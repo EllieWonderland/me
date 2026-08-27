@@ -1,6 +1,6 @@
 # =====================================================================
 #  Was NICHT auf janafisenko.de landen darf
-#  Veroeffentlicht wird nur: index.html, assets/, apps/, CNAME
+#  Veroeffentlicht wird nur: index.html, assets/, apps/, dokumentation/, CNAME
 # =====================================================================
 
 # Arbeitskopie von CoasterCheck.
@@ -9,7 +9,9 @@
 # Die veroeffentlichte Fassung liegt unter apps/coastercheck/.
 /CoasterCheck/
 
-# Persoenliche Unterlagen und Quellmaterial fuer die Seite
+# Persoenliche Unterlagen und Quellmaterial fuer die Seite.
+# Achtung: nicht mit /dokumentation/ verwechseln - Windows unterscheidet
+# keine Gross- und Kleinschreibung, ein Ordner "docs" landete hier drin.
 /Docs/
 /Fotos/
 /Abgabe/
@@ -42,3 +44,4 @@ vapid.json
 # Diese Ordner werden veroeffentlicht und duerfen nie ausgeschlossen werden
 !/assets/
 !/apps/
+!/dokumentation/

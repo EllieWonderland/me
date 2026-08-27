@@ -1,439 +1,484 @@
 /**
- * Data-loaders.js
- * Handles fetching and rendering of specific content sections (News, Services, Locations, Infos).
- * Dependencies: utils.js (fetchXML, createNewsCard, calculateLevenshtein)
+ * Inhalte aus den XML-Daten
+ *
+ * Die Seiten kommen weitgehend leer aus dem HTML und werden hier gefuellt:
+ * Meldungen, Dienstleistungen, Standorte, Abfall-ABC, Merkblaetter,
+ * Bilanzen, Onlinedienste, Repair-Cafes und Sortierhinweise.
+ *
+ * Jeder Lader prueft zuerst, ob sein Zielelement ueberhaupt existiert -
+ * dieselbe Datei laeuft auf allen Seiten, aber jede braucht nur einen Teil.
+ *
+ * Abhaengigkeiten: utils.js (fetchXML, createNewsCard, calculateLevenshtein)
  */
 
+// So viele Meldungen zeigt die Startseite an
+const NEWS_ON_HOMEPAGE = 3;
+
+// Ab dieser Laenge sucht das Abfall-ABC unscharf
+const ABC_FUZZY_MIN_LENGTH = 3;
+
 document.addEventListener('DOMContentLoaded', () => {
+    loadNews();
+    loadServices();
+    loadLocations();
+    loadInfos();
+    loadOnlineServices();
+    loadRepairCafes();
+    loadSortingHints();
+});
 
-    // 1. News loader
-    // Load latest news for homepage or full archive for news page
-    const newsGrid = document.getElementById('news-grid');
-    if (newsGrid) {
-        fetchXML('news.xml').then(xmlDoc => {
-            // Homepage: Show only first 3 items
-            const newsItems = Array.from(xmlDoc.getElementsByTagName('news')).slice(0, 3);
-            newsItems.forEach(item => newsGrid.appendChild(createNewsCard(item)));
-        }).catch(e => console.error("News loading error:", e));
-    }
+/**
+ * XML-Text, in dem Markup doppelt kodiert steckt, wieder lesbar machen.
+ * Die Daten sind aus verschiedenen Quellen zusammengetragen, darum stehen
+ * dort &lt;br&gt; statt Zeilenumbruechen.
+ */
+function decodeMarkup(text) {
+    return (text || '')
+        .replace(/&lt;br&gt;/g, '<br>')
+        .replace(/&lt;em&gt;/g, '<em>')
+        .replace(/&lt;\/em&gt;/g, '</em>')
+        .replace(/&amp;/g, '&');
+}
 
-    const newsArchiveGrid = document.getElementById('news-archive-grid');
-    if (newsArchiveGrid) {
-        fetchXML('news.xml').then(xmlDoc => {
-            // News Page: Show all items
-            newsArchiveGrid.innerHTML = '';
-            Array.from(xmlDoc.getElementsByTagName('news')).forEach(item => {
-                newsArchiveGrid.appendChild(createNewsCard(item));
-            });
-        }).catch(e => console.error("News archive loading error:", e));
-    }
+/** Kurzform fuer den Textinhalt eines Kindelements. */
+function textOf(element, selector) {
+    return element.querySelector(selector)?.textContent || '';
+}
 
-    // 2. Services loader (Startpage)
-    const servicesGrid = document.getElementById('services-grid');
-    if (servicesGrid) {
-        fetchXML('services.xml').then(xmlDoc => {
+/* ------------------------------------------------------------------
+   Meldungen und Dienstleistungen
+   ------------------------------------------------------------------ */
+
+/** Startseite zeigt die neuesten Meldungen, news.html alle. */
+function loadNews() {
+    const homepageGrid = document.getElementById('news-grid');
+    const archiveGrid = document.getElementById('news-archive-grid');
+    if (!homepageGrid && !archiveGrid) return;
+
+    fetchXML('data/news.xml')
+        .then(xmlDoc => {
+            const items = Array.from(xmlDoc.getElementsByTagName('news'));
+            const target = homepageGrid || archiveGrid;
+            const shown = homepageGrid ? items.slice(0, NEWS_ON_HOMEPAGE) : items;
+
+            target.innerHTML = '';
+            shown.forEach(item => target.appendChild(createNewsCard(item)));
+        })
+        .catch(error => console.error('Meldungen konnten nicht geladen werden:', error));
+}
+
+/** Die Kacheln der Dienstleistungen auf der Startseite. */
+function loadServices() {
+    const grid = document.getElementById('services-grid');
+    if (!grid) return;
+
+    fetchXML('data/services.xml')
+        .then(xmlDoc => {
             Array.from(xmlDoc.getElementsByTagName('service')).forEach(service => {
                 const article = document.createElement('article');
                 article.className = 'service-card';
                 article.innerHTML = `
-                    <div class="card-icon"><i class="${service.querySelector('icon').textContent}"></i></div>
-                    <h3>${service.querySelector('title').textContent}</h3>
-                    <p>${service.querySelector('text').textContent}</p>
-                    <a href="${service.querySelector('link').textContent}" class="card-link">
-                        ${service.querySelector('linkText').textContent} <i class="fas fa-arrow-right"></i>
+                    <div class="card-icon"><i class="${textOf(service, 'icon')}"></i></div>
+                    <h3>${textOf(service, 'title')}</h3>
+                    <p>${textOf(service, 'text')}</p>
+                    <a href="${textOf(service, 'link')}" class="card-link">
+                        ${textOf(service, 'linkText')} <i class="fas fa-arrow-right"></i>
                     </a>
                 `;
-                servicesGrid.appendChild(article);
+                grid.appendChild(article);
             });
-        }).catch(e => console.error("XML Services Error:", e));
+        })
+        .catch(error => console.error('Dienstleistungen konnten nicht geladen werden:', error));
+}
+
+/* ------------------------------------------------------------------
+   Standorte (standorte.html)
+   ------------------------------------------------------------------ */
+
+function loadLocations() {
+    const recyclingGrid = document.getElementById('locations-grid');
+    const greenWasteGrid = document.getElementById('gruen-grid');
+    const compostGrid = document.getElementById('kompost-grid');
+    const glassList = document.getElementById('altglas-list');
+    const clothingGrid = document.getElementById('kleider-grid');
+
+    if (!recyclingGrid && !greenWasteGrid && !compostGrid && !glassList && !clothingGrid) return;
+
+    fetchXML('data/standorte.xml')
+        .then(xmlDoc => {
+            if (recyclingGrid) renderRecyclingCenters(recyclingGrid, xmlDoc);
+            if (greenWasteGrid) renderGreenWaste(greenWasteGrid, xmlDoc);
+            if (compostGrid) renderCompostPlant(compostGrid, xmlDoc);
+            if (glassList) renderGlassContainers(glassList, xmlDoc);
+            if (clothingGrid) renderClothingContainers(clothingGrid, xmlDoc);
+        })
+        .catch(error => console.error('Standorte konnten nicht geladen werden:', error));
+}
+
+/** Wertstoffhoefe mit Anschrift und Oeffnungszeitentabelle. */
+function renderRecyclingCenters(grid, xmlDoc) {
+    getLocations(xmlDoc, 'wertstoffhoefe').forEach(location => {
+        const hoursRows = Array.from(location.getElementsByTagName('day'))
+            .map(day => `<tr><td>${textOf(day, 'label')}</td><td>${decodeMarkup(textOf(day, 'time'))}</td></tr>`)
+            .join('');
+
+        const note = decodeMarkup(textOf(location, 'note'));
+
+        const article = document.createElement('article');
+        article.className = 'location-card';
+        article.innerHTML = `
+            <h3><i class="fas fa-map-pin"></i> ${decodeMarkup(textOf(location, 'name'))}</h3>
+            <p><strong>${decodeMarkup(textOf(location, 'address'))}</strong></p>
+            <div class="opening-hours">
+                <strong>${textOf(location, 'openingHoursLabel')}</strong>
+                <table>${hoursRows}</table>
+            </div>
+            ${note ? `<p class="location-note">${note}</p>` : ''}
+        `;
+        grid.appendChild(article);
+    });
+}
+
+function renderGreenWaste(grid, xmlDoc) {
+    getLocations(xmlDoc, 'gruenabfall').forEach(location => {
+        const article = document.createElement('article');
+        article.className = 'location-card';
+        article.innerHTML = `
+            <h3>${textOf(location, 'name')}</h3>
+            <p>${textOf(location, 'address')}</p>
+            <div class="opening-hours">${textOf(location, 'openingHours')}</div>
+        `;
+        grid.appendChild(article);
+    });
+}
+
+function renderCompostPlant(grid, xmlDoc) {
+    getLocations(xmlDoc, 'kompostwerk').forEach(location => {
+        const article = document.createElement('article');
+        article.className = 'location-card';
+        article.innerHTML = `
+            <h3>${textOf(location, 'name')}</h3>
+            <p>${textOf(location, 'description')}</p>
+        `;
+        grid.appendChild(article);
+    });
+}
+
+/** Glascontainer: je Ortsteil ein aufklappbarer Abschnitt. */
+function renderGlassContainers(list, xmlDoc) {
+    const section = xmlDoc.getElementsByTagName('altglas')[0];
+    if (!section) return;
+
+    const info = section.querySelector('info');
+    if (info) {
+        const paragraph = document.createElement('p');
+        paragraph.textContent = info.textContent;
+        list.appendChild(paragraph);
     }
 
-    // 3. Locations loader (standorte.html)
-    // Loads multiple location types: Recycling Centers, Green Waste, Glass, etc.
-    const locationsGrid = document.getElementById('locations-grid');
-    const gruenGrid = document.getElementById('gruen-grid');
-    const kompostGrid = document.getElementById('kompost-grid');
-    const altglasList = document.getElementById('altglas-list');
-    const kleiderGrid = document.getElementById('kleider-grid');
+    Array.from(section.getElementsByTagName('area')).forEach(area => {
+        const details = document.createElement('details');
+        details.innerHTML = `<summary>${textOf(area, 'name')}</summary>`;
 
-    if (locationsGrid || gruenGrid || kompostGrid || altglasList || kleiderGrid) {
-        fetchXML('standorte.xml').then(xmlDoc => {
-
-            // A. Recycling Centers (Wertstoffhöfe)
-            if (locationsGrid) {
-                Array.from(xmlDoc.getElementsByTagName('wertstoffhoefe')[0]?.getElementsByTagName('location') || []).forEach(loc => {
-                    const article = document.createElement('article');
-                    article.className = 'location-card';
-
-                    // Construct opening hours table
-                    let hoursRows = '';
-                    Array.from(loc.getElementsByTagName('day')).forEach(d => {
-                        const label = d.querySelector('label').textContent;
-                        const time = d.querySelector('time').textContent.replace(/&lt;br&gt;/g, '<br>').replace(/&amp;/g, '&');
-                        hoursRows += `<tr><td>${label}</td><td>${time}</td></tr>`;
-                    });
-
-                    // Decode HTML entities in address
-                    const addressRaw = loc.querySelector('address').textContent;
-                    const address = addressRaw.replace(/&lt;br&gt;/g, '<br>').replace(/&amp;/g, '&');
-
-                    // Check for optional note
-                    const noteEl = loc.querySelector('note');
-                    const note = noteEl ? noteEl.textContent.replace(/&lt;br&gt;/g, '<br>').replace(/&lt;em&gt;/g, '<em>').replace(/&lt;\/em&gt;/g, '</em>').replace(/&amp;/g, '&') : '';
-
-                    article.innerHTML = `
-                        <h3><i class="fas fa-map-pin"></i> ${loc.querySelector('name').textContent.replace(/&amp;/g, '&')}</h3>
-                        <p><strong>${address}</strong></p>
-                        <div class="opening-hours">
-                            <strong>${loc.querySelector('openingHoursLabel').textContent}</strong>
-                            <table>${hoursRows}</table>
-                        </div>
-                        ${note ? `<p class="location-note">${note}</p>` : ''}
-                    `;
-                    locationsGrid.appendChild(article);
-                });
-            }
-            // B. Green waste (Grünabfall)
-            if (gruenGrid) {
-                Array.from(xmlDoc.getElementsByTagName('gruenabfall')[0]?.getElementsByTagName('location') || []).forEach(loc => {
-                    const article = document.createElement('article');
-                    article.className = 'location-card';
-                    article.innerHTML = `
-                        <h3>${loc.querySelector('name').textContent}</h3>
-                        <p>${loc.querySelector('address').textContent}</p>
-                        <div class="opening-hours">${loc.querySelector('openingHours').textContent}</div>
-                    `;
-                    gruenGrid.appendChild(article);
-                });
-            }
-            // C. Composting plant (Kompostwerk)
-            if (kompostGrid) {
-                Array.from(xmlDoc.getElementsByTagName('kompostwerk')[0]?.getElementsByTagName('location') || []).forEach(loc => {
-                    const article = document.createElement('article');
-                    article.className = 'location-card';
-                    article.innerHTML = `<h3>${loc.querySelector('name').textContent}</h3><p>${loc.querySelector('description').textContent}</p>`;
-                    kompostGrid.appendChild(article);
-                });
-            }
-            // D. Glass containers (Altglas)
-            if (altglasList) {
-                const altglas = xmlDoc.getElementsByTagName('altglas')[0];
-                if (altglas) {
-                    const info = altglas.querySelector('info');
-                    if (info) altglasList.appendChild(Object.assign(document.createElement('p'), { textContent: info.textContent }));
-
-                    // Create detail/summary list for cities
-                    Array.from(altglas.getElementsByTagName('area')).forEach(area => {
-                        const details = document.createElement('details');
-                        details.innerHTML = `<summary>${area.querySelector('name').textContent}</summary>`;
-                        const ul = document.createElement('ul');
-                        ul.className = 'location-list';
-                        Array.from(area.getElementsByTagName('loc')).forEach(l => {
-                            const li = document.createElement('li');
-                            li.textContent = l.textContent;
-                            ul.appendChild(li);
-                        });
-                        details.appendChild(ul);
-                        altglasList.appendChild(details);
-                    });
-                }
-            }
-            // E. Clothing containers (Altkleider)
-            if (kleiderGrid) {
-                const kleider = xmlDoc.getElementsByTagName('kleider')[0];
-                if (kleider) {
-                    const info = kleider.querySelector('info');
-                    if (info) {
-                        const infoP = document.createElement('p');
-                        infoP.className = 'kleider-info';
-                        infoP.textContent = info.textContent;
-                        kleiderGrid.appendChild(infoP);
-                    }
-                    Array.from(kleider.getElementsByTagName('location') || []).forEach(loc => {
-                        const article = document.createElement('article');
-                        article.className = 'location-card';
-                        article.innerHTML = `<h3>${loc.querySelector('title').textContent}</h3><p>${loc.querySelector('text').textContent}</p>`;
-                        kleiderGrid.appendChild(article);
-                    });
-                }
-            }
-
-        }).catch(e => console.error("XML Locations Error:", e));
-    }
-
-    // 4. Infos & Abfall-ABC loader
-    // Handles Abfall-ABC list with search, Leaflets, and Report-Downloads
-    const abcContainer = document.getElementById('abc-list-container');
-    const merkList = document.getElementById('merkblaetter-list');
-    const bilanzenGrid = document.getElementById('bilanzen-grid');
-
-    if (abcContainer || merkList || bilanzenGrid) {
-        fetchXML('infos.xml').then(xmlDoc => {
-            // A. Leaflets (Merkblätter)
-            if (merkList) {
-                Array.from(xmlDoc.getElementsByTagName('merkblaetter')[0]?.getElementsByTagName('item') || []).forEach(item => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `<a href="${item.querySelector('link').textContent}" target="_blank"><i class="${item.querySelector('icon').textContent}"></i> ${item.querySelector('text').textContent}</a>`;
-                    merkList.appendChild(li);
-                });
-            }
-
-            // B. Abfall-ABC logic
-            if (abcContainer) {
-                const abcItems = Array.from(xmlDoc.getElementsByTagName('abc')[0]?.getElementsByTagName('item') || []).map(item => ({
-                    name: item.querySelector('name').textContent,
-                    disposal: item.querySelector('disposal').textContent,
-                    type: item.querySelector('type').textContent
-                }));
-
-                // Render function for Abfall-ABC list
-                const renderABC = (items) => {
-                    abcContainer.innerHTML = '';
-                    if (items.length === 0) {
-                        abcContainer.innerHTML = '<p>Keine Einträge.</p>';
-                        return;
-                    }
-                    items.sort((a, b) => a.name.localeCompare(b.name)).forEach(item => {
-                        const det = document.createElement('details');
-                        det.className = 'abc-item';
-                        det.innerHTML = `<summary>${item.name}</summary><div class="abc-content"><p>Entsorgung: <strong>${item.disposal}</strong></p><span class="disposal-tag tonne-${item.type}">${item.disposal}</span></div>`;
-                        abcContainer.appendChild(det);
-                    });
-                };
-
-                // Initial render
-                renderABC(abcItems);
-
-                // Auto-open item from global search (SessionStorage)
-                const searchTermFromGlobal = sessionStorage.getItem('abcSearchTerm');
-                if (searchTermFromGlobal) {
-                    sessionStorage.removeItem('abcSearchTerm'); // Clean up
-
-                    const allItems = abcContainer.querySelectorAll('.abc-item');
-                    let foundItem = null;
-
-                    allItems.forEach(item => {
-                        const summary = item.querySelector('summary');
-                        if (summary && summary.textContent.toLowerCase() === searchTermFromGlobal.toLowerCase()) {
-                            foundItem = item;
-                        }
-                    });
-
-                    if (foundItem) {
-                        foundItem.setAttribute('open', '');
-                        foundItem.classList.add('abc-item-highlight');
-                        setTimeout(() => {
-                            foundItem.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                        }, 300);
-                        setTimeout(() => {
-                            foundItem.classList.remove('abc-item-highlight');
-                        }, 3000);
-                    }
-                }
-
-                // Abfall-ABC local search & filter
-                const abcSearch = document.querySelector('.abc-search');
-                const azFilter = document.getElementById('az-filter');
-
-                if (abcSearch) {
-                    abcSearch.addEventListener('input', function () {
-                        const term = this.value.toLowerCase();
-
-                        if (term.length < 3) {
-                            renderABC(abcItems.filter(i => i.name.toLowerCase().includes(term)));
-                            return;
-                        }
-
-                        // Fuzzy filter logic
-                        const results = abcItems.filter(item => {
-                            const name = item.name.toLowerCase();
-                            if (name.includes(term)) return true; // match
-
-                            const dist = calculateLevenshtein(name, term);
-                            const threshold = term.length > 5 ? 2 : 1;
-                            return dist <= threshold && Math.abs(name.length - term.length) <= 3;
-                        });
-
-                        // Sort best matches to top
-                        results.sort((a, b) => {
-                            const nameA = a.name.toLowerCase();
-                            const nameB = b.name.toLowerCase();
-                            const aStarts = nameA.startsWith(term);
-                            const bStarts = nameB.startsWith(term);
-
-                            if (aStarts && !bStarts) return -1;
-                            if (!aStarts && bStarts) return 1;
-                            return 0;
-                        });
-
-                        renderABC(results);
-                    });
-                }
-
-                // A-Z filter generation
-                if (azFilter) {
-                    azFilter.innerHTML = '';
-                    "#ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("").forEach(char => {
-                        const btn = document.createElement('button');
-                        btn.innerText = char;
-                        btn.className = 'az-btn';
-                        btn.addEventListener('click', function () {
-                            document.querySelectorAll('.az-btn').forEach(b => b.classList.remove('active'));
-                            this.classList.add('active');
-                            if (abcSearch) abcSearch.value = '';
-
-                            if (char === '#') renderABC(abcItems);
-                            else renderABC(abcItems.filter(i => i.name.toUpperCase().startsWith(char)));
-                        });
-                        azFilter.appendChild(btn);
-                    });
-                }
-            }
-
-            // C. Reports (Bilanzen)
-            if (bilanzenGrid) {
-                const blz = xmlDoc.querySelector('bilanzen');
-                if (blz) {
-                    bilanzenGrid.innerHTML = '';
-                    Array.from(blz.getElementsByTagName('box')).forEach(box => {
-                        const div = document.createElement('div');
-                        div.className = 'info-box-white';
-
-                        let linksHTML = '';
-                        Array.from(box.querySelector('downloads').getElementsByTagName('link')).forEach(l => {
-                            linksHTML += `<li><a href="${l.querySelector('url').textContent}" target="_blank"><i class="${l.querySelector('icon').textContent}"></i> ${l.querySelector('text').textContent}</a></li>`;
-                        });
-
-                        div.innerHTML = `
-                        <h3>${box.querySelector('title').textContent}</h3>
-                            <p>${box.querySelector('text').textContent}</p>
-                            <ul class="download-list">${linksHTML}</ul>
-                    `;
-                        bilanzenGrid.appendChild(div);
-                    });
-                }
-            }
-
-        }).catch(e => console.error("XML Infos Error:", e));
-    }
-
-    // 5. Gewerbe loader
-    const gewerbeGrid = document.getElementById('gewerbe-grid');
-    if (gewerbeGrid) {
-        fetchXML('gewerbe.xml').then(xmlDoc => {
-            gewerbeGrid.innerHTML = '';
-            Array.from(xmlDoc.getElementsByTagName('entry')).forEach(entry => {
-                const article = document.createElement('article');
-                article.className = 'service-card bg-white';
-                let linksHTML = '';
-                Array.from(entry.getElementsByTagName('link')).forEach(l => {
-                    linksHTML += `<li><a href="${l.querySelector('url').textContent}"><i class="${l.querySelector('icon').textContent}"></i> ${l.querySelector('text').textContent}</a></li>`;
-                });
-                article.innerHTML = `<h3><i class="${entry.querySelector('icon').textContent}"></i> ${entry.querySelector('title').textContent}</h3><p>${entry.querySelector('text').textContent}</p><ul>${linksHTML}</ul>`;
-                gewerbeGrid.appendChild(article);
-            });
-        }).catch(e => console.error("XML Gewerbe Error:", e));
-    }
-
-    // 6. Online Dienste loader
-    const olListIds = ['behaelter-list', 'abholung-list', 'sonstiges-list'];
-    if (olListIds.some(id => document.getElementById(id))) {
-        fetchXML('onlinedienste.xml').then(xmlDoc => {
-            olListIds.forEach(id => {
-                const list = document.getElementById(id);
-                // Map list id to xml tag name: container-list -> container
-                const tagName = id.replace('-list', '');
-                const container = xmlDoc.getElementsByTagName(tagName)[0];
-                if (list && container) {
-                    list.innerHTML = '';
-                    Array.from(container.getElementsByTagName('item')).forEach(item => {
-                        const li = document.createElement('li');
-                        li.className = 'service-item';
-                        const link = item.querySelector('link').textContent;
-                        li.innerHTML = `<a href="${link}"><i class="${item.querySelector('icon').textContent}"></i> ${item.querySelector('text').textContent}</a>`;
-                        list.appendChild(li);
-                    });
-                }
-            });
-        }).catch(e => console.error("XML Onlinedienste Error:", e));
-    }
-});
-
-// Repair Cafés loader (Standalone)
-document.addEventListener("DOMContentLoaded", function () {
-    const repairList = document.getElementById('repair-cafes-list');
-    if (!repairList) return;
-
-    fetchXML('standorte.xml').then(xmlDoc => {
-        const repaircafeSection = xmlDoc.querySelector('repaircafe');
-        if (!repaircafeSection) {
-            repairList.innerHTML = '<li>Keine Daten gefunden.</li>';
-            return;
-        }
-
-        const locations = repaircafeSection.querySelectorAll('location');
-        let html = '';
-
-        locations.forEach(loc => {
-            const name = loc.querySelector('name')?.textContent || '';
-            const address = loc.querySelector('address')?.textContent || '';
-            const openingHours = loc.querySelector('openingHours')?.textContent || '';
-
-            html += `
-                <li class="repair-item">
-                    <h3><i class="fas fa-map-marker-alt"></i> ${name.replace('Repair-Café ', '')}</h3>
-                    <p><strong>Ort:</strong> ${address}</p>
-                    <p><strong>Wann:</strong> ${openingHours}</p>
-                </li>
-            `;
+        const spots = document.createElement('ul');
+        spots.className = 'location-list';
+        Array.from(area.getElementsByTagName('loc')).forEach(spot => {
+            const entry = document.createElement('li');
+            entry.textContent = spot.textContent;
+            spots.appendChild(entry);
         });
 
-        repairList.innerHTML = html || '<li>Keine Repair-Cafés gefunden.</li>';
-    }).catch(e => {
-        console.error("Error loading repair cafes from standorte.xml:", e);
-        repairList.innerHTML = '<li>Fehler beim Laden der Daten.</li>';
+        details.appendChild(spots);
+        list.appendChild(details);
     });
-});
+}
 
-// Sortierung loader (Standalone)
-document.addEventListener("DOMContentLoaded", function () {
-    const sortierungGrid = document.getElementById('sortierung-grid');
-    if (!sortierungGrid) return;
+function renderClothingContainers(grid, xmlDoc) {
+    const section = xmlDoc.getElementsByTagName('kleider')[0];
+    if (!section) return;
 
-    fetchXML('infos.xml').then(xmlDoc => {
-        const sortierungSection = xmlDoc.querySelector('sortierung');
-        if (!sortierungSection) {
-            sortierungGrid.innerHTML = '<p>Keine Daten gefunden.</p>';
+    const info = section.querySelector('info');
+    if (info) {
+        const paragraph = document.createElement('p');
+        paragraph.className = 'kleider-info';
+        paragraph.textContent = info.textContent;
+        grid.appendChild(paragraph);
+    }
+
+    Array.from(section.getElementsByTagName('location')).forEach(location => {
+        const article = document.createElement('article');
+        article.className = 'location-card';
+        article.innerHTML = `
+            <h3>${textOf(location, 'title')}</h3>
+            <p>${textOf(location, 'text')}</p>
+        `;
+        grid.appendChild(article);
+    });
+}
+
+/** Alle <location> einer Standortgruppe. */
+function getLocations(xmlDoc, groupTag) {
+    const group = xmlDoc.getElementsByTagName(groupTag)[0];
+    return group ? Array.from(group.getElementsByTagName('location')) : [];
+}
+
+/* ------------------------------------------------------------------
+   Infos (infos.html)
+   ------------------------------------------------------------------ */
+
+function loadInfos() {
+    const abcContainer = document.getElementById('abc-list-container');
+    const leafletList = document.getElementById('merkblaetter-list');
+    const reportsGrid = document.getElementById('bilanzen-grid');
+
+    if (!abcContainer && !leafletList && !reportsGrid) return;
+
+    fetchXML('data/infos.xml')
+        .then(xmlDoc => {
+            if (leafletList) renderLeaflets(leafletList, xmlDoc);
+            if (abcContainer) setupWasteAbc(abcContainer, xmlDoc);
+            if (reportsGrid) renderReports(reportsGrid, xmlDoc);
+        })
+        .catch(error => console.error('Infos konnten nicht geladen werden:', error));
+}
+
+function renderLeaflets(list, xmlDoc) {
+    xmlDoc.querySelectorAll('merkblaetter item').forEach(item => {
+        const entry = document.createElement('li');
+        entry.innerHTML = `<a href="${textOf(item, 'link')}" target="_blank">
+            <i class="${textOf(item, 'icon')}"></i> ${textOf(item, 'text')}</a>`;
+        list.appendChild(entry);
+    });
+}
+
+/**
+ * Das Abfall-ABC: alphabetische Liste mit Suchfeld und A-Z-Filter.
+ * Die Suche verzeiht Tippfehler, sobald der Begriff lang genug ist.
+ */
+function setupWasteAbc(container, xmlDoc) {
+    const entries = Array.from(xmlDoc.querySelectorAll('abc item')).map(item => ({
+        name: textOf(item, 'name'),
+        disposal: textOf(item, 'disposal'),
+        type: textOf(item, 'type')
+    }));
+
+    const render = (items) => {
+        container.innerHTML = '';
+
+        if (items.length === 0) {
+            container.innerHTML = '<p>Keine Einträge.</p>';
             return;
         }
 
-        const boxes = sortierungSection.querySelectorAll('box');
-        let html = '';
-
-        boxes.forEach(box => {
-            const type = box.querySelector('type')?.textContent || '';
-            const title = box.querySelector('title')?.textContent || '';
-            const icon = box.querySelector('icon')?.textContent || '';
-            const items = box.querySelectorAll('items > item');
-
-            let itemsHtml = '';
-            items.forEach(item => {
-                itemsHtml += `<li>${item.textContent}</li>`;
-            });
-
-            html += `
-                <div class="tonne-box tonne-${type}">
-                    <h3><i class="${icon}"></i> ${title}</h3>
-                    <ul>
-                        ${itemsHtml}
-                    </ul>
+        [...items].sort((a, b) => a.name.localeCompare(b.name)).forEach(item => {
+            const details = document.createElement('details');
+            details.className = 'abc-item';
+            details.innerHTML = `
+                <summary>${item.name}</summary>
+                <div class="abc-content">
+                    <p>Entsorgung: <strong>${item.disposal}</strong></p>
+                    <span class="disposal-tag tonne-${item.type}">${item.disposal}</span>
                 </div>
             `;
+            container.appendChild(details);
+        });
+    };
+
+    render(entries);
+    openEntryFromGlobalSearch(container);
+
+    const searchField = document.querySelector('.abc-search');
+    if (searchField) {
+        searchField.addEventListener('input', function () {
+            render(filterAbcEntries(entries, this.value.toLowerCase()));
+        });
+    }
+
+    setupAzFilter(entries, render, searchField);
+}
+
+/** Sucht im Abfall-ABC, bei laengeren Begriffen auch unscharf. */
+function filterAbcEntries(entries, term) {
+    if (term.length < ABC_FUZZY_MIN_LENGTH) {
+        return entries.filter(entry => entry.name.toLowerCase().includes(term));
+    }
+
+    const threshold = term.length > 5 ? 2 : 1;
+
+    return entries
+        .filter(entry => {
+            const name = entry.name.toLowerCase();
+            if (name.includes(term)) return true;
+
+            // Unscharf nur bei aehnlich langen Namen, sonst passt alles auf alles
+            if (Math.abs(name.length - term.length) > 3) return false;
+            return calculateLevenshtein(name, term) <= threshold;
+        })
+        .sort((a, b) => {
+            const aStarts = a.name.toLowerCase().startsWith(term);
+            const bStarts = b.name.toLowerCase().startsWith(term);
+            return Number(bStarts) - Number(aStarts);
+        });
+}
+
+/** Die Buchstabenleiste; "#" zeigt wieder alle Eintraege. */
+function setupAzFilter(entries, render, searchField) {
+    const filter = document.getElementById('az-filter');
+    if (!filter) return;
+
+    filter.innerHTML = '';
+
+    '#ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(letter => {
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.textContent = letter;
+        button.className = 'az-btn';
+
+        button.addEventListener('click', function () {
+            filter.querySelectorAll('.az-btn').forEach(other => other.classList.remove('active'));
+            this.classList.add('active');
+            if (searchField) searchField.value = '';
+
+            render(letter === '#'
+                ? entries
+                : entries.filter(entry => entry.name.toUpperCase().startsWith(letter)));
         });
 
-        sortierungGrid.innerHTML = html || '<p>Keine Sortierungshinweise gefunden.</p>';
-    }).catch(e => {
-        console.error("Error loading sortierung from infos.xml:", e);
-        sortierungGrid.innerHTML = '<p>Fehler beim Laden der Daten.</p>';
+        filter.appendChild(button);
     });
-});
+}
+
+/**
+ * Wer ueber die Seitensuche auf einen ABC-Begriff geklickt hat, soll ihn
+ * hier aufgeschlagen und kurz hervorgehoben vorfinden.
+ */
+function openEntryFromGlobalSearch(container) {
+    const searchTerm = sessionStorage.getItem('abcSearchTerm');
+    if (!searchTerm) return;
+
+    sessionStorage.removeItem('abcSearchTerm');
+
+    const match = [...container.querySelectorAll('.abc-item')].find(item =>
+        item.querySelector('summary')?.textContent.toLowerCase() === searchTerm.toLowerCase());
+    if (!match) return;
+
+    match.setAttribute('open', '');
+    match.classList.add('abc-item-highlight');
+
+    // Erst rollen, wenn der Eintrag aufgeklappt ist, dann die Hervorhebung abklingen lassen
+    setTimeout(() => match.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+    setTimeout(() => match.classList.remove('abc-item-highlight'), 3000);
+}
+
+/** Abfallwirtschaftskonzept und Bilanzen mit ihren Downloads. */
+function renderReports(grid, xmlDoc) {
+    const section = xmlDoc.querySelector('bilanzen');
+    if (!section) return;
+
+    grid.innerHTML = '';
+
+    Array.from(section.getElementsByTagName('box')).forEach(box => {
+        const downloads = Array.from(box.querySelectorAll('downloads link'))
+            .map(link => `<li><a href="${textOf(link, 'url')}" target="_blank">
+                <i class="${textOf(link, 'icon')}"></i> ${textOf(link, 'text')}</a></li>`)
+            .join('');
+
+        const article = document.createElement('div');
+        article.className = 'info-box-white';
+        article.innerHTML = `
+            <h3>${textOf(box, 'title')}</h3>
+            <p>${textOf(box, 'text')}</p>
+            <ul class="download-list">${downloads}</ul>
+        `;
+        grid.appendChild(article);
+    });
+}
+
+/** Die Sortierhinweise je Tonne (infos.html). */
+function loadSortingHints() {
+    const grid = document.getElementById('sortierung-grid');
+    if (!grid) return;
+
+    fetchXML('data/infos.xml')
+        .then(xmlDoc => {
+            const boxes = Array.from(xmlDoc.querySelectorAll('sortierung box'));
+            if (boxes.length === 0) {
+                grid.innerHTML = '<p>Keine Sortierungshinweise gefunden.</p>';
+                return;
+            }
+
+            grid.innerHTML = boxes.map(box => {
+                const items = Array.from(box.querySelectorAll('items > item'))
+                    .map(item => `<li>${item.textContent}</li>`)
+                    .join('');
+
+                return `
+                    <div class="tonne-box tonne-${textOf(box, 'type')}">
+                        <h3><i class="${textOf(box, 'icon')}"></i> ${textOf(box, 'title')}</h3>
+                        <ul>${items}</ul>
+                    </div>
+                `;
+            }).join('');
+        })
+        .catch(error => {
+            console.error('Sortierungshinweise konnten nicht geladen werden:', error);
+            grid.innerHTML = '<p>Die Sortierungshinweise konnten nicht geladen werden.</p>';
+        });
+}
+
+/* ------------------------------------------------------------------
+   Onlinedienste und Repair-Cafes
+   ------------------------------------------------------------------ */
+
+/** Die drei Listen der Onlinedienste; die Listen-Id nennt das XML-Element. */
+function loadOnlineServices() {
+    const listIds = ['behaelter-list', 'abholung-list', 'sonstiges-list'];
+    if (!listIds.some(id => document.getElementById(id))) return;
+
+    fetchXML('data/onlinedienste.xml')
+        .then(xmlDoc => {
+            listIds.forEach(id => {
+                const list = document.getElementById(id);
+                const section = xmlDoc.getElementsByTagName(id.replace('-list', ''))[0];
+                if (!list || !section) return;
+
+                list.innerHTML = '';
+
+                Array.from(section.getElementsByTagName('item')).forEach(item => {
+                    const entry = document.createElement('li');
+                    entry.className = 'service-item';
+                    entry.innerHTML = `<a href="${textOf(item, 'link')}">
+                        <i class="${textOf(item, 'icon')}"></i> ${textOf(item, 'text')}</a>`;
+                    list.appendChild(entry);
+                });
+            });
+        })
+        .catch(error => console.error('Onlinedienste konnten nicht geladen werden:', error));
+}
+
+function loadRepairCafes() {
+    const list = document.getElementById('repair-cafes-list');
+    if (!list) return;
+
+    fetchXML('data/standorte.xml')
+        .then(xmlDoc => {
+            const locations = getLocations(xmlDoc, 'repaircafe');
+
+            if (locations.length === 0) {
+                list.innerHTML = '<li>Keine Repair-Cafés gefunden.</li>';
+                return;
+            }
+
+            list.innerHTML = locations.map(location => `
+                <li class="repair-item">
+                    <h3><i class="fas fa-map-marker-alt"></i> ${textOf(location, 'name').replace('Repair-Café ', '')}</h3>
+                    <p><strong>Ort:</strong> ${textOf(location, 'address')}</p>
+                    <p><strong>Wann:</strong> ${textOf(location, 'openingHours')}</p>
+                </li>
+            `).join('');
+        })
+        .catch(error => {
+            console.error('Repair-Cafés konnten nicht geladen werden:', error);
+            list.innerHTML = '<li>Die Daten konnten nicht geladen werden.</li>';
+        });
+}

@@ -1,164 +1,152 @@
 /**
- * Calendar.js
- * Implements the waste collection calendar logic.
- * Parses 'kalender.xml' and provides location-based filtering for collection dates.
- * Dependencies: utils.js (fetchXML)
+ * Abfallkalender
+ *
+ * Zeigt die naechsten Abfuhrtermine fuer eine Gemeinde und einen Bezirk.
+ * Die Termine stehen in data/kalender.xml und reichen bis Ende 2027; laeuft
+ * dieser Zeitraum ab, zeigt der Kalender die zuletzt bekannten Termine mit
+ * einem Hinweis statt einer leeren Seite.
+ *
+ * Abhaengigkeiten: utils.js (fetchXML)
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    try {
-        const calGemeinde = document.getElementById('cal-gemeinde');
-        const calBezirk = document.getElementById('cal-bezirk');
-        const btnShowCalendar = document.getElementById('btn-show-calendar');
-        const calendarOutput = document.getElementById('calendar-output');
-        const calendarGrid = document.getElementById('calendar-grid');
+// Beschriftung, Farbklasse und Symbol je Abfallart
+const WASTE_TYPES = {
+    rest:   { label: 'Restabfall',  className: 'tonne-rest',   icon: 'fa-trash' },
+    bio:    { label: 'Bioabfall',   className: 'tonne-bio',    icon: 'fa-leaf' },
+    papier: { label: 'Altpapier',   className: 'tonne-papier', icon: 'fa-newspaper' },
+    gelb:   { label: 'Gelbe Tonne', className: 'tonne-gelb',   icon: 'fa-recycle' }
+};
 
-        // Only run if calendar elements exist on the page
-        if (!calGemeinde) return;
+const MONTH_NAMES = ['JAN', 'FEB', 'MÄR', 'APR', 'MAI', 'JUN', 'JUL', 'AUG', 'SEP', 'OKT', 'NOV', 'DEZ'];
+const DAY_NAMES = ['SO', 'MO', 'DI', 'MI', 'DO', 'FR', 'SA'];
 
-        // Data store for parsed XML
-        let calendarData = {};
+// So viele kommende Termine zeigt der Kalender auf einmal
+const UPCOMING_LIMIT = 8;
 
-        // 1. Fetch and parse XML data
-        fetchXML('kalender.xml').then(xmlDoc => {
-            const gemeinden = xmlDoc.getElementsByTagName('gemeinde');
+document.addEventListener('DOMContentLoaded', function () {
+    const municipalitySelect = document.getElementById('cal-gemeinde');
+    const districtSelect = document.getElementById('cal-bezirk');
+    const showButton = document.getElementById('btn-show-calendar');
+    const output = document.getElementById('calendar-output');
+    const grid = document.getElementById('calendar-grid');
 
-            // Iterate through communities (Gemeinden)
-            Array.from(gemeinden).forEach(g => {
-                const gName = g.getAttribute('name');
-                calendarData[gName] = {};
+    // Der Kalender steckt nicht auf jeder Seite
+    if (!municipalitySelect) return;
 
-                // Iterate through districts (Bezirke)
-                const bezirke = g.getElementsByTagName('bezirk');
-                Array.from(bezirke).forEach(b => {
-                    const bName = b.getAttribute('name');
-                    calendarData[gName][bName] = [];
+    fetchXML('data/kalender.xml')
+        .then(xmlDoc => {
+            const calendarData = parseCalendar(xmlDoc);
 
-                    // Parse appointments (Termine)
-                    const termine = b.getElementsByTagName('termin');
-                    Array.from(termine).forEach(t => {
-                        calendarData[gName][bName].push({
-                            date: t.getAttribute('date'),
-                            type: t.getAttribute('type')
-                        });
-                    });
-                });
+            // Die Bedienung erst verdrahten, wenn die Daten da sind
+            municipalitySelect.addEventListener('change', function () {
+                fillDistricts(districtSelect, calendarData[this.value]);
+                showButton.disabled = true;
+                if (output) output.classList.add('hidden');
             });
 
-            // 2. Setup event listeners (only after data is loaded)
-
-            // Handle community selection
-            calGemeinde.addEventListener('change', function () {
-                // Reset district select
-                calBezirk.innerHTML = '<option value="">-- Bitte wählen --</option>';
-                calBezirk.disabled = true;
-                btnShowCalendar.disabled = true;
-                if (calendarOutput) calendarOutput.classList.add('hidden');
-
-                const gName = this.value;
-                if (gName && calendarData[gName]) {
-                    // Populate districts based on selected community
-                    Object.keys(calendarData[gName]).forEach(bName => {
-                        const opt = document.createElement('option');
-                        opt.value = bName;
-                        opt.textContent = bName;
-                        calBezirk.appendChild(opt);
-                    });
-                    calBezirk.disabled = false;
-                }
+            districtSelect.addEventListener('change', function () {
+                showButton.disabled = !this.value;
             });
 
-            // Handle district selection
-            calBezirk.addEventListener('change', function () {
-                btnShowCalendar.disabled = !this.value;
+            showButton.addEventListener('click', function () {
+                const dates = calendarData[municipalitySelect.value]?.[districtSelect.value];
+                if (!dates || !grid || !output) return;
+
+                output.classList.remove('hidden');
+                renderDates(grid, dates);
+                output.scrollIntoView({ behavior: 'smooth' });
             });
-
-            // Handle show calendar button click
-            btnShowCalendar.addEventListener('click', function () {
-                if (calendarOutput) calendarOutput.classList.remove('hidden');
-                if (calendarGrid) {
-                    calendarGrid.innerHTML = '';
-
-                    const gName = calGemeinde.value;
-                    const bName = calBezirk.value;
-
-                    if (!gName || !bName || !calendarData[gName] || !calendarData[gName][bName]) return;
-
-                    const allDates = calendarData[gName][bName];
-                    const today = new Date();
-                    today.setHours(0, 0, 0, 0);
-
-                    // Filter for future dates, sort, and limit to 8 entries
-                    const upcoming = allDates.map(item => {
-                        return {
-                            ...item,
-                            dateObj: new Date(item.date)
-                        };
-                    })
-                        .filter(item => item.dateObj >= today)
-                        .sort((a, b) => a.dateObj - b.dateObj)
-                        .slice(0, 8);
-
-                    // Wenn der hinterlegte Zeitraum abgelaufen ist, statt einer
-                    // Sackgasse die letzten bekannten Termine zeigen und sagen, warum.
-                    if (upcoming.length === 0) {
-                        const letzte = allDates
-                            .map(item => ({ ...item, dateObj: new Date(item.date) }))
-                            .sort((a, b) => b.dateObj - a.dateObj)
-                            .slice(0, 4)
-                            .reverse();
-                        if (letzte.length === 0) {
-                            calendarGrid.innerHTML = '<p>Für diesen Bezirk liegen keine Termine vor.</p>';
-                            return;
-                        }
-                        calendarGrid.innerHTML =
-                            '<p class="cal-hint">Der hinterlegte Abfuhrzeitraum ist abgelaufen. ' +
-                            'Hier die zuletzt bekannten Termine:</p>';
-                        upcoming.push(...letzte);
-                    }
-
-                    // Configuration for waste types (labels, colors, icons)
-                    const typeLabels = {
-                        'rest': { l: 'Restabfall', c: 'tonne-rest', i: 'fa-trash' },
-                        'bio': { l: 'Bioabfall', c: 'tonne-bio', i: 'fa-leaf' },
-                        'papier': { l: 'Altpapier', c: 'tonne-papier', i: 'fa-newspaper' },
-                        'gelb': { l: 'Gelbe Tonne', c: 'tonne-gelb', i: 'fa-recycle' }
-                    };
-
-                    const months = ['JAN', 'FEB', 'MÄR', 'APR', 'MAI', 'JUN', 'JUL', 'AUG', 'SEP', 'OKT', 'NOV', 'DEZ'];
-                    const days = ['SO', 'MO', 'DI', 'MI', 'DO', 'FR', 'SA'];
-
-                    // Render calendar cards
-                    upcoming.forEach(item => {
-                        const info = typeLabels[item.type] || { l: item.type, c: '', i: 'fa-calendar' };
-                        const d = item.dateObj;
-
-                        const dayName = days[d.getDay()];
-                        const monthName = months[d.getMonth()];
-                        const year = d.getFullYear();
-                        const dayNum = d.getDate();
-
-                        const div = document.createElement('div');
-                        div.className = 'cal-date-card';
-                        div.innerHTML = `
-                            <div class="cal-day">
-                                <span class="cal-date-full">${dayName}, ${dayNum}. ${monthName} ${year}</span>
-                            </div>
-                            <div class="cal-info">
-                                <span class="cal-badge ${info.c}"><i class="fas ${info.i}"></i> ${info.l}</span>
-                            </div>
-                        `;
-                        calendarGrid.appendChild(div);
-                    });
-
-                    // Smooth scroll to results
-                    calendarOutput.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-
-        }).catch(e => console.error("Error loading kalender.xml:", e));
-
-    } catch (e) {
-        console.error("Error in Calendar:", e);
-    }
+        })
+        .catch(error => console.error('Abfallkalender konnte nicht geladen werden:', error));
 });
+
+/**
+ * Liest kalender.xml in die Form { Gemeinde: { Bezirk: [Termin, ...] } }.
+ *
+ * @param {Document} xmlDoc Das geparste Dokument
+ * @returns {Object} Termine nach Gemeinde und Bezirk
+ */
+function parseCalendar(xmlDoc) {
+    const calendarData = {};
+
+    Array.from(xmlDoc.getElementsByTagName('gemeinde')).forEach(municipality => {
+        const districts = {};
+
+        Array.from(municipality.getElementsByTagName('bezirk')).forEach(district => {
+            districts[district.getAttribute('name')] =
+                Array.from(district.getElementsByTagName('termin')).map(entry => ({
+                    date: new Date(entry.getAttribute('date')),
+                    type: entry.getAttribute('type')
+                }));
+        });
+
+        calendarData[municipality.getAttribute('name')] = districts;
+    });
+
+    return calendarData;
+}
+
+/** Fuellt die Bezirksauswahl passend zur gewaehlten Gemeinde. */
+function fillDistricts(districtSelect, districts) {
+    districtSelect.innerHTML = '<option value="">-- Bitte wählen --</option>';
+    districtSelect.disabled = true;
+    if (!districts) return;
+
+    Object.keys(districts).forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        districtSelect.appendChild(option);
+    });
+
+    districtSelect.disabled = false;
+}
+
+/** Zeigt die naechsten Termine, ersatzweise die zuletzt bekannten. */
+function renderDates(grid, dates) {
+    const today = new Date();
+    today.setHours(0, 0, 0, 0);
+
+    grid.innerHTML = '';
+
+    let shown = dates
+        .filter(entry => entry.date >= today)
+        .sort((a, b) => a.date - b.date)
+        .slice(0, UPCOMING_LIMIT);
+
+    if (shown.length === 0) {
+        // Der hinterlegte Zeitraum ist abgelaufen: statt einer Sackgasse die
+        // letzten bekannten Termine zeigen und sagen, warum.
+        shown = [...dates].sort((a, b) => b.date - a.date).slice(0, 4).reverse();
+
+        if (shown.length === 0) {
+            grid.innerHTML = '<p>Für diesen Bezirk liegen keine Termine vor.</p>';
+            return;
+        }
+
+        grid.innerHTML =
+            '<p class="cal-hint">Der hinterlegte Abfuhrzeitraum ist abgelaufen. ' +
+            'Hier die zuletzt bekannten Termine:</p>';
+    }
+
+    shown.forEach(entry => grid.appendChild(createDateCard(entry)));
+}
+
+/** Baut die Kachel fuer einen einzelnen Abfuhrtermin. */
+function createDateCard(entry) {
+    const type = WASTE_TYPES[entry.type] || { label: entry.type, className: '', icon: 'fa-calendar' };
+    const date = entry.date;
+
+    const card = document.createElement('div');
+    card.className = 'cal-date-card';
+    card.innerHTML = `
+        <div class="cal-day">
+            <span class="cal-date-full">${DAY_NAMES[date.getDay()]}, ${date.getDate()}. ${MONTH_NAMES[date.getMonth()]} ${date.getFullYear()}</span>
+        </div>
+        <div class="cal-info">
+            <span class="cal-badge ${type.className}"><i class="fas ${type.icon}"></i> ${type.label}</span>
+        </div>
+    `;
+
+    return card;
+}

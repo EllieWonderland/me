@@ -1,211 +1,202 @@
 /**
- * Calculator.js - Fee calculator for rechner.html
- * Allows users to calculate their estimated waste fees based on bin types and sizes.
- * Loads fee structure from 'rechner.xml' dynamically.
- * Dependencies: utils.js (fetchXML)
+ * Gebuehrenrechner (rechner.html)
+ *
+ * Stellt aus Grundgebuehr und beliebig vielen Behaeltern die jaehrliche
+ * Gebuehr zusammen. Die Preise stehen in data/rechner.xml, gestaffelt nach
+ * Abfallart, Behaeltergroesse und Abfuhrrhythmus - drei voneinander
+ * abhaengige Auswahlfelder, die nacheinander freigeschaltet werden.
+ *
+ * Abhaengigkeiten: utils.js (fetchXML)
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    try {
-        const calcContainer = document.getElementById('gebuehrenrechner');
-        if (!calcContainer) return;
+document.addEventListener('DOMContentLoaded', function () {
+    // Der Rechner steckt nur auf rechner.html
+    if (!document.getElementById('gebuehrenrechner')) return;
 
-        // UI References
-        const calcType = document.getElementById('select-type');
-        const calcVolume = document.getElementById('select-volume');
-        const calcRhythm = document.getElementById('select-rhythm');
-        const groupVolume = document.getElementById('group-volume');
-        const groupRhythm = document.getElementById('group-rhythm');
-        const btnAddBin = document.getElementById('btn-add-bin');
-        const feeTableBody = document.getElementById('fee-table-body');
-        const totalSumEl = document.getElementById('total-sum');
+    const typeSelect = document.getElementById('select-type');
+    const volumeSelect = document.getElementById('select-volume');
+    const rhythmSelect = document.getElementById('select-rhythm');
+    const volumeGroup = document.getElementById('group-volume');
+    const rhythmGroup = document.getElementById('group-rhythm');
+    const addButton = document.getElementById('btn-add-bin');
+    const tableBody = document.getElementById('fee-table-body');
+    const totalCell = document.getElementById('total-sum');
 
-        // State variables
-        let pricesData = {};
-        let currentTotal = 0;
-        let baseFee = 0;
-        let selectedBins = [];
+    let priceTable = {};
+    let baseFee = 0;
+    let selectedBins = [];
 
-        // 1. Load fee structure from XML
-        fetchXML('rechner.xml').then(xmlDoc => {
-            const satzung = xmlDoc.querySelector('gebuehrensatzung');
+    fetchXML('data/rechner.xml')
+        .then(xmlDoc => {
+            const statute = xmlDoc.querySelector('gebuehrensatzung');
 
-            // Get base fee (Grundgebühr)
-            baseFee = parseFloat(satzung.querySelector('grundgebuehr').getAttribute('wert'));
-
-            // Display base fee
-            const baseRowPrice = document.querySelector('#row-base-fee .price-cell');
-            if (baseRowPrice) baseRowPrice.textContent = baseFee.toFixed(2).replace('.', ',') + " €";
-            currentTotal = baseFee;
+            baseFee = parseFloat(statute.querySelector('grundgebuehr').getAttribute('wert'));
+            const baseFeeCell = document.querySelector('#row-base-fee .price-cell');
+            if (baseFeeCell) baseFeeCell.textContent = formatEuro(baseFee);
             updateTotal();
 
-            // Store fee options (Hierarchical: Type -> Tonne -> Rhythm)
-            Array.from(satzung.getElementsByTagName('gebuehren')).forEach(geb => {
-                const typeKey = geb.getAttribute('typ');
-                const typeLabel = geb.getAttribute('label');
+            priceTable = parsePrices(statute);
 
-                const opt = document.createElement('option');
-                opt.value = typeKey;
-                opt.textContent = typeLabel;
-                calcType.appendChild(opt);
+            // Die Abfallarten stehen erst nach dem Laden zur Wahl
+            Object.entries(priceTable).forEach(([key, type]) => {
+                typeSelect.appendChild(createOption(key, type.label));
+            });
+        })
+        .catch(error => console.error('Gebuehrensatzung konnte nicht geladen werden:', error));
 
-                pricesData[typeKey] = {
-                    label: typeLabel,
-                    sizes: {}
-                };
+    // Schritt 1: Abfallart gewaehlt -> Behaeltergroessen anbieten
+    typeSelect.addEventListener('change', function () {
+        resetSelect(volumeSelect);
+        resetSelect(rhythmSelect);
+        volumeGroup.classList.add('hidden');
+        rhythmGroup.classList.add('hidden');
+        addButton.disabled = true;
 
-                Array.from(geb.getElementsByTagName('tonne')).forEach(tonne => {
-                    const volKey = tonne.getAttribute('volumen');
-                    const volLabel = tonne.getAttribute('label');
+        const sizes = priceTable[this.value]?.sizes;
+        if (!sizes) return;
 
-                    pricesData[typeKey].sizes[volKey] = {
-                        label: volLabel,
-                        rhythms: {}
+        Object.entries(sizes).forEach(([key, size]) => {
+            volumeSelect.appendChild(createOption(key, size.label));
+        });
+
+        volumeSelect.disabled = false;
+        volumeGroup.classList.remove('hidden');
+        volumeGroup.classList.add('fade-in');
+    });
+
+    // Schritt 2: Groesse gewaehlt -> Abfuhrrhythmen mit Preis anbieten
+    volumeSelect.addEventListener('change', function () {
+        resetSelect(rhythmSelect);
+        rhythmGroup.classList.add('hidden');
+        addButton.disabled = true;
+
+        const rhythms = priceTable[typeSelect.value]?.sizes[this.value]?.rhythms;
+        if (!rhythms) return;
+
+        Object.entries(rhythms).forEach(([key, rhythm]) => {
+            const option = createOption(key, `${rhythm.label} (${formatEuro(rhythm.price)})`);
+            option.dataset.price = rhythm.price;
+            rhythmSelect.appendChild(option);
+        });
+
+        rhythmSelect.disabled = false;
+        rhythmGroup.classList.remove('hidden');
+        rhythmGroup.classList.add('fade-in');
+    });
+
+    // Schritt 3: Rhythmus gewaehlt -> Behaelter darf hinzugefuegt werden
+    rhythmSelect.addEventListener('change', function () {
+        addButton.disabled = this.value === '';
+    });
+
+    addButton.addEventListener('click', function () {
+        const rhythmOption = rhythmSelect.options[rhythmSelect.selectedIndex];
+
+        selectedBins.push({
+            id: Date.now(),
+            typeLabel: typeSelect.options[typeSelect.selectedIndex].text,
+            volumeLabel: volumeSelect.options[volumeSelect.selectedIndex].text,
+            // Der Preis steht in Klammern hinter der Beschriftung und wuerde
+            // in der Tabelle sonst doppelt auftauchen
+            rhythmLabel: rhythmOption.text.split('(')[0].trim(),
+            price: parseFloat(rhythmOption.dataset.price)
+        });
+
+        renderTable();
+
+        // Auswahl zuruecksetzen, damit gleich der naechste Behaelter folgen kann
+        typeSelect.value = '';
+        resetSelect(volumeSelect);
+        resetSelect(rhythmSelect);
+        volumeGroup.classList.add('hidden');
+        rhythmGroup.classList.add('hidden');
+        addButton.disabled = true;
+    });
+
+    // Die Loeschen-Schaltflaechen entstehen erst mit den Zeilen, darum haengt
+    // der Zuhoerer an der Tabelle statt an jeder einzelnen Schaltflaeche
+    tableBody.addEventListener('click', function (event) {
+        const removeButton = event.target.closest('.remove-btn');
+        if (!removeButton) return;
+
+        const id = Number(removeButton.dataset.binId);
+        selectedBins = selectedBins.filter(bin => bin.id !== id);
+        renderTable();
+    });
+
+    /**
+     * Liest die Preisstaffel als
+     * { Abfallart: { sizes: { Volumen: { rhythms: { Rhythmus } } } } }.
+     */
+    function parsePrices(statute) {
+        const table = {};
+
+        Array.from(statute.getElementsByTagName('gebuehren')).forEach(feeGroup => {
+            const sizes = {};
+
+            Array.from(feeGroup.getElementsByTagName('tonne')).forEach(bin => {
+                const rhythms = {};
+
+                Array.from(bin.getElementsByTagName('rhythmus')).forEach(rhythm => {
+                    rhythms[rhythm.getAttribute('name')] = {
+                        label: rhythm.getAttribute('label'),
+                        price: parseFloat(rhythm.getAttribute('preis'))
                     };
-
-                    Array.from(tonne.getElementsByTagName('rhythmus')).forEach(rhythm => {
-                        const rKey = rhythm.getAttribute('name');
-                        const rLabel = rhythm.getAttribute('label');
-                        const rPrice = parseFloat(rhythm.getAttribute('preis'));
-
-                        pricesData[typeKey].sizes[volKey].rhythms[rKey] = {
-                            label: rLabel,
-                            price: rPrice
-                        };
-                    });
                 });
+
+                sizes[bin.getAttribute('volumen')] = { label: bin.getAttribute('label'), rhythms };
             });
-        }).catch(e => console.error("Error loading preise.xml:", e));
 
-        // 2. Cascading dropdowns logic
-
-        // Step 1: User selects type -> Load volumes
-        calcType.addEventListener('change', function () {
-            resetSelect(calcVolume);
-            resetSelect(calcRhythm);
-            groupVolume.classList.add('hidden');
-            groupRhythm.classList.add('hidden');
-            btnAddBin.disabled = true;
-
-            const type = this.value;
-            if (!type || !pricesData[type]) return;
-
-            const sizes = pricesData[type].sizes;
-            for (const [key, val] of Object.entries(sizes)) {
-                const opt = document.createElement('option');
-                opt.value = key;
-                opt.textContent = val.label;
-                calcVolume.appendChild(opt);
-            }
-
-            calcVolume.disabled = false;
-            groupVolume.classList.remove('hidden');
-            groupVolume.classList.add('fade-in');
+            table[feeGroup.getAttribute('typ')] = { label: feeGroup.getAttribute('label'), sizes };
         });
 
-        // Step 2: User selects volume -> Load rhythms
-        calcVolume.addEventListener('change', function () {
-            resetSelect(calcRhythm);
-            groupRhythm.classList.add('hidden');
-            btnAddBin.disabled = true;
+        return table;
+    }
 
-            const type = calcType.value;
-            const size = this.value;
+    /** Zeichnet die gewaehlten Behaelter neu; die Grundgebuehr bleibt stehen. */
+    function renderTable() {
+        tableBody.querySelectorAll('.dynamic-row').forEach(row => row.remove());
 
-            if (!type || !size || !pricesData[type]?.sizes[size]) return;
-
-            const rhythms = pricesData[type].sizes[size].rhythms;
-            for (const [key, val] of Object.entries(rhythms)) {
-                const opt = document.createElement('option');
-                opt.value = key;
-                opt.textContent = `${val.label} (${formatEuro(val.price)})`;
-                opt.dataset.price = val.price;
-                calcRhythm.appendChild(opt);
-            }
-
-            calcRhythm.disabled = false;
-            groupRhythm.classList.remove('hidden');
-            groupRhythm.classList.add('fade-in');
+        selectedBins.forEach(bin => {
+            const row = document.createElement('tr');
+            row.className = 'dynamic-row';
+            row.innerHTML = `
+                <td>${bin.typeLabel}</td>
+                <td>${bin.volumeLabel}, ${bin.rhythmLabel}</td>
+                <td class="price-cell">${formatEuro(bin.price)}</td>
+                <td class="action-cell">
+                    <button class="remove-btn" type="button" data-bin-id="${bin.id}"
+                            aria-label="Behälter entfernen">
+                        <i class="fas fa-trash-alt"></i>
+                    </button>
+                </td>
+            `;
+            tableBody.appendChild(row);
         });
 
-        // Step 3: User selects rhythm -> Enable add button
-        calcRhythm.addEventListener('change', function () {
-            btnAddBin.disabled = this.value === "";
-        });
+        updateTotal();
+    }
 
-        // 3. Add bin and calculations
-        btnAddBin.addEventListener('click', function () {
-            const typeOpt = calcType.options[calcType.selectedIndex];
-            const volOpt = calcVolume.options[calcVolume.selectedIndex];
-            const rhyOpt = calcRhythm.options[calcRhythm.selectedIndex];
-
-            const newItem = {
-                id: Date.now(),
-                typeLabel: typeOpt.text,
-                volLabel: volOpt.text,
-                rhythmLabel: rhyOpt.text.split('(')[0].trim(),
-                price: parseFloat(rhyOpt.dataset.price)
-            };
-
-            selectedBins.push(newItem);
-            renderTable();
-
-            // Reset selection for next input
-            calcType.value = "";
-            resetSelect(calcVolume);
-            resetSelect(calcRhythm);
-            groupVolume.classList.add('hidden');
-            groupRhythm.classList.add('hidden');
-            btnAddBin.disabled = true;
-        });
-
-        // Helper functions
-
-        function resetSelect(sel) {
-            sel.innerHTML = '<option value="">-- Bitte wählen --</option>';
-            sel.disabled = true;
-        }
-
-        function formatEuro(val) {
-            return val.toFixed(2).replace('.', ',') + ' €';
-        }
-
-        // Re-render the user's selected list
-        function renderTable() {
-            const rows = feeTableBody.querySelectorAll('.dynamic-row');
-            rows.forEach(r => r.remove());
-
-            selectedBins.forEach(item => {
-                const tr = document.createElement('tr');
-                tr.className = 'dynamic-row';
-                tr.innerHTML = `
-                    <td>${item.typeLabel}</td>
-                    <td>${item.volLabel}, ${item.rhythmLabel}</td>
-                    <td class="price-cell">${formatEuro(item.price)}</td>
-                    <td style="text-align:right;">
-                        <button class="remove-btn" onclick="removeBin(${item.id})">
-                            <i class="fas fa-trash-alt"></i>
-                        </button>
-                    </td>
-                `;
-                feeTableBody.appendChild(tr);
-            });
-            updateTotal();
-        }
-
-        function updateTotal() {
-            let sum = baseFee;
-            selectedBins.forEach(b => sum += b.price);
-            totalSumEl.textContent = formatEuro(sum);
-        }
-
-        // Expose remove function globally for onclick attribute
-        window.removeBin = function (id) {
-            selectedBins = selectedBins.filter(item => item.id !== id);
-            renderTable();
-        };
-
-    } catch (e) {
-        console.error("Error in Calculator:", e);
+    function updateTotal() {
+        const sum = selectedBins.reduce((total, bin) => total + bin.price, baseFee);
+        totalCell.textContent = formatEuro(sum);
     }
 });
+
+/** Setzt ein Auswahlfeld auf den Ausgangszustand zurueck und sperrt es. */
+function resetSelect(select) {
+    select.innerHTML = '<option value="">-- Bitte wählen --</option>';
+    select.disabled = true;
+}
+
+function createOption(value, label) {
+    const option = document.createElement('option');
+    option.value = value;
+    option.textContent = label;
+    return option;
+}
+
+/** 12.5 wird zu "12,50 €". */
+function formatEuro(value) {
+    return value.toFixed(2).replace('.', ',') + ' €';
+}

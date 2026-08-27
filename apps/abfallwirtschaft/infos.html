@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -49,7 +49,7 @@
         <section class="container pt-2">
             <h1 class="section-title">Informationen & Beratung</h1>
 
-            <!-- Tab Navigation -->
+            <!-- Reiternavigation -->
             <div class="tabs-nav">
                 <button class="tab-btn active" data-tab="abc">
                     <i class="fas fa-search"></i> Abfall-ABC
@@ -72,7 +72,7 @@
                 </button>
             </div>
 
-            <!-- Tab Content: Abfallkalender -->
+            <!-- Reiter: Abfallkalender -->
             <div id="kalender" class="tab-content">
                 <h2>Persönlicher Abfallkalender</h2>
                 <p>Wählen Sie Ihren Wohnort aus, um die nächsten Abfuhrtermine zu sehen.</p>
@@ -99,7 +99,7 @@
                                 <option value="">-- Zuerst Gemeinde wählen --</option>
                             </select>
                         </div>
-                        <div class="calc-group" style="flex: 0 0 auto; display: flex; align-items: flex-end;">
+                        <div class="calc-group calc-group-action">
                             <button id="btn-show-calendar" class="btn-add" disabled>
                                 <i class="fas fa-calendar-check"></i> Termine anzeigen
                             </button>
@@ -122,7 +122,7 @@
                 </div>
             </div>
 
-            <!-- Tab Content: Abfall-ABC -->
+            <!-- Reiter: Abfall-ABC -->
             <div id="abc" class="tab-content active">
                 <div class="abc-header">
                     <h2>Was möchten Sie entsorgen?</h2>
@@ -139,7 +139,7 @@
                 </div>
             </div>
 
-            <!-- Tab Content: Sortierung -->
+            <!-- Reiter: Richtig sortieren -->
             <div id="sortierung" class="tab-content">
                 <h2>Trennhilfe für den Alltag</h2>
                 <p>Eine korrekte Mülltrennung spart Ressourcen und schont die Umwelt.</p>
@@ -148,7 +148,7 @@
                 </div>
             </div>
 
-            <!-- Tab Content: Downloads -->
+            <!-- Reiter: Merkblätter -->
             <div id="downloads" class="tab-content">
                 <h2>Wichtige Merkblätter & Hinweise</h2>
                 <p>Hier finden Sie detaillierte Informationen zum Herunterladen.</p>
@@ -159,7 +159,7 @@
 
 
 
-            <!-- Tab Content: Repair Cafés -->
+            <!-- Reiter: Repair-Cafés -->
             <div id="repair" class="tab-content">
                 <h2>Repair-Cafés im Landkreis Oldenburg</h2>
                 <p><strong>Wegwerfen? Denkste!</strong> In den Repair-Cafés dreht sich alles ums Reparieren.
@@ -177,7 +177,7 @@
                         bitte vorab bei den jeweiligen Betreibern.</em></p>
             </div>
 
-            <!-- Tab Content: Verschenkmarkt -->
+            <!-- Reiter: Verschenkmarkt -->
             <div id="verschenkmarkt" class="tab-content">
                 <h2>Verschenkmarkt Landkreis Oldenburg</h2>
                 <p><strong>Zu schade für den Müll?</strong></p>
@@ -196,14 +196,13 @@
                             Landkreis Oldenburg.</li>
                     </ul>
                     <div class="mt-2 text-center">
-                        <a href="https://www.vm-lkol.de/oldenburg-info-p413" target="_blank" class="nav-link-cta"
-                            style="display:inline-block; padding: 1rem 2rem;">
+                        <a href="https://www.vm-lkol.de/oldenburg-info-p413" target="_blank" class="nav-link-cta btn-external">
                             <i class="fas fa-external-link-alt"></i> Zum Online-Verschenkmarkt
                         </a>
                     </div>
                 </div>
 
-                <!-- Video -->
+                <!-- Video zum Verschenkmarkt -->
                 <div class="video-container">
                     <video controls width="100%">
                         <source src="img/Verschenkmarkt.mp4" type="video/mp4">

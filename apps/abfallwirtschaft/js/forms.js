@@ -1,7 +1,8 @@
 /**
- * Forms.js
- * Formulare des Studienentwurfs: Kontaktformular (kontakt.html) und die
- * dreizehn Online-Antraege (onlinedienste.html).
+ * Formulare
+ *
+ * Kontaktformular (kontakt.html) und die dreizehn Online-Antraege
+ * (onlinedienste.html).
  *
  * Der Entwurf ist oeffentlich erreichbar, aber keine Seite des Landkreises.
  * Ein echter Versand waere darum falsch: Antraege gehoeren zur zustaendigen
@@ -9,55 +10,81 @@
  * Formulare deshalb genau das, was abgeschickt wuerde - so bleibt die Strecke
  * bis zur Bestaetigung vollstaendig bedienbar und nachvollziehbar.
  *
- * Dependencies: keine
+ * Abhaengigkeiten: keine
  */
 
-const FELD_LABELS = {
+// Felder des Kontaktformulars, deren Beschriftung nicht aus dem HTML
+// abzulesen ist
+const FIELD_LABELS = {
     'form-name':    'Name',
     'form-email':   'E-Mail',
     'form-subject': 'Thema',
     'form-message': 'Nachricht'
 };
 
-/** Beschriftung eines Feldes: eigenes <label>, sonst name/placeholder. */
-function feldBezeichnung(feld) {
-    if (FELD_LABELS[feld.id]) return FELD_LABELS[feld.id];
-    const ueber = feld.closest('label');
-    if (ueber) return ueber.textContent.replace(feld.value, '').trim();
-    if (feld.id) {
-        const label = document.querySelector(`label[for="${feld.id}"]`);
-        if (label) return label.textContent.trim().replace(/\*$/, '').trim();
+/**
+ * Sucht die Beschriftung eines Feldes: erst die feste Zuordnung, dann ein
+ * umschliessendes <label>, ein <label for="...">, ein direkt davor
+ * stehendes <label> - und zuletzt Name oder Platzhalter des Feldes.
+ */
+function findFieldLabel(field) {
+    if (FIELD_LABELS[field.id]) return FIELD_LABELS[field.id];
+
+    const enclosingLabel = field.closest('label');
+    if (enclosingLabel) return enclosingLabel.textContent.replace(field.value, '').trim();
+
+    if (field.id) {
+        const label = document.querySelector(`label[for="${field.id}"]`);
+        if (label) return stripRequiredMark(label.textContent);
     }
-    const vorher = feld.previousElementSibling;
-    if (vorher && vorher.tagName === 'LABEL') return vorher.textContent.trim().replace(/\*$/, '').trim();
-    return feld.name || feld.placeholder || 'Angabe';
+
+    const previous = field.previousElementSibling;
+    if (previous && previous.tagName === 'LABEL') return stripRequiredMark(previous.textContent);
+
+    return field.name || field.placeholder || 'Angabe';
 }
 
-/** Alle ausgefuellten Felder eines Formulars als [Bezeichnung, Wert]. */
-function ausgefuellteFelder(form) {
-    const zeilen = [];
-    form.querySelectorAll('input, select, textarea').forEach(feld => {
-        if (feld.type === 'submit' || feld.type === 'button' || feld.disabled) return;
-        let wert;
-        if (feld.type === 'checkbox' || feld.type === 'radio') {
-            if (!feld.checked) return;
-            wert = feld.value && feld.value !== 'on' ? feld.value : 'ja';
-        } else if (feld.tagName === 'SELECT') {
-            wert = feld.selectedIndex >= 0 ? feld.options[feld.selectedIndex].text : '';
-            if (!feld.value) return;
+/** Entfernt den Stern, mit dem Pflichtfelder gekennzeichnet sind. */
+function stripRequiredMark(text) {
+    return text.trim().replace(/\*$/, '').trim();
+}
+
+/**
+ * Sammelt alle ausgefuellten Felder eines Formulars.
+ *
+ * @param {HTMLFormElement} form
+ * @returns {Array<[string, string]>} Paare aus Beschriftung und Wert
+ */
+function collectFilledFields(form) {
+    const rows = [];
+
+    form.querySelectorAll('input, select, textarea').forEach(field => {
+        if (field.type === 'submit' || field.type === 'button' || field.disabled) return;
+
+        let value;
+        if (field.type === 'checkbox' || field.type === 'radio') {
+            if (!field.checked) return;
+            // Ohne eigenen Wert liefert der Browser "on" - das sagt niemandem etwas
+            value = field.value && field.value !== 'on' ? field.value : 'ja';
+        } else if (field.tagName === 'SELECT') {
+            if (!field.value) return;
+            value = field.options[field.selectedIndex].text;
         } else {
-            wert = feld.value;
+            value = field.value;
         }
-        if (!String(wert).trim()) return;
-        zeilen.push([feldBezeichnung(feld), String(wert).trim()]);
+
+        if (!String(value).trim()) return;
+        rows.push([findFieldLabel(field), String(value).trim()]);
     });
-    return zeilen;
+
+    return rows;
 }
 
-/** Bestaetigung unter dem Formular einblenden. */
-function zeigeBestaetigung(form, titel) {
-    const zeilen = ausgefuellteFelder(form);
+/** Zeigt die Bestaetigung mit allen Angaben unter dem Formular. */
+function showConfirmation(form, title) {
+    const rows = collectFilledFields(form);
 
+    // Je Formular gibt es nur eine Bestaetigung, sie wird wiederverwendet
     let box = form.parentElement.querySelector('.form-demo-confirm');
     if (!box) {
         box = document.createElement('div');
@@ -67,48 +94,50 @@ function zeigeBestaetigung(form, titel) {
         form.parentElement.insertBefore(box, form.nextSibling);
     }
 
-    const liste = zeilen.length
-        ? '<dl class="form-demo-confirm__data">' + zeilen.map(([k, v]) =>
-            `<dt>${escapeHTML(k)}</dt><dd>${escapeHTML(v)}</dd>`).join('') + '</dl>'
+    const list = rows.length
+        ? '<dl class="form-demo-confirm__data">' + rows.map(([label, value]) =>
+            `<dt>${escapeHTML(label)}</dt><dd>${escapeHTML(value)}</dd>`).join('') + '</dl>'
         : '<p>Es wurden keine Angaben gemacht.</p>';
 
     box.innerHTML = `
         <h4 class="form-demo-confirm__title">
             <i class="fas fa-circle-check" aria-hidden="true"></i>
-            ${escapeHTML(titel)}
+            ${escapeHTML(title)}
         </h4>
         <p class="form-demo-confirm__note">
             Studienentwurf: Es wurde nichts versendet. So sähen die Daten aus,
             die im Echtbetrieb an das Amt für Bodenschutz und Abfallwirtschaft gingen.
         </p>
-        ${liste}
+        ${list}
         <button type="button" class="form-demo-confirm__close">Schließen</button>
     `;
+
     box.querySelector('.form-demo-confirm__close').addEventListener('click', () => box.remove());
     box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     form.reset();
 }
 
+/** Gibt Text so zurueck, dass er als HTML sicher eingesetzt werden kann. */
 function escapeHTML(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
+    const container = document.createElement('div');
+    container.textContent = text;
+    return container.innerHTML;
 }
 
 // Kontaktformular (kontakt.html)
 const mailForm = document.getElementById('mail-form');
 if (mailForm) {
-    mailForm.addEventListener('submit', function (e) {
-        e.preventDefault();
-        zeigeBestaetigung(this, 'Ihre Nachricht ist vollständig');
+    mailForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+        showConfirmation(this, 'Ihre Nachricht ist vollständig');
     });
 }
 
 // Online-Antraege (onlinedienste.html)
 document.querySelectorAll('.online-form').forEach(form => {
-    form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const dienst = this.getAttribute('data-service') || 'Antrag';
-        zeigeBestaetigung(this, `${dienst}: Antrag vollständig`);
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+        const service = this.dataset.service || 'Antrag';
+        showConfirmation(this, `${service}: Antrag vollständig`);
     });
 });

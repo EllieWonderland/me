@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
         <section class="container pt-2">
             <h1 class="section-title">Gebühren & Informationen</h1>
 
-            <!-- Tab Navigation -->
+            <!-- Reiternavigation -->
             <div class="tab-navigation">
                 <button class="tab-btn active" data-tab="rechner">
                     <i class="fas fa-calculator"></i> Gebührenrechner
@@ -64,7 +64,7 @@
                 </button>
             </div>
 
-            <!-- Tab content: Calculator -->
+            <!-- Reiter: Gebuehrenrechner -->
             <div id="rechner" class="tab-content active">
                 <p class="mb-2">Stellen Sie hier Ihre individuelle Entsorgung zusammen. Wählen Sie zunächst die
                     Abfallart aus.</p>
@@ -98,7 +98,7 @@
                                         </select>
                                     </div>
 
-                                    <div class="calc-group" style="flex: 0 0 auto;">
+                                    <div class="calc-group calc-group-narrow">
                                         <label class="invisible">Aktion</label>
                                         <button id="btn-add-bin" class="btn-add" disabled>
                                             <i class="fas fa-plus"></i> Hinzufügen
@@ -139,7 +139,7 @@
                 </details>
             </div>
 
-            <!-- Tab content: Fee overview -->
+            <!-- Reiter: Gebuehrenuebersicht -->
             <div id="uebersicht" class="tab-content">
                 <p class="mb-2">Übersicht aller Gebühren für Behälter und Entsorgungsanlagen.</p>
 
@@ -397,7 +397,7 @@
                 </details>
             </div>
 
-            <!-- Tab content: Balances -->
+            <!-- Reiter: Konzepte und Bilanzen -->
             <div id="bilanzen" class="tab-content">
                 <p class="mb-2">Konzepte, Bilanzen und Berichte zur Abfallwirtschaft.</p>
 

@@ -1,4 +1,4 @@
-const CACHE_VERSION = 'v25-web1';
+const CACHE_VERSION = 'v26-web1';
 const SHELL_CACHE = `coastercheck-shell-${CACHE_VERSION}`;
 const FONT_CACHE = `coastercheck-fonts-${CACHE_VERSION}`;
 const IMAGE_CACHE = `coastercheck-images-${CACHE_VERSION}`;
@@ -19,6 +19,7 @@ const APP_SHELL = [
     './src/js/db.js',
     './src/js/score.mjs',
     './src/js/config.js',
+    './src/js/sw-register.js',
     './assets/fonts/fonts.css',
     './assets/fonts/material-symbols-rounded-400-fallback.woff2',
     './src/data/categories.json',

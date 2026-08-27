@@ -36,6 +36,11 @@
     </bilanzen>
     <merkblaetter>
         <item>
+            <text>Abfall-ABC zum Ausdrucken</text>
+            <icon>fas fa-book</icon>
+            <link>downloads/abfall_abc.pdf</link>
+        </item>
+        <item>
             <text>Merkblätter zur Abfallsortierung</text>
             <icon>fas fa-file-pdf</icon>
             <link>downloads/merkblatt_abfallsortierung.pdf</link>
@@ -49,6 +54,11 @@
             <text>Eigenkompostierung &amp; Biotonne</text>
             <icon>fas fa-leaf</icon>
             <link>downloads/merkblatt_kompostierung.pdf</link>
+        </item>
+        <item>
+            <text>Die Biotonne richtig nutzen</text>
+            <icon>fas fa-seedling</icon>
+            <link>downloads/merkblatt_biotonne.pdf</link>
         </item>
         <item>
             <text>Entsorgung von Asbest</text>
@@ -84,6 +94,21 @@
             <text>Hinweise für Flächennutzungspläne</text>
             <icon>fas fa-map</icon>
             <link>downloads/merkblatt_flaechennutzungs_und_bebauungsplaene.pdf</link>
+        </item>
+        <item>
+            <text>Auskunft über Altablagerungen</text>
+            <icon>fas fa-map-marker-alt</icon>
+            <link>downloads/merkblatt_altablagerung.pdf</link>
+        </item>
+        <item>
+            <text>Eigenerklärung: Entsorgung von Glas- und Steinwolle</text>
+            <icon>fas fa-file-signature</icon>
+            <link>downloads/eigenerklaerung_glas_und_steinwolle.pdf</link>
+        </item>
+        <item>
+            <text>Aktion Saubere Landschaft</text>
+            <icon>fas fa-broom</icon>
+            <link>downloads/info_blatt_aktion_saubere_landschaft.pdf</link>
         </item>
     </merkblaetter>
     <sortierung>

@@ -1,53 +1,48 @@
 /**
- * Navigation.js - Mobile menu and active link handling
- * Manages the responsive navigation menu and highlights the current page.
- * Dependencies: None
+ * Navigation auf schmalen Bildschirmen
+ *
+ * Klappmenue und aufklappbare Untermenues. Welcher Menuepunkt als
+ * aktuell markiert wird, entscheidet components.js - dort entsteht die
+ * Navigation, und eine zweite Stelle wuerde die Markierung nur wieder
+ * ueberschreiben.
+ *
+ * Abhaengigkeiten: keine
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    try {
-        const menuToggle = document.querySelector('.mobile-menu-toggle');
-        const navMenu = document.querySelector('.nav-menu');
-        const dropdowns = document.querySelectorAll('.has-dropdown, .has-mega-dropdown');
+const MOBILE_BREAKPOINT = 768;
 
-        // Mobile menu toggle
-        if (menuToggle) {
-            menuToggle.addEventListener('click', function () {
-                const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
-                menuToggle.setAttribute('aria-expanded', !isExpanded);
-                navMenu.classList.toggle('active');
-            });
-        }
-
-        // Mobile dropdown handling
-        // On mobile, clicking a parent link toggles the submenu instead of navigating
-        dropdowns.forEach(item => {
-            const link = item.querySelector('.nav-link');
-            if (link) {
-                link.addEventListener('click', function (e) {
-                    if (window.innerWidth <= 768) {
-                        e.preventDefault();
-                        item.classList.toggle('active');
-                    }
-                });
-            }
-        });
-
-        // Set active navigation link
-        // Highlights the menu item corresponding to the current page
-        const currentPath = window.location.pathname.split('/').pop() || 'index.html';
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        navLinks.forEach(link => {
-            const href = link.getAttribute('href');
-            // Check for exact match or default index.html match
-            if (href && (href === currentPath || (currentPath === '' && href === 'index.html'))) {
-                link.classList.add('active');
-            } else {
-                link.classList.remove('active');
-            }
-        });
-    } catch (e) {
-        console.error("Error in Mobile Menu:", e);
-    }
+document.addEventListener('DOMContentLoaded', function () {
+    setupMobileMenu();
+    setupMobileDropdowns();
 });
+
+/** Das Menuesymbol aus drei Strichen oeffnet und schliesst das Hauptmenue. */
+function setupMobileMenu() {
+    const menuToggle = document.querySelector('.mobile-menu-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    if (!menuToggle || !navMenu) return;
+
+    menuToggle.addEventListener('click', function () {
+        const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        menuToggle.setAttribute('aria-expanded', String(!isExpanded));
+        navMenu.classList.toggle('active');
+    });
+}
+
+/**
+ * Auf schmalen Bildschirmen gibt es kein Ueberfahren mit der Maus. Ein
+ * Tippen auf den Oberpunkt klappt darum das Untermenue auf, statt der
+ * Verlinkung zu folgen.
+ */
+function setupMobileDropdowns() {
+    document.querySelectorAll('.has-dropdown, .has-mega-dropdown').forEach(item => {
+        const link = item.querySelector('.nav-link');
+        if (!link) return;
+
+        link.addEventListener('click', function (event) {
+            if (window.innerWidth > MOBILE_BREAKPOINT) return;
+            event.preventDefault();
+            item.classList.toggle('active');
+        });
+    });
+}

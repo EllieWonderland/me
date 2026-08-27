@@ -35,7 +35,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
         integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
         <section class="container pt-2">
             <h1 class="section-title">Interaktive Standortkarte</h1>
 
-            <!-- Tab navigation -->
+            <!-- Reiternavigation -->
             <div class="tab-navigation">
                 <button class="tab-btn active" data-tab="karte">
                     <i class="fas fa-map"></i> Interaktive Karte
@@ -66,13 +66,13 @@
                 </a>
             </div>
 
-            <!-- Map content -->
+            <!-- Inhalt der Karte -->
             <div id="karte" class="tab-content active">
                 <p class="mb-2">Alle Entsorgungsstandorte im Landkreis Oldenburg auf einer interaktiven Karte.</p>
 
-                <!-- Map controls -->
+                <!-- Bedienelemente der Karte -->
                 <div class="map-controls-wrapper">
-                    <!-- Filter buttons -->
+                    <!-- Filterschaltflaechen -->
                     <div class="map-filters">
                         <button class="map-filter-btn active" data-category="all">
                             <i class="fas fa-layer-group"></i>
@@ -104,17 +104,17 @@
                         </button>
                     </div>
 
-                    <!-- Location button -->
+                    <!-- Schaltflaeche fuer den eigenen Standort -->
                     <button class="map-locate-btn" id="locate-me-btn" title="Meinen Standort anzeigen">
                         <i class="fas fa-location-crosshairs"></i>
                         <span>Mein Standort</span>
                     </button>
                 </div>
 
-                <!-- Map container -->
+                <!-- Kartenbereich -->
                 <div id="map" class="interactive-map-container"></div>
 
-                <!-- Legend inline -->
+                <!-- Legende -->
                 <div class="map-legend-inline">
                     <h4><i class="fas fa-info-circle"></i> Legende</h4>
                     <div class="legend-items">
@@ -151,7 +151,7 @@
     <div id="footer-placeholder"></div>
     <script src="js/components.js"></script>
 
-    <!-- Leaflet JS -->
+    <!-- Leaflet: Kartenbibliothek -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
         integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
     <script src="js/utils.js"></script>

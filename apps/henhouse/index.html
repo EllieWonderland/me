@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
     <title>Five Nights at Henhouse's</title>
-    <!-- Hosted locally (no CDN): starts offline and without supply-chain risk -->
+    <!-- Lokal ausgeliefert statt ueber ein CDN: laeuft offline und holt sich
+         keinen fremden Code nach -->
     <script src="./vendor/createjs.min.js"></script>
     <script src="./vendor/snap.svg-min.js"></script>
     <script type="module" crossorigin src="./assets/index-OvWfY7m9.js"></script>
@@ -17,9 +18,9 @@
     <!-- Rueckweg ins Portfolio. Das Spiel fuellt das Fenster, ohne diesen Link
          kaeme man von janafisenko.de/apps/henhouse/ nicht mehr zurueck.
          Liegt ausserhalb von #app, damit der Vue-Mount ihn nicht ersetzt. -->
-    <a id="zurueck-portfolio" href="https://janafisenko.de/#projekte">&#8592; Portfolio</a>
+    <a id="back-to-portfolio" href="https://janafisenko.de/#projekte">&#8592; Portfolio</a>
     <style>
-      #zurueck-portfolio {
+      #back-to-portfolio {
         position: fixed; left: 12px; bottom: 12px; z-index: 9999;
         font: 500 12px/1 ui-monospace, "Cascadia Mono", Consolas, monospace;
         letter-spacing: .08em; text-transform: uppercase; text-decoration: none;
@@ -27,9 +28,9 @@
         border: 1px solid rgba(201, 162, 39, .35); border-radius: 999px;
         padding: 7px 13px; opacity: .45; transition: opacity .2s, border-color .2s;
       }
-      #zurueck-portfolio:hover,
-      #zurueck-portfolio:focus-visible { opacity: 1; border-color: #c9a227; }
-      @media (max-width: 600px) { #zurueck-portfolio { font-size: 11px; padding: 6px 10px; } }
+      #back-to-portfolio:hover,
+      #back-to-portfolio:focus-visible { opacity: 1; border-color: #c9a227; }
+      @media (max-width: 600px) { #back-to-portfolio { font-size: 11px; padding: 6px 10px; } }
     </style>
   </body>
 </html>

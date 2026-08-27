@@ -1,14 +1,37 @@
 /**
- * Accessibility.js - Accessibility tools
- * Provides a modal to toggle high contrast mode and large font size.
- * Persists user preferences using LocalStorage.
- * Dependencies: None
+ * Darstellung anpassen
+ *
+ * Ein kleines Fenster mit zwei Schaltern: hoher Kontrast und groessere
+ * Schrift. Beide Einstellungen bleiben ueber LocalStorage erhalten, denn
+ * wer sie braucht, braucht sie auf jeder Seite und bei jedem Besuch.
+ *
+ * Der Auslöser sitzt in der Fusszeile ("Darstellung anpassen") und ist
+ * bewusst getrennt vom Link "Barrierefreiheit", der zur Erklaerung fuehrt.
+ *
+ * Abhaengigkeiten: keine
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    try {
-        // 1. Inject accessibility modal HTML
-        const accModalHTML = `
+const CONTRAST_STORAGE_KEY = 'high-contrast';
+const FONT_SIZE_STORAGE_KEY = 'large-font';
+
+document.addEventListener('DOMContentLoaded', function () {
+    insertAccessibilityDialog();
+
+    const dialog = document.getElementById('acc-modal');
+    const contrastButton = document.getElementById('btn-contrast');
+    const fontSizeButton = document.getElementById('btn-fontsize');
+
+    setupDialogHandling(dialog);
+
+    // Der Kontrast haengt am <body>, die Schriftgroesse an <html>: Letztere
+    // wird ueber die Wurzel-Schriftgroesse skaliert, damit alle rem-Werte folgen.
+    setupPreferenceToggle(contrastButton, CONTRAST_STORAGE_KEY, document.body, 'high-contrast');
+    setupPreferenceToggle(fontSizeButton, FONT_SIZE_STORAGE_KEY, document.documentElement, 'large-font');
+});
+
+/** Haengt das Dialogfenster ans Ende der Seite. */
+function insertAccessibilityDialog() {
+    document.body.insertAdjacentHTML('beforeend', `
         <div id="acc-modal" class="acc-modal" role="dialog" aria-modal="true" aria-labelledby="acc-modal-title">
             <div class="acc-content">
                 <h2 id="acc-modal-title">Darstellung anpassen</h2>
@@ -18,86 +41,72 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button id="btn-acc-close" class="acc-close">Schließen</button>
             </div>
         </div>
-        `;
-        document.body.insertAdjacentHTML('beforeend', accModalHTML);
+    `);
+}
 
-        // 2. Setup triggers
-        // Eigener Auslöser im Footer: "Barrierefreiheit" fuehrt zur Erklaerung,
-        // "Darstellung anpassen" oeffnet diese Werkzeuge. Frueher hat dieses
-        // Skript den Erklaerungs-Link gekapert, der dadurch ins Leere fuehrte.
-        const accTrigger = document.getElementById('acc-trigger');
+/**
+ * Oeffnen und Schliessen des Dialogs. Der Fokus wandert beim Oeffnen in
+ * den Dialog und beim Schliessen dorthin zurueck, wo er herkam - sonst
+ * steht er fuer Tastaturnutzer im Nichts.
+ */
+function setupDialogHandling(dialog) {
+    if (!dialog) return;
 
-        const accModal = document.getElementById('acc-modal');
-        const btnContrast = document.getElementById('btn-contrast');
-        const btnFontsize = document.getElementById('btn-fontsize');
-        const btnClose = document.getElementById('btn-acc-close');
+    const trigger = document.getElementById('acc-trigger');
+    const closeButton = document.getElementById('btn-acc-close');
+    const contrastButton = document.getElementById('btn-contrast');
+    let previousFocus = null;
 
-        let letzterFokus = null;
+    const openDialog = () => {
+        previousFocus = document.activeElement;
+        dialog.classList.add('active');
+        if (contrastButton) contrastButton.focus();
+    };
 
-        const modalOeffnen = () => {
-            if (!accModal) return;
-            letzterFokus = document.activeElement;
-            accModal.classList.add('active');
-            if (btnContrast) btnContrast.focus();
-        };
+    const closeDialog = () => {
+        dialog.classList.remove('active');
+        if (previousFocus && typeof previousFocus.focus === 'function') previousFocus.focus();
+    };
 
-        const modalSchliessen = () => {
-            if (!accModal) return;
-            accModal.classList.remove('active');
-            if (letzterFokus && typeof letzterFokus.focus === 'function') letzterFokus.focus();
-        };
-
-        // Open modal
-        if (accTrigger) {
-            accTrigger.addEventListener('click', function (e) {
-                e.preventDefault();
-                modalOeffnen();
-            });
-        }
-
-        // Close modal: Schaltflaeche, Escape und Klick auf den Hintergrund
-        if (btnClose) btnClose.addEventListener('click', modalSchliessen);
-
-        document.addEventListener('keydown', function (e) {
-            if (e.key === 'Escape' && accModal && accModal.classList.contains('active')) {
-                modalSchliessen();
-            }
+    if (trigger) {
+        trigger.addEventListener('click', function (event) {
+            event.preventDefault();
+            openDialog();
         });
-
-        if (accModal) {
-            accModal.addEventListener('click', function (e) {
-                if (e.target === accModal) modalSchliessen();
-            });
-        }
-
-        // 3. Feature: High contrast mode (Persistent)
-        if (btnContrast) {
-            // Load saved state
-            if (localStorage.getItem('high-contrast') === 'true') {
-                document.body.classList.add('high-contrast');
-                btnContrast.classList.add('active');
-            }
-            btnContrast.addEventListener('click', function () {
-                const isHigh = document.body.classList.toggle('high-contrast');
-                this.classList.toggle('active');
-                localStorage.setItem('high-contrast', isHigh);
-            });
-        }
-
-        // 4. Feature: Large font size (Persistent)
-        if (btnFontsize) {
-            // Load saved state
-            if (localStorage.getItem('large-font') === 'true') {
-                document.documentElement.classList.add('large-font');
-                btnFontsize.classList.add('active');
-            }
-            btnFontsize.addEventListener('click', function () {
-                const isLarge = document.documentElement.classList.toggle('large-font');
-                this.classList.toggle('active');
-                localStorage.setItem('large-font', isLarge);
-            });
-        }
-    } catch (e) {
-        console.error("Error in Accessibility:", e);
     }
-});
+
+    if (closeButton) closeButton.addEventListener('click', closeDialog);
+
+    // Escape schliesst, ein Klick auf den abgedunkelten Hintergrund ebenfalls
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape' && dialog.classList.contains('active')) closeDialog();
+    });
+
+    dialog.addEventListener('click', function (event) {
+        if (event.target === dialog) closeDialog();
+    });
+}
+
+/**
+ * Verbindet eine Schaltflaeche mit einer gespeicherten Einstellung.
+ *
+ * @param {HTMLElement|null} button   Die Schaltflaeche im Dialog
+ * @param {string} storageKey         Schluessel im LocalStorage
+ * @param {HTMLElement} target        Element, das die Klasse traegt
+ * @param {string} className          Die zu schaltende Klasse
+ */
+function setupPreferenceToggle(button, storageKey, target, className) {
+    if (!button) return;
+
+    // Gespeicherte Wahl beim Laden wiederherstellen
+    if (localStorage.getItem(storageKey) === 'true') {
+        target.classList.add(className);
+        button.classList.add('active');
+    }
+
+    button.addEventListener('click', function () {
+        const isActive = target.classList.toggle(className);
+        button.classList.toggle('active', isActive);
+        localStorage.setItem(storageKey, String(isActive));
+    });
+}

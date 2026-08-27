@@ -1,4 +1,4 @@
-﻿/* 1. Core & Variables */
+﻿/* 1. Grundlagen und Variablen */
 :root {
     --bg-main: #FAF7F2;
     --bg-white: #FFFFFF;
@@ -80,7 +80,7 @@ main {
     padding-bottom: 3rem;
 }
 
-/* Utility classes */
+/* Hilfsklassen */
 .pt-2 {
     padding-top: 2rem;
 }
@@ -151,7 +151,7 @@ main {
     border: 1px solid var(--border-color);
 }
 
-/* 2. Header & navigation */
+/* 2. Kopfzeile und Navigation */
 .site-header {
     background: var(--bg-white);
     border-bottom: 2px solid var(--border-color);
@@ -226,7 +226,7 @@ main {
     font-weight: 500;
 }
 
-/* Main navigation */
+/* Hauptnavigation */
 .main-nav {
     display: flex;
     align-items: center;
@@ -299,7 +299,7 @@ main {
     transform: rotate(180deg);
 }
 
-/* Mobile toggle */
+/* Menuesymbol auf schmalen Bildschirmen */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -320,7 +320,7 @@ main {
     transition: var(--transition);
 }
 
-/* 3. Dropdowns (mega & normal) */
+/* 3. Klappmenues (gross und normal) */
 .mega-dropdown,
 .dropdown-menu {
     position: fixed;
@@ -347,7 +347,7 @@ main {
     transform: translateY(0);
 }
 
-/* Mega dropdown layout */
+/* Aufbau des grossen Klappmenues */
 .mega-dropdown-inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -394,7 +394,7 @@ main {
     padding-left: var(--spacing-sm);
 }
 
-/* Normal dropdown layout */
+/* Aufbau des einfachen Klappmenues */
 .dropdown-menu {
     display: flex;
     justify-content: center;
@@ -419,7 +419,7 @@ main {
     color: var(--primary-terra);
 }
 
-/* 4. Hero & search */
+/* 4. Buehne und Suche */
 .hero {
     background: linear-gradient(135deg, var(--accent-green) 0%, var(--accent-green-light) 100%);
     padding: calc(var(--spacing) * 4) 0;
@@ -462,7 +462,7 @@ main {
     opacity: 0.95;
 }
 
-/* Search */
+/* Suche */
 .search-container {
     max-width: 600px;
     margin: 0 auto;
@@ -513,7 +513,7 @@ main {
     color: var(--text-light);
 }
 
-/* Search results dropdown */
+/* Trefferliste der Suche */
 .search-results-dropdown {
     position: absolute;
     top: 100%;
@@ -575,7 +575,7 @@ main {
     font-weight: 600;
 }
 
-/* Scrollbar for dropdown */
+/* Bildlaufleiste im Klappmenue */
 .search-results-dropdown::-webkit-scrollbar {
     width: 8px;
 }
@@ -589,7 +589,7 @@ main {
     border-radius: 4px;
 }
 
-/* 5. Content elements (cards, news, etc.) */
+/* 5. Inhaltsbausteine (Kacheln, Meldungen und Aehnliches) */
 .breadcrumb-header {
     background: var(--bg-light);
     padding: 1rem 0;
@@ -628,7 +628,7 @@ main {
     font-size: 1.125rem;
 }
 
-/* News grid */
+/* Raster der Meldungen */
 .news-section {
     background: var(--bg-main);
     padding: 4rem 0;
@@ -724,8 +724,11 @@ main {
     text-decoration: underline;
 }
 
+/* Die ganze Nachrichtenkachel ist ein Link, soll aber nicht wie einer aussehen */
 .news-card-link {
     display: block;
+    color: inherit;
+    text-decoration: none;
 }
 
 .link-all {
@@ -738,7 +741,7 @@ main {
     text-decoration: underline;
 }
 
-/* Service cards */
+/* Kacheln der Dienstleistungen */
 .cards-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -809,9 +812,9 @@ main {
     z-index: 1;
 }
 
-/* 6. Sidespecific styles */
+/* 6. Seitenspezifische Regeln */
 
-/* --- Infos & Tabs (infos.html) --- */
+/* --- Infos und Reiter (infos.html) --- */
 .tabs-nav,
 .tab-navigation {
     display: flex;
@@ -905,7 +908,7 @@ main {
     transition: border-color 0.3s, box-shadow 0.3s;
 }
 
-/* Highlight animation for search results */
+/* Hervorhebung eines ueber die Suche geoeffneten Eintrags */
 .abc-item-highlight {
     border-color: var(--accent-green) !important;
     box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.3);
@@ -970,7 +973,7 @@ main {
     margin-top: 0.5rem;
 }
 
-/* Sort guide */
+/* Sortierhilfe */
 .sort-guide {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1021,7 +1024,7 @@ main {
     margin-bottom: 0.25rem;
 }
 
-/* Info links grid */
+/* Raster der Info-Verweise */
 .info-links {
     list-style: none;
     padding: 0;
@@ -1055,7 +1058,7 @@ main {
     color: var(--primary-terra);
 }
 
-/* Repair Cafe list */
+/* Liste der Repair-Cafes */
 .repair-list {
     list-style: none;
     padding: 0;
@@ -1089,7 +1092,7 @@ main {
     font-size: 0.95rem;
 }
 
-/* Video container */
+/* Videobereich */
 .video-container {
     margin-top: 2rem;
     border-radius: var(--radius);
@@ -1104,9 +1107,9 @@ main {
     height: auto;
 }
 
-/* Online service forms */
+/* Formulare der Onlinedienste */
 
-/* Service form cards (Accordion-style) */
+/* Aufklappbare Formularkacheln */
 .service-form-card {
     background: white;
     border: 1px solid var(--border-color);
@@ -1173,7 +1176,7 @@ main {
     border-top: 1px solid var(--border-color);
 }
 
-/* Form layout */
+/* Aufbau der Formulare */
 .online-form {
     max-width: 800px;
 }
@@ -1245,7 +1248,7 @@ main {
     cursor: pointer;
 }
 
-/* Form info box */
+/* Hinweiskasten in Formularen */
 .form-info {
     background: var(--bg-light);
     padding: 1rem;
@@ -1261,7 +1264,7 @@ main {
     color: var(--accent-green);
 }
 
-/* Submit button */
+/* Absendeschaltflaeche */
 .btn-submit {
     background: var(--primary-terra);
     color: white;
@@ -1286,7 +1289,7 @@ main {
     transform: translateY(0);
 }
 
-/* Form options */
+/* Auswahlfelder in Formularen */
 .form-options {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -1325,7 +1328,7 @@ main {
     font-size: 1.1rem;
 }
 
-/* Service download card */
+/* Kachel mit Downloads */
 .service-download-card {
     display: flex;
     align-items: center;
@@ -1387,12 +1390,12 @@ main {
     background: var(--accent-green-dark);
 }
 
-/* Utility classes */
+/* Hilfsklassen */
 .mb-2 {
     margin-bottom: 1.5rem;
 }
 
-/* ---Waste calendar (kalender.html) --- */
+/* --- Abfallkalender (kalender.html) --- */
 .calendar-controls {
     display: flex;
     flex-wrap: wrap;
@@ -1461,7 +1464,7 @@ main {
     color: white;
 }
 
-/* --- Contact (kontakt.html) --- */
+/* --- Kontakt (kontakt.html) --- */
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1493,7 +1496,7 @@ main {
     border-radius: 4px;
 }
 
-/* --- Business (gewerbe.html) --- */
+/* --- Gewerbe (gewerbe.html) --- */
 .grid-layout {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -1517,7 +1520,7 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* --- Locations (standorte.html) --- */
+/* --- Standorte (standorte.html) --- */
 .location-card {
     background: #fff;
     border: 1px solid var(--border-color);
@@ -1561,7 +1564,7 @@ main {
     padding-top: 4px;
 }
 
-/* Details & summary (global & locations) */
+/* Aufklappbare Abschnitte (allgemein und bei den Standorten) */
 details {
     background: #f9f9f9;
     border: 1px solid #ddd;
@@ -1610,7 +1613,7 @@ details[open] summary::after {
 
 .location-list li::before {
     content: '\f3c5';
-    /* Map marker icon */
+    /* Symbol einer Kartenmarkierung */
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     position: absolute;
@@ -1618,7 +1621,7 @@ details[open] summary::after {
     color: var(--accent-green);
 }
 
-/* --- Online services (onlinedienste.html) --- */
+/* --- Onlinedienste (onlinedienste.html) --- */
 .service-list {
     list-style: none;
     display: grid;
@@ -1730,7 +1733,7 @@ details[open] summary::after {
     margin-right: 0.5rem;
 }
 
-/* --- Fee calculator (rechner.html) --- */
+/* --- Gebuehrenrechner (rechner.html) --- */
 .calculator-wrapper {
     background: #fff;
     padding: 2rem;
@@ -1753,6 +1756,22 @@ details[open] summary::after {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+}
+
+/* Spalte mit der Schaltflaeche: nur so breit wie noetig */
+.calc-group-action {
+    flex: 0 0 auto;
+    align-items: flex-end;
+}
+
+.calc-group-narrow {
+    flex: 0 0 auto;
+}
+
+/* Auffaellige Schaltflaeche zu einem externen Angebot */
+.btn-external {
+    display: inline-block;
+    padding: 1rem 2rem;
 }
 
 .calc-group label {
@@ -1818,7 +1837,7 @@ details[open] summary::after {
     border-top: 2px solid var(--primary-terra);
 }
 
-/* Fee overview table */
+/* Tabelle der Gebuehrenuebersicht */
 .fee-overview-table {
     width: 100%;
     border-collapse: collapse;
@@ -1905,6 +1924,11 @@ details[open] summary::after {
 }
 
 
+/* Zelle mit der Loeschen-Schaltflaeche im Gebuehrenrechner */
+.action-cell {
+    text-align: right;
+}
+
 .remove-btn {
     color: #d9534f;
     cursor: pointer;
@@ -1955,7 +1979,7 @@ details[open] summary::after {
     font-weight: 500;
 }
 
-/* Footer */
+/* Fusszeile */
 .site-footer {
     background: var(--dark-brown);
     color: white;
@@ -1995,7 +2019,7 @@ details[open] summary::after {
     text-decoration: underline;
 }
 
-/* Responsive / mobile */
+/* Schmale Bildschirme */
 @media (max-width: 768px) {
     .site-header {
         position: fixed;
@@ -2065,7 +2089,7 @@ details[open] summary::after {
         justify-content: center;
     }
 
-    /* Mobile dropdown */
+    /* Klappmenue auf schmalen Bildschirmen */
     .mega-dropdown,
     .dropdown-menu {
         position: static !important;
@@ -2106,7 +2130,7 @@ details[open] summary::after {
         margin-left: auto;
     }
 
-    /* Mobile tabs */
+    /* Reiter auf schmalen Bildschirmen */
     .tabs-nav {
         flex-direction: column;
         gap: 0.5rem;
@@ -2125,7 +2149,7 @@ details[open] summary::after {
         border-color: var(--primary-terra);
     }
 
-    /* Mobile grids */
+    /* Raster auf schmalen Bildschirmen */
     .contact-grid,
     .grid-layout-2col {
         grid-template-columns: 1fr;
@@ -2144,7 +2168,7 @@ details[open] summary::after {
     }
 }
 
-/* Print styles */
+/* Druckausgabe */
 @media print {
 
     .site-header,
@@ -2208,7 +2232,7 @@ details[open] summary::after {
         font-size: 80%;
     }
 
-    /* Hide redundant links or specific elements */
+    /* Ueberfluessige Verweise und Einzelelemente ausblenden */
     a[href^="#"]:after,
     a[href^="javascript"]:after {
         content: "";
@@ -2219,7 +2243,7 @@ details[open] summary::after {
     }
 }
 
-/* Accessibility (modal & states) */
+/* Darstellung anpassen (Dialog und Zustaende) */
 .acc-modal {
     position: fixed;
     top: 0;
@@ -2280,9 +2304,9 @@ details[open] summary::after {
     color: var(--text-light);
 }
 
-/* High contrast mode (black on white) */
+/* Hoher Kontrast (schwarz auf weiss) */
 body.high-contrast {
-    /* Strict variables */
+    /* Feste Werte statt Variablen */
     --bg-main: #ffffff;
     --bg-white: #ffffff;
     --bg-light: #ffffff;
@@ -2308,7 +2332,7 @@ body.high-contrast {
     --shadow-lg: none;
 }
 
-/* Global overrides for high contrast */
+/* Uebersteuerungen fuer den hohen Kontrast */
 body.high-contrast * {
     background-color: #ffffff !important;
     color: #000000 !important;
@@ -2317,7 +2341,7 @@ body.high-contrast * {
     border-radius: 0 !important;
 }
 
-/* Specific element visibility */
+/* Sichtbarkeit einzelner Elemente */
 body.high-contrast a {
     color: #000000 !important;
     text-decoration: underline !important;
@@ -2360,13 +2384,13 @@ body.high-contrast .mega-dropdown {
     text-shadow: none !important;
 }
 
-/* Focus states */
+/* Sichtbarer Fokus fuer die Tastaturbedienung */
 body.high-contrast *:focus {
     outline: 3px solid #000000 !important;
     outline-offset: 2px !important;
 }
 
-/* Search styles */
+/* Gestaltung der Suche */
 .search-form {
     position: relative;
     width: 100%;
@@ -2442,7 +2466,7 @@ body.high-contrast *:focus {
     font-size: 0.75rem;
 }
 
-/* High contrast overrides */
+/* Uebersteuerungen im hohen Kontrast */
 body.high-contrast .search-input {
     border: 2px solid #000;
     background: #fff;
@@ -2487,12 +2511,12 @@ body.high-contrast .search-result-type {
 }
 
 
-/* Large font mode */
+/* Vergroesserte Schrift */
 html.large-font {
     font-size: 125%;
 }
 
-/* Calendar date styles */
+/* Terminkacheln des Abfallkalenders */
 .cal-date-card {
     background: white;
     border: 1px solid var(--border-color);
@@ -2561,7 +2585,7 @@ html.large-font {
     color: #333;
 }
 
-/* Interactive map (karte.html) */
+/* Interaktive Karte (karte.html) */
 .map-page-body {
     padding-top: var(--header-height);
     height: 100vh;
@@ -2575,7 +2599,7 @@ html.large-font {
     position: relative;
 }
 
-/* Map controls */
+/* Bedienelemente der Karte */
 .map-controls {
     background: var(--bg-white);
     border-bottom: 2px solid var(--border-color);
@@ -2594,7 +2618,7 @@ html.large-font {
     flex-wrap: wrap;
 }
 
-/* Filter buttons */
+/* Filterschaltflaechen */
 .map-filters {
     display: flex;
     gap: 0.5rem;
@@ -2631,7 +2655,7 @@ html.large-font {
     font-size: 0.9rem;
 }
 
-/* Category-specific filter colors when active */
+/* Farbe der aktiven Filterschaltflaeche je Standortart */
 .map-filter-btn[data-category="wertstoffhof"].active {
     background: #4CAF50;
     border-color: #4CAF50;
@@ -2644,7 +2668,7 @@ html.large-font {
     border-color: #558B2F;
 }
 
-/* Scroll to top button */
+/* Schaltflaeche nach oben */
 #scroll-top-btn {
     position: fixed;
     bottom: 30px;
@@ -2701,7 +2725,7 @@ html.large-font {
     color: #333;
 }
 
-/* Locate me button */
+/* Schaltflaeche fuer den eigenen Standort */
 .map-locate-btn {
     display: flex;
     align-items: center;
@@ -2726,14 +2750,14 @@ html.large-font {
     font-size: 1rem;
 }
 
-/* Map container */
+/* Kartenbereich */
 .map-container {
     flex: 1;
     width: 100%;
     z-index: 1;
 }
 
-/* Legend */
+/* Legende */
 .map-legend {
     position: absolute;
     bottom: 2rem;
@@ -2801,7 +2825,7 @@ html.large-font {
     background: #FFC107;
 }
 
-/* Leaflet popup customization */
+/* Eigene Gestaltung der Leaflet-Sprechblasen */
 .leaflet-popup-content-wrapper {
     border-radius: var(--radius) !important;
     box-shadow: var(--shadow-lg) !important;
@@ -2882,7 +2906,7 @@ html.large-font {
     margin-bottom: 0.25rem;
 }
 
-/* Custom marker icons */
+/* Symbole der Kartenmarkierungen */
 .custom-marker {
     display: flex;
     align-items: center;
@@ -2921,7 +2945,7 @@ html.large-font {
     color: #333;
 }
 
-/* User location marker */
+/* Markierung des eigenen Standorts */
 .user-location-marker {
     width: 20px;
     height: 20px;
@@ -2946,7 +2970,7 @@ html.large-font {
     }
 }
 
-/* Responsive map */
+/* Karte auf schmalen Bildschirmen */
 @media (max-width: 768px) {
     .map-controls {
         padding: 0.5rem;
@@ -2992,10 +3016,10 @@ html.large-font {
     }
 }
 
-/* Print styles */
+/* Druckausgabe */
 @media print {
 
-    /* Hide navigation and header */
+    /* Navigation und Kopfzeile ausblenden */
     .site-header,
     .mobile-menu-toggle,
     .main-nav,
@@ -3004,7 +3028,7 @@ html.large-font {
         display: none !important;
     }
 
-    /* Hide footer actions but keep copyright */
+    /* Aktionen der Fusszeile ausblenden, Urhebervermerk behalten */
     .legal-menu,
     .footer-info nav {
         display: none !important;
@@ -3021,7 +3045,7 @@ html.large-font {
         font-size: 10pt;
     }
 
-    /* Hide interface elements */
+    /* Bedienelemente ausblenden */
     #scroll-top-btn,
     .map-controls,
     .btn,
@@ -3030,7 +3054,7 @@ html.large-font {
         display: none !important;
     }
 
-    /* Reset body and colors */
+    /* Grundfarben zuruecksetzen */
     body {
         background: white !important;
         color: black !important;
@@ -3050,20 +3074,20 @@ html.large-font {
         color: black !important;
     }
 
-    /* Show href for links */
+    /* Zieladresse hinter Verweisen ausgeben */
     a[href]::after {
         content: " (" attr(href) ")";
         font-size: 0.8em;
         font-style: italic;
     }
 
-    /* Don't show generic links or javascript links */
+    /* Leere Verweise und Skript-Verweise nicht ausgeben */
     a[href^="#"]::after,
     a[href^="javascript"]::after {
         content: "";
     }
 
-    /* Layout adjustments */
+    /* Anpassungen am Aufbau */
     .news-grid,
     .cards-grid,
     .news-archive-grid {
@@ -3090,7 +3114,7 @@ html.large-font {
         color: black !important;
     }
 
-    /* Table improvements */
+    /* Tabellen */
     table {
         width: 100% !important;
         border-collapse: collapse !important;
@@ -3104,7 +3128,7 @@ html.large-font {
 }
 
 
-/* Map controls wrapper */
+/* Huelle der Bedienelemente */
 .map-controls-wrapper {
     display: flex;
     flex-wrap: wrap;
@@ -3118,14 +3142,14 @@ html.large-font {
     border: 2px solid var(--border-color);
 }
 
-/* Map filters */
+/* Filter der Karte */
 .map-filters {
     display: flex;
     flex-wrap: wrap;
     gap: var(--spacing-xs);
 }
 
-/* Map filter buttons */
+/* Filterschaltflaechen der Karte */
 .map-filter-btn {
     display: inline-flex;
     align-items: center;
@@ -3157,7 +3181,7 @@ html.large-font {
     font-size: 0.9rem;
 }
 
-/* Locate button */
+/* Schaltflaeche fuer den eigenen Standort */
 .map-locate-btn {
     display: inline-flex;
     align-items: center;
@@ -3184,7 +3208,7 @@ html.large-font {
     transform: none;
 }
 
-/* Map container */
+/* Kartenbereich */
 .interactive-map-container {
     width: 100%;
     height: 500px;
@@ -3194,7 +3218,7 @@ html.large-font {
     background: var(--bg-light);
 }
 
-/* Map legend inline */
+/* Legende in der Karte */
 .map-legend-inline {
     margin-top: var(--spacing);
     padding: var(--spacing-sm) var(--spacing);
@@ -3261,7 +3285,7 @@ html.large-font {
     background: #FFC107;
 }
 
-/* Custom map markers */
+/* Eigene Kartenmarkierungen */
 .custom-map-marker {
     background: transparent;
     border: none;
@@ -3284,7 +3308,7 @@ html.large-font {
     transform: rotate(45deg);
 }
 
-/* User location marker */
+/* Markierung des eigenen Standorts */
 .user-location-marker {
     width: 20px;
     height: 20px;
@@ -3309,7 +3333,7 @@ html.large-font {
     }
 }
 
-/* Map popup */
+/* Sprechblase der Karte */
 .map-popup {
     padding: var(--spacing-xs);
 }
@@ -3381,7 +3405,7 @@ html.large-font {
     color: var(--accent-green);
 }
 
-/* Responsive: Map controls */
+/* Bedienelemente der Karte auf schmalen Bildschirmen */
 @media (max-width: 768px) {
     .map-controls-wrapper {
         flex-direction: column;

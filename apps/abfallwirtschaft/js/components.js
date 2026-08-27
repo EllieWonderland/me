@@ -1,19 +1,18 @@
 /**
- * Components.js
- * Manages the global header and footer injection for all pages.
- * Dependencies: None
+ * Kopf- und Fusszeile
+ *
+ * Beide sind auf allen zwoelf Seiten gleich. Statt sie zwoelfmal zu
+ * pflegen, stehen sie hier einmal und werden in die Platzhalter
+ * #header-placeholder und #footer-placeholder gesetzt.
+ *
+ * Abhaengigkeiten: keine
  */
 
-/**
- * Loads the header content into the placeholder.
- * Injects the full HTML structure including Logo and Navigation.
- * Calls highlightActiveMenuItem() to set the correct active state.
- */
+/** Setzt die Kopfzeile mit Logo und Hauptnavigation in ihren Platzhalter. */
 function loadHeader() {
     const headerPlaceholder = document.getElementById('header-placeholder');
     if (!headerPlaceholder) return;
 
-    // Inject header HTML
     headerPlaceholder.innerHTML = `
     <header class="site-header">
         <div class="container">
@@ -31,7 +30,7 @@ function loadHeader() {
                 </a>
 
                 <nav class="main-nav">
-                    <!-- Mobile Menu Toggle Button -->
+                    <!-- Schaltflaeche, die auf schmalen Bildschirmen das Menue oeffnet -->
                     <button class="mobile-menu-toggle" aria-expanded="false">
                         <span class="burger-line"></span>
                         <span class="burger-line"></span>
@@ -40,7 +39,7 @@ function loadHeader() {
                     </button>
 
                     <ul class="nav-menu">
-                        <!-- Navigation Item: Standorte (Mega Dropdown) -->
+                        <!-- Standorte -->
                         <li class="nav-item has-mega-dropdown">
                             <a href="karte.html" class="nav-link">
                                 <i class="fas fa-map-marked-alt"></i>
@@ -74,7 +73,7 @@ function loadHeader() {
                             </div>
                         </li>
 
-                        <!-- Navigation Item: Onlinedienste (Mega Dropdown) -->
+                        <!-- Onlinedienste -->
                         <li class="nav-item has-mega-dropdown">
                             <a href="onlinedienste.html" class="nav-link">
                                 <i class="fas fa-laptop"></i>
@@ -112,7 +111,7 @@ function loadHeader() {
                             </div>
                         </li>
 
-                        <!-- Navigation Item: Infos (Mega Dropdown) -->
+                        <!-- Infos -->
                         <li class="nav-item has-mega-dropdown">
                             <a href="infos.html" class="nav-link">
                                 <i class="fas fa-info-circle"></i>
@@ -141,7 +140,7 @@ function loadHeader() {
                             </div>
                         </li>
 
-                        <!-- Navigation Item: Gebühren (Mega Dropdown) -->
+                        <!-- Gebuehren -->
                         <li class="nav-item has-mega-dropdown">
                             <a href="rechner.html" class="nav-link">
                                 <i class="fas fa-euro-sign"></i>
@@ -177,7 +176,7 @@ function loadHeader() {
                             </div>
                         </li>
 
-                        <!-- Navigation Item: Gewerbe (Standard Dropdown) -->
+                        <!-- Gewerblich -->
                         <li class="nav-item has-dropdown">
                             <a href="gewerbe.html" class="nav-link">
                                 <i class="fas fa-industry"></i>
@@ -191,7 +190,7 @@ function loadHeader() {
                             </ul>
                         </li>
 
-                        <!-- Navigation Item: Kontakt -->
+                        <!-- Kontakt -->
                         <li class="nav-item">
                             <a href="kontakt.html" class="nav-link nav-link-cta">
                                 <i class="fas fa-headset"></i>
@@ -205,19 +204,11 @@ function loadHeader() {
     </header>
     `;
 
-    // Initialize navigation logic
+    // Erst jetzt gibt es Menuepunkte, die markiert werden koennen
     highlightActiveMenuItem();
-
-    // Check if mobile menu init function exists (from navigation.js) and run it
-    if (window.initMobileMenu) {
-        window.initMobileMenu();
-    }
 }
 
-/**
- * Loads the footer content into the placeholder.
- * Adds dynamic year for copyright.
- */
+/** Setzt die Fusszeile in ihren Platzhalter, mit dem laufenden Jahr. */
 function loadFooter() {
     const footerPlaceholder = document.getElementById('footer-placeholder');
     if (!footerPlaceholder) return;
@@ -232,7 +223,7 @@ function loadFooter() {
                     <p>&copy; ${year} Jana Fisenko</p>
                     <p>Amt für Bodenschutz und Abfallwirtschaft | Delmenhorster Str. 6 | 27793 Wildeshausen</p>
                 </div>
-                <!-- Legal Menu -->
+                <!-- Rechtliches -->
                 <nav class="legal-menu" aria-label="Rechtliches">
                     <ul>
                         <li><a href="legal.html#impressum">Impressum</a></li>
@@ -249,59 +240,33 @@ function loadFooter() {
 }
 
 /**
- * Highlights the active menu item based on the current URL.
- * Matches current filename to navigation links or categories.
+ * Markiert den Menuepunkt, der zur aufgerufenen Seite gehoert.
+ *
+ * Zu einem Menuepunkt gehoeren teils mehrere Seiten: "Standorte" bleibt
+ * auch auf standorte.html hervorgehoben, obwohl der Punkt auf karte.html
+ * zeigt. Diese Zuordnung steht in NAV_ENTRY_BY_PAGE.
  */
+const NAV_ENTRY_BY_PAGE = {
+    'karte.html':         'karte.html',
+    'standorte.html':     'karte.html',
+    'onlinedienste.html': 'onlinedienste.html',
+    'infos.html':         'infos.html',
+    'news.html':          'infos.html',
+    'kalender.html':      'infos.html',
+    'rechner.html':       'rechner.html',
+    'gewerbe.html':       'gewerbe.html',
+    'kontakt.html':       'kontakt.html'
+};
+
 function highlightActiveMenuItem() {
-    const path = window.location.pathname;
-    const page = path.split("/").pop() || 'index.html';
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    const activeHref = NAV_ENTRY_BY_PAGE[currentPage];
 
-    // Determine active category key from filename
-    let activeKey = '';
-    if (page === 'index.html' || page === '') activeKey = 'index';
-    else if (page === 'karte.html' || page === 'standorte.html') activeKey = 'standorte';
-    else if (page === 'onlinedienste.html') activeKey = 'onlinedienste';
-    else if (page === 'infos.html') activeKey = 'infos';
-    else if (page === 'rechner.html') activeKey = 'gebuehren';
-    else if (page === 'gewerbe.html') activeKey = 'gewerbe';
-    else if (page === 'kontakt.html') activeKey = 'kontakt';
-
-    const links = document.querySelectorAll('.nav-link');
-
-    links.forEach(link => {
-        link.classList.remove('active');
-        const href = link.getAttribute('href');
-
-        // Exact filename match
-        if (href === page || (page === '' && href === 'index.html')) {
-            link.classList.add('active');
-        }
-        // Category match (e.g., maintain highlight on subpages)
-        else if (activeKey === 'standorte' && (href === 'karte.html' || href === 'standorte.html')) {
-            if (href.includes(activeKey) || href.includes('karte')) link.classList.add('active');
-        }
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.classList.toggle('active', link.getAttribute('href') === activeHref);
     });
-
-    // Ensure top-level menu items are highlighted for dropdowns
-    const navMap = {
-        'standorte': 'karte.html',
-        'onlinedienste': 'onlinedienste.html',
-        'infos': 'infos.html',
-        'gebuehren': 'rechner.html',
-        'gewerbe': 'gewerbe.html',
-        'kontakt': 'kontakt.html'
-    };
-
-    if (activeKey && navMap[activeKey]) {
-        const topLink = document.querySelector(`.nav-link[href="${navMap[activeKey]}"]`);
-        if (topLink) topLink.classList.add('active');
-    } else if (activeKey === 'standorte') {
-        const topLink = document.querySelector(`.nav-link[href="karte.html"]`);
-        if (topLink) topLink.classList.add('active');
-    }
 }
 
-// Global initialization when DOM is ready
 document.addEventListener('DOMContentLoaded', () => {
     loadHeader();
     loadFooter();

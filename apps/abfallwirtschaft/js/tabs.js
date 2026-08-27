@@ -1,122 +1,97 @@
 /**
- * Tabs.js - Generic Tab Navigation System
- * Handles tab switching, URL hash integration and breadcrumb updates.
- * Used on: infos.html, onlinedienste.html, standorte.html, rechner.html
- * Dependencies: None
+ * Reiternavigation
+ *
+ * Die Inhaltsseiten buendeln viel Stoff in Reitern. Damit man einen
+ * einzelnen Reiter verlinken kann, haengt der aktive Reiter in der
+ * Adresszeile: #abc oeffnet den Reiter "abc", #sperrmuell oeffnet den
+ * Reiter, in dem dieser Abschnitt liegt, und springt dorthin.
+ *
+ * Genutzt von: infos.html, onlinedienste.html, standorte.html,
+ * rechner.html, gewerbe.html
+ *
+ * Abhaengigkeiten: keine
  */
 
-document.addEventListener("DOMContentLoaded", function () {
-    try {
-        const tabBtns = document.querySelectorAll('.tab-btn');
-        const tabContents = document.querySelectorAll('.tab-content');
+document.addEventListener('DOMContentLoaded', function () {
+    const tabButtons = [...document.querySelectorAll('.tab-btn')];
+    const tabPanels = [...document.querySelectorAll('.tab-content')];
+    if (tabButtons.length === 0) return;
 
-        if (tabBtns.length === 0) return;
+    /** Zeigt einen Reiter an und fuehrt den Brotkrumenpfad nach. */
+    const activateTab = (tabId) => {
+        tabButtons.forEach(button => button.classList.toggle('active', button.dataset.tab === tabId));
+        tabPanels.forEach(panel => panel.classList.toggle('active', panel.id === tabId));
 
-        // Core activation function
-        const activateTab = (tabId) => {
-            // Update UI Button states
-            tabBtns.forEach(b => {
-                b.classList.toggle('active', b.dataset.tab === tabId);
-            });
-            // Show/Hide Content Areas
-            tabContents.forEach(c => {
-                c.classList.toggle('active', c.id === tabId);
-            });
+        const activeButton = tabButtons.find(button => button.dataset.tab === tabId);
+        if (activeButton) updateBreadcrumb(activeButton.textContent.trim());
+    };
 
-            // Dynamic breadcrumb update
-            const activeBtn = [...tabBtns].find(b => b.dataset.tab === tabId);
-            if (activeBtn) {
-                const tabName = activeBtn.textContent.trim();
-                const breadcrumbContainer = document.querySelector('.breadcrumb-header .container');
+    /**
+     * Wertet die Adresszeile aus. Der Anker kann entweder ein Reiter
+     * selbst sein oder ein Abschnitt darin - im zweiten Fall wird der
+     * umgebende Reiter geoeffnet.
+     */
+    const handleHash = () => {
+        if (!window.location.hash) return;
+        const hash = window.location.hash.substring(1);
 
-                if (breadcrumbContainer) {
-                    let wrapper = breadcrumbContainer.querySelector('.breadcrumb-dynamic-wrapper');
-                    if (!wrapper) {
-                        wrapper = document.createElement('span');
-                        wrapper.className = 'breadcrumb-dynamic-wrapper';
-                        breadcrumbContainer.appendChild(wrapper);
-                    }
-                    wrapper.innerHTML = ` / <span class="breadcrumb-dynamic-item">${tabName}</span>`;
-                }
-            }
-        };
-
-        // Handle URL hash (deep linking)
-        const handleHash = () => {
-            if (!window.location.hash) return;
-            const hash = window.location.hash.substring(1);
-
-            // 1. Direct tab match (#abc)
-            const matchingTabBtn = [...tabBtns].find(b => b.dataset.tab === hash);
-            if (matchingTabBtn) {
-                activateTab(hash);
-                // Scroll to navigation bar
-                setTimeout(() => {
-                    const tabNav = document.querySelector('.tab-navigation');
-                    if (tabNav) tabNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }, 50);
-                return;
-            }
-
-            // 2. Element match inside a tab (#some-id)
-            const targetElement = document.getElementById(hash);
-            if (targetElement) {
-                const parentTab = targetElement.closest('.tab-content');
-                if (parentTab && parentTab.id) {
-                    activateTab(parentTab.id); // Open parent tab
-
-                    if (targetElement.tagName === 'DETAILS') {
-                        targetElement.setAttribute('open', ''); // Auto-expand if details
-                    }
-
-                    setTimeout(() => {
-                        targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    }, 100);
-                }
-            }
-        };
-
-        // Event listeners for tab buttons
-        tabBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                const tabId = btn.getAttribute('data-tab');
-                if (tabId) {
-                    activateTab(tabId);
-                    // Update URL hash without scroll jump
-                    history.pushState(null, null, '#' + tabId);
-                }
-            });
-        });
-
-        // Initialize state
-        handleHash();
-
-        // Default: If no hash, activate tab marked as active in HTML
-        if (!window.location.hash) {
-            const defaultActiveTab = document.querySelector('.tab-btn.active');
-            if (defaultActiveTab) activateTab(defaultActiveTab.dataset.tab);
+        // Fall 1: Der Anker ist ein Reiter
+        if (tabButtons.some(button => button.dataset.tab === hash)) {
+            activateTab(hash);
+            // Kurz warten, bis der Reiter sichtbar ist, sonst springt es ins Leere
+            setTimeout(() => {
+                const tabNav = document.querySelector('.tab-navigation');
+                if (tabNav) tabNav.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 50);
+            return;
         }
 
-        // Listen for internal navigation
-        window.addEventListener('hashchange', handleHash);
+        // Fall 2: Der Anker liegt in einem Reiter
+        const target = document.getElementById(hash);
+        if (!target) return;
 
-        // Intercept clicks on links to same page to trigger handleHash
-        document.addEventListener('click', (e) => {
-            const link = e.target.closest('a[href*="#"]');
-            if (!link) return;
+        const parentPanel = target.closest('.tab-content');
+        if (!parentPanel || !parentPanel.id) return;
 
-            const href = link.getAttribute('href');
-            if (!href) return;
+        activateTab(parentPanel.id);
 
-            const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-            const [linkPage, linkHash] = href.split('#');
+        // Aufklappbare Abschnitte gleich mit oeffnen
+        if (target.tagName === 'DETAILS') target.setAttribute('open', '');
 
-            if ((linkPage === currentPage || linkPage === '') && linkHash) {
-                // Let hashchange event handle it, just define new hash
-            }
+        setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+    };
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const tabId = button.dataset.tab;
+            if (!tabId) return;
+            activateTab(tabId);
+            // Anker mitfuehren, damit der Reiter teilbar und zurueckspringbar bleibt
+            history.pushState(null, '', '#' + tabId);
         });
+    });
 
-    } catch (e) {
-        console.error("Error in Tabs:", e);
+    handleHash();
+    window.addEventListener('hashchange', handleHash);
+
+    // Ohne Anker gilt der Reiter, den das HTML als aktiv markiert hat
+    if (!window.location.hash) {
+        const defaultTab = document.querySelector('.tab-btn.active');
+        if (defaultTab) activateTab(defaultTab.dataset.tab);
     }
 });
+
+/** Haengt den Namen des offenen Reiters hinten an den Brotkrumenpfad. */
+function updateBreadcrumb(tabName) {
+    const breadcrumb = document.querySelector('.breadcrumb-header .container');
+    if (!breadcrumb) return;
+
+    let wrapper = breadcrumb.querySelector('.breadcrumb-dynamic-wrapper');
+    if (!wrapper) {
+        wrapper = document.createElement('span');
+        wrapper.className = 'breadcrumb-dynamic-wrapper';
+        breadcrumb.appendChild(wrapper);
+    }
+
+    wrapper.innerHTML = ` / <span class="breadcrumb-dynamic-item">${tabName}</span>`;
+}

@@ -32,7 +32,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -51,7 +51,7 @@
             <p class="section-subtitle">Erledigen Sie Ihre Anliegen bequem von zu Hause aus. Füllen Sie das passende
                 Formular aus und senden Sie es direkt ab.</p>
 
-            <!-- Tab navigation -->
+            <!-- Reiternavigation -->
             <div class="tabs-nav">
                 <button class="tab-btn active" data-tab="behaelter">
                     <i class="fas fa-trash"></i> Behälterverwaltung
@@ -64,11 +64,11 @@
                 </button>
             </div>
 
-            <!-- Tab content: Bin -->
+            <!-- Reiter: Behaelter -->
             <div id="behaelter" class="tab-content active">
                 <p class="mb-2">Hier können Sie Änderungen an Ihren Abfallbehältern beantragen.</p>
 
-                <!-- Service 1: Order bin -->
+                <!-- Antrag 1: Tonne bestellen -->
                 <details class="service-form-card" id="tonne-bestellen">
                     <summary>
                         <i class="fas fa-plus-circle"></i> Tonne bestellen / anmelden
@@ -120,7 +120,7 @@
                     </div>
                 </details>
 
-                <!-- Service 2: Bin exchange -->
+                <!-- Antrag 2: Tonne umtauschen -->
                 <details class="service-form-card" id="tonne-umtauschen">
                     <summary>
                         <i class="fas fa-exchange-alt"></i> Tonne umtauschen (Größe ändern)
@@ -183,7 +183,7 @@
                     </div>
                 </details>
 
-                <!-- Service 3: Bin owner change -->
+                <!-- Antrag 3: Eigentuemerwechsel -->
                 <details class="service-form-card" id="eigentuemerwechsel">
                     <summary>
                         <i class="fas fa-user-friends"></i> Eigentümerwechsel melden
@@ -220,7 +220,7 @@
                     </div>
                 </details>
 
-                <!-- Service 4: Bin sharing -->
+                <!-- Antrag 4: Gemeinsame Behaelternutzung -->
                 <details class="service-form-card" id="gemeinsame-nutzung">
                     <summary>
                         <i class="fas fa-users"></i> Gemeinsame Nutzung von Behältern
@@ -259,7 +259,7 @@
                     </div>
                 </details>
 
-                <!-- Service 5: Organic waste bin exemption -->
+                <!-- Antrag 5: Befreiung von der Biotonne -->
                 <details class="service-form-card" id="biotonne-befreiung">
                     <summary>
                         <i class="fas fa-leaf"></i> Befreiung von der Biotonne
@@ -303,11 +303,11 @@
                 </details>
             </div>
 
-            <!-- Tab content: Bin pickup -->
+            <!-- Reiter: Abholung -->
             <div id="abholung" class="tab-content">
                 <p class="mb-2">Beantragen Sie hier die Abholung von Sperrmüll oder Elektrogeräten.</p>
 
-                <!-- Service 1: Pickup bulky waste -->
+                <!-- Antrag 1: Sperrmuell anmelden -->
                 <details class="service-form-card" id="sperrmuell" open>
                     <summary>
                         <i class="fas fa-couch"></i> Sperrmüll anmelden
@@ -365,7 +365,7 @@
                     </div>
                 </details>
 
-                <!-- Service 2: Pickup large household appliances -->
+                <!-- Antrag 2: Abholung von Haushaltsgrossgeraeten -->
                 <details class="service-form-card" id="elektrogeraete">
                     <summary>
                         <i class="fas fa-tv"></i> Haushaltsgroßgeräte Abfuhr
@@ -420,11 +420,11 @@
                 </details>
             </div>
 
-            <!-- Tab content: Other -->
+            <!-- Reiter: Sonstiges -->
             <div id="sonstiges" class="tab-content">
                 <p class="mb-2">Weitere Anträge und Meldungen.</p>
 
-                <!-- SEPA Direct Debit -->
+                <!-- SEPA-Lastschriftmandat -->
                 <details class="service-form-card" id="sepa-mandat">
                     <summary>
                         <i class="fas fa-university"></i> SEPA-Lastschriftmandat
@@ -476,7 +476,7 @@
                     </div>
                 </details>
 
-                <!-- Burn plant-based waste -->
+                <!-- Pflanzliche Abfaelle verbrennen -->
                 <details class="service-form-card" id="verbrennen">
                     <summary>
                         <i class="fas fa-fire"></i> Verbrennen pflanzlicher Abfälle
@@ -517,7 +517,7 @@
                     </div>
                 </details>
 
-                <!-- Self-declaration glass- and stone wool -->
+                <!-- Eigenerklaerung Glas- und Steinwolle -->
                 <details class="service-form-card" id="glaswolle">
                     <summary>
                         <i class="fas fa-file-signature"></i> Eigenerklärung: Entsorgung Glas-/Steinwolle
@@ -554,7 +554,7 @@
                     </div>
                 </details>
 
-                <!-- Information on old landfills -->
+                <!-- Hinweise zu Altablagerungen -->
                 <details class="service-form-card" id="altablagerungen">
                     <summary>
                         <i class="fas fa-map-marker-alt"></i> Auskunft über Altablagerungen
@@ -591,7 +591,7 @@
                     </div>
                 </details>
 
-                <!-- Report unauthorized waste disposal -->
+                <!-- Unerlaubte Abfallentsorgung melden -->
                 <details class="service-form-card" id="muellkippe">
                     <summary>
                         <i class="fas fa-exclamation-triangle"></i> Meldung unerlaubter Abfallentsorgung
@@ -626,7 +626,7 @@
                     </div>
                 </details>
 
-                <!-- Registration clean landscape -->
+                <!-- Anmeldung zur Aktion Saubere Landschaft -->
                 <details class="service-form-card" id="saubere-landschaft">
                     <summary>
                         <i class="fas fa-hands-helping"></i> Anmeldung Aktion "Saubere Landschaft"
