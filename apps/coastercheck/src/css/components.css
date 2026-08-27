@@ -1,0 +1,2123 @@
+/* ==========================================
+   CoasterCheck – Reusable Components
+   ========================================== */
+
+/* ---- Skip Link (Accessibility) ---- */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: -1;
+    color: transparent;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    height: auto;
+    overflow: visible;
+    z-index: 9999;
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    padding: 12px 28px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: var(--cc-shadow-lg);
+    outline: 3px solid var(--cc-accent);
+    outline-offset: 3px;
+}
+
+/* ---- Card ---- */
+.card {
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: 18px;
+    padding: var(--space-lg);
+    box-shadow: var(--cc-shadow-sm);
+    transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+}
+
+.card:hover {
+    box-shadow: var(--cc-shadow-md);
+    transform: translateY(-2px);
+}
+
+.card__title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    margin-bottom: var(--space-sm);
+    color: var(--cc-ink);
+}
+
+.card__subtitle {
+    font-size: var(--font-size-sm);
+    color: var(--cc-muted);
+}
+
+/* ---- Button ---- */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    letter-spacing: 0.005em;
+    transition: all var(--transition-fast);
+}
+
+.btn--primary {
+    background: var(--cc-accent);
+    color: var(--cc-on-accent);
+    box-shadow: var(--cc-shadow-sm);
+}
+
+.btn--primary:hover {
+    filter: brightness(1.08);
+    box-shadow: var(--cc-shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn--primary:active {
+    transform: scale(0.96);
+}
+
+.btn--secondary {
+    background: var(--cc-surface-2);
+    color: var(--cc-ink);
+    border: 1px solid var(--cc-border);
+}
+
+.btn--secondary:hover {
+    background: #ede7db;
+}
+
+.btn--outline {
+    background: transparent;
+    color: var(--cc-ink);
+    border: 1.5px solid var(--cc-border-strong);
+}
+
+.btn--outline:hover {
+    background: var(--cc-border);
+}
+
+.btn--ink {
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    box-shadow: var(--cc-shadow-sm);
+}
+
+.btn--ink:hover {
+    filter: brightness(1.1);
+    transform: translateY(-1px);
+}
+
+.btn--ink:active {
+    transform: scale(0.96);
+}
+
+/* Light section overrides (kept for compatibility, now no-ops since all light) */
+.park-section--light .btn--outline {
+    color: var(--cc-ink);
+    border-color: var(--cc-border-strong);
+}
+
+.park-section--light .btn--outline:hover {
+    background: var(--cc-border);
+}
+
+/* ---- Badge / Tag ---- */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    background: var(--cc-surface-2);
+    color: var(--cc-ink);
+    border: 1px solid var(--cc-border);
+}
+
+.badge--accent {
+    background: var(--cc-accent-bg);
+    color: var(--cc-accent);
+    border-color: transparent;
+}
+
+.badge--success {
+    background: var(--cc-success-bg);
+    color: var(--cc-success);
+    border-color: transparent;
+}
+
+/* ---- Chip (Park Filter — Pill style) ---- */
+.chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 8px 14px;
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    background: var(--cc-surface);
+    color: var(--cc-muted);
+    border: 1.5px solid var(--cc-border);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    min-height: 44px;
+}
+
+.chip:hover {
+    border-color: var(--cc-accent);
+    color: var(--cc-ink);
+}
+
+.chip--active {
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    border-color: var(--cc-ink);
+    font-weight: 700;
+    box-shadow: 0 6px 14px -6px rgba(0,0,0,.25);
+}
+
+.chip--active:hover {
+    filter: brightness(1.1);
+}
+
+/* ---- Weitere Parks Popup ---- */
+.more-parks-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 1200;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-lg);
+}
+
+.more-parks-overlay[hidden] {
+    display: none;
+}
+
+.more-parks-popup {
+    background: var(--cc-surface);
+    border-radius: 24px;
+    border: 1px solid var(--cc-border);
+    box-shadow: var(--cc-shadow-lg);
+    width: 100%;
+    max-width: 400px;
+    overflow: hidden;
+    animation: cc-card-in 250ms cubic-bezier(.2,.8,.2,1) both;
+}
+
+.more-parks-popup__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    padding: var(--space-lg) var(--space-xl);
+    border-bottom: 1px solid var(--cc-border);
+}
+
+.more-parks-popup__title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--cc-ink);
+    line-height: 1.25;
+}
+
+.more-parks-popup__list {
+    list-style: none;
+    margin: 0;
+    padding: var(--space-md) var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.more-parks-popup__list li {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: var(--space-sm);
+    padding: 8px 0;
+    border-bottom: 1px solid var(--cc-border);
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    color: var(--cc-ink);
+}
+
+.more-parks-popup__list li:last-child {
+    border-bottom: none;
+}
+
+.more-parks-popup__location {
+    font-weight: 400;
+    color: var(--cc-muted);
+    font-size: var(--font-size-xs);
+    white-space: nowrap;
+}
+
+.more-parks-popup__footer {
+    padding: var(--space-sm) var(--space-xl) var(--space-lg);
+    font-size: var(--font-size-sm);
+    color: var(--cc-muted);
+    font-style: italic;
+    text-align: center;
+}
+
+/* ---- Score Display ---- */
+.score {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-xs);
+}
+
+.score__value {
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--cc-accent);
+    font-variant-numeric: tabular-nums;
+}
+
+.score__max {
+    font-size: var(--font-size-sm);
+    color: var(--cc-muted);
+}
+
+/* ---- Counter (Daily / Lifetime) ---- */
+.counter {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.counter__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-full);
+    background: var(--cc-surface-2);
+    color: var(--cc-ink);
+    border: 1px solid var(--cc-border);
+    font-size: var(--font-size-xl);
+    transition: background var(--transition-fast);
+}
+
+.counter__btn:hover {
+    background: #ede7db;
+}
+
+.counter__value {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    min-width: 2ch;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+    color: var(--cc-ink);
+}
+
+/* ---- Ride List & Filter Bar ---- */
+.filter-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-sm) var(--space-md);
+    border-bottom: 1px solid var(--cc-border);
+    background: var(--cc-bg);
+}
+
+.filter-bar__sort {
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+    position: relative;
+    color: var(--cc-muted);
+}
+
+.select-input {
+    appearance: none;
+    background: transparent;
+    border: none;
+    color: var(--cc-ink);
+    font-family: inherit;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    padding-right: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.select-input option {
+    background: var(--cc-surface);
+    color: var(--cc-ink);
+}
+
+.select-icon {
+    position: absolute;
+    right: 0;
+    pointer-events: none;
+    font-size: 20px;
+    color: var(--cc-muted);
+}
+
+.btn--sm {
+    padding: 6px 12px;
+    font-size: var(--font-size-xs);
+}
+
+/* ---- Filter Modal (Bottom Sheet) ---- */
+.filter-modal {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--cc-surface);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    border: 1px solid var(--cc-border);
+    box-shadow: var(--cc-shadow-lg);
+    transform: translateY(100%);
+    transition: transform var(--transition-normal);
+    z-index: 1000;
+    padding-bottom: calc(var(--nav-height) + var(--space-md));
+}
+
+.filter-modal--open {
+    transform: translateY(0);
+}
+
+.filter-modal__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--space-lg) var(--space-xl);
+    border-bottom: 1px solid var(--cc-border);
+}
+
+.filter-modal__title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--cc-ink);
+}
+
+.filter-modal__close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: var(--cc-surface-2);
+    border: 1px solid var(--cc-border);
+    color: var(--cc-muted);
+    cursor: pointer;
+    transition: background var(--transition-fast);
+}
+
+.filter-modal__close:hover {
+    background: #ede7db;
+    color: var(--cc-ink);
+}
+
+.filter-modal__body {
+    padding: var(--space-lg) var(--space-xl);
+    max-height: 60vh;
+    overflow-y: auto;
+}
+
+/* ---- Ride List ---- */
+.ride-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: var(--space-md);
+    margin-top: var(--space-md);
+}
+
+/* ---- Park section card overrides (same as main since all light) ---- */
+.park-section--light .card {
+    background: var(--cc-surface);
+    border-color: var(--cc-border);
+}
+
+.park-section--light .ride-item__title { color: var(--cc-ink); }
+.park-section--light .ride-item__category { color: var(--cc-muted); }
+
+.park-section--light .badge {
+    background: var(--cc-surface-2);
+    color: var(--cc-ink);
+}
+
+.park-section--light .badge-icon--inactive {
+    background: rgba(28, 26, 24, 0.06);
+    color: var(--cc-muted);
+}
+
+/* ---- Ride Item ---- */
+.ride-item {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.ride-item__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.ride-item__title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--cc-ink);
+    margin-bottom: var(--space-xs);
+    letter-spacing: -0.01em;
+}
+
+.ride-item__category {
+    font-size: var(--font-size-xs);
+    color: var(--cc-muted);
+    font-weight: 500;
+}
+
+.ride-item__metrics {
+    display: flex;
+    gap: var(--space-xs);
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: var(--space-sm);
+}
+
+.badge-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+}
+
+.badge-icon--active {
+    background: var(--cc-accent-bg);
+    color: var(--cc-accent);
+}
+
+.badge-icon--inactive {
+    background: rgba(28, 26, 24, 0.06);
+    color: var(--cc-muted);
+}
+
+.badge-icon--warning {
+    background: var(--cc-danger-bg);
+    color: var(--cc-danger);
+}
+
+.ride-item__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-top: var(--space-sm);
+}
+
+/* ---- Ghost Button ---- */
+.btn--ghost {
+    background: transparent;
+    color: var(--cc-muted);
+    border: none;
+    padding: var(--space-xs);
+    border-radius: var(--radius-md);
+}
+
+.btn--ghost:hover {
+    background: var(--cc-danger-bg);
+    color: var(--cc-danger);
+}
+
+/* ---- Logbook Entries ---- */
+.logbook-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: var(--space-md) var(--space-md) var(--space-xl);
+}
+
+.logbook-entry {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.logbook-entry__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--space-sm);
+}
+
+.logbook-entry__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.logbook-entry__ride {
+    font-family: var(--font-display);
+    font-size: var(--font-size-base);
+    font-weight: 700;
+    color: var(--cc-ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logbook-entry__meta {
+    font-size: var(--font-size-xs);
+    color: var(--cc-muted);
+    margin-top: 2px;
+}
+
+.logbook-entry__scores {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-xs);
+    margin-top: var(--space-xs);
+}
+
+/* ---- Score Chips (Logbook) ---- */
+.score-chip {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: var(--radius-md);
+    background: rgba(28, 26, 24, 0.05);
+    min-width: 52px;
+}
+
+.score-chip__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--cc-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    line-height: 1;
+}
+
+.score-chip__value {
+    font-family: var(--font-display);
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--cc-ink);
+    line-height: 1.4;
+    font-variant-numeric: tabular-nums;
+}
+
+.score-chip--thrill    { background: rgba(232, 93, 59, 0.10); }
+.score-chip--thrill    .score-chip__value { color: var(--cc-accent); }
+
+.score-chip--immersion { background: rgba(57, 177, 167, 0.10); }
+.score-chip--immersion .score-chip__value { color: var(--cc-accent-3); }
+
+.score-chip--komfort   { background: var(--cc-success-bg); }
+.score-chip--komfort   .score-chip__value { color: var(--cc-success); }
+
+.score-chip--wied      { background: rgba(182, 114, 42, 0.10); }
+.score-chip--wied      .score-chip__value { color: var(--cc-warning); }
+
+/* ---- Logbook Empty State ---- */
+.logbook-empty {
+    text-align: center;
+    color: var(--cc-muted);
+    padding: var(--space-2xl) var(--space-xl);
+    font-size: var(--font-size-sm);
+}
+
+/* ---- Daily / Lifetime Counter ---- */
+.logbook-entry__counter {
+    display: flex;
+    gap: var(--space-md);
+    align-items: center;
+    padding: var(--space-sm) 0;
+    border-top: 1px solid var(--cc-border);
+    border-bottom: 1px solid var(--cc-border);
+    margin: var(--space-sm) 0;
+}
+
+.counter-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.counter-block--stepper {
+    flex: 1;
+}
+
+.counter-block__value {
+    font-family: var(--font-display);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--cc-accent);
+    line-height: 1;
+    min-width: 2ch;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.counter-block__label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--cc-muted);
+}
+
+.counter-stepper {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin-top: 4px;
+}
+
+.counter-stepper__value {
+    font-family: var(--font-display);
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    color: var(--cc-ink);
+    min-width: 2ch;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+.counter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    background: var(--cc-surface-2);
+    color: var(--cc-ink);
+    border: 1px solid var(--cc-border);
+    cursor: pointer;
+    transition: background 150ms, transform 100ms;
+}
+
+.counter-btn:active {
+    transform: scale(0.92);
+}
+
+.counter-btn--inc {
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    border-color: transparent;
+}
+
+.counter-btn--inc:hover {
+    filter: brightness(1.15);
+}
+
+/* ---- Inline Validation Error ---- */
+.form-validation-error {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    margin: var(--space-md) var(--space-md) 0;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: var(--radius-md);
+    background: var(--cc-danger-bg);
+    border: 1px solid rgba(179, 54, 27, 0.25);
+    color: var(--cc-danger);
+    font-size: var(--font-size-sm);
+}
+
+.form-validation-error .material-symbols-rounded {
+    font-size: 20px;
+    flex-shrink: 0;
+}
+
+.chip-group--error {
+    outline: 2px solid var(--cc-danger);
+    outline-offset: 4px;
+    border-radius: var(--radius-sm);
+    animation: errorShake 300ms ease;
+}
+
+@keyframes errorShake {
+    0%, 100% { transform: translateX(0); }
+    25%       { transform: translateX(-4px); }
+    75%       { transform: translateX(4px); }
+}
+
+/* ---- Stat Tile (Logbuch) ---- */
+.stats-overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-sm);
+    padding: 0 var(--space-md) var(--space-md);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+}
+
+.stat-tile {
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: 16px;
+    padding: var(--space-md) var(--space-sm);
+    text-align: center;
+    box-shadow: var(--cc-shadow-sm);
+}
+
+.stat-tile__value {
+    display: block;
+    font-family: var(--font-display);
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--cc-accent);
+    font-variant-numeric: tabular-nums;
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.stat-tile__label {
+    font-size: var(--font-size-xs);
+    color: var(--cc-muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+/* ---- Achievements Grid (Hall of Fame) ---- */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.achievement-card {
+    background: var(--cc-surface);
+    border: 1.5px solid var(--cc-border);
+    border-radius: 18px;
+    padding: var(--space-lg);
+    text-align: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    box-shadow: var(--cc-shadow-sm);
+}
+
+.achievement-card--unlocked {
+    border-color: var(--cc-accent);
+    box-shadow: 0 0 0 1px var(--cc-accent-bg), var(--cc-shadow-sm);
+}
+
+.achievement-card--locked {
+    opacity: 0.45;
+    filter: grayscale(0.8);
+}
+
+.achievement-card__icon {
+    font-size: 2.5rem;
+    color: var(--cc-accent);
+    display: block;
+    margin-bottom: var(--space-sm);
+}
+
+.achievement-card__title {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--font-size-base);
+    color: var(--cc-ink);
+    margin-bottom: var(--space-xs);
+}
+
+.achievement-card__desc {
+    font-size: var(--font-size-xs);
+    color: var(--cc-muted);
+    line-height: 1.4;
+}
+
+.achievement-card__badge {
+    margin-top: var(--space-sm);
+    font-size: var(--font-size-xs);
+    font-weight: 700;
+    color: var(--cc-accent);
+    letter-spacing: 0.03em;
+}
+
+/* ==========================================
+   Logbuch — New Design
+   ========================================== */
+
+/* ---- Stat Tile with Icon ---- */
+.stat-tile__icon {
+    font-size: 18px;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* ---- Today Hero (gradient box) ---- */
+.today-hero {
+    margin: 0 var(--space-md) var(--space-md);
+    background: linear-gradient(135deg, var(--cc-accent) 0%, var(--cc-accent-2) 120%);
+    border-radius: 22px;
+    padding: 16px;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+.today-hero__stripes {
+    position: absolute;
+    inset: 0;
+    background-image: repeating-linear-gradient(-45deg, #fff 0 1.5px, transparent 1.5px 14px);
+    opacity: 0.12;
+    pointer-events: none;
+}
+
+.today-hero__top {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.today-hero__date {
+    font-size: 11px;
+    font-weight: 700;
+    opacity: 0.85;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.today-hero__count {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+}
+
+.today-hero__count-sub {
+    font-size: 14px;
+    opacity: 0.85;
+    font-weight: 600;
+    margin-left: 4px;
+}
+
+.today-hero__park-logo {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: rgba(255,255,255,.2);
+    object-fit: contain;
+    padding: 4px;
+}
+
+.today-hero__rides {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.today-hero__ride-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,.15);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 8px 10px 8px 12px;
+    border-radius: 14px;
+}
+
+.today-hero__mood {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.today-hero__ride-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.today-hero__ride-name {
+    font-weight: 700;
+    font-size: 13.5px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.today-hero__ride-score {
+    font-size: 10.5px;
+    opacity: 0.85;
+    margin-top: 1px;
+}
+
+/* ---- Counter inline (Today Hero) ---- */
+.counter-inline {
+    display: flex;
+    align-items: center;
+    background: rgba(255,255,255,.2);
+    border-radius: var(--radius-full);
+    border: 1px solid rgba(255,255,255,.3);
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.counter-inline__btn {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    color: #fff;
+    font-size: 16px;
+}
+
+.counter-inline__btn--dec {
+    background: rgba(255,255,255,.1);
+}
+
+.counter-inline__btn--inc {
+    background: rgba(255,255,255,.3);
+}
+
+.counter-inline__val {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    color: #fff;
+    min-width: 22px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---- Logbook History ---- */
+.logbook-history {
+    padding: 0 0 var(--space-xl);
+}
+
+.logbook-date-group {
+    margin-bottom: var(--space-md);
+}
+
+.logbook-date-label {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--cc-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 var(--space-md) 6px;
+    display: block;
+}
+
+/* ==========================================
+   Hall of Fame — Trophy System
+   ========================================== */
+
+/* ---- Trophy Showcase (Ink Background) ---- */
+.trophy-showcase {
+    margin: 0 var(--space-md) var(--space-md);
+    border-radius: 22px;
+    padding: 18px;
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    position: relative;
+    overflow: hidden;
+}
+
+.trophy-showcase__radial {
+    position: absolute;
+    inset: 0;
+    opacity: 0.18;
+    background:
+        radial-gradient(circle at 80% 20%, var(--cc-accent), transparent 60%),
+        radial-gradient(circle at 10% 100%, var(--cc-accent-2), transparent 60%);
+    pointer-events: none;
+}
+
+.trophy-showcase__body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.trophy-showcase__disc {
+    width: 72px;
+    height: 72px;
+    border-radius: var(--radius-full);
+    display: grid;
+    place-items: center;
+    flex-shrink: 0;
+    box-shadow: 0 6px 22px -6px #F2A53A, inset 0 -10px 16px rgba(0,0,0,.2), inset 0 10px 16px rgba(255,255,255,.4);
+    position: relative;
+    overflow: visible;
+}
+
+.trophy-showcase__text {
+    flex: 1;
+    min-width: 0;
+}
+
+.trophy-showcase__eyebrow {
+    font-size: 11px;
+    font-weight: 700;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.trophy-showcase__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.1;
+    margin-top: 2px;
+}
+
+.trophy-showcase__desc {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.trophy-showcase__progress-row {
+    position: relative;
+    margin-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.trophy-showcase__progress-label {
+    opacity: 0.8;
+}
+
+.trophy-showcase__progress-value {
+    font-family: var(--font-display);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.trophy-showcase__bar-wrap {
+    position: relative;
+    margin-top: 6px;
+    height: 6px;
+    background: rgba(255,255,255,.15);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.trophy-showcase__bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--cc-accent), var(--cc-accent-2));
+    border-radius: var(--radius-full);
+    transition: width var(--cc-t-slow);
+}
+
+/* ---- Trophy Card ---- */
+.trophy-card {
+    background: var(--cc-surface);
+    border: 1.5px solid var(--cc-border);
+    border-radius: 18px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    box-shadow: var(--cc-shadow-sm);
+    position: relative;
+    transition: transform var(--cc-t), box-shadow var(--cc-t);
+}
+
+.trophy-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--cc-shadow-md);
+}
+
+.trophy-card--locked {
+    opacity: 0.55;
+    filter: grayscale(0.6);
+}
+
+.trophy-card__tier-pill {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    padding: 2px 6px;
+    border-radius: var(--radius-full);
+    color: #fff;
+}
+
+.trophy-card__tier-pill--bronze   { background: #A86A3C; }
+.trophy-card__tier-pill--silver   { background: #6B7280; }
+.trophy-card__tier-pill--gold     { background: #A66E1B; }
+.trophy-card__tier-pill--platinum { background: #5B21B6; }
+
+.trophy-card__disc {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    display: grid;
+    place-items: center;
+    margin-bottom: 2px;
+    box-shadow: inset 0 -8px 12px rgba(0,0,0,.18), inset 0 8px 12px rgba(255,255,255,.35);
+}
+
+.trophy-card__disc--bronze   { background: linear-gradient(135deg, #E0A26B, #A86A3C); }
+.trophy-card__disc--silver   { background: linear-gradient(135deg, #E4E7EC, #A6ADBA); }
+.trophy-card__disc--gold     { background: linear-gradient(135deg, #FFE082, #F2A53A); }
+.trophy-card__disc--platinum { background: linear-gradient(135deg, #E8DEFB, #9C8AE0, #5B21B6); }
+.trophy-card__disc--locked   { background: var(--cc-surface-2); }
+
+.trophy-card__disc .material-symbols-rounded {
+    font-size: 32px;
+    color: rgba(255,255,255,.9);
+}
+
+.trophy-card__disc--locked .material-symbols-rounded {
+    color: var(--cc-muted);
+}
+
+.trophy-card__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--cc-ink);
+    line-height: 1.2;
+}
+
+.trophy-card__desc {
+    font-size: 11px;
+    color: var(--cc-muted);
+    line-height: 1.4;
+}
+
+.trophy-card__progress-bar-wrap {
+    width: 100%;
+    height: 5px;
+    background: var(--cc-border);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.trophy-card__progress-bar {
+    height: 100%;
+    border-radius: var(--radius-full);
+    background: linear-gradient(90deg, var(--cc-accent), var(--cc-accent-2));
+}
+
+.trophy-card__progress-text {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--cc-muted);
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---- Trophy Grid ---- */
+.trophy-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    padding: 0 var(--space-md) var(--space-xl);
+}
+
+/* ---- Wait Pill ---- */
+.wait-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: rgba(255,255,255,.22);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: var(--radius-full);
+    padding: 3px 8px;
+    font-size: 11px;
+    font-weight: 700;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.wait-pill--long {
+    background: rgba(179, 54, 27, .5);
+}
+
+/* ---- Category Pill ---- */
+.cat-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--cc-surface-2);
+    border: 1px solid var(--cc-border);
+    border-radius: var(--radius-full);
+    padding: 3px 10px;
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--cc-muted);
+    white-space: nowrap;
+}
+
+/* ---- Thrill Meter (for ride cards, inline) ---- */
+.ride-thrill-meter {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+/* ---- Confetti burst (JS-generated particles) ---- */
+.confetti-particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 2px;
+    animation: cc-confetti 1.5s cubic-bezier(.25,.46,.45,.94) both;
+}
+
+/* ---- Trophy Unlock Toast ---- */
+.trophy-toast {
+    position: fixed;
+    bottom: calc(var(--nav-height) + 16px);
+    left: 50%;
+    transform: translateX(-50%) translateY(0);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: var(--radius-xl);
+    padding: 10px 18px 10px 10px;
+    box-shadow: var(--cc-shadow-lg);
+    z-index: 2100;
+    min-width: 220px;
+    max-width: 320px;
+    animation: cc-trophy-toast-in 380ms cubic-bezier(.16,1,.3,1) both,
+               cc-trophy-toast-out 320ms ease 3200ms both;
+    pointer-events: none;
+}
+
+.trophy-toast__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.trophy-toast__icon .material-symbols-rounded {
+    font-size: 22px;
+    color: #fff;
+}
+
+.trophy-toast__body {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+}
+
+.trophy-toast__eyebrow {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--cc-muted);
+}
+
+.trophy-toast__name {
+    font-size: var(--font-size-sm);
+    font-weight: 700;
+    color: var(--cc-ink);
+}
+
+@keyframes cc-trophy-toast-in {
+    from { opacity: 0; transform: translateX(-50%) translateY(20px) scale(.92); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
+}
+
+@keyframes cc-trophy-toast-out {
+    from { opacity: 1; }
+    to   { opacity: 0; transform: translateX(-50%) translateY(12px); }
+}
+
+/* ---- Progress bar animated fill ---- */
+.trophy-card__progress-bar {
+    transition: width 700ms cubic-bezier(.2,.8,.2,1);
+}
+
+/* ---- Logbook Edit Button ---- */
+.logbook-edit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border: none;
+    background: transparent;
+    color: var(--cc-muted);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background var(--cc-t), color var(--cc-t);
+    flex-shrink: 0;
+}
+
+.logbook-edit-btn:hover,
+.logbook-edit-btn:focus-visible {
+    background: var(--cc-border);
+    color: var(--cc-ink);
+    outline: none;
+}
+
+/* ---- Ride Info Sheet (Bottom Drawer) ---- */
+.ride-info-sheet__backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.45);
+    z-index: 990;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity var(--transition-normal);
+}
+
+.ride-info-sheet__backdrop--open {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.ride-info-sheet {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 991;
+    background: var(--cc-surface);
+    border-top-left-radius: 24px;
+    border-top-right-radius: 24px;
+    box-shadow: var(--cc-shadow-lg);
+    transform: translateY(100%);
+    transition: transform var(--transition-normal);
+    overflow: hidden;
+    max-height: 80dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.ride-info-sheet--open {
+    transform: translateY(0);
+}
+
+.ride-info-sheet__drag {
+    width: 36px;
+    height: 4px;
+    border-radius: 2px;
+    background: var(--cc-border-strong);
+    margin: 10px auto 0;
+    flex-shrink: 0;
+}
+
+.ride-info-sheet__hero {
+    position: relative;
+    height: 180px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, var(--cc-accent), var(--cc-accent-2));
+    background-size: cover;
+    background-position: center;
+}
+
+.ride-info-sheet__hero-scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0,0,0,.2) 0%, rgba(0,0,0,.6) 100%);
+}
+
+.ride-info-sheet__close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+    border-radius: var(--radius-full);
+    background: rgba(255,255,255,.22);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    display: grid;
+    place-items: center;
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.3);
+}
+
+.ride-info-sheet__hero-content {
+    position: absolute;
+    bottom: 14px;
+    left: 14px;
+    right: 50px;
+    color: #fff;
+}
+
+.ride-info-sheet__park-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    font-weight: 700;
+    opacity: 0.9;
+    margin-bottom: 4px;
+}
+
+.ride-info-sheet__park-logo {
+    border-radius: var(--radius-full);
+    background: #fff;
+    padding: 1px;
+    object-fit: contain;
+}
+
+.ride-info-sheet__ride-name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.015em;
+    line-height: 1.1;
+    margin: 0 0 4px;
+}
+
+.ride-info-sheet__stats {
+    font-size: 12px;
+    font-weight: 600;
+    opacity: 0.9;
+    display: flex;
+    gap: 10px;
+}
+
+.ride-info-sheet__body {
+    padding: 14px 16px 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+}
+
+.ride-info-sheet__badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.ride-info-sheet__actions {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ride-info-sheet__rate-btn {
+    flex: 1;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background: var(--cc-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    box-shadow: var(--cc-shadow-sm);
+    transition: background var(--cc-t), color var(--cc-t);
+}
+
+.ride-info-sheet__rate-btn--rated {
+    background: #2ecc71 !important;
+    color: #fff !important;
+}
+
+.ride-info-sheet__rate-btn .material-symbols-rounded {
+    font-size: 20px;
+}
+
+.ride-info-sheet__fav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius-full);
+    background: var(--cc-surface-2);
+    border: 1.5px solid var(--cc-border);
+    display: grid;
+    place-items: center;
+    color: var(--cc-muted);
+    flex-shrink: 0;
+    transition: background var(--cc-t), color var(--cc-t), border-color var(--cc-t);
+}
+
+.ride-info-sheet__fav-btn--active {
+    background: rgba(255,183,0,.12);
+    color: #d4a017;
+    border-color: rgba(255,183,0,.4);
+}
+
+/* ---- Cat Pill interactive (badge with tooltip) ---- */
+.cat-pill--btn {
+    cursor: pointer;
+    transition: background var(--cc-t), color var(--cc-t), border-color var(--cc-t);
+}
+.cat-pill--btn:hover,
+.cat-pill--btn:focus-visible {
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    border-color: var(--cc-ink);
+    outline: none;
+}
+
+/* ---- Badge tooltip (appears below badges on click) ---- */
+.ride-info-sheet__badge-tooltip {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    border-radius: var(--radius-md);
+    padding: 9px 12px;
+    font-size: 12.5px;
+    font-weight: 500;
+    line-height: 1.45;
+    animation: cc-badge-tip-in 140ms ease both;
+}
+.ride-info-sheet__badge-tooltip .material-symbols-rounded {
+    font-size: 16px;
+    flex-shrink: 0;
+    margin-top: 1px;
+    opacity: 0.85;
+}
+
+/* ---- Description (subcategory + description text + special features) ---- */
+.ride-info-sheet__description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.ride-info-sheet__subcategory {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--cc-muted);
+    margin: 0;
+}
+.ride-info-sheet__desc-text {
+    font-size: 13.5px;
+    line-height: 1.6;
+    color: var(--cc-ink);
+    margin: 0;
+}
+.ride-info-sheet__features {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.ride-info-sheet__features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 2px;
+    font-size: 13px;
+    color: var(--cc-ink);
+    line-height: 1.45;
+}
+
+@keyframes cc-badge-tip-in {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Ride card stagger entrance ---- */
+.ride-card,
+.ride-card--compact {
+    animation: cc-card-in 350ms cubic-bezier(.2,.8,.2,1) both;
+    animation-delay: calc(var(--card-i, 0) * 45ms);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .trophy-toast { animation: none; }
+    .trophy-card__progress-bar { transition: none; }
+    .ride-card,
+    .ride-card--compact { animation: none; }
+}
+
+/* ==========================================
+   Empty States — Premium Styling
+   ========================================== */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: var(--space-xl) var(--space-lg);
+    background: var(--cc-surface);
+    border: 1.5px dashed var(--cc-border-strong);
+    border-radius: 24px;
+    margin: var(--space-md) auto;
+    max-width: calc(var(--content-max-width) - 32px);
+    box-shadow: var(--cc-shadow-sm);
+    animation: cc-fade-in 250ms ease-out both;
+}
+
+.empty-state__icon-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-full);
+    background: var(--cc-surface-2);
+    display: grid;
+    place-items: center;
+    margin-bottom: var(--space-md);
+    color: var(--cc-muted);
+}
+
+.empty-state__icon-wrap .material-symbols-rounded {
+    font-size: 32px;
+}
+
+.empty-state__icon-wrap--fav {
+    background: rgba(255, 183, 0, 0.1);
+    color: #d4a017;
+}
+
+.empty-state__title {
+    font-family: var(--font-display);
+    font-size: var(--font-size-md);
+    font-weight: 700;
+    color: var(--cc-ink);
+    margin: 0 0 var(--space-xs);
+    letter-spacing: -0.015em;
+}
+
+.empty-state__text {
+    font-size: var(--font-size-sm);
+    color: var(--cc-muted);
+    max-width: 32ch;
+    line-height: 1.5;
+    margin: 0 0 var(--space-md);
+}
+
+.empty-state__btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-xs);
+    padding: 10px 20px;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    background: var(--cc-ink);
+    color: var(--cc-on-ink);
+    border: none;
+    cursor: pointer;
+    box-shadow: var(--cc-shadow-sm);
+    transition: transform var(--cc-t), filter var(--cc-t);
+}
+
+.empty-state__btn:hover {
+    filter: brightness(1.1);
+}
+
+.empty-state__btn:active {
+    transform: scale(0.96);
+}
+
+/* ==========================================
+   Einstellungen (Settings) — Premium Styles
+   ========================================== */
+.settings-list {
+    padding: 0 var(--space-md) var(--space-2xl);
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    animation: cc-page-in 200ms cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+.settings-group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.settings-group__title {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--cc-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin: 0 var(--space-xs) 4px;
+}
+
+.settings-group__title .material-symbols-rounded {
+    font-size: 16px;
+    color: var(--cc-accent);
+}
+
+.settings-card {
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: 20px;
+    padding: var(--space-md) var(--space-lg);
+    box-shadow: var(--cc-shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.settings-card--buttons {
+    gap: var(--space-sm);
+    padding: var(--space-lg);
+}
+
+.settings-card--info {
+    text-align: center;
+    align-items: center;
+    padding: var(--space-lg);
+}
+
+.settings-select {
+    width: 100%;
+    height: 46px;
+    padding: 0 var(--space-md);
+    font-family: var(--font-family);
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    color: var(--cc-ink);
+    background: var(--cc-surface-2);
+    border: 1.5px solid var(--cc-border);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: border-color var(--cc-t), background var(--cc-t);
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23807468'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 20px;
+}
+
+.settings-select:focus {
+    outline: none;
+    border-color: var(--cc-accent);
+    background-color: var(--cc-accent-bg);
+}
+
+.settings-info-text {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--font-size-base);
+    color: var(--cc-ink);
+    margin: 0;
+}
+
+/* ==========================================
+   Dark Mode Contrast & Hover Fixes
+   ========================================== */
+body.dark-theme .ride-card--compact:hover {
+    background: var(--cc-surface-2);
+    box-shadow: var(--cc-shadow-md);
+}
+
+body.dark-theme .btn--secondary:hover,
+body.dark-theme .counter__btn:hover,
+body.dark-theme .filter-modal__close:hover,
+body.dark-theme .more-parks-popup__close:hover,
+body.dark-theme #settings-import-label:hover {
+    background: var(--cc-surface-2);
+    filter: brightness(1.2);
+}
+
+/* danger button styles */
+.btn--danger {
+    background: var(--cc-danger);
+    color: #ffffff !important;
+    box-shadow: var(--cc-shadow-sm);
+    border: none;
+}
+
+.btn--danger:hover {
+    filter: brightness(1.1);
+    box-shadow: var(--cc-shadow-md);
+    transform: translateY(-1px);
+}
+
+.btn--danger:active {
+    transform: scale(0.96);
+}
+
+body.dark-theme .btn--danger {
+    background: var(--cc-danger);
+    color: #ffffff !important;
+}
+
+body.dark-theme .btn--danger:hover {
+    filter: brightness(1.25);
+}
+
+/* ==========================================
+   Sortierung & Filterung (Pfad C) — UX Upgrade
+   ========================================== */
+.chip-select--sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    min-height: 36px;
+}
+
+.filter-bar__count {
+    font-family: var(--font-family);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--cc-muted);
+}
+
+
+/* ==========================================
+   Logbuch-Teilung (Tagebuch & Fahrtenbuch) - Pfad D
+   ========================================== */
+.logbook-tabs {
+    display: flex;
+    gap: 4px;
+    background: var(--cc-surface-2);
+    border: 1px solid var(--cc-border);
+    border-radius: 12px;
+    padding: 4px;
+    margin: 0 var(--space-md) var(--space-lg);
+    box-shadow: var(--cc-shadow-sm);
+}
+
+.logbook-tab {
+    flex: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 40px;
+    font-family: var(--font-family);
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--cc-muted);
+    background: transparent;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: background var(--cc-t), color var(--cc-t), transform 150ms ease;
+}
+
+.logbook-tab .material-symbols-rounded {
+    font-size: 18px;
+}
+
+.logbook-tab--active {
+    background: var(--cc-surface);
+    color: var(--cc-ink);
+    box-shadow: var(--cc-shadow-sm);
+    border: 1px solid var(--cc-border);
+}
+
+.logbook-tab:active {
+    transform: scale(0.97);
+}
+
+/* ---- Ride Info Sheet Details Counter ---- */
+.ride-info-sheet__counter-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--cc-surface-2);
+    border: 1.5px solid var(--cc-border);
+    border-radius: 14px;
+    padding: 12px var(--space-md);
+    margin: var(--space-md) 0;
+    transition: background var(--cc-t), border-color var(--cc-t);
+}
+
+.ride-info-sheet__counter-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.ride-info-sheet__counter-eyebrow {
+    font-family: var(--font-family);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--cc-ink);
+}
+
+.ride-info-sheet__counter-total {
+    font-family: var(--font-family);
+    font-size: 11px;
+    color: var(--cc-muted);
+}
+
+/* Ensure readability of counter elements in sheet */
+.ride-info-sheet__counter-row .counter-inline {
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: var(--radius-full);
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.ride-info-sheet__counter-row .counter-inline__btn {
+    width: 30px;
+    height: 30px;
+    border-radius: var(--radius-full);
+    border: none;
+    background: var(--cc-surface-2);
+    color: var(--cc-ink);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--cc-t), color var(--cc-t);
+}
+
+.ride-info-sheet__counter-row .counter-inline__btn:hover {
+    background: var(--cc-border);
+}
+
+.ride-info-sheet__counter-row .counter-inline__val {
+    font-family: var(--font-family);
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--cc-ink);
+    min-width: 24px;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Edit and delete icons on logbook history items */
+.logbook-edit-btn {
+    background: transparent;
+    border: none;
+    color: var(--cc-muted);
+    padding: 6px;
+    border-radius: var(--radius-full);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background var(--cc-t), color var(--cc-t);
+}
+
+.logbook-edit-btn:hover {
+    background: var(--cc-surface-2);
+    color: var(--cc-ink);
+}
+
+/* Compact layout inside Fahrtenbuch counters list */
+.logbook-counter-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    padding: 0 var(--space-md) var(--space-xl);
+}
+
+.logbook-counter-item {
+    display: flex;
+    align-items: center;
+    background: var(--cc-surface);
+    border: 1px solid var(--cc-border);
+    border-radius: 16px;
+    padding: 10px 12px;
+    gap: 12px;
+    box-shadow: var(--cc-shadow-sm);
+    transition: border-color var(--cc-t), box-shadow var(--cc-t);
+}
+
+.logbook-counter-item:hover {
+    border-color: var(--cc-accent-bg-active);
+    box-shadow: var(--cc-shadow-md);
+}
+
+.logbook-counter-item__photo {
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.logbook-counter-item__photo-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.15;
+}
+
+.logbook-counter-item__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.logbook-counter-item__name {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 13.5px;
+    color: var(--cc-ink);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.logbook-counter-item__meta {
+    font-size: 10.5px;
+    color: var(--cc-muted);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.logbook-counter-item__right {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+

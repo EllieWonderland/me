@@ -1,0 +1,90 @@
+[
+    {
+        "id": "roller_coasters",
+        "name": "1. Achterbahnen (Roller Coasters)",
+        "focus": "Schienengebundene Fahrt mit Abfahrten, Hügeln und potenziellen Inversionen, angetrieben durch Schwerkraft oder Launches.",
+        "subcategories": [
+            "Stahlachterbahnen (Sit-Down, Hyper, Dive)",
+            "Holzachterbahnen (Wooden Coasters)",
+            "Hängende Achterbahnen (Inverted & Suspended Coasters)",
+            "Fliegende Achterbahnen (Flying Coasters für eine liegende Position)",
+            "Wasserachterbahnen (Kombination aus Achterbahn-Strecke und Splash-Down)",
+            "Angetriebene Achterbahnen (Powered Coasters, die durchgehend motorisiert sind)"
+        ]
+    },
+    {
+        "id": "dark_rides",
+        "name": "2. Themenfahrten (Dark Rides)",
+        "focus": "Fortbewegungsmittel dient primär als Vehikel, um durch eine stark thematisierte, meist überdachte Szenerie (Immersion, Animatronics) zu fahren.",
+        "subcategories": [
+            "Klassische Dark Rides (Schienengebundene Endlossysteme oder Einzelwagen)",
+            "Trackless Dark Rides (Schienenlose, computergesteuerte Wagen)",
+            "Boots-Themenfahrten (Fokus auf Szenerie, nicht auf Nässe oder Thrill-Drops)",
+            "Interaktive Dark Rides (Ausgestattet mit Zielsystemen/Shootern)"
+        ]
+    },
+    {
+        "id": "water_rides",
+        "name": "3. Wasserfahrgeschäfte",
+        "focus": "Action und Fahrtdynamik im Element Wasser (Nässegrad und Strömung sind entscheidend, nicht primär die Szenerie).",
+        "subcategories": [
+            "Wildwasserbahnen (Log Flumes mit klassischen Abfahrten/Drops)",
+            "Rafting-Anlagen (Rapid Rivers in Rundbooten mit wilder Strömung)",
+            "Splash Battles (Interaktive Wasserschlachten mit Wasserkanonen)",
+            "Shoot-the-Chutes (Große Boote mit einem massiven Drop und gigantischer Welle)"
+        ]
+    },
+    {
+        "id": "flat_rides_horizontal",
+        "name": "4. Rundfahrgeschäfte (Flat Rides, Horizontale Dynamik)",
+        "focus": "Fahrgeschäfte mit kompakter Grundfläche, bei denen die Fliehkraft und die horizontale Drehung am Boden im Vordergrund stehen.",
+        "subcategories": [
+            "Klassische Karussells (z. B. Pferdekarussells)",
+            "Bodennahe Drehgeschäfte (z. B. Breakdance, Walzerbahnen, Teetassen)",
+            "Wellenflieger (Kettenkarussells ohne extreme Höhen)",
+            "Polyp / Krake (Rotierende Arme mit sich drehenden Gondeln am Boden)"
+        ]
+    },
+    {
+        "id": "flat_rides_vertical",
+        "name": "5. Hochfahrgeschäfte (Flat Rides, Vertikale Dynamik)",
+        "focus": "Fahrgeschäfte, bei denen es primär um Höhe, den freien Fall oder vertikale Überkopf-Rotation geht.",
+        "subcategories": [
+            "Freifalltürme (Freefall-Tower)",
+            "Aussichtstürme & Riesenräder (Langsame Rotation/Fahrt in große Höhen)",
+            "Pendel & Schaukeln (z. B. Schiffsschaukeln, riesige Frisbee-Pendel)",
+            "Überkopf-Fahrgeschäfte (z. B. Top Spin, Booster, Propeller)"
+        ]
+    },
+    {
+        "id": "simulators_cinemas",
+        "name": "6. Simulatoren & Kinos",
+        "focus": "Die Illusion von Bewegung oder Reisen durch Bild-, Ton- und Bewegungseffekte auf der Stelle.",
+        "subcategories": [
+            "Bewegungssimulatoren (Motion-Bases mit Leinwand)",
+            "Flying Theaters (Große schwebende Gondeln vor einer Kuppelleinwand)",
+            "4D-/5D-Kinos (Filme mit physischen Spezialeffekten im Saal)"
+        ]
+    },
+    {
+        "id": "transport_rides",
+        "name": "7. Transport- & Schienenfahrten",
+        "focus": "Entspannte Fortbewegung von A nach B oder Sightseeing-Rundfahrten durch den Park.",
+        "subcategories": [
+            "Parkeisenbahnen (Ebenerdige Züge)",
+            "Einschienenbahnen (Monorails)",
+            "Seilbahnen & Sessellifte"
+        ]
+    },
+    {
+        "id": "walkthroughs_play_areas",
+        "name": "8. Walkthroughs & Play Areas",
+        "focus": "Aktives Erkunden zu Fuß und im eigenen Tempo.",
+        "subcategories": [
+            "Laufgeschäfte (Funhouses mit physischen Hindernissen)",
+            "Spukhäuser & Mazes (Horror-Labyrinthe mit Erschreckern)",
+            "Begehbare Dioramen (z. B. Märchenwälder)",
+            "Spiel- & Kletteranlagen"
+        ]
+    }
+]

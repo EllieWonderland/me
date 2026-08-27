@@ -1,0 +1,744 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="CoasterCheck: Deine Offline-First PWA zum Loggen und Bewerten von Achterbahnfahrten.">
+    <meta name="theme-color" content="#fbf6ee">
+
+    <title>CoasterCheck</title>
+
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="manifest.json">
+
+    <!-- Favicon & App Icons -->
+    <link rel="icon" type="image/svg+xml" href="assets/icons/logo_foreground.svg">
+    <link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="assets/icons/icon-512.png">
+
+    <!-- Fonts + Material Symbols icons: self-hosted, no external dependency -->
+    <link rel="stylesheet" href="assets/fonts/fonts.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="src/css/variables.css">
+    <link rel="stylesheet" href="src/css/reset.css">
+    <link rel="stylesheet" href="src/css/layout.css">
+    <link rel="stylesheet" href="src/css/components.css">
+    <link rel="stylesheet" href="src/css/form.css">
+    <link rel="stylesheet" href="src/css/animations.css">
+</head>
+
+<body>
+
+    <!-- Skip Link -->
+    <a href="#app-content" class="skip-link">Zum Inhalt springen</a>
+
+    <!-- Willkommens-Banner: erscheint, wenn ein Park per GPS erkannt wird -->
+    <div class="park-welcome" id="park-welcome" role="status" aria-live="polite" hidden>
+        <span class="material-symbols-rounded park-welcome__icon">celebration</span>
+        <div class="park-welcome__body">
+            <div class="park-welcome__title">Willkommen im <span id="park-welcome-name">Park</span>!</div>
+            <div class="park-welcome__subtitle">Viel Spaß – logge deine Fahrten direkt in der App.</div>
+        </div>
+        <button class="park-welcome__close" id="park-welcome-close" aria-label="Hinweis schließen">
+            <span class="material-symbols-rounded">close</span>
+        </button>
+    </div>
+
+    <!-- App Header -->
+    <header class="app-header" role="banner">
+        <button id="home-btn" class="app-header__home-btn" aria-label="Zur Startseite">
+            <img src="assets/icons/logo_foreground.svg" alt="" class="app-header__logo">
+            <h1 class="app-header__title">CoasterCheck</h1>
+        </button>
+        <a class="app-header__back" href="https://janafisenko.de/#projekte">Zurück zum Portfolio</a>
+    </header>
+
+    <!-- Main Content Area (Pages) -->
+    <main class="app-content" id="app-content" role="main">
+
+        <!-- Page: Parks -->
+        <section class="page page--active page--parks" id="page-parks" aria-label="Parks entdecken">
+
+            <!-- Status Bar -->
+            <div class="status-bar">
+                <div class="status-pill" role="status" aria-live="polite">
+                    <span class="status-pill__dot"></span>
+                    <span class="status-pill__label" id="status-label">Online</span>
+                </div>
+                <div class="status-pill status-pill--gps" id="gps-status-pill" role="status" aria-live="polite">
+                    <span class="status-pill__dot status-pill__dot--gps" id="gps-status-dot"></span>
+                    <span class="status-pill__label" id="gps-status-label">GPS inaktiv</span>
+                </div>
+            </div>
+            <div id="wait-time-status" class="wait-time-status"></div>
+
+            <!-- Welcome Hero -->
+            <div class="welcome-hero">
+                <h2 class="welcome-hero__title">Bereit für den nächsten <span
+                        class="welcome-hero__gradient">Drop?</span></h2>
+                <p class="welcome-hero__subtitle" id="hero-subline">Logge Fahrten, bewerte Rides und entdecke neue
+                    Abenteuer.</p>
+            </div>
+
+            <!-- More parks popup -->
+            <div class="more-parks-overlay" id="more-parks-overlay" role="dialog" aria-modal="true"
+                aria-labelledby="more-parks-title" hidden>
+                <div class="more-parks-popup">
+                    <div class="more-parks-popup__header">
+                        <span class="more-parks-popup__title" id="more-parks-title">Folgende Parks sind bereits in
+                            Planung...</span>
+                        <button class="filter-modal__close" id="more-parks-close" aria-label="Schließen">
+                            <span class="material-symbols-rounded">close</span>
+                        </button>
+                    </div>
+                    <ul class="more-parks-popup__list">
+                        <li>Europa-Park <span class="more-parks-popup__location">Rust</span></li>
+                        <li>Legoland Deutschland <span class="more-parks-popup__location">Günzburg</span></li>
+                        <li>Hansa-Park <span class="more-parks-popup__location">Sierksdorf</span></li>
+                        <li>Holiday Park <span class="more-parks-popup__location">Haßloch</span></li>
+                        <li>Erlebnispark Tripsdrill <span class="more-parks-popup__location">Cleebronn</span></li>
+                        <li>Ravensburger Spieleland <span class="more-parks-popup__location">Meckenbeuren</span></li>
+                        <li>Fort Fun Abenteuerland <span class="more-parks-popup__location">Bestwig</span></li>
+                        <li>Skyline Park <span class="more-parks-popup__location">Bad Wörishofen</span></li>
+                        <li>Freizeitpark Plohn <span class="more-parks-popup__location">Vogtland</span></li>
+                        <li>Bayernpark <span class="more-parks-popup__location">Reisbach</span></li>
+                    </ul>
+                    <p class="more-parks-popup__footer">...und viele weitere.</p>
+                </div>
+            </div>
+
+            <!-- Park Carousel (injected by JS when parkFilter=all) -->
+            <div id="park-carousel"></div>
+
+            <!-- Search bar -->
+            <div class="search-bar">
+                <span class="material-symbols-rounded search-bar__icon">search</span>
+                <input type="search" id="search-input" class="search-bar__input" placeholder="Bahn oder Park suchen…"
+                    aria-label="Suche" autocomplete="off">
+                <button class="search-bar__filter-btn cc-press" id="filter-btn" aria-label="Erweiterte Filter öffnen"
+                    aria-expanded="false" aria-controls="filter-modal">
+                    <span class="material-symbols-rounded">tune</span>
+                    <span class="search-bar__badge" id="filter-badge" hidden>0</span>
+                </button>
+            </div>
+
+            <!-- Filter Bar (Sorting & Counter) -->
+            <div class="filter-bar">
+                <div class="filter-bar__sort">
+                    <span class="material-symbols-rounded">sort</span>
+                    <select id="sort-select" class="select-input" aria-label="Attraktionen sortieren">
+                        <option value="default">Standard</option>
+                        <option value="name-asc">Alphabetisch (A-Z)</option>
+                        <option value="name-desc">Alphabetisch (Z-A)</option>
+                        <option value="score-desc">Ranking (Beste zuerst)</option>
+                        <option value="speed-desc">Geschwindigkeit (schnellste zuerst)</option>
+                        <option value="height-desc">Höhe (höchste zuerst)</option>
+                        <option value="inversions-desc">Loopings (meiste zuerst)</option>
+                        <option value="wait-asc">Wartezeit (kürzeste zuerst)</option>
+                    </select>
+                </div>
+                <span class="filter-bar__count" id="ride-count-label">0 Bahnen</span>
+            </div>
+
+            <!-- Featured Ride (injected by JS when parkFilter=all) -->
+            <div id="featured-ride"></div>
+
+            <!-- Ride List (injected by JS) -->
+            <div id="ride-list" aria-live="polite"></div>
+
+        </section>
+
+        <!-- Page: Logbook -->
+        <section class="page" id="page-logbook" aria-label="Logbuch">
+            <div class="page-header">
+                <div class="page__eyebrow-inline">
+                    <span class="material-symbols-rounded">menu_book</span>
+                    Logbuch
+                </div>
+                <h1 class="page__title">Deine Coaster-<br>Reise</h1>
+            </div>
+            <div class="stats-overview" id="stats-overview"></div>
+            <div class="logbook-tabs">
+                <button class="logbook-tab logbook-tab--active" id="logbook-tab-diary">
+                    <span class="material-symbols-rounded">book</span>
+                    Tagebuch
+                </button>
+                <button class="logbook-tab" id="logbook-tab-log">
+                    <span class="material-symbols-rounded">edit_calendar</span>
+                    Fahrtenbuch
+                </button>
+            </div>
+            
+            <div id="diary-section">
+                <div id="logbook-history" aria-live="polite">
+                    <p class="logbook-empty">Noch keine Bewertungen. Bewerte deinen ersten Ride!</p>
+                </div>
+            </div>
+
+            <div id="log-section" hidden>
+                <div id="today-hero"></div>
+                <div id="logbook-counters" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <!-- ====== Review Modal (Full-Screen Overlay) ====== -->
+        <div class="review-modal" id="review-modal" role="dialog" aria-modal="true" aria-label="Ride bewerten">
+
+            <!-- Gradient Hero Header -->
+            <div class="review-hero" id="review-hero">
+                <div class="review-hero__overlay" aria-hidden="true"></div>
+                <div class="review-hero__top">
+                    <button class="review-hero__close cc-press" id="review-close" aria-label="Bewertung schließen">
+                        <span class="material-symbols-rounded">close</span>
+                    </button>
+                    <div class="thrill-meter-wrap" id="review-thrill-meter" aria-label="Live-Score" aria-live="polite">
+                    </div>
+                </div>
+                <div class="review-hero__info">
+                    <div class="review-hero__park-row">
+                        <img class="review-hero__park-logo" id="review-hero-park-logo" src="" alt="" width="18"
+                            height="18">
+                        <span class="review-hero__park-name" id="review-hero-park-name">-</span>
+                    </div>
+                    <h2 class="review-hero__ride-name" id="review-hero-ride-name">-</h2>
+                    <div class="review-hero__stats" id="review-hero-stats"></div>
+                </div>
+            </div>
+
+            <!-- Stepper -->
+            <div class="review-stepper" role="tablist" aria-label="Bewertungs-Sektionen" id="review-stepper">
+                <button class="review-stepper__tab review-stepper__tab--active" data-step="1" role="tab"
+                    aria-selected="true">
+                    <span class="material-symbols-rounded">speed</span>
+                    <span>Thrill</span>
+                    <span class="review-stepper__check" hidden>✓</span>
+                </button>
+                <button class="review-stepper__tab" data-step="2" role="tab" aria-selected="false">
+                    <span class="material-symbols-rounded">visibility</span>
+                    <span>Thema</span>
+                    <span class="review-stepper__check" hidden>✓</span>
+                </button>
+                <button class="review-stepper__tab" data-step="3" role="tab" aria-selected="false">
+                    <span class="material-symbols-rounded">self_improvement</span>
+                    <span>Komfort</span>
+                    <span class="review-stepper__check" hidden>✓</span>
+                </button>
+                <button class="review-stepper__tab" data-step="4" role="tab" aria-selected="false">
+                    <span class="material-symbols-rounded">repeat</span>
+                    <span>Fazit</span>
+                    <span class="review-stepper__check" hidden>✓</span>
+                </button>
+            </div>
+
+            <!-- Scrollable Body -->
+            <div class="review-modal__body" id="review-body">
+
+                <!-- Inline Validation Error -->
+                <div class="form-validation-error" id="review-validation-error" role="alert" hidden>
+                    <span class="material-symbols-rounded" aria-hidden="true">error</span>
+                    <span id="review-validation-message"></span>
+                </div>
+
+                <!-- Section 1: Thrill -->
+                <div class="review-section" data-step="1">
+                    <div class="form-field">
+                        <label class="form-field__label">Erleben</label>
+                        <div class="chip-group" data-field="experience" data-type="single">
+                            <button class="chip-select" data-value="1"><span aria-hidden="true">😴</span> Langweilig</button>
+                            <button class="chip-select" data-value="2"><span aria-hidden="true">😌</span> Entspannend</button>
+                            <button class="chip-select" data-value="3"><span aria-hidden="true">😄</span> Spaßig</button>
+                            <button class="chip-select" data-value="4"><span aria-hidden="true">🏎️</span> Rasant</button>
+                            <button class="chip-select" data-value="5"><span aria-hidden="true">🤯</span> Verrückt</button>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label">Einzigartigkeit
+                            <span class="form-field__hint-inline" id="uniqueness-count">(0/5)</span>
+                        </label>
+                        <div class="chip-group" data-field="uniqueness" data-type="multi">
+                            <button class="chip-multi" data-feature="launch">Launch</button>
+                            <button class="chip-multi" data-feature="vr">VR</button>
+                            <button class="chip-multi" data-feature="backwards">Rückwärts</button>
+                            <button class="chip-multi" data-feature="seats">Spezialsitze</button>
+                            <button class="chip-multi" data-feature="show">Show</button>
+                            <button class="chip-multi" data-feature="drop">Drop</button>
+                            <button class="chip-multi" data-feature="audio">Onboard-Audio</button>
+                            <button class="chip-multi" data-feature="surprise">Überraschung</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 2: Theming -->
+                <div class="review-section" data-step="2" hidden>
+                    <div class="form-field">
+                        <label class="form-field__label">Thema</label>
+                        <div class="chip-group" data-field="theme" data-type="single">
+                            <button class="chip-select" data-value="0">Keins</button>
+                            <button class="chip-select" data-value="1">Wenig</button>
+                            <button class="chip-select" data-value="2">Lieblos</button>
+                            <button class="chip-select" data-value="3">Ganz nett</button>
+                            <button class="chip-select" data-value="4">Toll</button>
+                            <button class="chip-select" data-value="5">Überragend</button>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label">Spezialeffekte</label>
+                        <div class="chip-group" data-field="effects" data-type="single">
+                            <button class="chip-select" data-value="0">Keine</button>
+                            <button class="chip-select" data-value="1.5">Wenige</button>
+                            <button class="chip-select" data-value="3.5">Einige</button>
+                            <button class="chip-select" data-value="5">Viele</button>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label">Sounds</label>
+                        <div class="chip-group" data-field="sounds" data-type="single">
+                            <button class="chip-select" data-value="-1"><span aria-hidden="true">😖</span> Unangenehm</button>
+                            <button class="chip-select" data-value="0">Keine</button>
+                            <button class="chip-select" data-value="3"><span aria-hidden="true">🎵</span> Angenehm</button>
+                            <button class="chip-select" data-value="5"><span aria-hidden="true">🎶</span> Top</button>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label">Wartebereich</label>
+                        <div class="chip-group" data-field="queueLine" data-type="single">
+                            <button class="chip-select" data-value="0">Zickzack</button>
+                            <button class="chip-select" data-value="1">Nice try</button>
+                            <button class="chip-select" data-value="2">Ganz nett</button>
+                            <button class="chip-select" data-value="3">Schön</button>
+                            <button class="chip-select" data-value="4">Spannend</button>
+                            <button class="chip-select" data-value="5">Interaktiv</button>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <div class="toggle-row">
+                            <span class="toggle-row__label">Single Rider verfügbar?</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="review-single-rider">
+                                <span class="toggle-switch__track"></span>
+                                <span class="toggle-switch__thumb"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3: Comfort -->
+                <div class="review-section" data-step="3" hidden>
+                    <div class="form-field">
+                        <label class="form-field__label">Smoothness</label>
+                        <div class="chip-group chip-group--colored" data-field="smoothness" data-type="single">
+                            <button class="chip-select" data-value="-1"><span aria-hidden="true">💢</span> Aua!</button>
+                            <button class="chip-select" data-value="1"><span aria-hidden="true">😬</span> Geht so</button>
+                            <button class="chip-select" data-value="2">Leichtes Ruckeln</button>
+                            <button class="chip-select" data-value="3"><span aria-hidden="true">😐</span> Okay</button>
+                            <button class="chip-select" data-value="4"><span aria-hidden="true">😊</span> Angenehm</button>
+                            <button class="chip-select" data-value="5"><span aria-hidden="true">😍</span> Butterweich</button>
+                        </div>
+                    </div>
+                    <div class="form-field">
+                        <label class="form-field__label">Familientauglichkeit</label>
+                        <p class="form-field__hint">Tippe: Nein → Eingeschränkt → Ja</p>
+                        <div class="toggle-card-group" data-field="family" data-type="tristate">
+                            <button type="button" class="toggle-card" data-item="infants" data-state="0" aria-label="Kleine Kinder: keine Angabe">
+                                <span class="toggle-card__label">Kleine Kinder</span>
+                                <span class="toggle-card__state" aria-hidden="true">-</span>
+                            </button>
+                            <button type="button" class="toggle-card" data-item="kids" data-state="0" aria-label="Schulkinder: keine Angabe">
+                                <span class="toggle-card__label">Schulkinder</span>
+                                <span class="toggle-card__state" aria-hidden="true">-</span>
+                            </button>
+                            <button type="button" class="toggle-card" data-item="fearful" data-state="0" aria-label="Ängstliche: keine Angabe">
+                                <span class="toggle-card__label">Ängstliche</span>
+                                <span class="toggle-card__state" aria-hidden="true">-</span>
+                            </button>
+                            <button type="button" class="toggle-card" data-item="disabled" data-state="0" aria-label="Körperl. Einschr.: keine Angabe">
+                                <span class="toggle-card__label">Körperl. Einschr.</span>
+                                <span class="toggle-card__state" aria-hidden="true">-</span>
+                            </button>
+                            <button type="button" class="toggle-card" data-item="tall" data-state="0" aria-label="Große Menschen: keine Angabe">
+                                <span class="toggle-card__label">Große Menschen</span>
+                                <span class="toggle-card__state" aria-hidden="true">-</span>
+                            </button>
+                            <button type="button" class="toggle-card" data-item="wide" data-state="0" aria-label="Breite Menschen: keine Angabe">
+                                <span class="toggle-card__label">Breite Menschen</span>
+                                <span class="toggle-card__state" aria-hidden="true">-</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4: Summary -->
+                <div class="review-section" data-step="4" hidden>
+                    <div class="form-field">
+                        <label class="form-field__label">Wiederholungsfaktor</label>
+                        <div class="chip-group" data-field="repeatFactor" data-type="single">
+                            <button class="chip-select" data-value="0"><span aria-hidden="true">🚫</span> Nie wieder!</button>
+                            <button class="chip-select" data-value="2"><span aria-hidden="true">🤷</span> Kann man</button>
+                            <button class="chip-select" data-value="3"><span aria-hidden="true">👍</span> Sollte man</button>
+                            <button class="chip-select" data-value="4"><span aria-hidden="true">🔥</span> Unbedingt!</button>
+                            <button class="chip-select" data-value="5"><span aria-hidden="true">🎢</span> Sucht!</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /review-body -->
+
+            <!-- Sticky Footer -->
+            <div class="review-modal__footer">
+                <button class="review-footer__back cc-press" id="review-back" aria-label="Vorherige Sektion">
+                    <span class="material-symbols-rounded">arrow_back</span>
+                </button>
+                <button class="review-footer__next cc-press" id="review-next">
+                    Weiter <span class="material-symbols-rounded">arrow_forward</span>
+                </button>
+                <button class="review-footer__save cc-press" id="review-save" hidden disabled>
+                    <span class="material-symbols-rounded">save</span>
+                    Speichern · <span id="review-score-display">0</span>
+                </button>
+            </div>
+
+            <!-- Save Success Overlay -->
+            <div class="review-success" id="review-success" hidden>
+                <div class="review-success__card">
+                    <div class="review-success__confetti" aria-hidden="true"></div>
+                    <div class="review-success__icon">
+                        <span class="material-symbols-rounded">check</span>
+                    </div>
+                    <div class="review-success__title">Gespeichert!</div>
+                    <div class="review-success__sub" id="review-success-sub">0 Punkte · offline gesichert</div>
+                </div>
+            </div>
+
+        </div><!-- /review-modal -->
+
+        <!-- Page: Hall of Fame -->
+        <section class="page" id="page-fame" aria-label="Hall of Fame">
+            <div class="page-header">
+                <div class="page__eyebrow-inline">
+                    <span class="material-symbols-rounded">emoji_events</span>
+                    Hall of Fame
+                </div>
+                <h1 class="page__title">Deine<br>Trophäen</h1>
+            </div>
+            <div id="trophy-showcase"></div>
+            <div id="trophy-in-progress"></div>
+            <div id="trophy-grid"></div>
+        </section>
+
+        <!-- Page: Einstellungen -->
+        <section class="page" id="page-settings" aria-label="Einstellungen">
+            <div class="page-header">
+                <div class="page__eyebrow-inline">
+                    <span class="material-symbols-rounded">settings</span>
+                    Einstellungen
+                </div>
+                <h1 class="page__title">Deine<br>Einstellungen</h1>
+            </div>
+
+            <div class="settings-list" id="settings-list">
+                <!-- Section: Appearance -->
+                <div class="settings-group">
+                    <h2 class="settings-group__title">
+                        <span class="material-symbols-rounded">palette</span>
+                        Darstellung & Design
+                    </h2>
+                    <div class="settings-card">
+                        <div class="form-field">
+                            <label class="form-field__label" for="settings-theme">Farbthema</label>
+                            <select id="settings-theme" class="settings-select">
+                                <option value="light">Hell</option>
+                                <option value="dark">Dunkel</option>
+                                <option value="system">System-Standard</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Wait times & notifications -->
+                <div class="settings-group">
+                    <h2 class="settings-group__title">
+                        <span class="material-symbols-rounded">notifications_active</span>
+                        Wartezeiten & Push
+                    </h2>
+                    <div class="settings-card">
+                        <p class="settings-note" id="demo-server-note" hidden>
+                            Diese öffentliche Demo läuft ohne Server. Live-Wartezeiten, heutige
+                            Öffnungszeiten und Push-Benachrichtigungen brauchen das Node-Backend
+                            der App und sind hier deshalb deaktiviert. Alles andere &ndash; Fahrten
+                            loggen, bewerten, Bestenliste, Trophäen, Export und der komplette
+                            Offline-Betrieb &ndash; funktioniert vollständig.
+                        </p>
+                        <div class="form-field">
+                            <label class="form-field__label" for="settings-interval">Aktualisierungsintervall der
+                                Wartezeiten</label>
+                            <select id="settings-interval" class="settings-select">
+                                <option value="5">Alle 5 Minuten</option>
+                                <option value="10">Alle 10 Minuten</option>
+                                <option value="30">Alle 30 Minuten</option>
+                                <option value="manual">Nur manuell</option>
+                            </select>
+                        </div>
+                        <div class="toggle-row toggle-row--spaced">
+                            <span class="toggle-row__label">Push-Benachrichtigungen aktivieren</span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="settings-push">
+                                <span class="toggle-switch__track"></span>
+                                <span class="toggle-switch__thumb"></span>
+                            </label>
+                        </div>
+                        <div class="toggle-row toggle-row--spaced">
+                            <span class="toggle-row__label">Standort-Vorschläge im Park (GPS)<br>
+                                <small class="toggle-row__hint">Schlägt die Bahn vor, vor der du stehst. Ausschalten spart Akku.</small>
+                            </span>
+                            <label class="toggle-switch">
+                                <input type="checkbox" id="settings-gps">
+                                <span class="toggle-switch__track"></span>
+                                <span class="toggle-switch__thumb"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section: Backup -->
+                <div class="settings-group">
+                    <h2 class="settings-group__title">
+                        <span class="material-symbols-rounded">backup</span>
+                        Datensicherung
+                    </h2>
+                    <div class="settings-card settings-card--buttons">
+                        <button class="btn btn--secondary settings-btn cc-press" id="settings-export-btn">
+                            <span class="material-symbols-rounded">download</span>
+                            Daten sichern (Export)
+                        </button>
+                        <label class="btn btn--secondary settings-btn settings-import-label cc-press" id="settings-import-label"
+                            for="settings-import-file">
+                            <span class="material-symbols-rounded">upload</span>
+                            Daten wiederherstellen (Import)
+                            <input type="file" id="settings-import-file" accept=".json" hidden>
+                        </label>
+                        <button class="btn btn--danger settings-btn settings-btn--spaced cc-press" id="settings-reset-btn">
+                            <span class="material-symbols-rounded">delete_forever</span>
+                            Konto zurücksetzen
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Section: Info & Support -->
+                <div class="settings-group">
+                    <h2 class="settings-group__title">
+                        <span class="material-symbols-rounded">info</span>
+                        Info & Support
+                    </h2>
+                    <div class="settings-card settings-card--info">
+                        <p class="settings-info-text">CoasterCheck v1.2.0-PWA</p>
+                        <p class="settings-info-text settings-info-text--sub">Entwickelt mit ❤️ von Ellie Wonderland Productions</p>
+                        <button class="btn btn--secondary settings-btn settings-btn--spaced-lg cc-press" id="settings-report-btn">
+                            <span class="material-symbols-rounded">bug_report</span>
+                            Fehler melden
+                        </button>
+                        <p class="settings-info-text settings-info-text--legal">
+                            <b>Bildnachweis:</b> Die Foto- und Videoaufnahmen der Attraktionen des Movie Park Germany
+                            wurden von der Entwicklerin selbst vor Ort aufgenommen. Alle übrigen Ride- und Park-Fotos
+                            (Heide Park, Phantasialand) sind Eigentum des jeweiligen Freizeitparks und wurden
+                            ausschließlich zu nicht-kommerziellen Zwecken verwendet.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== Ride Info Sheet (Bottom Sheet) ====== -->
+        <div class="ride-info-sheet" id="ride-info-sheet" role="dialog" aria-modal="true" aria-label="Bahn-Details">
+            <div class="ride-info-sheet__drag" aria-hidden="true"></div>
+            <div class="ride-info-sheet__hero" id="ride-info-hero">
+                <div class="ride-info-sheet__gallery" id="ride-info-gallery" hidden></div>
+                <div class="ride-info-sheet__hero-scrim" aria-hidden="true"></div>
+                <div class="ride-info-sheet__hero-content">
+                    <div class="ride-info-sheet__park-row" id="ride-info-park-row">
+                        <img class="ride-info-sheet__park-logo" id="ride-info-park-logo" src="" alt="" width="18"
+                            height="18">
+                        <span id="ride-info-park-name"></span>
+                    </div>
+                    <h2 class="ride-info-sheet__ride-name" id="ride-info-ride-name">-</h2>
+                    <div class="ride-info-sheet__stats" id="ride-info-stats"></div>
+                </div>
+                <button class="ride-info-sheet__close cc-press" id="ride-info-close" aria-label="Schließen">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+            <div class="ride-info-sheet__body" id="ride-info-body">
+                <div class="ride-info-sheet__badges" id="ride-info-badges"></div>
+                <div class="ride-info-sheet__badge-tooltip" id="ride-info-badge-tooltip" hidden>
+                    <span class="material-symbols-rounded" id="ride-info-badge-tooltip-icon">info</span>
+                    <span id="ride-info-badge-tooltip-text"></span>
+                </div>
+                <div class="ride-info-sheet__description" id="ride-info-description"></div>
+                <div class="ride-info-sheet__counter-row">
+                    <div class="ride-info-sheet__counter-info">
+                        <span class="ride-info-sheet__counter-eyebrow">Heutige Fahrten</span>
+                        <span class="ride-info-sheet__counter-total">Gesamt: <b id="ride-info-lifetime-count">0</b></span>
+                    </div>
+                    <div class="counter-inline">
+                        <button class="counter-inline__btn counter-inline__btn--dec cc-press" id="ride-info-dec-btn" aria-label="Fahrt abziehen">
+                            <span class="material-symbols-rounded">remove</span>
+                        </button>
+                        <span class="counter-inline__val" id="ride-info-day-count">0</span>
+                        <button class="counter-inline__btn counter-inline__btn--inc cc-press" id="ride-info-inc-btn" aria-label="Fahrt hinzufügen">
+                            <span class="material-symbols-rounded">add</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="ride-info-sheet__actions">
+                    <button class="ride-info-sheet__rate-btn cc-press" id="ride-info-rate-btn">
+                        <span class="material-symbols-rounded">rate_review</span>
+                        Bewerten
+                    </button>
+                    <button class="ride-info-sheet__fav-btn cc-press" id="ride-info-fav-btn" aria-label="Favorit">
+                        <span class="material-symbols-rounded" id="ride-info-fav-icon">star</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="ride-info-sheet__backdrop" id="ride-info-backdrop"></div>
+
+        <!-- ====== Filter Modal (Bottom Sheet) ====== -->
+        <div class="filter-modal" id="filter-modal" role="dialog" aria-modal="true" aria-label="Erweiterte Filter">
+            <div class="filter-modal__header">
+                <span class="filter-modal__title">Rides filtern</span>
+                <button class="filter-modal__close" id="filter-close" aria-label="Schließen">
+                    <span class="material-symbols-rounded">close</span>
+                </button>
+            </div>
+
+            <div class="filter-modal__body">
+                <div class="form-field">
+                    <label class="form-field__label">Kategorie</label>
+                    <div class="chip-group" id="filter-categories" data-type="multi">
+                        <button class="chip-multi" data-value="roller_coasters">Achterbahnen</button>
+                        <button class="chip-multi" data-value="water_rides">Wasserbahnen</button>
+                        <button class="chip-multi" data-value="dark_rides">Dark Rides</button>
+                        <button class="chip-multi" data-value="thrill_rides">Thrill Rides</button>
+                        <button class="chip-multi" data-value="walkthrough">Laufgeschäfte</button>
+                        <button class="chip-multi" data-value="scenic_rides">Panoramafahrten</button>
+                        <button class="chip-multi" data-value="kid_rides">Kinderfahrten</button>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-field__label">Eigenschaften</label>
+                    <div class="chip-group" id="filter-features" data-type="multi">
+                        <button class="chip-multi" data-value="single_rider">Single Rider</button>
+                        <button class="chip-multi" data-value="water">Nass</button>
+                        <button class="chip-multi" data-value="spooky">Grusel / Horror</button>
+                        <button class="chip-multi" data-value="loud">Laute Effekte</button>
+                        <button class="chip-multi" data-value="dark">Dunkelheit</button>
+                    </div>
+                </div>
+                <div class="form-field" id="filter-theme-field" hidden>
+                    <label class="form-field__label">Themenbereich</label>
+                    <div class="chip-group" id="filter-theme" data-type="multi"></div>
+                </div>
+                <div class="form-field">
+                    <label class="form-field__label">Mindestgröße (Anforderung)</label>
+                    <div class="chip-group" id="filter-min-height" data-type="single">
+                        <button class="chip-select chip-select--sm chip-select--selected" data-value="all">Alle</button>
+                        <button class="chip-select chip-select--sm" data-value="90">ab 90 cm</button>
+                        <button class="chip-select chip-select--sm" data-value="120">ab 120 cm</button>
+                        <button class="chip-select chip-select--sm" data-value="140">ab 140 cm</button>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-field__label">Mindestalter (Anforderung)</label>
+                    <div class="chip-group" id="filter-min-age" data-type="single">
+                        <button class="chip-select chip-select--sm chip-select--selected"
+                            data-value="all">Jedes</button>
+                        <button class="chip-select chip-select--sm" data-value="8">ab 8 J.</button>
+                        <button class="chip-select chip-select--sm" data-value="12">ab 12 J.</button>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <label class="form-field__label">Thrill-Level</label>
+                    <div class="chip-group" id="filter-thrill" data-type="multi">
+                        <button class="chip-multi" data-value="low">Niedrig</button>
+                        <button class="chip-multi" data-value="medium">Mittel</button>
+                        <button class="chip-multi" data-value="high">Hoch</button>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="toggle-row">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="filter-headache">
+                            <span class="toggle-switch__track"></span>
+                            <span class="toggle-switch__thumb"></span>
+                        </label>
+                        <span class="toggle-row__label">Rides mit Kopfschmerz-Potenzial ausblenden</span>
+                    </div>
+                </div>
+                <div class="form-field">
+                    <div class="toggle-row">
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="filter-loops">
+                            <span class="toggle-switch__track"></span>
+                            <span class="toggle-switch__thumb"></span>
+                        </label>
+                        <span class="toggle-row__label">Nur Bahnen mit Loopings anzeigen</span>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /filter-modal -->
+
+    </main>
+
+    <!-- Bottom Navigation (floating pill) -->
+    <nav class="bottom-nav" id="bottom-nav" role="navigation" aria-label="Hauptnavigation">
+        <button class="bottom-nav__item bottom-nav__item--active" data-page="page-parks" aria-label="Parks"
+            aria-current="page">
+            <span class="material-symbols-rounded bottom-nav__icon">attractions</span>
+            <span class="bottom-nav__label">Parks</span>
+        </button>
+        <button class="bottom-nav__item" data-page="page-logbook" aria-label="Logbuch">
+            <span class="material-symbols-rounded bottom-nav__icon">menu_book</span>
+            <span class="bottom-nav__label">Logbuch</span>
+        </button>
+        <button class="bottom-nav__item" data-page="page-fame" aria-label="Trophäen">
+            <span class="material-symbols-rounded bottom-nav__icon">emoji_events</span>
+            <span class="bottom-nav__label">Trophäen</span>
+        </button>
+        <button class="bottom-nav__item" data-page="page-settings" aria-label="Einstellungen">
+            <span class="material-symbols-rounded bottom-nav__icon">settings</span>
+            <span class="bottom-nav__label">Einstellungen</span>
+        </button>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="src/js/config.js"></script>
+    <script src="src/js/app.js" type="module"></script>
+
+    <!-- Update banner: shown when a new app version has been installed -->
+    <div id="update-banner" class="update-banner" role="status" aria-live="polite" hidden>
+        <span class="material-symbols-rounded update-banner__icon">rocket_launch</span>
+        <span class="update-banner__text">Neue Version verfügbar.</span>
+        <button id="update-reload" class="cc-press update-banner__reload">Neu laden</button>
+        <button id="update-dismiss" class="update-banner__dismiss" aria-label="Hinweis schließen">
+            <span class="material-symbols-rounded">close</span>
+        </button>
+    </div>
+
+    <!-- Hinweis nach der Installation: Push aktivieren (unabhängig von GPS) -->
+    <div id="push-hint-banner" class="push-hint" role="status" aria-live="polite" hidden>
+        <span class="material-symbols-rounded push-hint__icon">notifications_active</span>
+        <span class="push-hint__text">App installiert. Aktiviere Push-Benachrichtigungen, um bei Störungen und Neuigkeiten informiert zu werden.</span>
+        <button id="push-hint-enable" class="cc-press push-hint__enable">Aktivieren</button>
+        <button id="push-hint-dismiss" class="push-hint__dismiss" aria-label="Hinweis schließen">
+            <span class="material-symbols-rounded">close</span>
+        </button>
+    </div>
+
+    <!-- Service Worker Registration (external file so CSP script-src can stay 'self') -->
+    <script src="src/js/sw-register.js"></script>
+
+</body>
+
+</html>

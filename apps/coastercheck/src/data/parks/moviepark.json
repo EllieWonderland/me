@@ -1,0 +1,1371 @@
+[
+    {
+        "id": "mp_star_trek",
+        "park_id": "movie_park",
+        "name": "Star Trek™: Operation Enterprise",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Launch Coaster)",
+        "theme_area": "Federation Plaza",
+        "image": "assets/images/coasters/moviepark/mp_star_trek.webp",
+        "requirements": {
+            "min_height_cm": 130,
+            "max_height_cm": null,
+            "min_age": 7,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 90,
+            "length_m": 720,
+            "height_m": 40,
+            "inversions": 3
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Triple Launch",
+                "Twisted Halfpipe",
+                "Star Trek Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "hints": {
+            "loud_effects": true,
+            "darkness": true,
+            "wet": false
+        },
+        "description": "Werde Teil der Sternenflotte! Bei Star Trek™: Operation Enterprise wirst du mit einem spektakulären Triple-Launch vorwärts und rückwärts in neue Galaxien katapultiert. Diese Achterbahn bietet dir absolut butterweiche Fahrfiguren, eine tolle Thematisierung und ordentlich Thrill, perfekt für alle, die schwerelose Airtime und rasante Beschleunigung lieben. Hinweis: Die Launches und Inversionen sind rasant, aber durch die extrem ruhige Fahrweise auch für mutige Einsteiger machbar. Wenn du jedoch große Angst vor Loopings hast, bleib lieber auf der Brücke!"
+    },
+    {
+        "id": "mp_movie_park_studio_tour",
+        "park_id": "movie_park",
+        "name": "Movie Park Studio Tour",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Multi-Dimension Coaster)",
+        "theme_area": "The Hollywood Studio Set",
+        "image": "assets/images/coasters/moviepark/mp_movie_park_studio_tour.webp",
+        "requirements": {
+            "min_height_cm": 110,
+            "max_height_cm": null,
+            "min_age": 5,
+            "max_age": null,
+            "companion_under_cm": 130,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 60,
+            "length_m": 532,
+            "height_m": 12,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Indoor & Outdoor",
+                "Multimedia-Launch",
+                "Drehplattform"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": true,
+            "darkness": true,
+            "wet": false
+        },
+        "description": "Erlebe einen exklusiven Blick hinter die Kulissen der Filmwelt! Die Movie Park Studio Tour ist eine perfekte Familienachterbahn, die dich vorwärts und rückwärts durch aufwendig gestaltete Hollywood-Sets schießt. Ohne Loopings, aber mit überraschenden Drehungen und Multimedia-Effekten. Ein riesiger Spaß für die ganze Familie und ideal für alle, die eine detailverliebte Thematisierung schätzen. Absolut nicht gruselig, nur die kurzen Beschleunigungen in der Dunkelheit könnten zarte Gemüter ganz kurz überraschen."
+    },
+    {
+        "id": "mp_bandit",
+        "park_id": "movie_park",
+        "name": "The Bandit",
+        "category": "roller_coasters",
+        "subcategory": "Holzachterbahnen (Wooden Coaster)",
+        "theme_area": "The Old West",
+        "image": "assets/images/coasters/moviepark/mp_bandit.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 70,
+            "length_m": 1099,
+            "height_m": 30,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Klassische Holzachterbahn im Wilden Westen"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": false,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Traust du dich auf den ungezähmten Holzklassiker? The Bandit schickt dich auf eine wilde, ratternde Fahrt über unzählige Höhen und Tiefen mitten im Wilden Westen! Es erwarten dich nostalgisches Achterbahn-Feeling und das typische Krachen einer echten Holzachterbahn. Perfekt für Nostalgiker und unerschrockene Coaster-Fans. Warnung: Da die Bahn schon etwas älter ist, ist das Fahrgefühl sehr ruppig! Wer empfindlich auf Schläge reagiert oder schnell Kopfschmerzen bekommt, sollte diesen Ritt unbedingt auslassen."
+    },
+    {
+        "id": "mp_van_helsing",
+        "park_id": "movie_park",
+        "name": "Van Helsing's Factory",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Indoor Bobsled / Gerstlauer Bobsled)",
+        "theme_area": "Streets of New York",
+        "image": "assets/images/coasters/moviepark/mp_van_helsing.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": null,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 40,
+            "length_m": 400,
+            "height_m": 14,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Indoor-Achterbahn",
+                "Horror-Thematisierung",
+                "Starke Kurven",
+                "Empfohlen ab 12 Jahren"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": true,
+            "darkness": true,
+            "wet": false
+        },
+        "description": "Werde zum furchtlosen Vampirjäger! In Van Helsing's Factory rast du fast komplett im Dunkeln durch eine düstere, schaurig-schöne Werkstatt voller blutsaugender Monster. Ohne Loopings, aber mit extrem wilden, engen Kurven und plötzlichen Richtungswechseln sorgt diese Indoor-Achterbahn für rasanten Nervenkitzel. Perfekt für alle, die intensive Horror-Thematisierungen lieben. Hinweis für ängstliche Menschen: Die Bahn ist dunkel, laut und enthält Erschrecker-Szenen. Wenn du dich leicht gruselst, ist hier äußerste Vorsicht geboten!"
+    },
+    {
+        "id": "mp_iron_claw",
+        "park_id": "movie_park",
+        "name": "Iron Claw",
+        "category": "roller_coasters",
+        "subcategory": "Hängende Achterbahnen (Suspended Looping Coaster / SLC)",
+        "theme_area": "The Old West",
+        "image": "assets/images/coasters/moviepark/mp_iron_claw.webp",
+        "requirements": {
+            "min_height_cm": 130,
+            "max_height_cm": 195,
+            "min_age": null,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 80,
+            "length_m": 689,
+            "height_m": 33,
+            "inversions": 5
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Beine frei hängend",
+                "Unter 10 Jahren nur mit Begleitung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": false,
+            "thrill_level": "high"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Lass die Beine baumeln und stell die Welt auf den Kopf! Iron Claw (ehemals MP Xpress) zieht dich hoch hinaus und wirbelt dich durch gleich fünf intensive Überschläge, während du völlig frei unter der Schiene hängst. Ein absolutes Muss für echte Adrenalin-Junkies, die starke G-Kräfte und Loopings lieben. Achtung: Diese Bahn ist dafür bekannt, dass sie relativ starke Schläge verteilt. Wer zu Kopfschmerzen neigt oder leicht Angst vor Desorientierung hat, sollte besser festen Boden unter den Füßen behalten."
+    },
+    {
+        "id": "mp_ghost_chasers",
+        "park_id": "movie_park",
+        "name": "Ghost Chasers",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Wilde Maus)",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_ghost_chasers.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": 195,
+            "min_age": 6,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 45,
+            "length_m": 370,
+            "height_m": 15,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "SpongeBob Thematisierung",
+                "Keine Neigung in Kurven"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Tauche ab nach Bikini Bottom und nimm dich vor dem Fliegenden Holländer in Acht! Auf der Ghost Chasers fährst du im markanten Zickzack-Kurs durch sehr scharfe Haarnadelkurven, bei denen du bis zur letzten Sekunde denkst, du fliegst geradewegs aus der Bahn. Ein actionreicher Wilde-Maus-Klassiker mit toller SpongeBob-Kulisse. Perfekt für mutige Kids und Familien. Hinweis: Die plötzlichen, völlig ungebremsten Richtungswechsel reißen ordentlich am Körper und können auf sehr schreckhafte Kinder anfangs einschüchternd wirken."
+    },
+    {
+        "id": "mp_jimmy_neutron",
+        "park_id": "movie_park",
+        "name": "Jimmy Neutron's Atomic Flyer",
+        "category": "roller_coasters",
+        "subcategory": "Hängende Achterbahnen (Inverted Family Coaster)",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_jimmy_neutron.webp",
+        "requirements": {
+            "min_height_cm": 95,
+            "max_height_cm": 205,
+            "min_age": 4,
+            "max_age": null,
+            "companion_under_cm": 130,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 40,
+            "length_m": 294,
+            "height_m": 13,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Familienfreundlicher Inverted Coaster"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Flieg mit dem genialen Jimmy Neutron durch die Luft! Bei diesem sanften Inverted Coaster hängst du sicher unter der Schiene und fliegst in schönen, weichen Schwüngen aus bis zu 15 Metern Höhe über das bunte Nickelodeon-Land. Ganz ohne Überschläge und extrem familienfreundlich, ist dies die absolut perfekte Einsteiger-Achterbahn, um sich an das Gefühl der baumelnden Beine heranzutasten. Völlig harmlos und auch für ängstlichere Kinder ein fantastisches und befreiendes Erlebnis!"
+    },
+    {
+        "id": "mp_backyardigans",
+        "park_id": "movie_park",
+        "name": "Backyardigans Mission to Mars",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Kiddie Coaster)",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_backyardigans.webp",
+        "requirements": {
+            "min_height_cm": 90,
+            "max_height_cm": null,
+            "min_age": 4,
+            "max_age": null,
+            "companion_under_cm": 135,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 35,
+            "length_m": 200,
+            "height_m": 8,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Nickelodeon Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Startklar für die allererste Weltraummission ins All? Die Backyardigans Mission to Mars ist eine wundervolle erste Kinderachterbahn, die sanft und ohne große Gefälle moderate Kurven dreht. Hier kribbelt es höchstens ein ganz kleines bisschen im Bauch. Perfekt auf die kleinsten Parkbesucher abgestimmt, die nun endlich auch mal wie die Großen Achterbahn fahren wollen. Hier muss garantiert niemand Angst haben!"
+    },
+    {
+        "id": "mp_area_51",
+        "park_id": "movie_park",
+        "name": "Area 51 - Top Secret",
+        "category": "water_rides",
+        "subcategory": "Wildwasserbahnen / Dark Ride",
+        "theme_area": "Hollywood Street Set",
+        "image": "assets/images/coasters/moviepark/mp_area_51.webp",
+        "media": [
+            {
+                "type": "image",
+                "src": "assets/images/coasters/moviepark/mp_area_51.webp"
+            },
+            {
+                "type": "image",
+                "src": "assets/images/coasters/moviepark/mp_area_51_2.webp"
+            }
+        ],
+        "requirements": {
+            "min_height_cm": 90,
+            "max_height_cm": null,
+            "min_age": null,
+            "max_age": null,
+            "companion_under_cm": 120,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Indoor & Outdoor",
+                "Alien-Thematisierung",
+                "Rückwärtsfahrt",
+                "Empfohlen ab 6 Jahren"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": true,
+            "darkness": true,
+            "wet": true
+        },
+        "description": "Lüfte das strengste Geheimnis der US-Regierung! Bei Area 51 startest du zu einer extrem spannenden Wasserfahrt direkt hinein in eine mysteriöse Militärbasis voller hochtechnisierter Aliens. Die einzigartige Mischung aus aufwendigem Dark Ride und klassischer Wildwasserbahn (inklusive einer unerwarteten Rückwärts-Schussfahrt) ist ein absolutes Highlight. Hinweis: Die gruselige Alien-Atmosphäre im Dunkeln und die steilen Drops können auf kleinere Kinder und ängstliche Fahrgäste furchteinflößend wirken."
+    },
+    {
+        "id": "mp_excalibur",
+        "park_id": "movie_park",
+        "name": "Excalibur - Secrets of the Dark Forest",
+        "category": "water_rides",
+        "subcategory": "Rafting-Anlagen",
+        "theme_area": "The Hollywood Studio Set",
+        "image": "assets/images/coasters/moviepark/mp_excalibur.webp",
+        "requirements": {
+            "min_height_cm": 110,
+            "max_height_cm": null,
+            "min_age": 2,
+            "max_age": null,
+            "companion_under_cm": 140,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Rundboote",
+                "Starke Indoor-Thematisierung (Merlin)"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": true,
+            "darkness": true,
+            "wet": true
+        },
+        "description": "Werde zum Teil einer lebendigen Legende und folge Merlins Ruf! In großen, sich drehenden Rundbooten stürzt du dich bei Excalibur durch eine fantastische, dunkle Höhlenwelt und einen wilden Flusslauf. Was diese Anlage so unglaublich besonders macht, ist das opulente Storytelling und die detaillierte Fantasy-Kulisse. Perfekt für die ganze Familie! Keine Sorge: Die Fahrt ist nicht extrem wild und nicht auf maximalen Nässegrad ausgelegt, du tauchst hier einfach nur tief in eine großartige Geschichte ein."
+    },
+    {
+        "id": "mp_spongebob",
+        "park_id": "movie_park",
+        "name": "SpongeBob Splash Bash",
+        "category": "water_rides",
+        "subcategory": "Splash Battles",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_spongebob.webp",
+        "requirements": {
+            "min_height_cm": 90,
+            "max_height_cm": null,
+            "min_age": null,
+            "max_age": null,
+            "companion_under_cm": 120,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Wassershoot auf andere Schiffe/Besucher",
+                "Extrem hoher Nässegrad"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": true
+        },
+        "description": "Mach dich bereit für die verrückteste Wasserschlacht in ganz Bikini Bottom! Beim SpongeBob Splash Bash steigst du in kunterbunte Boote, klemmst dich hinter die fest installierten Wasserkanonen und feuerst aus allen Rohren auf andere Fahrgäste und die lachenden Zuschauer am Ufer. Ein riesengroßer, ungefährlicher Familienspaß. Null Gruselfaktor, aber eine dicke Vorwarnung: Du wirst hier nicht nur ein bisschen nass, du wirst meistens komplett eingeweicht! Wasserphobiker sollten zuschauen statt einsteigen."
+    },
+    {
+        "id": "mp_high_fall",
+        "park_id": "movie_park",
+        "name": "The High Fall",
+        "category": "flat_rides_vertical",
+        "subcategory": "Freifalltürme",
+        "theme_area": "The Old West",
+        "image": "assets/images/coasters/moviepark/mp_high_fall.webp",
+        "media": [
+            {
+                "type": "image",
+                "src": "assets/images/coasters/moviepark/mp_high_fall.webp"
+            },
+            {
+                "type": "video",
+                "src": "assets/images/coasters/moviepark/mp_high_fall_2.mp4"
+            }
+        ],
+        "requirements": {
+            "min_height_cm": 145,
+            "max_height_cm": 195,
+            "min_age": 10,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 90,
+            "length_m": null,
+            "height_m": 60,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Gyro Drop Tower",
+                "Stehende, kippende Sitzposition (Floorless)"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "high"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Beweise ultimative Nervenstärke! The High Fall zieht dich extrem langsam 60 Meter in den Himmel hinauf. Dort angekommen, kippen die Sitze plötzlich nach vorne, und lassen dich mit 90 km/h in den gnadenlosen freien Fall stürzen. Das Besondere: Durch die bodenlose, beinahe stehende Sitzposition spürst du den Fallwind noch weitaus intensiver. Ein grandioser Kick für Thrill-Seeker! Warnung: Nichts für schwache Nerven, Menschen mit massiver Höhenangst oder Angsthasen."
+    },
+    {
+        "id": "mp_crazy_surfer",
+        "park_id": "movie_park",
+        "name": "Crazy Surfer",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Disk'O Coaster",
+        "theme_area": "Santa Monica Pier",
+        "image": "assets/images/coasters/moviepark/mp_crazy_surfer.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6,
+            "max_age": null,
+            "companion_under_cm": 130,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 70,
+            "length_m": 82,
+            "height_m": 15,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Drehende Scheibe auf Schienen"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 2,
+            "immersive_theming": false,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Reite die perfekte kalifornische Welle! Auf dem Crazy Surfer stehst du am äußeren Rand einer riesigen Scheibe, die rasant eine bogenförmige Strecke hinauf und hinab saust, während sie sich unaufhörlich um sich selbst dreht. Das sorgt für ein herrliches Gefühl von Kribbeln und Schwerelosigkeit an den höchsten Punkten. Ein cooler Spaß! Hinweis: Durch die ständige, simultane Schwing- und Drehbewegung kann Besuchern mit einem schwachen Magen hier sehr schnell schwindelig werden!"
+    },
+    {
+        "id": "mp_doras_big_river",
+        "park_id": "movie_park",
+        "name": "Dora's Big River Adventure",
+        "category": "water_rides",
+        "subcategory": "Wildwasserbahnen",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_doras_big_river.webp",
+        "media": [
+            {
+                "type": "image",
+                "src": "assets/images/coasters/moviepark/mp_doras_big_river.webp"
+            },
+            {
+                "type": "image",
+                "src": "assets/images/coasters/moviepark/mp_doras_big_river_2.webp"
+            }
+        ],
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 2,
+            "max_age": null,
+            "companion_under_cm": 120,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 14,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Dora the Explorer Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": true
+        },
+        "description": "Begib dich mit Dora auf eine abenteuerliche und feuchtfröhliche Expedition in den Dschungel! In farbenfrohen Baumstamm-Booten schipperst du sanft durch die Wasserkanäle, bis es steil bergab geht. Ein fantastischer Erfrischungsspaß an heißen Sommertagen und ein großer Favorit bei Familien. Warnung: Die große finale Abfahrt ins Wasser ist hoch und rasant. Du solltest also keine allzu große Angst vor tiefen Wasserfällen haben, und trocken bleibt hier sowieso niemand!"
+    },
+    {
+        "id": "mp_splat_o_sphere",
+        "park_id": "movie_park",
+        "name": "Splat-O-Sphere",
+        "category": "flat_rides_vertical",
+        "subcategory": "Kettenkarussells",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_splat_o_sphere.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": 155
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 30,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Flugkarussell"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Erhebe dich schwebend in himmlische Höhen! Das imposante Kettenkarussell Splat-O-Sphere wirbelt dich in einer luftigen Höhe von knapp 30 Metern weich durch den Himmel und schenkt dir einen atemberaubenden Rundumblick über den kompletten Movie Park. Ein herrlich freies Fluggefühl, das Spaß macht. Hinweis: Das Karussell dreht sich wunderbar sanft, aber die enorme Höhe ist deutlich spürbar. Wenn du schnell an Höhenangst leidest, genieße diesen Anblick lieber vom sicheren Boden aus."
+    },
+    {
+        "id": "mp_avatar_air_glider",
+        "park_id": "movie_park",
+        "name": "Avatar Air Glider",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Flugkarussells",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_avatar_air_glider.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6,
+            "max_age": null,
+            "companion_under_cm": 140,
+            "max_weight_kg": 300
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 15,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Liege-Position",
+                "Avatar - Der Herr der Elemente Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Meistere mühelos das Element der Luft! Im Avatar Air Glider liegst du ungewohnt flach auf dem Bauch und wirst in behutsamen, ausladenden Kreisen sanft in die Höhe getragen. Dieses besondere Fahrgeschäft simuliert wunderbar das schwerelose Gleiten auf einem mächtigen Flugdrachen. Perfekt, um das Gefühl des Fliegens ohne plötzlichen Nervenkitzel auszukosten. Völlig ungefährlich und durch die gemütliche Bauchlage ein riesengroßer, ruhiger Spaß!"
+    },
+    {
+        "id": "mp_santa_monica_wheel",
+        "park_id": "movie_park",
+        "name": "Santa Monica Wheel",
+        "category": "scenic_rides",
+        "subcategory": "Riesenräder",
+        "theme_area": "Santa Monica Pier",
+        "image": "assets/images/coasters/moviepark/mp_santa_monica_wheel.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 6,
+            "max_age": null,
+            "companion_under_cm": 130,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 38,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Klassisches Riesenrad"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Tauche ein in das entspannte Flair der amerikanischen Westküste! Das Santa Monica Wheel ist das hoch aufragende Wahrzeichen des Pier-Bereichs und lässt dich im gemütlichen Tempo hoch über den Köpfen der Menge kreisen. Ein idealer Rückzugsort, um kurz durchzuatmen und herrliche Panoramafotos zu machen. Eine wundervolle, friedliche Auszeit für die komplette Familie, die vollkommen frei von Hektik oder Grusel ist."
+    },
+    {
+        "id": "mp_time_riders",
+        "park_id": "movie_park",
+        "name": "Time Riders",
+        "category": "dark_rides",
+        "subcategory": "Simulatoren",
+        "theme_area": "Streets of New York",
+        "image": "assets/images/coasters/moviepark/mp_time_riders.webp",
+        "requirements": {
+            "min_height_cm": 110,
+            "max_height_cm": null,
+            "min_age": 4,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Bewegungssimulator",
+                "Story-Fokus"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 4,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": true,
+            "darkness": true,
+            "wet": false
+        },
+        "description": "Reise in sekundenschnelle quer durch die faszinierendsten Zeitalter! Bei Time Riders begleitest du einen exzentrischen Erfinder in seinem Labor und betrittst einen Simulator, der synchron zu den packenden Bildern auf der großen Leinwand wackelt, rüttelt und sich neigt. Ein großartiges Erlebnis für Story-Liebhaber. Hinweis: Da sich die Kabine in einem geschlossenen Raum stark bewegt, könnte es für Menschen, die schnell unter Reisekrankheit (Motion Sickness) leiden, rasch unangenehm werden."
+    },
+    {
+        "id": "mp_journey_forbidden_chamber",
+        "park_id": "movie_park",
+        "name": "Journey to the Forbidden Chamber",
+        "category": "dark_rides",
+        "subcategory": "Multi-Dimension Coaster / Dark Ride",
+        "theme_area": "Hollywood Street Set",
+        "image": "assets/images/coasters/moviepark/mp_journey_forbidden_chamber.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": null,
+            "max_age": null,
+            "companion_under_cm": 130,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Neuheit 2026",
+                "Paramount Produktion",
+                "Immersives Abenteuer"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": true,
+            "wet": false
+        },
+        "description": "Sei der Star der spektakulärsten Paramount Blockbuster-Produktion! Die brandneue Attraktion Journey to the Forbidden Chamber entführt dich tief in verborgene, mystische Welten voller atemberaubender Spezialeffekte und hollywoodreifer Inszenierung. Mach dich auf ein packendes, immersives Abenteuer der Extraklasse gefasst. Da diese Attraktion actiongeladen ist und ins Unbekannte führt, sollten sich schreckhafte Besucher und Angsthasen auf unvorhersehbare Überraschungen und viel Dunkelheit einstellen!"
+    },
+    {
+        "id": "mp_paw_patrol_adventure",
+        "park_id": "movie_park",
+        "name": "PAW Patrol Adventure Tour",
+        "category": "kid_rides",
+        "subcategory": "Rundfahrten",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_paw_patrol_adventure.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 2,
+            "max_age": null,
+            "companion_under_cm": 90,
+            "max_weight_kg": 225
+        },
+        "stats": {
+            "speed_kmh": 5,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Fahrt in den PAW Patrol Fahrzeugen"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Kein Einsatz ist zu groß, keine Pfote zu klein! Steig begeistert in die weltbekannten Einsatzfahrzeuge deiner flauschigen Helden von PAW Patrol und unternimm eine gemütliche Entdeckungsreise auf einer Führungsschiene durch Adventure Bay. Strahlende Kinderaugen sind hier fest vorprogrammiert! Eine zu einhundert Prozent harmlose, liebevoll dekorierte Fahrt, die auch die allerjüngsten oder besonders schüchterne Welpen-Fans spielend leicht meistern."
+    },
+    {
+        "id": "mp_stormy_cruise",
+        "park_id": "movie_park",
+        "name": "Stormy Cruise",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Rockin' Tug",
+        "theme_area": "Santa Monica Pier",
+        "image": "assets/images/coasters/moviepark/mp_stormy_cruise.webp",
+        "requirements": {
+            "min_height_cm": 90,
+            "max_height_cm": null,
+            "min_age": 4,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 5,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Drehendes Schiff in der Halbpipe",
+                "Begleitung erforderlich"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 1,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Halt dich fest, der Seegang nimmt zu! Bei Stormy Cruise nimmst du in einem Rettungsboot Platz, das behutsam eine kleine Halbpipe hinauf und hinunter schwingt und sich währenddessen langsam um seine eigene Achse dreht. Ein sanftes, wunderbar kribbeliges Gefühl im Bauch, das aber niemals überfordert. Ideal für Familien, denen wuchtige Schiffsschaukeln noch zu respekteinflößend sind, doch Vorsicht, empfindliche Mägen könnten das konstante Drehen dennoch leicht spüren."
+    },
+    {
+        "id": "mp_skyes_high_flyer",
+        "park_id": "movie_park",
+        "name": "Skye's High Flyer",
+        "category": "kid_rides",
+        "subcategory": "Kinder-Flugkarussells",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_skyes_high_flyer.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 2,
+            "max_age": null,
+            "companion_under_cm": 135,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 10,
+            "length_m": null,
+            "height_m": 4,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Interaktive Höhenkontrolle"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Hebe mutig ab und erobere den Himmel mit Skye! In kleinen, sicheren Flugzeugen kreist du sanft durch die Luft und kannst per Hebel sogar ganz alleine entscheiden, wie hoch oder tief dein Flieger steigen soll. Ein wunderschöner, interaktiver Flugspaß für Kinder. Absolut zutraulich und sicher, wer Angst vor der Höhe hat, lenkt seinen Helikopter einfach entspannt weiter unten."
+    },
+    {
+        "id": "mp_zumas_zoomers",
+        "park_id": "movie_park",
+        "name": "Zuma's Zoomers",
+        "category": "kid_rides",
+        "subcategory": "Hovercraft-Karussells",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_zumas_zoomers.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 2,
+            "max_age": null,
+            "companion_under_cm": 90,
+            "max_weight_kg": 125
+        },
+        "stats": {
+            "speed_kmh": 10,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Driften in Kurven"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Gib ordentlich Gas und gleite mit Zuma lässig übers Wasser! Du fährst in coolen Hovercrafts im Kreis und schleuderst dabei leicht, aber stets sicher nach außen in die Kurven. Ein riesengroßer Spaß, der actionreich aussieht, aber perfekt für kleinere Kinder abgestimmt ist. Hier rutscht niemand aus dem Sitz, und selbst sehr vorsichtige Kinder fangen schnell an zu lachen."
+    },
+    {
+        "id": "mp_fairy_world_spin",
+        "park_id": "movie_park",
+        "name": "Fairy World Spin",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Teetassen-Karussells",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_fairy_world_spin.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 2,
+            "max_age": null,
+            "companion_under_cm": 100,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Cosmo & Wanda Thematisierung",
+                "Selbst drehbare Gondeln"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 1,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Lass dich kräftig durchwirbeln mit deinen Elfen Cosmo und Wanda! Dieses kunterbunte Karussell lässt dich in Gondeln rotieren, deren Eigengeschwindigkeit du mithilfe des großen Lenkrads in der Mitte ganz alleine bestimmst. Ein echter Freizeitpark-Klassiker! Keine Sorge vor Kontrollverlust: Wenn du dich vor wilden Umdrehungen oder Schwindel fürchtest, fasst du das Lenkrad einfach nicht an und genießt eine entspannte Kaffeefahrt."
+    },
+    {
+        "id": "mp_tmnt_license",
+        "park_id": "movie_park",
+        "name": "Teenage Mutant Ninja Turtles: License to Drive",
+        "category": "kid_rides",
+        "subcategory": "Kinder-Fahrschulen",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_tmnt_license.webp",
+        "media": [
+            {
+                "type": "image",
+                "src": "assets/images/coasters/moviepark/mp_tmnt_license.webp"
+            },
+            {
+                "type": "image",
+                "src": "assets/images/coasters/moviepark/mp_tmnt_license_2.webp"
+            }
+        ],
+        "requirements": {
+            "min_height_cm": 90,
+            "max_height_cm": 150,
+            "min_age": 4,
+            "max_age": 13,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": 5,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Verkehrsübungsplatz für Kinder",
+                "Junior-Parcours 0,90 - 1,20 m",
+                "Training-Parcours 1,21 - 1,50 m"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Werde zum geschickten Fahrer und sichere dir deinen allerersten Ninja-Turtles-Führerschein! Auf diesem liebevoll gestalteten Parcours steuerst du völlig frei dein eigenes kleines Fahrzeug quer durch die Straßen von New York. Lehrreich, sicher und ein wahnsinnig stolzer Moment für den Nachwuchs. Völlig harmlos und genau das Richtige für Kinder, die endlich selbst das Lenkrad in die Hand nehmen wollen."
+    },
+    {
+        "id": "mp_rescue_112",
+        "park_id": "movie_park",
+        "name": "Rescue 112",
+        "category": "kid_rides",
+        "subcategory": "Rundfahrten",
+        "theme_area": "Santa Monica Pier",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 1,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": 225
+        },
+        "stats": {
+            "speed_kmh": 5,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Feuerwehrauto-Karussell",
+                "Unter 1,05 m nur vorne im Auto"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Schlüpfe in die Rolle eines unerschrockenen Feuerwehrmanns! Bei Rescue 112 nimmst du in knallroten Feuerwehrautos Platz, drückst ordentlich auf die integrierten Knöpfe für Soundeffekte und fährst gemütlich deine Runden am sonnigen Pier entlang. Ein unbeschwerter und durchweg fröhlicher Spaß für kleine Retter, bei dem absolut nichts passieren kann."
+    },
+    {
+        "id": "mp_roxy_4d",
+        "park_id": "movie_park",
+        "name": "ROXY 4-D Kino",
+        "category": "dark_rides",
+        "subcategory": "4D-/5D-Kinos",
+        "theme_area": "Hollywood Street Set",
+        "image": "assets/images/coasters/moviepark/mp_roxy_4d.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": null,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "4D-Effekte im Kinosaal",
+                "Keine Größenbeschränkung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": true,
+            "darkness": true,
+            "wet": false
+        },
+        "description": "Setz dich hin und tauche mitten ins Geschehen! Im ROXY 4-D Kino wird ein rasanter Kurzfilm auf der großen Leinwand lebendig: bewegliche Sitze, Wind, kleine Wasserspritzer und satte Soundeffekte holen dich direkt in die Handlung. Ein herrlicher Spaß für alle Altersgruppen und ein perfekter Programmpunkt zwischendurch, wenn die Beine mal eine Pause brauchen. Hinweis: Der Saal wird dunkel und die Effekte sind laut, das sollten empfindliche oder schreckhafte Gäste im Kopf behalten."
+    },
+    {
+        "id": "mp_sea_swing",
+        "park_id": "movie_park",
+        "name": "Sea Swing",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Wellenflieger (Kettenkarussell)",
+        "theme_area": "Nickland",
+        "image": "assets/images/coasters/moviepark/mp_sea_swing.webp",
+        "requirements": {
+            "min_height_cm": 90,
+            "max_height_cm": 160,
+            "min_age": null,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Schwingende Gondeln im Kreis"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Schwing dich sanft in die Höhe! Bei Sea Swing gleitest du in luftigen Gondeln in ruhigen Bögen im Kreis und hebst dabei leicht ab, gerade genug für ein wohliges Kribbeln im Bauch. Ein liebevoller Klassiker für die ganze Familie, der auch für kleinere Kinder bestens geeignet ist. Völlig harmlos, hier kann sich jeder entspannt durch die Luft tragen lassen."
+    },
+    {
+        "id": "mp_pier_side_carousel",
+        "park_id": "movie_park",
+        "name": "Pier Side Carousel",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Wellenflieger (Kettenkarussell)",
+        "theme_area": "Santa Monica Pier",
+        "image": null,
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": 195,
+            "min_age": 6,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Schwingende Gondeln am Pier"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "medium"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Dreh eine schwungvolle Runde über dem Pier! Das Pier Side Carousel hebt dich in luftige Höhe und trägt dich in weiten Kreisen über die sonnige Promenade von Santa Monica, mit einem herrlichen Blick über den Park. Ein luftiger Spaß mit dem entspannten Flair der Westküste. Hinweis: Durch die stetige Drehung in der Höhe kann empfindlichen Mägen leicht schwindelig werden."
+    },
+    {
+        "id": "mp_nyc_transformer",
+        "park_id": "movie_park",
+        "name": "N.Y.C. Transformer",
+        "category": "flat_rides_vertical",
+        "subcategory": "Überkopf-Fahrgeschäfte (Top Spin)",
+        "theme_area": "Streets of New York",
+        "image": "assets/images/coasters/moviepark/mp_nyc_transformer.webp",
+        "requirements": {
+            "min_height_cm": 140,
+            "max_height_cm": 195,
+            "min_age": 10,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Überkopf-Rotation",
+                "Starke G-Kräfte"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "high"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Halt dich fest, gleich steht die Welt Kopf! Der N.Y.C. Transformer packt dich mitten in den Straßen von New York, kippt dich nach hinten und wirbelt dich in wilden Überschlägen durch die Luft. Ein knackiger Nervenkitzel für alle, die kräftige Fliehkräfte und ein ordentliches Durcheinander lieben. Warnung: Diese Fahrt ist intensiv und dreht heftig, nichts für schwache Mägen oder ängstliche Gemüter."
+    },
+    {
+        "id": "mp_side_kick",
+        "park_id": "movie_park",
+        "name": "Side Kick",
+        "category": "flat_rides_vertical",
+        "subcategory": "Pendel & Schaukeln (Frisbee-Pendel)",
+        "theme_area": "The Old West",
+        "image": "assets/images/coasters/moviepark/mp_side_kick.webp",
+        "requirements": {
+            "min_height_cm": 145,
+            "max_height_cm": 195,
+            "min_age": 8,
+            "max_age": null,
+            "companion_under_cm": null,
+            "max_weight_kg": null
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Pendelbewegung mit Airtime",
+                "Unter 10 Jahren nur mit Begleitung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "high"
+        },
+        "hints": {
+            "loud_effects": false,
+            "darkness": false,
+            "wet": false
+        },
+        "description": "Fühl den freien Fall im großen Bogen! Side Kick schwingt dich als mächtiges Pendel hoch hinaus und lässt dich mit ordentlich Wucht wieder nach unten sausen, immer wieder und immer höher. Ein grandioser Kick für echte Thrill-Fans mitten im Wilden Westen. Warnung: Die Schwerelosigkeit an den Umkehrpunkten ist heftig, wer Höhenangst oder einen empfindlichen Magen hat, bleibt besser am Boden."
+    }
+]

@@ -1,0 +1,174 @@
+/* ==========================================
+   CoasterCheck – Design Tokens & Variables
+   Light Warm Theme (Coral Sunset)
+   ========================================== */
+
+:root {
+    /* ---- CC Design Tokens (Light Warm Theme) ---- */
+
+    /* App Background + Surfaces */
+    --cc-bg:         #fbf6ee;
+    --cc-surface:    #ffffff;
+    --cc-surface-2:  #f3ede2;
+    --cc-nav-bg:     rgba(255, 251, 244, 0.82);
+
+    /* Text / Ink */
+    --cc-ink:           #1c1a18;
+    --cc-on-ink:        #fbf6ee;
+    --cc-muted:         #807468;
+    --cc-border:        rgba(28, 26, 24, 0.08);
+    --cc-border-strong: rgba(28, 26, 24, 0.18);
+
+    /* Accents — Coral Sunset (default palette) */
+    --cc-accent:    #E85D3B;
+    --cc-accent-2:  #FFB347;
+    --cc-accent-3:  #39B1A7;
+    --cc-accent-bg: color-mix(in oklab, var(--cc-accent) 14%, transparent);
+    --cc-on-accent: #ffffff;
+
+    /* Semantic */
+    --cc-success:    #1f7a5b;
+    --cc-success-bg: rgba(31, 122, 91, 0.12);
+    --cc-warning:    #b6722a;
+    --cc-warn-bg:    rgba(182, 114, 42, 0.14);
+    --cc-danger:     #b3361b;
+    --cc-danger-bg:  rgba(179, 54, 27, 0.12);
+
+    /* Shadows (soft, light-theme) */
+    --cc-shadow-sm: 0 2px 8px -2px rgba(28,26,24,.10), 0 1px 2px rgba(28,26,24,.05);
+    --cc-shadow-md: 0 8px 22px -8px rgba(28,26,24,.18);
+    --cc-shadow-lg: 0 20px 40px -16px rgba(28,26,24,.25);
+
+    /* Motion */
+    --cc-t:      240ms cubic-bezier(.2,.8,.2,1);
+    --cc-t-slow: 600ms cubic-bezier(.2,.8,.2,1);
+
+    /* ---- Typography ---- */
+    --font-family:   'Outfit', system-ui, -apple-system, sans-serif;
+    --font-display:  'Bricolage Grotesque', system-ui, sans-serif;
+
+    --font-size-xs:   0.6875rem;  /* 11px */
+    --font-size-sm:   0.875rem;   /* 14px */
+    --font-size-base: 0.875rem;   /* 14px */
+    --font-size-lg:   1rem;       /* 16px */
+    --font-size-xl:   1.1875rem;  /* 19px */
+    --font-size-2xl:  1.375rem;   /* 22px stat numbers */
+    --font-size-3xl:  1.75rem;    /* 28px screen titles */
+
+    --font-weight-light:     300;
+    --font-weight-regular:   400;
+    --font-weight-medium:    500;
+    --font-weight-semibold:  600;
+    --font-weight-bold:      700;
+    --font-weight-extrabold: 800;
+
+    --line-height-tight:  1.1;
+    --line-height-normal: 1.5;
+
+    /* ---- Spacing ---- */
+    --space-xs:      0.25rem;   /* 4px */
+    --space-sm:      0.5rem;    /* 8px */
+    --space-md:      1rem;      /* 16px */
+    --space-lg:      1.5rem;    /* 24px */
+    --space-xl:      2rem;      /* 32px */
+    --space-2xl:     3rem;      /* 48px */
+    --space-section: 2rem;
+
+    /* ---- Border Radius ---- */
+    --radius-sm:   0.5rem;    /* 8px */
+    --radius-md:   0.875rem;  /* 14px */
+    --radius-lg:   1rem;      /* 16px */
+    --radius-xl:   1.375rem;  /* 22px cover cards */
+    --radius-2xl:  1.5rem;    /* 24px bottom sheet */
+    --radius-full: 999px;     /* pill */
+
+    /* ---- Layout ---- */
+    --header-height:     48px;
+    --nav-height:        80px;   /* floating nav 56px + 12px gap + 12px clearance */
+    --content-max-width: 800px;
+
+    /* ==========================================
+       Backward-Compatibility Aliases
+       Maps old --color-* names to new tokens so
+       existing layout/component/form CSS still works.
+       ========================================== */
+
+    --color-bg-primary:   var(--cc-bg);
+    --color-bg-secondary: var(--cc-surface-2);
+    --color-bg-card:      var(--cc-surface);
+    --color-bg-card-hover:#f5efe6;
+    --color-bg-nav:       var(--cc-nav-bg);
+
+    --color-surface:       var(--cc-surface-2);
+    --color-surface-light: #ede7db;
+
+    --color-accent:       var(--cc-accent);
+    --color-accent-light: var(--cc-accent-2);
+    --color-accent-glow:  var(--cc-accent-bg);
+
+    --color-inactive-icon: var(--cc-muted);
+    --color-inactive-bg:   rgba(28, 26, 24, 0.05);
+
+    --color-text-primary:   var(--cc-ink);
+    --color-text-secondary: #4a4540;
+    --color-text-muted:     var(--cc-muted);
+
+    --color-success: var(--cc-success);
+    --color-warning: var(--cc-warning);
+    --color-error:   var(--cc-danger);
+    --color-border:  var(--cc-border);
+
+    /* Light section — now everything is light */
+    --color-bg-section-light:         var(--cc-surface-2);
+    --color-bg-card-light:            var(--cc-surface);
+    --color-text-on-light:            var(--cc-ink);
+    --color-text-on-light-secondary:  var(--cc-muted);
+    --color-border-light:             var(--cc-border);
+
+    --border-subtle: 1px solid var(--cc-border);
+
+    /* Shadows */
+    --shadow-sm:   var(--cc-shadow-sm);
+    --shadow-md:   var(--cc-shadow-md);
+    --shadow-lg:   var(--cc-shadow-lg);
+    --shadow-card: var(--cc-shadow-sm);
+    --shadow-glow: 0 0 20px var(--cc-accent-bg);
+
+    /* Transitions */
+    --transition-fast:   150ms ease;
+    --transition-normal: var(--cc-t);
+    --transition-slow:   var(--cc-t-slow);
+}
+
+/* ==========================================
+   CC Design Tokens — Warm Charcoal Dark Theme
+   ========================================== */
+body.dark-theme {
+    /* App Background + Surfaces */
+    --cc-bg:         #121110;
+    --cc-surface:    #1e1c1a;
+    --cc-surface-2:  #2b2824;
+    --cc-nav-bg:     rgba(18, 17, 16, 0.85);
+
+    /* Text / Ink */
+    --cc-ink:           #fbf6ee;
+    --cc-on-ink:        #121110;
+    --cc-muted:         #a39587;
+    --cc-border:        rgba(251, 246, 238, 0.08);
+    --cc-border-strong: rgba(251, 246, 238, 0.18);
+
+    /* Accent adjustments for dark background */
+    --cc-accent-bg: color-mix(in oklab, var(--cc-accent) 18%, transparent);
+
+    /* Shadows (dark-theme soft shadows) */
+    --cc-shadow-sm: 0 2px 8px -2px rgba(0,0,0,.5), 0 1px 2px rgba(0,0,0,.3);
+    --cc-shadow-md: 0 8px 22px -8px rgba(0,0,0,.6);
+    --cc-shadow-lg: 0 20px 40px -16px rgba(0,0,0,.8);
+
+    /* Backward compatibility overrides */
+    --color-bg-card-hover: #262320;
+    --color-bg-card-light: var(--cc-surface);
+    --color-text-on-light: var(--cc-ink);
+    --color-text-on-light-secondary: var(--cc-muted);
+    --color-border-light: var(--cc-border);
+}

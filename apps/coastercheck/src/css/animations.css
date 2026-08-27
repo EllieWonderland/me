@@ -1,0 +1,126 @@
+/* ==========================================
+   CoasterCheck – Animations & Transitions
+   ========================================== */
+
+/* ---- Page Enter ---- */
+@keyframes pageIn {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Alias used in layout.css */
+@keyframes cc-page-in {
+    from { opacity: 0; transform: translateY(8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Fade In ---- */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Alias for modal backdrop */
+@keyframes cc-fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ---- Slide Up (Bottom Sheet) ---- */
+@keyframes slideUp {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes cc-slide-up {
+    from { transform: translateY(100%); }
+    to   { transform: translateY(0); }
+}
+
+/* ---- Scale Pop (Save success / Achievement unlock) ---- */
+@keyframes scalePop {
+    0%   { transform: scale(0.6); opacity: 0; }
+    70%  { transform: scale(1.08); }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+@keyframes cc-pop {
+    0%   { transform: scale(0.5); opacity: 0; }
+    60%  { transform: scale(1.15); opacity: 1; }
+    80%  { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* ---- Pulse (Online status dot) ---- */
+@keyframes cc-pulse {
+    0%, 100% { opacity: 1;   transform: scale(1);    }
+    50%       { opacity: 0.4; transform: scale(0.75); }
+}
+
+/* ---- Bounce (Recently unlocked trophy) ---- */
+@keyframes cc-bounce {
+    0%, 100% { transform: translateY(0); }
+    40%       { transform: translateY(-8px); }
+    60%       { transform: translateY(-4px); }
+}
+
+/* ---- Confetti Particle ---- */
+@keyframes cc-confetti {
+    0%   { transform: translateY(0)    rotate(0deg)   scale(1);    opacity: 1; }
+    100% { transform: translateY(120px) rotate(540deg) scale(0.4);  opacity: 0; }
+}
+
+/* ---- Activity Chart Bar Rise ---- */
+@keyframes cc-bar-rise {
+    from { transform: scaleY(0); transform-origin: bottom; }
+    to   { transform: scaleY(1); transform-origin: bottom; }
+}
+
+/* ---- Card Entrance (staggered list) ---- */
+@keyframes cc-card-in {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ---- Press Feedback ---- */
+.cc-press:active {
+    transform: scale(0.96);
+    transition: transform 100ms ease;
+}
+
+/* ---- Utility Classes ---- */
+.anim-fade-in {
+    animation: fadeIn var(--transition-normal) ease forwards;
+}
+
+.anim-scale-pop {
+    animation: scalePop var(--transition-slow) ease forwards;
+}
+
+.anim-slide-up {
+    animation: slideUp var(--transition-slow) cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-page-in {
+    animation: cc-page-in 300ms cubic-bezier(.2,.8,.2,1) forwards;
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+    .cc-press:active { transform: none; }
+
+    .anim-fade-in,
+    .anim-scale-pop,
+    .anim-slide-up,
+    .anim-page-in {
+        animation: none;
+    }
+
+    .page {
+        animation: none !important;
+    }
+
+    .status-pill__dot {
+        animation: none;
+    }
+}

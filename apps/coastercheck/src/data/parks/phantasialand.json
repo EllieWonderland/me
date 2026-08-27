@@ -1,0 +1,652 @@
+[
+    {
+        "id": "pl_taron",
+        "park_id": "phantasialand",
+        "name": "Taron",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Multi-Launch Coaster)",
+        "image": "assets/images/coasters/phantasialand/pl_taron.webp",
+        "requirements": {
+            "min_height_cm": 130,
+            "max_height_cm": null,
+            "min_age": 8
+        },
+        "stats": {
+            "speed_kmh": 117,
+            "length_m": 1320,
+            "height_m": 30,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Multi-Launch",
+                "Intensives Strecken-Layout (Klugheim)"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Bist du bereit für einen echten Geschwindigkeitsrausch? Taron katapultiert dich gleich zweimal mit gewaltiger Kraft durch die atemberaubende, mystische Felslandschaft von Klugheim! Das absolut Besondere an dieser Anlage: Trotz des rasanten Tempos und des enormen Thrill-Faktors fährt Taron butterweich, Nervenkitzel pur, komplett ohne Kopfschmerz-Gefahr oder unangenehmes Ruckeln. Perfekt für Adrenalin-Fans, die schnelle, bodennahe Richtungswechsel lieben. Hinweis: Die rohe Geschwindigkeit und das wilde Layout können auf sehr schreckhafte Fahrer anfangs ziemlich einschüchternd wirken!"
+    },
+    {
+        "id": "pl_black_mamba",
+        "park_id": "phantasialand",
+        "name": "Black Mamba",
+        "category": "roller_coasters",
+        "subcategory": "Hängende Achterbahnen (Inverted Coaster)",
+        "image": "assets/images/coasters/phantasialand/pl_black_mamba.webp",
+        "requirements": {
+            "min_height_cm": 140,
+            "max_height_cm": 195,
+            "min_age": 10
+        },
+        "stats": {
+            "speed_kmh": 80,
+            "length_m": 768,
+            "height_m": 26,
+            "inversions": 4
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Near-Miss-Elemente",
+                "Tief in die Schlucht gebaut (Deep in Africa)"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Hörst du die Trommeln von Deep in Africa? Die Black Mamba reißt dich mit frei baumelnden Beinen in eine wilde Fahrt durch dunkle Schluchten, enge Tunnel und direkt an Wasserfällen vorbei. Ein extrem intensives, immersives Erlebnis mit vier Überschlägen! Perfekt für alle, die das Gefühl lieben, kopfüber durch dichten Dschungel zu rasen. Warnung: Die starken G-Kräfte, die vielen Inversionen und das leichte Ruckeln älterer Bahnen machen die Mamba zu einem potenziellen Kopfschmerz-Kandidaten. Für ängstliche Menschen ist diese peitschende Fahrt definitiv zu wild."
+    },
+    {
+        "id": "pl_fly",
+        "park_id": "phantasialand",
+        "name": "F.L.Y.",
+        "category": "roller_coasters",
+        "subcategory": "Fliegende Achterbahnen (Flying Coaster)",
+        "image": "assets/images/coasters/phantasialand/pl_fly.webp",
+        "requirements": {
+            "min_height_cm": 130,
+            "max_height_cm": 205,
+            "min_age": 8
+        },
+        "stats": {
+            "speed_kmh": 78,
+            "length_m": 1236,
+            "height_m": null,
+            "inversions": 2
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Launch Flying Coaster",
+                "Liegende Position (Rookburgh)"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Erfülle dir den ultimativen Traum vom Fliegen! F.L.Y. ist ein Meisterwerk in Rookburgh, bei dem du in liegender Position wie ein echter Pilot durch die Steampunk-Metropole geschossen wirst. Diese Anlage bietet dir einen unglaublich sanften Flug mit herrlichem Thrill-Faktor, ganz ohne Schläge oder Kopfschmerzen. Du gleitest elegant, aber temporeich über die Köpfe der Zuschauer hinweg. Ein Must-Ride für Fans von Innovation und Immersion. Hinweis: Die liegende Position, bei der man den Boden unter sich sieht, kostet beim ersten Mal ordentlich Überwindung, wenn man unter Höhenangst leidet!"
+    },
+    {
+        "id": "pl_colorado_adventure",
+        "park_id": "phantasialand",
+        "name": "Colorado Adventure",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Mine Train)",
+        "image": "assets/images/coasters/phantasialand/pl_colorado_adventure.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 50,
+            "length_m": 1280,
+            "height_m": 26,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Drei Lifts",
+                "Sehr langes Layout",
+                "The Michael Jackson Thrill Ride"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Steig ein in den rasantesten Minenzug des Wilden Westens! Colorado Adventure nimmt dich mit auf eine extrem ausgedehnte Reise durch zerklüftete Felsen und steile Schluchten. Mit gleich drei Lifthills hört der rasante Spaß gefühlt gar nicht mehr auf! Ideal für mutige Kids und Erwachsene, die temporeiche Familienachterbahnen schätzen. Vorsicht: Der Zug wirft sich recht abrupt in die Steilkurven und fährt teilweise im komplett Dunkeln, das ruppige Layout macht Spaß, kann aber schreckhaften Naturen kurz den Atem rauben."
+    },
+    {
+        "id": "pl_raik",
+        "park_id": "phantasialand",
+        "name": "Raik",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Family Boomerang)",
+        "image": "assets/images/coasters/phantasialand/pl_raik.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 62,
+            "length_m": 210,
+            "height_m": 25,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Vorwärts und rückwärts",
+                "Fährt durch Taron-Layout"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Erlebe Klugheim aus einer völlig neuen Perspektive! Raik ist ein Family Boomerang, der dich zuerst vorwärts in eine tief hinabführende Schlucht sausen lässt, um das Ganze danach direkt noch einmal rückwärts zu durchlaufen. Die Fahrt webt sich faszinierend durch die Schienen der gigantischen Taron-Achterbahn. Trotz des Tempos fährt Raik herrlich sanft und ohne Ruckeln. Super für die ganze Familie! Wer allerdings schnell Panik beim Rückwärtsfahren bekommt, sollte kurz die Augen schließen."
+    },
+    {
+        "id": "pl_crazy_bats",
+        "park_id": "phantasialand",
+        "name": "Crazy Bats",
+        "category": "dark_rides",
+        "subcategory": "Interaktive Dark Rides",
+        "image": "assets/images/coasters/phantasialand/pl_crazy_bats.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": true,
+            "special_features": [
+                "VR-Erlebnis",
+                "Fledermaus-Thematisierung",
+                "Indoor Dark Ride"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Begib dich auf eine eisige Mission mit drei verrückten Fledermäusen! Crazy Bats ist Europas längster VR-Coaster. Du setzt eine Virtual-Reality-Brille auf und rast virtuell durch ein vereistes Schloss, während dein Wagen synchron zur Handlung sanfte Kurven fährt. Perfekt für Technik-Begeisterte und Familien, da die physische Achterbahnfahrt sehr milde ist. Kleiner Hinweis: Wer empfindlich auf VR-Brillen in Bewegung reagiert (Motion Sickness), kann hier etwas Schwindel verspüren, du kannst die Fahrt aber auch jederzeit ohne Brille im Dunkeln genießen!"
+    },
+    {
+        "id": "pl_winjas_fear",
+        "park_id": "phantasialand",
+        "name": "Winja's Fear",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Indoor Spinning Coaster)",
+        "image": "assets/images/coasters/phantasialand/pl_winjas_fear.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 8
+        },
+        "stats": {
+            "speed_kmh": 66,
+            "length_m": 465,
+            "height_m": 17,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Drehende Gondeln",
+                "Klappschiene"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Lass dich von der rasanten Fear-Route in den Bann ziehen! Diese wilde Indoor-Achterbahn befindet sich hoch oben in der Wuze Town Halle. Du nimmst in Gondeln Platz, die sich während der rasanten Fahrt wild um die eigene Achse drehen, gekrönt von überraschenden Schienen-Spezialeffekten in der Dunkelheit! Wer auf spaßige Drehungen und Überraschungen steht, wird es lieben. Achtung: Durch das ständige Rotieren und die schnellen Richtungswechsel ist diese Bahn für Menschen mit einem schwachen Magen oder Neigung zu Kopfschmerzen definitiv mit Vorsicht zu genießen."
+    },
+    {
+        "id": "pl_winjas_force",
+        "park_id": "phantasialand",
+        "name": "Winja's Force",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Indoor Spinning Coaster)",
+        "image": "assets/images/coasters/phantasialand/pl_winjas_force.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 8
+        },
+        "stats": {
+            "speed_kmh": 60,
+            "length_m": 410,
+            "height_m": 17,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Drehende Gondeln",
+                "Wippe"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Erkunde die Force-Seite von Wuze Town! Winja's Force ist die leicht schwächere, aber nicht minder spannende Schwester von Fear. Auch hier drehen sich die runden Gondeln wild auf den Schienen, während du durch die große Halle und das Dunkle kurvst, spannendes Wipp-Element am Ende inklusive! Ein toller Thrill für die Familie. Wie bei der Schwester gilt aber auch hier: Wer die Orientierung verliert, dem wird rasch schwindelig. Angsthasen könnten sich an den völlig unvorhersehbaren Drehungen stören."
+    },
+    {
+        "id": "pl_chiapas",
+        "park_id": "phantasialand",
+        "name": "Chiapas - DIE Wasserbahn",
+        "category": "water_rides",
+        "subcategory": "Wildwasserbahnen",
+        "image": "assets/images/coasters/phantasialand/pl_chiapas.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Steilste Abfahrt einer Wildwasserbahn weltweit",
+                "Rückwärtsfahrt"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Tauche ein in die faszinierende mexikanische Ausgrabungsstätte von Chiapas! Diese Wildwasserbahn gehört dank ihrer fantastischen Thematisierung und des extrem ohrwurmlastigen Soundtracks zu den besten der Welt. Du erlebst mehrere Abfahrten (sogar eine rückwärts!) und den absoluten Höhepunkt: Die steilste Abfahrt einer Wildwasserbahn weltweit! Keine Kopfschmerz-Gefahr, aber 100% grandioser Thrill. Vorsicht: Für sehr ängstliche Fahrgäste kostet der gewaltige 53-Grad-Sturz am Ende extrem viel Überwindung, und nass wirst du obendrein!"
+    },
+    {
+        "id": "pl_river_quest",
+        "park_id": "phantasialand",
+        "name": "River Quest",
+        "category": "water_rides",
+        "subcategory": "Rafting-Anlagen",
+        "image": "assets/images/coasters/phantasialand/pl_river_quest.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 8
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Vertikaler Aufzug",
+                "Drei Abfahrten",
+                "Sehr hoher Nässegrad"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Erlebe Rafting auf einem völlig neuen, extrem nassen Level! Bei River Quest bist du nicht einfach auf einem Fluss unterwegs, du wirst in einem Aufzug hoch in eine Ritterburg gezogen, um dann in riesigen, kreisrunden Gummibooten steile Abfahrten hinabzustürzen. Ein wahnsinniger, erfrischender Spaß, der komplett unerwartet kommt. Warnung für Wasserscheue und Angsthasen: Es geht überraschend tief bergab für ein Rafting-Boot, und wer auf dem falschen Sitzplatz landet, verlässt die Anlage garantiert vollkommen durchnässt!"
+    },
+    {
+        "id": "pl_maus_au_chocolat",
+        "park_id": "phantasialand",
+        "name": "Maus au Chocolat",
+        "category": "dark_rides",
+        "subcategory": "Interaktive Dark Rides",
+        "image": "assets/images/coasters/phantasialand/pl_maus_au_chocolat.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Interaktives 3D-Erlebnis",
+                "Spritzbeutel als Shooter"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Auf zur süßesten Mäusejagd Berlins! In diesem fantastischen 3D-Dark-Ride hilfst du dem Kammerjäger, eine überlaufene Konditorei von frechen Mäusen zu befreien. Bewaffnet mit einer Spritzbeutel-Kanone jagst du Punkte und schießt Schokolade auf die kleinen Nager, während du von Bildschirm zu Bildschirm gefahren wirst. Ein interaktiver, komplett harmloser Spaß für die ganze Familie! Hier gibt es absolut nichts zum Fürchten, ideal für Angsthasen und alle, die gerne um den familiären Highscore spielen."
+    },
+    {
+        "id": "pl_mystery_castle",
+        "park_id": "phantasialand",
+        "name": "Mystery Castle",
+        "category": "flat_rides_vertical",
+        "subcategory": "Freifalltürme (Bungee Drop)",
+        "image": "assets/images/coasters/phantasialand/pl_mystery_castle.webp",
+        "requirements": {
+            "min_height_cm": 130,
+            "max_height_cm": 195,
+            "min_age": 10
+        },
+        "stats": {
+            "speed_kmh": 72,
+            "length_m": null,
+            "height_m": 65,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Indoor Drop Tower",
+                "Katapult-Start nach oben",
+                "Horror-Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Tauch ein in das finstere Geheimnis der Familie von Windhoven! Das Mystery Castle ist kein gewöhnlicher Freifallturm, sondern ein packender Bungee-Drop im Inneren eines düsteren Burgfrieds. Völlig unerwartet in der Dunkelheit wirst du mit massiver Power nach oben geschossen und fällst direkt wieder in die Tiefe. Ein genialer Thrill-Ritt! Achtung: Die dunkle und extrem gruselige Thematisierung im Wartebereich sowie der überraschende Abschuss im Turm sind für Menschen mit Höhenangst und Klaustrophobie der blanke Horror!"
+    },
+    {
+        "id": "pl_talocan",
+        "park_id": "phantasialand",
+        "name": "Talocan",
+        "category": "flat_rides_vertical",
+        "subcategory": "Suspended Top Spin",
+        "image": "assets/images/coasters/phantasialand/pl_talocan.webp",
+        "requirements": {
+            "min_height_cm": 140,
+            "max_height_cm": 195,
+            "min_age": 10
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 18,
+            "inversions": 4
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Feuer- und Wassereffekte",
+                "Beine frei hängend"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 5,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Entfessle den Zorn des mächtigen Gottes Tlaloc! Talocan ist Europas einziger Suspended Top Spin und ein absolutes Spektakel. Mit frei hängenden Beinen wirst du rücksichtslos durch Nebel, gewaltige Feuerfontänen und Wasserstrahlen gewirbelt, während sich die Gondel immer wieder kopfüber überschlägt. Ein intensiver, fantastisch thematisierter Adrenalin-Kick. Warnung: Durch die extrem vielen Überschläge und die massiven G-Kräfte ist dieses Fahrgeschäft ein starker Kopfschmerz-Kandidat und dreht auch den stabilsten Magen schnell um. Für ängstliche Beobachter schon von außen ein Graus!"
+    },
+    {
+        "id": "pl_geister_rikscha",
+        "park_id": "phantasialand",
+        "name": "Geister Rikscha",
+        "category": "dark_rides",
+        "subcategory": "Geisterbahnen",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 4,
+            "length_m": 250,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Unterirdische Geisterbahn",
+                "Asiatische Mythologie"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": "medium",
+            "thrill_level": "low"
+        },
+        "description": "Wage den Abstieg in die chinesische Unterwelt! Die Geister Rikscha ist ein echter Klassiker im Phantasialand und Europas größte unterirdische Themenfahrt. Du fährst völlig gemütlich in einer endlos laufenden Gondel durch mystische und gruselige Szenen der fernöstlichen Mythologie. Die ruhige Fahrt bietet eine tolle Gelegenheit, die Beine zu entspannen. Hinweis: Auch wenn die Animatronics heutzutage eher charmant als schockierend wirken, könnten die durchgehende Dunkelheit und die unheimlichen Fratzen für Kleinkinder noch etwas zu gruselig sein."
+    },
+    {
+        "id": "pl_tartueff",
+        "park_id": "phantasialand",
+        "name": "Das verrückte Hotel Tartüff",
+        "category": "walkthrough",
+        "subcategory": "Funhouse",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Laufgeschäft",
+                "Interaktive Hindernisse"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Willkommen im verrücktesten Hotel Berlins! Das Hotel Tartüff ist ein liebevoll gestaltetes Laufgeschäft (Funhouse), das du komplett auf eigenen Beinen erkundest. Dich erwarten rutschende Treppen, sich drehende Zylinder, wackelige Fußböden und jede Menge optische Täuschungen, die deinen Gleichgewichtssinn auf die Probe stellen. Ein herrlicher, unbeschwerter Spaß für die ganze Familie! Hier gibt es absolut keinen Gruselfaktor, nur für Personen mit starker Gehbehinderung oder extremen Schwindelproblemen ist dieser Parcours ungeeignet."
+    },
+    {
+        "id": "pl_wellenflug",
+        "park_id": "phantasialand",
+        "name": "Wellenflug",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Kettenkarussells",
+        "image": null,
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 40,
+            "length_m": null,
+            "height_m": 14,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Wasserfontänen",
+                "Klassisches Kettenkarussell im Kaiserplatz"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Erhebe dich majestätisch über den Berliner Kaiserplatz! Der Wellenflug ist ein wunderschön gestaltetes Kettenkarussell, das dich in sanften, wogenden Wellenbewegungen durch die Lüfte schweben lässt, während unter dir prächtige Wasserfontänen tanzen. Ein optisches Highlight und ein herrlich entspanntes, sanftes Flugerlebnis für Groß und Klein. Absolut Angsthasen-tauglich, solange man sich auf einem gemütlich rotierenden Karussell wohlfühlt."
+    },
+    {
+        "id": "pl_feng_ju",
+        "park_id": "phantasialand",
+        "name": "Feng Ju Palace",
+        "category": "flat_rides_vertical",
+        "subcategory": "Madhouse",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 6
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Optische Täuschung",
+                "Chinesische Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 4,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Verliere den Boden unter den Füßen im Palast der Illusionen! Der Feng Ju Palace sieht von innen aus wie ein prachtvoller chinesischer Tempel, doch sobald die Fahrt beginnt, trickst er deine Sinne gnadenlos aus. Durch die Drehung des Raumes und das leichte Schaukeln der Bank entsteht die perfekte Illusion, dass du dich kopfüber überschlägst, obwohl du nur sitzt! Faszinierend für Fans von optischen Täuschungen. Warnung: Da Auge und Gleichgewichtssinn hier stark kollidieren, kann diese Attraktion sehr schnell Kopfschmerzen und starke Übelkeit verursachen!"
+    },
+    {
+        "id": "pl_tikal",
+        "park_id": "phantasialand",
+        "name": "Tikal",
+        "category": "flat_rides_vertical",
+        "subcategory": "Familien-Freifalltürme",
+        "image": "assets/images/coasters/phantasialand/pl_tikal.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 10,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Doppel-Turm",
+                "Gekreuzt mit Colorado Adventure"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Wage den lustigen Sturz durch die Holzverschläge Mexikos! Tikal besteht aus zwei kleinen Familien-Freifalltürmen, die geschickt in die Schluchten der Colorado Adventure Achterbahn integriert sind. Anstatt eines extremen Drops wippst und fällst du hier in kleinen, spaßigen Sprüngen sanft auf und ab. Es kribbelt angenehm im Bauch, ohne zu überfordern. Perfekt für junge Entdecker und ein großartiger Einstieg für alle Angsthasen, denen der riesige Mystery Castle Turm viel zu einschüchternd ist."
+    },
+    {
+        "id": "pl_wakobato",
+        "park_id": "phantasialand",
+        "name": "Wakobato",
+        "category": "water_rides",
+        "subcategory": "Interaktive Wasserfahrt",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Bootsfahrt mit Wasserkanonen",
+                "Ruhiger See"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Erlebe eine friedliche Patrouillenfahrt auf dem idyllischen Mondsee von Wuze Town! Bei Wakobato fährst du in langsamen Booten auf dem echten Wasser und nutzt Handkurbel-Kanonen, um sprudelnde Ziele und kleine Frösche am Ufer nasszuspritzen. Diese Attraktion ist komplett auf Entspannung ausgelegt und zielt darauf ab, ohne Hektik Punkte zu sammeln. Weder nass noch gefährlich, ein rein idyllischer Spaß für Kleinkinder und Entspannungssuchende, bei dem man die Seele gefahrlos baumeln lassen kann."
+    }
+]

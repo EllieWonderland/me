@@ -1,0 +1,1009 @@
+[
+    {
+        "id": "hp_colossos",
+        "park_id": "heide_park",
+        "name": "Colossos: Kampf der Giganten",
+        "category": "roller_coasters",
+        "subcategory": "Holzachterbahnen",
+        "image": "assets/images/coasters/heidepark/hp_colossos.webp",
+        "requirements": {
+            "min_height_cm": 140,
+            "max_height_cm": 195,
+            "min_age": 12
+        },
+        "stats": {
+            "speed_kmh": 110,
+            "length_m": 1344,
+            "height_m": 50,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Europas höchste & schnellste reine Holzachterbahn",
+                "Feuer-Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Bist du bereit für den ultimativen Kampf zwischen Feuer und Holz? Auf Colossos rast du als wahrer Adrenalin-Junkie Europas höchste und schnellste reine Holzachterbahn hinab! Mach dich auf brachiale Airtime, eine gewaltige erste Abfahrt aus 50 Metern Höhe und das feurige Finale gefasst. Perfekt für alle, die extremen Nervenkitzel lieben! Hinweis: Diese Bahn ist extrem hoch, schnell und intensiv, absolut nichts für schwache Nerven oder Menschen mit Höhenangst!"
+    },
+    {
+        "id": "hp_flug_der_daemonen",
+        "park_id": "heide_park",
+        "name": "Flug der Dämonen",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Wing Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_flug_der_daemonen.webp",
+        "requirements": {
+            "min_height_cm": 140,
+            "max_height_cm": 195,
+            "min_age": 10
+        },
+        "stats": {
+            "speed_kmh": 100,
+            "length_m": 772,
+            "height_m": 40,
+            "inversions": 5
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Wing Coaster",
+                "Near-Miss-Elemente"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Verliere den Boden unter den Füßen! Beim Flug der Dämonen hängst du frei schwebend neben der Schiene und rast auf furchterregende Hindernisse zu, als ob du mit ihnen kollidierst. Dich erwarten atemberaubende Schwerelosigkeit und fünf krasse Inversionen. Ideal für mutige Coaster-Fans, die das Gefühl vom Fliegen lieben. Hinweis: Die Dämonen könnten ängstlichen Gemütern mit ihren unvorhersehbaren Manövern, der hängenden Position und der brachialen Optik etwas zu viel Respekt einflößen!"
+    },
+    {
+        "id": "hp_krake",
+        "park_id": "heide_park",
+        "name": "KRAKE",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Dive Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_krake.webp",
+        "requirements": {
+            "min_height_cm": 140,
+            "max_height_cm": 195,
+            "min_age": 12
+        },
+        "stats": {
+            "speed_kmh": 103,
+            "length_m": 476,
+            "height_m": 41,
+            "inversions": 1
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Vertical Drop",
+                "Splashdown"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Schau dem Monster direkt ins Auge! Bevor du bei der Krake 41 Meter in die Tiefe stürzt, lässt man dich noch für fiese Sekunden über dem gnadenlosen Abgrund hängen. Danach tauchst du in einem spektakulären Splashdown direkt in das Wasser ein! Ein Muss für mutige Seefahrer. Vorsicht: Der Drop direkt in das geöffnete Krakenmaul ist zwar kurz, aber extrem intensiv und kann für ängstliche Menschen sehr einschüchternd wirken!"
+    },
+    {
+        "id": "hp_desert_race",
+        "park_id": "heide_park",
+        "name": "Desert Race",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Launch Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_desert_race.webp",
+        "requirements": {
+            "min_height_cm": 140,
+            "max_height_cm": 195,
+            "min_age": 12
+        },
+        "stats": {
+            "speed_kmh": 100,
+            "length_m": 650,
+            "height_m": 19,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Katapultstart (Launch)",
+                "Wüsten-Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Von 0 auf 100 km/h in weniger als 2,4 Sekunden! Desert Race katapultiert dich mit brachialer Kraft wie in einem Formel-1-Wagen über die sandigen Wüstendünen des Parks. Es gibt hier zwar keine Loopings, dafür aber extreme G-Kräfte in den Kurven und wilde Richtungswechsel. Hinweis: Der extrem rasante und unerwartete Start kann für schreckhafte Personen sehr plötzlich kommen, halte dich gut fest!"
+    },
+    {
+        "id": "hp_toxic_garden",
+        "park_id": "heide_park",
+        "name": "Toxic Garden (ehemals Limit)",
+        "category": "roller_coasters",
+        "subcategory": "Hängende Achterbahnen (Suspended Looping Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_toxic_garden.webp",
+        "requirements": {
+            "min_height_cm": 130,
+            "max_height_cm": 195,
+            "min_age": 10
+        },
+        "stats": {
+            "speed_kmh": 80,
+            "length_m": 689,
+            "height_m": 33,
+            "inversions": 5
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Beine frei"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": true,
+            "thrill_level": "high"
+        },
+        "description": "Stürze dich in den wilden, überwucherten Toxic Garden! Bei dieser Hängeachterbahn baumeln deine Beine völlig frei in der Luft, während du in schnellem Tempo durch gleich fünf Überschläge gewirbelt wirst. Wenn du Loopings liebst und gerne mal komplett die Orientierung verlierst, bist du hier richtig. Hinweis: Die Bahn rüttelt ordentlich und kann durch die vielen intensiven Drehungen überfordern, wer Angst vor Kopfschmerzen oder dem Überkopf-Gefühl hat, setzt hier besser aus."
+    },
+    {
+        "id": "hp_big_loop",
+        "park_id": "heide_park",
+        "name": "Big Loop",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Looping Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_big_loop.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6
+        },
+        "stats": {
+            "speed_kmh": 63,
+            "length_m": 706,
+            "height_m": 30,
+            "inversions": 4
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Park-Klassiker (1983)"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": false,
+            "thrill_level": "medium"
+        },
+        "description": "Erlebe ein echtes Stück Heide-Park-Geschichte! Der Big Loop ist der absolute Achterbahn-Klassiker des Parks und schleudert dich auf traditionelle Weise durch zwei Loopings und zwei Korkenzieher. Perfekt, um sich mutig an erste Überkopf-Elemente heranzutasten. Hinweis: Es rappelt im Karton, das Fahrerlebnis ist nostalgisch-rau und für zarte oder ängstliche Gemüter durch die ruckeligen Bewegungen vielleicht etwas zu ruppig."
+    },
+    {
+        "id": "hp_bobbahn",
+        "park_id": "heide_park",
+        "name": "Bobbahn",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Bobsled Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_bobbahn.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6
+        },
+        "stats": {
+            "speed_kmh": 60,
+            "length_m": 826,
+            "height_m": 27,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Schienenlos im Eiskanal"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Rein in den Eiskanal! Wie ein echter Bobpilot rast du völlig ohne Führungsschienen in einer gewaltigen Stahlrinne durch wilde Kurven. Die Bahn schaukelt sich dabei je nach Gewichtsverteilung richtig schön in den Steilkurven auf. Super geeignet für die ganze Familie und angehende Coaster-Fans! Keine Sorge: Hier gibt es keine extremen Drops oder Loopings, weshalb auch ängstlichere Mitfahrer hier bedenkenlos ihren Spaß haben können."
+    },
+    {
+        "id": "hp_grottenblitz",
+        "park_id": "heide_park",
+        "name": "Grottenblitz",
+        "category": "roller_coasters",
+        "subcategory": "Angetriebene Achterbahnen (Powered Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_grottenblitz.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 45,
+            "length_m": 370,
+            "height_m": 6,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Motorisierter Zug",
+                "Höhlenfahrt"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Mach dich auf eine rasante und mystische Höhlenfahrt gefasst! Der Grottenblitz ist eine motorisierte Achterbahn, die dich im strammen Tempo durch tiefe Felsspalten und dunkle Tunnel zieht. Eine tolle, temporeiche Familienbahn! Hinweis: Es wird kurzzeitig im Gebirge recht dunkel und laut, was auf ganz kleine Kinder oder schreckhafte Fahrgäste etwas unheimlich wirken könnte."
+    },
+    {
+        "id": "hp_indy_blitz",
+        "park_id": "heide_park",
+        "name": "Indy-Blitz",
+        "category": "roller_coasters",
+        "subcategory": "Stahlachterbahnen (Kiddie Coaster)",
+        "image": "assets/images/coasters/heidepark/hp_indy_blitz.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 38,
+            "length_m": 128,
+            "height_m": 4.5,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "First Coaster",
+                "Indianer-Thematisierung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Dein erstes richtiges Achterbahn-Abenteuer wartet! Der Indy-Blitz ist perfekt auf die jüngsten Besucher abgestimmt und saust in angenehmem, aber flotten Tempo durch ein schönes Indianer-Thema. Es kribbelt leicht im Bauch, ohne jedoch zu überfordern. Ideal für sehr kleine oder ängstliche Kinder, die sich hier völlig gefahrlos und spielerisch an Achterbahnen herantasten können."
+    },
+    {
+        "id": "hp_ghostbusters",
+        "park_id": "heide_park",
+        "name": "Ghostbusters 5D: Die ultimative Geisterjagd",
+        "category": "dark_rides",
+        "subcategory": "Interaktive Dark Rides",
+        "image": "assets/images/coasters/heidepark/ghostbusters.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Interaktiver Shooter",
+                "3D-Brillen"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Auf zur wilden Geisterjagd! Schnapp dir deine 3D-Brille sowie deine Protonenstrahler-Laserwaffe und fahre mit dem berühmten Ecto-1 durch ein verlassenes, spukendes Lagerhaus. Hier bist du interaktiv gefragt, um Slimer und Co. auf die Pelle zu rücken und Punkte zu sammeln. Ein riesiger Spaß! Hinweis: Obwohl es eine vorrangig lustige Jagd ist, können die sehr plastischen 3D-Geister, die ständige Dunkelheit und plötzliche Geräusche für sehr sensible Menschen oder kleine Kinder anfangs etwas erschreckend wirken."
+    },
+    {
+        "id": "hp_drachengrotte",
+        "park_id": "heide_park",
+        "name": "Drachengrotte",
+        "category": "dark_rides",
+        "subcategory": "Boots-Themenfahrten",
+        "image": "assets/images/coasters/heidepark/hp_drachengrotte.webp",
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Ruhige Bootsfahrt",
+                "Drachenzähmen"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Gönn dir eine entspannte Pause und wage dich in die fantastische Welt von Hicks und Ohnezahn. Bei dieser wundervoll gemütlichen Bootsfahrt gleitest du sanft durch das Wasser und triffst in der Höhle auf verschiedene toll animierte Drachen-Bewohner. Perfekt zum Durchschnaufen für die gesamte Familie. Keine Sorge: Die Drachen sind alle durchweg freundlich gesinnt, hier gibt es absolut nichts, wovor man sich auch nur ansatzweise fürchten müsste."
+    },
+    {
+        "id": "hp_mountain_rafting",
+        "park_id": "heide_park",
+        "name": "Mountain-Rafting",
+        "category": "water_rides",
+        "subcategory": "Rafting-Anlagen",
+        "image": "assets/images/coasters/heidepark/hp_mountain_rafting.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": 600,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Drehende Boote",
+                "Hoher Nässegrad"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Bist du bereit, nass zu werden? Beim Mountain-Rafting wirbelst du in großen, runden Gummibooten durch einen wilden Gebirgsflusslauf. Stromschnellen, kleine Wasserfälle und tückische Strudel sorgen mit unberechenbaren Drehungen dafür, dass garantiert keiner trocken bleibt. Der perfekte Familienspaß an warmen Tagen! Absolut familientauglich und nicht gruselig, aber rechne damit, dass du ziemlich durchnässt werden kannst."
+    },
+    {
+        "id": "hp_wildwasserbahn",
+        "park_id": "heide_park",
+        "name": "Wildwasserbahn",
+        "category": "water_rides",
+        "subcategory": "Wildwasserbahnen",
+        "image": "assets/images/coasters/heidepark/hp_wildwasserbahn.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 50,
+            "length_m": 600,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Baumstamm-Fahrt",
+                "Zwei Drops"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": "medium",
+            "thrill_level": "medium"
+        },
+        "description": "Steig in deinen rustikalen Baumstamm und lass dich einfach treiben! Diese klassische Wildwasserbahn bietet dir eine entspannte Fahrt durch den Wald und gipfelt in zwei rasanten Abfahrten, bei denen es am Ende ordentlich spritzt. Eine herrliche Erfrischung und ein großer Spaß für kleine und große Entdecker. Hinweis: Die steilen Abfahrten machen riesigen Spaß und bringen das Blut in Wallung, aber wenn du große Angst vor schnellen, wasserreichen Gefällen hast, halte am besten die Augen bei der Schussfahrt gut zu."
+    },
+    {
+        "id": "hp_topilaula",
+        "park_id": "heide_park",
+        "name": "ToPiLauLa Schlacht",
+        "category": "water_rides",
+        "subcategory": "Splash Battles",
+        "image": "assets/images/coasters/heidepark/hp_topilaula.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Interaktive Wasserkanonen",
+                "Extrem nass"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Alle Piraten an die Wasserkanonen! In der ToPiLauLa Schlacht lieferst du dir in kleinen, schienengeführten Booten eine absolut wilde und erbarmungslose Spritzpistolen-Schlacht mit den anderen vorbeifahrenden Booten und den schadenfrohen Zuschauern am Ufer. Wer hier trocken rauskommt, hat definitiv etwas falsch gemacht. Komplett harmlos, null gruselig und super lustig, ideal für Angsthasen, solange du absolut nichts gegen plötzliche Wasserspritzer einzuwenden hast!"
+    },
+    {
+        "id": "hp_scream",
+        "park_id": "heide_park",
+        "name": "Scream",
+        "category": "flat_rides_vertical",
+        "subcategory": "Freifalltürme",
+        "image": "assets/images/coasters/heidepark/hp_scream.webp",
+        "requirements": {
+            "min_height_cm": 130,
+            "max_height_cm": 195,
+            "min_age": 10
+        },
+        "stats": {
+            "speed_kmh": 98,
+            "length_m": null,
+            "height_m": 103,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Gyro-Drop-Tower"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "high"
+        },
+        "description": "Nichts für schwache Nerven! Der gigantische Gyro-Drop-Tower Scream zieht dich quälend langsam über 70 Meter in die Höhe, lässt dich kurz die atemberaubende Aussicht genießen, und klinkt dich dann völlig unerwartet aus. Im steilen freien Fall rast du mit fast 100 km/h erbarmungslos in die Tiefe! Achtung: Dies ist eine der extremsten Attraktionen im Park. Wenn du Höhenangst hast, das Kribbeln im Bauch beim Fallen nicht magst oder zu den schreckhaften Menschen gehörst, solltest du unbedingt am Boden bleiben!"
+    },
+    {
+        "id": "hp_bounty",
+        "park_id": "heide_park",
+        "name": "Bounty",
+        "category": "flat_rides_vertical",
+        "subcategory": "Pendel & Schaukeln",
+        "image": "assets/images/coasters/heidepark/hp_bounty.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": 15,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Klassische Schiffsschaukel"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": false,
+            "thrill_level": "medium"
+        },
+        "description": "Ahoi, Matrosen! Die riesige klassische Schiffsschaukel Bounty nimmt dich mit auf stürmische See. Es geht verdammt hoch hinaus, und das flaue Kribbel-Gefühl im Magen ist bei jedem Schwung durch die lange Airtime-Phase garantiert. Ein toller Klassiker! Hinweis für empfindliche Gemüter: Es ist nicht gruselig, aber die starke, anhaltende Schaukelbewegung kann sehr schnell für extremen Schwindel oder Übelkeit sorgen, also steig lieber nur mit einem seefesten Magen ein!"
+    },
+    {
+        "id": "hp_breakdance",
+        "park_id": "heide_park",
+        "name": "Breakdance & Magic",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Bodennahe Drehgeschäfte",
+        "image": "assets/images/coasters/heidepark/hp_breakdance.webp",
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Kirmes-Klassiker",
+                "Drehintensiv"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": true,
+            "headache_reports": 6,
+            "immersive_theming": false,
+            "thrill_level": "medium"
+        },
+        "description": "Hier wird dir garantiert im Handumdrehen schwindelig! Der Breakdance wirbelt dich in rasantem Tempo um verschiedene Achsen gleichzeitig und drückt dich kräftig in deinen Sitz. Eine echte Kirmes-Legende, die einfach Laune macht und ordentlich Action bietet. Vorsicht: Durch die sehr intensiven, extrem schnellen und unvorhersehbaren Drehungen ist dieses Fahrgeschäft für Menschen, denen schnell übel wird oder die Angst vor Kontrollverlust haben, überhaupt nicht zu empfehlen."
+    },
+    {
+        "id": "hp_wellenflieger",
+        "park_id": "heide_park",
+        "name": "Wellenflieger / La Ola",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Wellenflieger",
+        "image": "assets/images/coasters/heidepark/hp_wellenflieger.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": null,
+            "length_m": null,
+            "height_m": null,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Kettenkarussell"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "description": "Lass einfach mal die Seele baumeln! Der Wellenflieger ist ein wunderschönes, aufwendig gestaltetes und absolut klassisches Kettenkarussell, das dich in angenehmer Höhe in weichen Wellen sanft durch die Luft schweben lässt. Wunderbar entspannend und auch für leicht ängstliche Menschen oder Fahrgäste, die eine kleine Auszeit von den Thrill-Rides brauchen, ein durch und durch tolles, sorgenfreies Erlebnis."
+    },
+    {
+        "id": "hp_daemonen_gruft",
+        "park_id": "heide_park",
+        "name": "Dämonen Gruft",
+        "category": "dark_rides",
+        "subcategory": "Indoor-Themenfahrten",
+        "image": null,
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 8
+        },
+        "stats": {
+            "speed_kmh": 5,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Deutschlands gruseligster Dark Ride",
+                "Immersive Katakomben-Atmosphäre"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "medium"
+        },
+        "description": "Traust du dich in die dunkelsten Katakomben des Parks? Die Dämonen Gruft ist ein herausragender Dark Ride der neuesten Generation, der dich tief in die Erde entführt, wo uralte Dämonen in der Dunkelheit auf deine Seele warten. Die extrem detaillierte Thematisierung und die stetig unheimliche Atmosphäre ziehen dich hier direkt ins Geschehen. Achtung: Absolut nichts für schwache Nerven! Die ständige Dunkelheit, gut platzierte Jumpscares, unheimliche Effekte und laute Dämonengeräusche sind für ängstliche Menschen und Kinder definitiv zu extrem."
+    },
+    {
+        "id": "hp_screamie",
+        "park_id": "heide_park",
+        "name": "Screamie",
+        "category": "flat_rides_vertical",
+        "subcategory": "Freifalltürme",
+        "image": "assets/images/coasters/heidepark/hp_screamie.webp",
+        "requirements": {
+            "min_height_cm": 100,
+            "max_height_cm": null,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 15,
+            "length_m": null,
+            "height_m": 12,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Kinder-Freifallturm"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "description": "Erlebe das aufregende Freifall-Gefühl im coolen Miniformat! Screamie ist der lustige kleine Bruder des großen Fallturms Scream und lässt dich aus 12 Metern Höhe sanft, aber herrlich kribbelig in die Tiefe plumpsen. Ideal für kleine Adrenalin-Fans, die wachsen wollen. Auch für etwas ängstliche Kinder ist dies ein toller und harmloser Einstieg, um spielerisch Mut für die großen Türme des Parks zu fassen."
+    },
+    {
+        "id": "hp_panoramabahn",
+        "park_id": "heide_park",
+        "name": "Panoramabahn",
+        "category": "scenic_rides",
+        "subcategory": "Hochbahnen",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": 10,
+            "length_m": null,
+            "height_m": 6,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Erhöhte Rundfahrt über den Park"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "description": "Genieße den Heide Park ganz entspannt von oben! Die Panoramabahn fährt dich gemütlich als Monorail über den Köpfen der anderen Besucher durch verschiedene Bereiche des Parks. Ideal, um zwischendurch die Füße zu entspannen, die tolle Aussicht zu genießen und den nächsten Ride zu planen. Eine absolute Wohlfühlfahrt ohne jeden Grusel- oder Schwindelfaktor, perfekt für Angsthasen und Familien."
+    },
+    {
+        "id": "hp_express",
+        "park_id": "heide_park",
+        "name": "Heide Park Express",
+        "category": "scenic_rides",
+        "subcategory": "Parkeisenbahnen",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": 12,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Bimmelbahn"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": false,
+            "thrill_level": "low"
+        },
+        "description": "Lass dich entspannt durch den Park chauffieren! Der Heide Park Express ist die nostalgische, bodennahe Bimmelbahn des Parks und dreht wunderbar gemütlich ihre ausgedehnten Runden. Eine exzellente Möglichkeit für die ganze Familie, große Teile des Parks ohne schmerzende Füße zu erkunden. Kein Schwindel, keine Angst, keine schnellen Abfahrten, hier kannst du dich einfach völlig sicher zurücklehnen."
+    },
+    {
+        "id": "hp_peppas_ballonfahrt",
+        "park_id": "heide_park",
+        "name": "Peppas Ballonfahrt",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Kinderkarussells",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": 5,
+            "length_m": null,
+            "height_m": 3,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Peppa Pig Land"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Steig mutig in einen schönen, bunten Heißluftballon und heb gemeinsam mit Peppa Wutz ab! Du fliegst sanft und gemächlich im Kreis und kannst in leichter Erhöhung die tolle Aussicht über das gesamte Peppa Pig Land genießen. Perfekt abgestimmt auf Kleinkinder und die ganze Familie. Hier gibt es garantiert nichts zum Fürchten, eine wundervoll ruhige, bunte Fahrt für die Allerkleinsten."
+    },
+    {
+        "id": "hp_opa_wutz_zug",
+        "park_id": "heide_park",
+        "name": "Opa Pigs Zugfahrt",
+        "category": "scenic_rides",
+        "subcategory": "Kindereisenbahnen",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": 5,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Peppa Pig Land"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Tuckere fröhlich mit Opa Wutz in seiner kleinen, blauen Lokomotive durch das liebevoll gestaltete Gelände! Auf dieser kleinen Rundfahrt gibt es für die jüngsten Besucher viel zu sehen und zu winken. Perfekt für absolute Angsthasen und Kleinkinder, da diese Fahrt völlig ruhig und ohne jedes Schaukeln oder Tempo abläuft."
+    },
+    {
+        "id": "hp_peppas_bootsfahrt",
+        "park_id": "heide_park",
+        "name": "Peppas Bootsfahrt",
+        "category": "water_rides",
+        "subcategory": "Kinder-Bootsfahrten",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": 3,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Peppa Pig Land",
+                "Wasserfahrt für Kleinkinder"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Ahoi, kleine Seefahrer! Setz die Segel mit Peppa und schippere in kleinen Booten einen friedlichen kleinen Wasserkanal entlang. Die Boote gleiten ganz sanft dahin. Es gibt hier keine wilden Wellen, keine Abfahrten und keine Wasserkanonen, nur fröhliches Planschen. Absolut harmlos und sehr beruhigend."
+    },
+    {
+        "id": "hp_schorschs_dino_abenteuer",
+        "park_id": "heide_park",
+        "name": "Schorschs Dino-Abenteuer",
+        "category": "scenic_rides",
+        "subcategory": "Kinder-Reitbahnen",
+        "image": null,
+        "requirements": {
+            "min_height_cm": 86,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": 4,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Peppa Pig Land"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Reite auf dem Rücken eines liebenswerten, grünen Dinosauriers! Diese geführte, langsame Reitbahn bringt besonders kleine Fans von Schorsch zum Strahlen, wenn der Dino auf einer festen Schiene sanft vor sich hin wackelt. Komplett harmlos, liebevoll gestaltet und selbst für extrem schüchterne Kinder ein wunderbares Erlebnis."
+    },
+    {
+        "id": "hp_hicks_himmelsstuermer",
+        "park_id": "heide_park",
+        "name": "Hicks Himmelsstürmer",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Flugkarussells",
+        "image": null,
+        "requirements": {
+            "min_height_cm": 120,
+            "max_height_cm": null,
+            "min_age": 6
+        },
+        "stats": {
+            "speed_kmh": 20,
+            "length_m": null,
+            "height_m": 4,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Liege-Position",
+                "Drachenzähmen-Thema"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Leg dich flach auf den Bauch und fliege wie ein echter, tapferer Drachenreiter durch die weiten Lüfte! Bei diesem tollen Karussell spürst du den starken Wind direkt im Gesicht und fühlst dich, als ob du auf dem Rücken eines Drachen gleitest. Die waagerechte Liegeposition ist anfangs vielleicht ein wenig ungewohnt, aber die Fahrt ist sanft und auch für leicht ängstliche Drachenbändiger ein durchweg sicherer, großer Spaß."
+    },
+    {
+        "id": "hp_raffnuss_taffnuss",
+        "park_id": "heide_park",
+        "name": "Raffnuss & Taffnuss Wasserflieger",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Flugkarussells",
+        "image": null,
+        "requirements": {
+            "min_height_cm": 95,
+            "max_height_cm": null,
+            "min_age": 3
+        },
+        "stats": {
+            "speed_kmh": 15,
+            "length_m": null,
+            "height_m": 3,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Flug über Wasser",
+                "Interaktive Steuerung"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Dreh deine fröhlichen Runden dicht übers Wasser des Nordmeers! In diesen coolen, kleinen Gondeln bestimmst du mithilfe eines Knopfdrucks selbst, wie hoch dein Drachenflug geht. Harmloser, spritziger Flugspaß ohne plötzliche Schreckmomente, perfekt für Kinder, die das Gefühl lieben, selbst die Kontrolle über den Flug zu haben."
+    },
+    {
+        "id": "hp_grobians_wolkenspringer",
+        "park_id": "heide_park",
+        "name": "Grobians Wolkenspringer",
+        "category": "flat_rides_horizontal",
+        "subcategory": "Flugkarussells",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": null,
+            "min_age": 0
+        },
+        "stats": {
+            "speed_kmh": 15,
+            "length_m": null,
+            "height_m": 4,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": false,
+            "vr": false,
+            "special_features": [
+                "Drachenzähmen-Thema"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Heb mutig ab und steuere dein eigenes, kleines Flugobjekt! Bei diesem klassischen Rundfahrgeschäft entscheidest du selbst, wie weit dein Drache in Richtung der Wolken steigen soll. Zwar geht es hier fröhlich in die Luft, aber da du selbst steuerst, ist die Fahrt sanft und sehr entspannt. Für ängstliche Piloten: Lass dein Gefährt einfach unten, dann bleibst du sicher in Bodennähe."
+    },
+    {
+        "id": "hp_wuestenflitzer",
+        "park_id": "heide_park",
+        "name": "Wüstenflitzer",
+        "category": "kid_rides",
+        "subcategory": "Fahrschulen",
+        "image": null,
+        "requirements": {
+            "min_height_cm": null,
+            "max_height_cm": 140,
+            "min_age": 4
+        },
+        "stats": {
+            "speed_kmh": 5,
+            "length_m": null,
+            "height_m": 0,
+            "inversions": 0
+        },
+        "features": {
+            "single_rider": true,
+            "vr": false,
+            "special_features": [
+                "Kinder-Fahrschule",
+                "Wüsten-Thema"
+            ]
+        },
+        "app_metrics": {
+            "headache_potential": false,
+            "headache_reports": 0,
+            "immersive_theming": true,
+            "thrill_level": "low"
+        },
+        "description": "Gib spielerisch Gas in deiner eigenen kleinen Wüsten-Seifenkiste! Bei den Wüstenflitzern können Kinder in einem geschützten Bereich komplett allein erste Fahrerfahrungen sammeln und über einen kleinen, markierten Parcours lenken. Komplett harmlos, sicher und absolut fantastisch für Kinder, die stolz darauf sind, ihr erstes kleines Auto selbst zu steuern."
+    }
+]
