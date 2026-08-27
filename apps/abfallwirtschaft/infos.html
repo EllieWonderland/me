@@ -1,0 +1,229 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studienentwurf · Informationen & ABC - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb-header">
+            <div class="container">
+                <a href="index.html">Startseite</a> / <span>Infos & ABC</span>
+            </div>
+        </div>
+
+        <section class="container pt-2">
+            <h1 class="section-title">Informationen & Beratung</h1>
+
+            <!-- Tab Navigation -->
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="abc">
+                    <i class="fas fa-search"></i> Abfall-ABC
+                </button>
+                <button class="tab-btn" data-tab="kalender">
+                    <i class="fas fa-calendar-alt"></i> Abfallkalender
+                </button>
+                <button class="tab-btn" data-tab="sortierung">
+                    <i class="fas fa-recycle"></i> Richtig Sortieren
+                </button>
+                <button class="tab-btn" data-tab="downloads">
+                    <i class="fas fa-file-download"></i> Merkblätter
+                </button>
+
+                <button class="tab-btn" data-tab="repair">
+                    <i class="fas fa-tools"></i> Repair-Cafés
+                </button>
+                <button class="tab-btn" data-tab="verschenkmarkt">
+                    <i class="fas fa-gift"></i> Verschenkmarkt
+                </button>
+            </div>
+
+            <!-- Tab Content: Abfallkalender -->
+            <div id="kalender" class="tab-content">
+                <h2>Persönlicher Abfallkalender</h2>
+                <p>Wählen Sie Ihren Wohnort aus, um die nächsten Abfuhrtermine zu sehen.</p>
+
+                <div class="content-box mt-2">
+                    <div class="calendar-controls">
+                        <div class="calc-group">
+                            <label for="cal-gemeinde">Gemeinde / Stadt</label>
+                            <select id="cal-gemeinde">
+                                <option value="">-- Bitte wählen --</option>
+                                <option value="Dötlingen">Dötlingen</option>
+                                <option value="Ganderkesee">Ganderkesee</option>
+                                <option value="Großenkneten">Großenkneten</option>
+                                <option value="Harpstedt">Samtgemeinde Harpstedt</option>
+                                <option value="Hatten">Hatten</option>
+                                <option value="Hude">Hude</option>
+                                <option value="Wardenburg">Wardenburg</option>
+                                <option value="Wildeshausen">Wildeshausen</option>
+                            </select>
+                        </div>
+                        <div class="calc-group">
+                            <label for="cal-bezirk">Bezirk / Ortsteil</label>
+                            <select id="cal-bezirk" disabled>
+                                <option value="">-- Zuerst Gemeinde wählen --</option>
+                            </select>
+                        </div>
+                        <div class="calc-group" style="flex: 0 0 auto; display: flex; align-items: flex-end;">
+                            <button id="btn-show-calendar" class="btn-add" disabled>
+                                <i class="fas fa-calendar-check"></i> Termine anzeigen
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="calendar-output" class="mt-2 hidden">
+                    <div class="section-header">
+                        <h2>Nächste Abfuhrtermine</h2>
+                        <div class="calendar-actions">
+                            <a href="downloads/abfallkalender.pdf" target="_blank" class="btn-text">
+                                <i class="fas fa-file-pdf"></i> Jahreskalender herunterladen (PDF)
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="calendar-grid" id="calendar-grid">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Abfall-ABC -->
+            <div id="abc" class="tab-content active">
+                <div class="abc-header">
+                    <h2>Was möchten Sie entsorgen?</h2>
+                    <p>Geben Sie einen Begriff ein oder nutzen Sie den A-Z Filter.</p>
+                </div>
+
+                <input type="text" class="abc-search" placeholder="Suchbegriff eingeben (z.B. Aktenordner)...">
+
+                <div class="az-filter" id="az-filter">
+                </div>
+
+                <div id="abc-list-container" class="abc-list">
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Lade Daten...</div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Sortierung -->
+            <div id="sortierung" class="tab-content">
+                <h2>Trennhilfe für den Alltag</h2>
+                <p>Eine korrekte Mülltrennung spart Ressourcen und schont die Umwelt.</p>
+                <div class="sort-guide" id="sortierung-grid">
+                    <div class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Lade Daten...</div>
+                </div>
+            </div>
+
+            <!-- Tab Content: Downloads -->
+            <div id="downloads" class="tab-content">
+                <h2>Wichtige Merkblätter & Hinweise</h2>
+                <p>Hier finden Sie detaillierte Informationen zum Herunterladen.</p>
+
+                <ul class="info-links" id="merkblaetter-list">
+                </ul>
+            </div>
+
+
+
+            <!-- Tab Content: Repair Cafés -->
+            <div id="repair" class="tab-content">
+                <h2>Repair-Cafés im Landkreis Oldenburg</h2>
+                <p><strong>Wegwerfen? Denkste!</strong> In den Repair-Cafés dreht sich alles ums Reparieren.
+                    Ehrenamtliche Helfer unterstützen Sie dabei, defekte Gegenstände wieder flott zu machen. Das spart
+                    Geld, schont wertvolle Ressourcen und reduziert den CO2-Ausstoß.</p>
+                <p>Repariert werden können z.B. elektrische Kleingeräte, Kleidung, Möbel, Spielzeug und Fahrräder.
+                    Werkzeug und Material sind meist vorhanden. Eine Anmeldung ist oft nicht erforderlich, aber
+                    empfehlenswert.</p>
+
+                <h3 class="mt-2">Standorte & Termine</h3>
+                <ul class="repair-list" id="repair-cafes-list">
+                    <li class="loading-spinner"><i class="fas fa-spinner fa-spin"></i> Lade Daten...</li>
+                </ul>
+                <p class="mt-1 text-small"><em>Bitte beachten Sie: Die Termine können abweichen. Informieren Sie sich
+                        bitte vorab bei den jeweiligen Betreibern.</em></p>
+            </div>
+
+            <!-- Tab Content: Verschenkmarkt -->
+            <div id="verschenkmarkt" class="tab-content">
+                <h2>Verschenkmarkt Landkreis Oldenburg</h2>
+                <p><strong>Zu schade für den Müll?</strong></p>
+                <p>Der Verschenkmarkt ist eine kostenlose Online-Börse für den Landkreis Oldenburg. Hier können Sie gut
+                    erhaltene Möbel, Hausrat, Kleidung und vieles mehr verschenken oder tauschen. Damit leisten Sie
+                    einen aktiven Beitrag zur Abfallvermeidung.</p>
+
+                <div class="content-box mt-2">
+                    <h3>So funktioniert es:</h3>
+                    <ul class="list-spaced">
+                        <li><i class="fas fa-check icon-primary"></i> <strong>Kostenlos:</strong> Inserieren und Suchen
+                            ist gratis.</li>
+                        <li><i class="fas fa-check icon-primary"></i> <strong>Privat:</strong> Nur für private Anbieter
+                            (kein Gewerbe).</li>
+                        <li><i class="fas fa-check icon-primary"></i> <strong>Regional:</strong> Angebote aus dem
+                            Landkreis Oldenburg.</li>
+                    </ul>
+                    <div class="mt-2 text-center">
+                        <a href="https://www.vm-lkol.de/oldenburg-info-p413" target="_blank" class="nav-link-cta"
+                            style="display:inline-block; padding: 1rem 2rem;">
+                            <i class="fas fa-external-link-alt"></i> Zum Online-Verschenkmarkt
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Video -->
+                <div class="video-container">
+                    <video controls width="100%">
+                        <source src="img/Verschenkmarkt.mp4" type="video/mp4">
+                        Ihr Browser unterstützt das Video-Tag nicht.
+                    </video>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/data-loaders.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studienentwurf · Kontakt - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb-header">
+            <div class="container">
+                <a href="index.html">Startseite</a> / <span>Kontakt</span>
+            </div>
+        </div>
+
+        <section class="container pt-2">
+            <h1 class="section-title">Kontakt aufnehmen</h1>
+
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <h3>Schreiben Sie uns</h3>
+                    <form id="mail-form">
+                        <label for="form-name">Ihr Name</label>
+                        <input type="text" id="form-name" name="name" autocomplete="name" required>
+
+                        <label for="form-email">Ihre E-Mail</label>
+                        <input type="email" id="form-email" name="email" autocomplete="email" required>
+
+                        <label for="form-subject">Thema / Ansprechpartner finden</label>
+                        <select id="form-subject" name="thema" required>
+                            <option value="">-- Bitte wählen --</option>
+                            <option value="allgemein">Allgemeine Anfrage</option>
+                            <option value="gebuehren">Gebührenbescheid / Abrechnung</option>
+                            <option value="abfuhr">Reklamation Abfuhr (Tonne nicht geleert)</option>
+                            <option value="sperrmuell">Sperrmüll & E-Geräte</option>
+                            <option value="gewerbe">Gewerbeabfallberatung</option>
+                            <option value="wilder_muell">Meldung wilder Müll</option>
+                        </select>
+
+                        <label for="form-message">Nachricht</label>
+                        <textarea id="form-message" name="nachricht" rows="5" required></textarea>
+
+                        <button type="submit">Nachricht senden</button>
+                    </form>
+                </div>
+
+                <div class="contact-info-box">
+                    <h3>Anschrift & Telefon</h3>
+                    <p><strong>Amt für Bodenschutz und Abfallwirtschaft</strong><br>
+                        Delmenhorster Str. 6<br>
+                        27793 Wildeshausen</p>
+
+                    <p class="mt-1">
+                        <i class="fas fa-phone"></i> 04431 / 85 - 0<br>
+                        <i class="fas fa-envelope"></i> abfallwirtschaft@oldenburg-kreis.de
+                    </p>
+
+                    <h4 class="mt-1-5">Sprechzeiten</h4>
+                    <p>Mo - Fr: 08:00 - 12:00 Uhr<br>
+                        Do: 14:00 - 17:00 Uhr</p>
+
+                    <p class="contact-info-box__disclaimer">
+                        <i class="fas fa-circle-info" aria-hidden="true"></i>
+                        Beispieldaten eines Studienentwurfs. Für ein echtes Anliegen wenden Sie sich
+                        bitte an die offizielle Seite des Landkreises Oldenburg; das Formular hier
+                        verschickt nichts.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

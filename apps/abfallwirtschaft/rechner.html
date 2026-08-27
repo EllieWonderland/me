@@ -1,0 +1,429 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gebührenrechner und Übersicht - Abfallwirtschaft Landkreis Oldenburg">
+    <title>Studienentwurf · Gebühren - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb-header">
+            <div class="container">
+                <a href="index.html">Startseite</a> / <span>Gebühren</span>
+            </div>
+        </div>
+
+        <section class="container pt-2">
+            <h1 class="section-title">Gebühren & Informationen</h1>
+
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="rechner">
+                    <i class="fas fa-calculator"></i> Gebührenrechner
+                </button>
+                <button class="tab-btn" data-tab="uebersicht">
+                    <i class="fas fa-list-alt"></i> Gebührenübersicht
+                </button>
+                <button class="tab-btn" data-tab="bilanzen">
+                    <i class="fas fa-chart-bar"></i> Konzepte & Bilanzen
+                </button>
+            </div>
+
+            <!-- Tab content: Calculator -->
+            <div id="rechner" class="tab-content active">
+                <p class="mb-2">Stellen Sie hier Ihre individuelle Entsorgung zusammen. Wählen Sie zunächst die
+                    Abfallart aus.</p>
+
+                <details class="service-form-card" id="gebuehrenrechner" open>
+                    <summary>
+                        <i class="fas fa-calculator"></i> Gebührenrechner 2025
+                    </summary>
+                    <div class="service-form-content">
+                        <div class="calculator-wrapper">
+                            <div id="configurator">
+                                <div class="calc-row">
+                                    <div class="calc-group">
+                                        <label for="select-type">1. Abfallart wählen</label>
+                                        <select id="select-type">
+                                            <option value="">-- Bitte wählen --</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="calc-group hidden fade-in" id="group-volume">
+                                        <label for="select-volume">2. Größe wählen</label>
+                                        <select id="select-volume" disabled>
+                                            <option value="">-- Größe --</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="calc-group hidden fade-in" id="group-rhythm">
+                                        <label for="select-rhythm">3. Rhythmus wählen</label>
+                                        <select id="select-rhythm" disabled>
+                                            <option value="">-- Rhythmus --</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="calc-group" style="flex: 0 0 auto;">
+                                        <label class="invisible">Aktion</label>
+                                        <button id="btn-add-bin" class="btn-add" disabled>
+                                            <i class="fas fa-plus"></i> Hinzufügen
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <hr class="divider">
+
+                            <div id="calculation-result">
+                                <h3>Ihre Zusammenstellung</h3>
+                                <table class="fee-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Position</th>
+                                            <th>Details</th>
+                                            <th>Preis / Jahr</th>
+                                            <th></th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="fee-table-body">
+                                        <tr id="row-base-fee">
+                                            <td>Grundgebühr (Privathaushalt)</td>
+                                            <td>Pauschale</td>
+                                            <td class="price-cell">54,00 €</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <div class="fee-total">
+                                    Gesamtbetrag: <span id="total-sum">54,00 €</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Tab content: Fee overview -->
+            <div id="uebersicht" class="tab-content">
+                <p class="mb-2">Übersicht aller Gebühren für Behälter und Entsorgungsanlagen.</p>
+
+                <details class="service-form-card" id="behaeltergebuehren" open>
+                    <summary>
+                        <i class="fas fa-trash"></i> Behältergebühren 2025
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Jährliche Gebühren für die
+                            Abfallbehälter (zzgl. Grundgebühr 54,00 €/Jahr)</p>
+
+                        <h4>Restabfalltonne</h4>
+                        <table class="fee-overview-table">
+                            <thead>
+                                <tr>
+                                    <th>Größe</th>
+                                    <th>8-wöchentlich</th>
+                                    <th>4-wöchentlich</th>
+                                    <th>2-wöchentlich</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>80 Liter</td>
+                                    <td>21,00 €</td>
+                                    <td>42,00 €</td>
+                                    <td>84,00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>120 Liter</td>
+                                    <td>-</td>
+                                    <td>63,00 €</td>
+                                    <td>126,00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>240 Liter</td>
+                                    <td>-</td>
+                                    <td>126,00 €</td>
+                                    <td>252,00 €</td>
+                                </tr>
+                                <tr>
+                                    <td>1.100 Liter</td>
+                                    <td>-</td>
+                                    <td>-</td>
+                                    <td>1.087,20 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Biotonne</h4>
+                        <table class="fee-overview-table">
+                            <thead>
+                                <tr>
+                                    <th>Größe</th>
+                                    <th>2-wöchentlich</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>80 Liter</td>
+                                    <td>45,60 €</td>
+                                </tr>
+                                <tr>
+                                    <td>120 Liter</td>
+                                    <td>68,40 €</td>
+                                </tr>
+                                <tr>
+                                    <td>240 Liter</td>
+                                    <td>136,80 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Saison-Biotonne (März - November)</h4>
+                        <table class="fee-overview-table">
+                            <thead>
+                                <tr>
+                                    <th>Größe</th>
+                                    <th>Saisongebühr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>120 Liter</td>
+                                    <td>45,60 €</td>
+                                </tr>
+                                <tr>
+                                    <td>240 Liter</td>
+                                    <td>91,20 €</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h4>Papiertonne (kostenfrei)</h4>
+                        <p>Die Papiertonne (240 l oder 1.100 l) wird kostenfrei bereitgestellt.</p>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="wertstoffhof-gebuehren">
+                    <summary>
+                        <i class="fas fa-recycle"></i> Gebühren Wertstoffhöfe
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Gebühren bei Anlieferung auf den
+                            Wertstoffhöfen</p>
+                        <table class="fee-overview-table">
+                            <thead>
+                                <tr>
+                                    <th>Abfallart</th>
+                                    <th>Gebühr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Sperrmüll (bis 200 kg)</td>
+                                    <td>kostenfrei</td>
+                                </tr>
+                                <tr>
+                                    <td>Sperrmüll (über 200 kg)</td>
+                                    <td>0,15 € / kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Grünabfall (bis 250 kg)</td>
+                                    <td>kostenfrei</td>
+                                </tr>
+                                <tr>
+                                    <td>Grünabfall (über 250 kg)</td>
+                                    <td>0,08 € / kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Altholz A I - A III</td>
+                                    <td>0,15 € / kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Altholz A IV (behandelt)</td>
+                                    <td>0,20 € / kg</td>
+                                </tr>
+                                <tr>
+                                    <td>Elektrogeräte</td>
+                                    <td>kostenfrei</td>
+                                </tr>
+                                <tr>
+                                    <td>Schadstoffe (haushaltsübliche Mengen)</td>
+                                    <td>kostenfrei</td>
+                                </tr>
+                                <tr>
+                                    <td>Asbest & KMF (bis 500 kg)</td>
+                                    <td>25,00 € pauschal</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="umschlagstation-gebuehren">
+                    <summary>
+                        <i class="fas fa-truck-loading"></i> Gebühren Umschlagstation
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Gebühren bei Anlieferung auf der
+                            Umschlagstation Wildeshausen</p>
+                        <table class="fee-overview-table">
+                            <thead>
+                                <tr>
+                                    <th>Abfallart</th>
+                                    <th>Gebühr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Kleinmengen (bis 50 kg)</td>
+                                    <td>8,00 € pauschal</td>
+                                </tr>
+                                <tr>
+                                    <td>Hausmüll / hausmüllähnlicher Gewerbeabfall</td>
+                                    <td>160,00 € / t</td>
+                                </tr>
+                                <tr>
+                                    <td>Sperrmüll</td>
+                                    <td>150,00 € / t</td>
+                                </tr>
+                                <tr>
+                                    <td>Altholz A I - A III</td>
+                                    <td>150,00 € / t</td>
+                                </tr>
+                                <tr>
+                                    <td>Altholz A IV</td>
+                                    <td>200,00 € / t</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="gruenabfall-gebuehren">
+                    <summary>
+                        <i class="fas fa-leaf"></i> Gebühren Grünabfall-Sammelstellen
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Gebühren bei Anlieferung zu den
+                            Grünabfall-Sammelstellen</p>
+                        <table class="fee-overview-table">
+                            <thead>
+                                <tr>
+                                    <th>Menge</th>
+                                    <th>Gebühr</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Bis 250 kg</td>
+                                    <td>kostenfrei</td>
+                                </tr>
+                                <tr>
+                                    <td>Über 250 kg</td>
+                                    <td>0,08 € / kg</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <p class="mt-1"><strong>Hinweis:</strong> Die Sammelstellen sind von März bis November geöffnet.
+                        </p>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="kostenfreie-leistungen">
+                    <summary>
+                        <i class="fas fa-gift"></i> Leistungen ohne Gebühren
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Folgende Leistungen sind für
+                            Privathaushalte kostenfrei:</p>
+                        <ul class="info-list">
+                            <li>Sperrmüllabholung auf Abruf (2x pro Jahr)</li>
+                            <li>Elektro-Altgeräte-Abholung</li>
+                            <li>Papiertonne (240 l oder 1.100 l)</li>
+                            <li>Schadstoffsammlung (mobil und stationär)</li>
+                            <li>Sperrmüll bis 200 kg am Wertstoffhof</li>
+                            <li>Grünabfall bis 250 kg am Wertstoffhof/Sammelstelle</li>
+                            <li>Elektrogeräte am Wertstoffhof</li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="gebuehren-download">
+                    <summary>
+                        <i class="fas fa-file-pdf"></i> Gebührensatzung Download
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Die vollständige Gebührensatzung finden
+                            Sie in unseren Downloads.</p>
+                        <p><a href="downloads/abfallkalender.pdf" class="btn btn-primary" target="_blank"><i
+                                    class="fas fa-download"></i> Vollständige Gebührenübersicht als PDF
+                                herunterladen</a></p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Tab content: Balances -->
+            <div id="bilanzen" class="tab-content">
+                <p class="mb-2">Konzepte, Bilanzen und Berichte zur Abfallwirtschaft.</p>
+
+                <details class="service-form-card" id="konzepte-bilanzen" open>
+                    <summary>
+                        <i class="fas fa-chart-bar"></i> Konzepte & Bilanzen
+                    </summary>
+                    <div class="service-form-content">
+                        <div id="bilanzen-grid" class="grid-layout-2col">
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/calculator.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/data-loaders.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

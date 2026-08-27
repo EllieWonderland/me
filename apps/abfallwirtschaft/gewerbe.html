@@ -1,0 +1,334 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Informationen für Gewerbebetriebe - Abfallwirtschaft Landkreis Oldenburg">
+    <title>Studienentwurf · Gewerbe - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb-header">
+            <div class="container">
+                <a href="index.html">Startseite</a> / <span>Gewerbe</span>
+            </div>
+        </div>
+
+        <section class="container pt-2">
+            <h1 class="section-title">Informationen für Gewerbebetriebe</h1>
+
+            <!-- Tab Navigation -->
+            <div class="tab-navigation">
+                <button class="tab-btn active" data-tab="sammlungen">
+                    <i class="fas fa-clipboard-list"></i> Sammlungen §18
+                </button>
+                <button class="tab-btn" data-tab="gewerbeabfall">
+                    <i class="fas fa-trash-alt"></i> Gewerbeabfall
+                </button>
+                <button class="tab-btn" data-tab="merkblaetter-gewerbe">
+                    <i class="fas fa-file-alt"></i> Merkblätter
+                </button>
+            </div>
+
+            <!-- Tab 1: Sammlungen -->
+            <div id="sammlungen" class="tab-content active">
+                <p class="mb-2">Gemeinnützige und gewerbliche Sammlungen von Abfällen zur Verwertung sind nach § 18
+                    Kreislaufwirtschaftsgesetz (KrWG) anzuzeigen.</p>
+
+                <details class="service-form-card" id="anzeige-krwg" open>
+                    <summary>
+                        <i class="fas fa-file-signature"></i> Anzeige nach § 18 KrWG
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Nutzen Sie dieses Formular zur Anzeige
+                            einer gemeinnützigen oder gewerblichen Sammlung gemäß § 18 KrWG.</p>
+
+                        <form class="service-form" id="form-krwg-anzeige">
+                            <div class="form-group">
+                                <label for="krwg-firma">Firma/Organisation *</label>
+                                <input type="text" id="krwg-firma" name="firma" required
+                                    placeholder="Name der Firma oder Organisation">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="krwg-ansprechpartner">Ansprechpartner *</label>
+                                    <input type="text" id="krwg-ansprechpartner" name="ansprechpartner" required
+                                        placeholder="Vor- und Nachname">
+                                </div>
+                                <div class="form-group">
+                                    <label for="krwg-telefon">Telefon *</label>
+                                    <input type="tel" id="krwg-telefon" name="telefon" required
+                                        placeholder="Telefonnummer">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="krwg-email">E-Mail *</label>
+                                <input type="email" id="krwg-email" name="email" required placeholder="E-Mail-Adresse">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="krwg-adresse">Anschrift *</label>
+                                <input type="text" id="krwg-adresse" name="adresse" required
+                                    placeholder="Straße, Hausnummer, PLZ, Ort">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="krwg-art">Art der Sammlung *</label>
+                                    <select id="krwg-art" name="art" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="gewerblich">Gewerbliche Sammlung</option>
+                                        <option value="gemeinnuetzig">Gemeinnützige Sammlung</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="krwg-sammelgut">Sammelgut *</label>
+                                    <select id="krwg-sammelgut" name="sammelgut" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="altkleider">Altkleider</option>
+                                        <option value="schrott">Schrott/Metalle</option>
+                                        <option value="papier">Papier/Pappe</option>
+                                        <option value="elektro">Elektrogeräte</option>
+                                        <option value="sonstiges">Sonstiges</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="krwg-beginn">Beginn der Sammlung *</label>
+                                    <input type="date" id="krwg-beginn" name="beginn" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="krwg-ende">Voraussichtliches Ende</label>
+                                    <input type="date" id="krwg-ende" name="ende">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="krwg-sammelgebiet">Sammelgebiet *</label>
+                                <textarea id="krwg-sammelgebiet" name="sammelgebiet" rows="2" required
+                                    placeholder="In welchen Gemeinden/Ortsteilen soll gesammelt werden?"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="krwg-bemerkungen">Zusätzliche Angaben</label>
+                                <textarea id="krwg-bemerkungen" name="bemerkungen" rows="3"
+                                    placeholder="Weitere Informationen zur Sammlung"></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <label>
+                                    <input type="checkbox" name="datenschutz" required>
+                                    Ich habe die <a href="legal.html#datenschutz"
+                                        target="_blank">Datenschutzerklärung</a> gelesen und akzeptiere diese. *
+                                </label>
+                            </div>
+
+                            <button type="submit" class="btn-submit">
+                                <i class="fas fa-paper-plane"></i> Anzeige absenden
+                            </button>
+                        </form>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="krwg-downloads">
+                    <summary>
+                        <i class="fas fa-download"></i> Downloads & Informationen
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Wichtige Dokumente und Informationen zu
+                            gewerblichen Sammlungen:</p>
+                        <ul class="download-list">
+                            <li>
+                                <a href="downloads/formblatt_anzeige_18_krwg.pdf" class="download-link" target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Anzeigeformular gemäß § 18 KrWG (PDF)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/liste_gewerblicher_sammlungen.pdf" class="download-link"
+                                    target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Liste aktuell angezeigter Sammlungen (PDF)</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/informationen_fuer_schrotthaendler.pdf" class="download-link"
+                                    target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Informationen für Schrotthändler (PDF)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Tab 2: Gewerbeabfall -->
+            <div id="gewerbeabfall" class="tab-content">
+                <p class="mb-2">Informationen zur ordnungsgemäßen Entsorgung von Gewerbeabfällen im Landkreis Oldenburg.
+                </p>
+
+                <details class="service-form-card" id="restabfallbehaelter" open>
+                    <summary>
+                        <i class="fas fa-trash-alt"></i> Restabfallbehälter für Gewerbebetriebe
+                    </summary>
+                    <div class="service-form-content">
+                        <p>Gemäß der Abfallsatzung des Landkreises Oldenburg sind Gewerbebetriebe zur Nutzung von
+                            Restabfallbehältern verpflichtet. Die Behältergröße wird nach der Art und dem Umfang des
+                            Betriebes bemessen.</p>
+
+                        <div class="info-box">
+                            <h4><i class="fas fa-calculator"></i> Bemessung der Behältergröße</h4>
+                            <p>Die Mindestgröße richtet sich nach:</p>
+                            <ul>
+                                <li>Anzahl der Beschäftigten</li>
+                                <li>Art des Gewerbebetriebs</li>
+                                <li>Abfallintensität der Branche</li>
+                            </ul>
+                        </div>
+
+                        <p class="mt-2">Für detaillierte Informationen zur Bemessung und zu Ausnahmen laden Sie bitte
+                            unser Merkblatt herunter:</p>
+                        <ul class="download-list">
+                            <li>
+                                <a href="downloads/merkblatt_restabfallbehaelter_in_gewerbebetrieben.pdf"
+                                    class="download-link" target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Merkblatt: Restabfallbehälter in Gewerbebetrieben (PDF)</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="gewerbeabfallverordnung">
+                    <summary>
+                        <i class="fas fa-balance-scale"></i> Gewerbeabfallverordnung
+                    </summary>
+                    <div class="service-form-content">
+                        <p>Die Gewerbeabfallverordnung (GewAbfV) regelt die Entsorgung von gewerblichen
+                            Siedlungsabfällen. Sie schreibt vor:</p>
+                        <ul class="info-list">
+                            <li><strong>Getrenntsammlung:</strong> Papier, Glas, Kunststoffe, Metalle, Bioabfälle und
+                                Holz sind getrennt zu erfassen</li>
+                            <li><strong>Dokumentationspflicht:</strong> Die Getrennthaltung ist zu dokumentieren</li>
+                            <li><strong>Vorbehandlung:</strong> Gemischte Gewerbeabfälle müssen vorbehandelt werden</li>
+                        </ul>
+                        <p class="mt-2">Bei Fragen zur Umsetzung der Gewerbeabfallverordnung wenden Sie sich bitte an
+                            unsere <a href="kontakt.html">Abfallberatung</a>.</p>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Tab 3: Merkblätter -->
+            <div id="merkblaetter-gewerbe" class="tab-content">
+                <p class="mb-2">Hier finden Sie wichtige Merkblätter und Informationen speziell für Gewerbetreibende und
+                    Freiberufler.</p>
+
+                <details class="service-form-card" id="downloads-gewerbe" open>
+                    <summary>
+                        <i class="fas fa-folder-open"></i> Downloads für Gewerbetreibende
+                    </summary>
+                    <div class="service-form-content">
+                        <ul class="download-list">
+                            <li>
+                                <a href="downloads/merkblatt_restabfallbehaelter_in_gewerbebetrieben.pdf"
+                                    class="download-link" target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Merkblatt: Restabfallbehälter in Gewerbebetrieben</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/merkblatt_pur_schaumdosen.pdf" class="download-link" target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Merkblatt: Entsorgung von PUR-Schaumdosen</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/informationen_fuer_schrotthaendler.pdf" class="download-link"
+                                    target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Informationen für Schrottsammlungen</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/merkblatt_asbestentsorgung.pdf" class="download-link"
+                                    target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Merkblatt: Asbestentsorgung</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="downloads/merkblatt_altholz.pdf" class="download-link" target="_blank">
+                                    <i class="fas fa-file-pdf"></i>
+                                    <span>Merkblatt: Altholzentsorgung</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+
+                <details class="service-form-card" id="weitere-merkblaetter">
+                    <summary>
+                        <i class="fas fa-info-circle"></i> Weitere Informationen
+                    </summary>
+                    <div class="service-form-content">
+                        <p>Weitere allgemeine Merkblätter zur Abfallentsorgung finden Sie im Bereich <a
+                                href="infos.html#downloads">Infos → Merkblätter</a>.</p>
+                        <p class="mt-1">Bei speziellen Fragen zur gewerblichen Entsorgung kontaktieren Sie bitte unsere
+                            <a href="kontakt.html">Abfallberatung</a>.
+                        </p>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/data-loaders.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

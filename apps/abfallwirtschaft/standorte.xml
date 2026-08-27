@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <wertstoffhoefe>
+        <location>
+            <name>Wildeshausen &amp; Umschlagstation</name>
+            <address>Bauhofstraße 12a&lt;br&gt;27793 Wildeshausen</address>
+            <lat>52.8924</lat>
+            <lng>8.4295</lng>
+            <openingHoursLabel>Öffnungszeiten:</openingHoursLabel>
+            <days>
+                <day>
+                    <label>Mo-Fr:</label>
+                    <time>07:30 - 12:30 Uhr&lt;br&gt;13:00 - 16:30 Uhr&lt;br&gt;(Do bis 18:00 Uhr)</time>
+                </day>
+                <day>
+                    <label>Sa:</label>
+                    <time>08:00 - 12:00 Uhr</time>
+                </day>
+            </days>
+        </location>
+        <location>
+            <name>Ganderkesee</name>
+            <address>Weststraße 10&lt;br&gt;27777 Ganderkesee</address>
+            <lat>53.0332</lat>
+            <lng>8.5484</lng>
+            <openingHoursLabel>Öffnungszeiten:</openingHoursLabel>
+            <days>
+                <day>
+                    <label>Mo-Fr:</label>
+                    <time>07:30 - 18:00 Uhr</time>
+                </day>
+                <day>
+                    <label>Sa:</label>
+                    <time>07:30 - 14:00 Uhr</time>
+                </day>
+            </days>
+        </location>
+        <location>
+            <name>Neerstedt (Dötlingen)</name>
+            <address>Kirchhatter Str. 8&lt;br&gt;27801 Neerstedt</address>
+            <lat>52.9456</lat>
+            <lng>8.3945</lng>
+            <openingHoursLabel>Öffnungszeiten:</openingHoursLabel>
+            <days>
+                <day>
+                    <label>Di &amp; Fr:</label>
+                    <time>14:00 - 18:00 Uhr</time>
+                </day>
+                <day>
+                    <label>Sa:</label>
+                    <time>09:00 - 13:00 Uhr</time>
+                </day>
+            </days>
+        </location>
+        <location>
+            <name>Wardenburg</name>
+            <address>Rothenschlatt 35&lt;br&gt;26203 Wardenburg</address>
+            <lat>53.0528</lat>
+            <lng>8.2014</lng>
+            <openingHoursLabel>Öffnungszeiten:</openingHoursLabel>
+            <days>
+                <day>
+                    <label>Di-Fr:</label>
+                    <time>14:00 - 18:00 Uhr</time>
+                </day>
+                <day>
+                    <label>Sa:</label>
+                    <time>09:00 - 13:00 Uhr</time>
+                </day>
+            </days>
+            <note>&lt;em&gt;Problemstoffannahme:&lt;/em&gt;&lt;br&gt;Fr 14-17, Sa 10-12</note>
+        </location>
+        <location>
+            <name>Hude</name>
+            <address>Leckerhörne&lt;br&gt;27798 Hude</address>
+            <lat>53.1067</lat>
+            <lng>8.4656</lng>
+            <openingHoursLabel>Öffnungszeiten (März - Nov):</openingHoursLabel>
+            <days>
+                <day>
+                    <label>Di &amp; Fr:</label>
+                    <time>14:00 - 18:00 Uhr</time>
+                </day>
+                <day>
+                    <label>Sa:</label>
+                    <time>09:00 - 13:00 Uhr</time>
+                </day>
+            </days>
+        </location>
+        <location>
+            <name>Bargloy</name>
+            <address>Wildeshausen-Bargloy</address>
+            <lat>52.9012</lat>
+            <lng>8.3856</lng>
+            <openingHoursLabel>Öffnungszeiten:</openingHoursLabel>
+            <days>
+                <day>
+                    <label>Di &amp; Fr:</label>
+                    <time>14:00 - 18:00 Uhr</time>
+                </day>
+                <day>
+                    <label>Sa:</label>
+                    <time>09:00 - 13:00 Uhr</time>
+                </day>
+            </days>
+        </location>
+    </wertstoffhoefe>
+    <gruenabfall>
+        <location>
+            <name>Sage (Großenkneten)</name>
+            <address>Am Waldesrand</address>
+            <lat>52.9285</lat>
+            <lng>8.2234</lng>
+            <openingHours>Di &amp; Fr: 14-18 Uhr, Sa: 9-13 Uhr</openingHours>
+        </location>
+        <location>
+            <name>Hatten</name>
+            <address>Sandkruger Str. 35</address>
+            <lat>53.0412</lat>
+            <lng>8.3145</lng>
+            <openingHours>Di &amp; Fr: 14-18 Uhr, Sa: 9-13 Uhr</openingHours>
+        </location>
+        <location>
+            <name>Harpstedt</name>
+            <address>Neus Heidland</address>
+            <lat>52.9078</lat>
+            <lng>8.5867</lng>
+            <openingHours>Di &amp; Fr: 14-18 Uhr, Sa: 9-13 Uhr</openingHours>
+        </location>
+    </gruenabfall>
+    <kompostwerk>
+        <location>
+            <name>Kompostwerk Ganderkesee (Fa. K-Nord)</name>
+            <description>Am Wertstoffhof Ganderkesee, Weststraße 10.</description>
+            <lat>53.0335</lat>
+            <lng>8.5490</lng>
+            <note>Annahme von Garten- und Parkabfällen sowie Baum- und Strauchschnitt (Entgeltpflichtig).</note>
+        </location>
+    </kompostwerk>
+    <altglas>
+        <info>Einwurfzeiten: Mo-Sa 07:00 - 20:00 Uhr. Nicht an Feiertagen.</info>
+        <areas>
+            <area>
+                <name>Gemeinde Dötlingen</name>
+                <locations>
+                    <loc lat="52.9523" lng="8.3789">Voßberg, Tannenweg</loc>
+                    <loc lat="52.9312" lng="8.3845">Dötlingen, Heideweg (Lopshof)</loc>
+                    <loc lat="52.9298" lng="8.3912">Dötlingen, Zum Sande (Sportplatz)</loc>
+                    <loc lat="52.9189" lng="8.4156">Ostrittrum, An der Steindaren</loc>
+                    <loc lat="52.9234" lng="8.3567">Riede, Schwarzer Moorweg</loc>
+                    <loc lat="52.9478" lng="8.3934">Neerstedt, Kirchweg / Brettorfer Str. (Bauhof)</loc>
+                    <loc lat="52.9456" lng="8.3945">Neerstedt, Kirchhatter Str. 8 (Wertstoffhof)</loc>
+                    <loc lat="52.9612" lng="8.4234">Nuttel, Falkenburger Weg / Stedinger Weg</loc>
+                    <loc lat="52.9689" lng="8.4012">Brettorf, Bareler Weg (Bhf)</loc>
+                    <loc lat="52.9545" lng="8.4123">Klattenhof, Im Dorfe 12</loc>
+                </locations>
+            </area>
+            <area>
+                <name>Gemeinde Ganderkesee</name>
+                <locations>
+                    <loc lat="53.0332" lng="8.5484">Ganderkesee, Weststraße (Wertstoffhof)</loc>
+                    <loc lat="53.0289" lng="8.5523">Ganderkesee, Schillerstraße / Goethestraße</loc>
+                    <loc lat="53.0312" lng="8.5612">Ganderkesee, Brüninger Weg (Altenheim)</loc>
+                    <loc lat="53.0256" lng="8.5434">Ganderkesee, Habbrügger Weg (Schießstand)</loc>
+                    <loc lat="53.0345" lng="8.5389">Ganderkesee, Adelheider Straße</loc>
+                    <loc lat="53.0123" lng="8.5289">Hoyerswege, An der Hackhorst</loc>
+                    <loc lat="53.0045" lng="8.5456">Hengsterholz, Neustädter Str.</loc>
+                    <loc lat="53.0678" lng="8.5123">Schönemoor, Schönemoorer Landstr. 119</loc>
+                    <loc lat="53.0789" lng="8.5234">Bookholzberg, Zum Hang, Nutzhorner Str., Übern Berg</loc>
+                    <loc lat="53.0456" lng="8.5012">Rethorn, Birkenweg</loc>
+                    <loc lat="53.0178" lng="8.4934">Stenum, Dorfring</loc>
+                    <loc lat="52.9912" lng="8.4823">Falkenburg, Orthstraße</loc>
+                    <loc lat="53.0012" lng="8.4912">Steinkimmen, Am Jugendhof</loc>
+                    <loc lat="53.0534" lng="8.4789">Schierbrok, Am Buschhagen</loc>
+                    <loc lat="53.0423" lng="8.4678">Bergedorf, Auf dem Varel</loc>
+                </locations>
+            </area>
+            <area>
+                <name>Gemeinde Großenkneten</name>
+                <locations>
+                    <loc lat="52.9156" lng="8.3678">Westrittrum, Rittrumer Esch</loc>
+                    <loc lat="52.9434" lng="8.2456">Großenkneten, Am Rieskamp (Aldi), Gasthaus Kempermann, Bahnhofsweg</loc>
+                    <loc lat="52.9285" lng="8.2234">Sage, Sager Str.</loc>
+                    <loc lat="52.9312" lng="8.1989">Sage-Haast, Garreler Str.</loc>
+                    <loc lat="52.9089" lng="8.1756">Bissel, Ringstr. &amp; Garreler Str.</loc>
+                    <loc lat="52.9567" lng="8.2123">Hengstlage, Hengstlager Weg</loc>
+                    <loc lat="52.9678" lng="8.3012">Huntlosen, Am Forst &amp; Bahnhof</loc>
+                    <loc lat="52.9823" lng="8.3234">Döhlen, Im Dorf</loc>
+                    <loc lat="52.8945" lng="8.2345">Ahlhorn, Cloppenburger Str., Fischteiche, Am Lemsen, Katharinenstr.</loc>
+                </locations>
+            </area>
+            <area>
+                <name>Samtgemeinde Harpstedt</name>
+                <locations>
+                    <loc lat="52.8867" lng="8.5345">Beckeln, Hauptstr.</loc>
+                    <loc lat="52.8956" lng="8.6123">Colnrade, Kieselhorster Weg</loc>
+                    <loc lat="52.9234" lng="8.5678">Dünsen, Dorfstr.</loc>
+                    <loc lat="52.9456" lng="8.5234">Groß Ippener, Dorfstr. &amp; Hespenriede</loc>
+                    <loc lat="52.9078" lng="8.5867">Harpstedt, Tielingskamp</loc>
+                    <loc lat="52.9345" lng="8.6012">Kirchseelte, Dorfstr. &amp; Groß-Ippener-Weg</loc>
+                </locations>
+            </area>
+            <area>
+                <name>Stadt Wildeshausen</name>
+                <locations>
+                    <loc lat="52.8878" lng="8.4323">Glaner Str. / Bremer Weg</loc>
+                    <loc lat="52.8934" lng="8.4378">Gisbertzstraße (Parkplatz)</loc>
+                    <loc lat="52.8812" lng="8.4289">Heilstättenstr.</loc>
+                    <loc lat="52.8956" lng="8.4434">Dittmarstraße</loc>
+                    <loc lat="52.8989" lng="8.4512">Am Krandel</loc>
+                    <loc lat="52.9012" lng="8.4023">Bargloyer Str. (Netto)</loc>
+                    <loc lat="52.8901" lng="8.4256">Michaelstraße</loc>
+                    <loc lat="52.8867" lng="8.4189">Dr.-Pickart-Straße</loc>
+                    <loc lat="52.8889" lng="8.4345">Mühlendamm</loc>
+                    <loc lat="52.8923" lng="8.4412">Katenbäker Berg</loc>
+                    <loc lat="52.9012" lng="8.3856">Bargloy (Wertstoffhof)</loc>
+                    <loc lat="52.9145" lng="8.4678">Düngstrup (Feuerwehr)</loc>
+                    <loc lat="52.8756" lng="8.4534">Aumühle (Kartbahn &amp; Camping)</loc>
+                    <loc lat="52.8978" lng="8.4089">Westring (Famila)</loc>
+                </locations>
+            </area>
+            <area>
+                <name>Gemeinde Wardenburg</name>
+                <locations>
+                    <loc lat="53.0234" lng="8.2156">Oberlethe, Tungeler Damm (Dorfgemeinschaftshaus)</loc>
+                    <loc lat="53.0789" lng="8.2345">Hundsmühlen, Achternmeerer Str.</loc>
+                    <loc lat="53.0456" lng="8.1934">Klein Bümmerstede, An der Waldschänke</loc>
+                    <loc lat="53.0528" lng="8.2014">Wardenburg, Rothenschlatt (Wertstoffhof)</loc>
+                </locations>
+            </area>
+            <area>
+                <name>Gemeinde Hude</name>
+                <locations>
+                    <loc lat="53.1067" lng="8.4656">Hude, Leckerhörne (Wertstoffhof)</loc>
+                    <loc lat="53.1089" lng="8.4623">Hude, Parkplatz Rathaus</loc>
+                    <loc lat="53.0923" lng="8.4234">Wüsting, Stedinger Landstr.</loc>
+                </locations>
+            </area>
+            <area>
+                <name>Gemeinde Hatten</name>
+                <locations>
+                    <loc lat="53.0567" lng="8.3012">Sandkrug, EDEKA-Parkplatz</loc>
+                    <loc lat="53.0412" lng="8.3145">Kirchhatten, Hauptstraße</loc>
+                    <loc lat="53.0389" lng="8.3234">Sandkruger Str. 35</loc>
+                </locations>
+            </area>
+        </areas>
+    </altglas>
+    <kleider>
+        <info>Altkleider und Schuhe können an folgenden Standorten abgegeben werden. Container werden vom DRK und anderen gemeinnützigen Organisationen betrieben.</info>
+        <location>
+            <title>Wildeshausen</title>
+            <text>Wertstoffhof Bargloy (Bauhofstraße 12a) • Famila-Parkplatz (Westring) • Netto-Parkplatz (Bargloyer Str.) • Michaelstraße • Heilstättenstraße</text>
+            <spots>
+                <spot lat="52.8924" lng="8.4295">Wertstoffhof Bargloy</spot>
+                <spot lat="52.8978" lng="8.4089">Famila-Parkplatz (Westring)</spot>
+                <spot lat="52.9012" lng="8.4023">Netto-Parkplatz (Bargloyer Str.)</spot>
+                <spot lat="52.8901" lng="8.4256">Michaelstraße</spot>
+                <spot lat="52.8812" lng="8.4289">Heilstättenstraße</spot>
+            </spots>
+        </location>
+        <location>
+            <title>Ganderkesee</title>
+            <text>Wertstoffhof (Weststraße 10) • Rewe-Parkplatz (Wittekindstraße) • Bookholzberg (Zum Hang) • Stenum (Dorfring) • Schierbrok (Am Buschhagen)</text>
+            <spots>
+                <spot lat="53.0332" lng="8.5484">Wertstoffhof (Weststraße 10)</spot>
+                <spot lat="53.0312" lng="8.5456">Rewe-Parkplatz (Wittekindstraße)</spot>
+                <spot lat="53.0789" lng="8.5234">Bookholzberg (Zum Hang)</spot>
+                <spot lat="53.0178" lng="8.4934">Stenum (Dorfring)</spot>
+                <spot lat="53.0534" lng="8.4789">Schierbrok (Am Buschhagen)</spot>
+            </spots>
+        </location>
+        <location>
+            <title>Wardenburg</title>
+            <text>Wertstoffhof (Rothenschlatt 35) • Hundsmühlen (Achternmeerer Str.) • Oberlethe (Tungeler Damm)</text>
+            <spots>
+                <spot lat="53.0528" lng="8.2014">Wertstoffhof (Rothenschlatt 35)</spot>
+                <spot lat="53.0789" lng="8.2345">Hundsmühlen (Achternmeerer Str.)</spot>
+                <spot lat="53.0234" lng="8.2156">Oberlethe (Tungeler Damm)</spot>
+            </spots>
+        </location>
+        <location>
+            <title>Hude</title>
+            <text>Wertstoffhof (Leckerhörne) • Parkplatz Rathaus • Wüsting (Stedinger Landstr.)</text>
+            <spots>
+                <spot lat="53.1067" lng="8.4656">Wertstoffhof (Leckerhörne)</spot>
+                <spot lat="53.1089" lng="8.4623">Parkplatz Rathaus</spot>
+                <spot lat="53.0923" lng="8.4234">Wüsting (Stedinger Landstr.)</spot>
+            </spots>
+        </location>
+        <location>
+            <title>Großenkneten</title>
+            <text>Ahlhorn (Cloppenburger Str., REWE-Parkplatz) • Sage (Sager Str.) • Huntlosen (Am Forst)</text>
+            <spots>
+                <spot lat="52.8945" lng="8.2345">Ahlhorn (Cloppenburger Str., REWE-Parkplatz)</spot>
+                <spot lat="52.9285" lng="8.2234">Sage (Sager Str.)</spot>
+                <spot lat="52.9678" lng="8.3012">Huntlosen (Am Forst)</spot>
+            </spots>
+        </location>
+        <location>
+            <title>Dötlingen / Neerstedt</title>
+            <text>Wertstoffhof Neerstedt (Kirchhatter Str. 8) • Brettorf (Bareler Weg) • Dötlingen (Heideweg)</text>
+            <spots>
+                <spot lat="52.9456" lng="8.3945">Wertstoffhof Neerstedt</spot>
+                <spot lat="52.9689" lng="8.4012">Brettorf (Bareler Weg)</spot>
+                <spot lat="52.9312" lng="8.3845">Dötlingen (Heideweg)</spot>
+            </spots>
+        </location>
+        <location>
+            <title>Hatten</title>
+            <text>Sandkrug (EDEKA-Parkplatz) • Kirchhatten (Hauptstraße) • Sandkruger Str. 35</text>
+            <spots>
+                <spot lat="53.0567" lng="8.3012">Sandkrug (EDEKA-Parkplatz)</spot>
+                <spot lat="53.0412" lng="8.3145">Kirchhatten (Hauptstraße)</spot>
+                <spot lat="53.0389" lng="8.3234">Sandkruger Str. 35</spot>
+            </spots>
+        </location>
+        <location>
+            <title>Harpstedt</title>
+            <text>Ortskern (Tielingskamp) • Groß Ippener (Dorfstr.) • Beckeln (Hauptstr.)</text>
+            <spots>
+                <spot lat="52.9078" lng="8.5867">Ortskern (Tielingskamp)</spot>
+                <spot lat="52.9456" lng="8.5234">Groß Ippener (Dorfstr.)</spot>
+                <spot lat="52.8867" lng="8.5345">Beckeln (Hauptstr.)</spot>
+            </spots>
+        </location>
+    </kleider>
+    <repaircafe>
+        <info>In den Repair-Cafés können defekte Gegenstände kostenlos repariert werden. Ehrenamtliche Helfer unterstützen bei der Reparatur.</info>
+        <location>
+            <name>Repair-Café Ganderkesee</name>
+            <address>VHS Ganderkesee-Hude</address>
+            <lat>53.0312</lat>
+            <lng>8.5523</lng>
+            <openingHours>Jeden 1. Samstag im Monat, 14:00 - 17:00 Uhr</openingHours>
+        </location>
+        <location>
+            <name>Repair-Café Wildeshausen</name>
+            <address>Mehrgenerationenhaus</address>
+            <lat>52.8945</lat>
+            <lng>8.4356</lng>
+            <openingHours>Jeden 3. Samstag im Monat, 10:00 - 13:00 Uhr</openingHours>
+        </location>
+        <location>
+            <name>Repair-Café Hude</name>
+            <address>Kulturhof Hude</address>
+            <lat>53.1078</lat>
+            <lng>8.4598</lng>
+            <openingHours>Jeden 2. Mittwoch im Monat, 15:00 - 18:00 Uhr</openingHours>
+        </location>
+        <location>
+            <name>Repair-Café Wardenburg</name>
+            <address>Gemeindehaus Wardenburg</address>
+            <lat>53.0534</lat>
+            <lng>8.1978</lng>
+            <openingHours>Jeden letzten Freitag im Monat, 16:00 - 19:00 Uhr</openingHours>
+        </location>
+    </repaircafe>
+</data>

@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Abfallwirtschaft Landkreis Oldenburg - Ihr Partner für nachhaltige Entsorgung">
+    <title>Studienentwurf · Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <section class="hero">
+            <div class="hero-background">
+                <div class="hero-pattern"></div>
+            </div>
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        <span class="hero-title-main">Willkommen bei der</span>
+                        <span class="hero-title-highlight">Abfallwirtschaft Landkreis Oldenburg</span>
+                    </h1>
+                    <p class="hero-subtitle">Gemeinsam für eine saubere und nachhaltige Zukunft</p>
+
+                    <!-- Search -->
+                    <div class="search-container">
+                        <form id="search-form" class="search-form" autocomplete="off">
+                            <div class="search-input-wrapper">
+                                <i class="fas fa-search search-icon"></i>
+                                <input type="search" id="search-input" name="q" class="search-input"
+                                    placeholder="Wie können wir Ihnen helfen?" aria-label="Suche">
+                                <button type="submit" class="search-button">Suchen</button>
+                            </div>
+                            <!-- Search Results -->
+                            <div id="global-search-results" class="search-results-dropdown"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Aktuelles & wichtige Hinweise</h2>
+                    <a href="news.html" class="link-all">Alle Meldungen <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="news-grid" id="news-grid">
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="quick-access">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Unsere Services für Sie</h2>
+                </div>
+                <div class="cards-grid" id="services-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/search.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/data-loaders.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studienentwurf · Rechtliches - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main class="container">
+        <div class="breadcrumb-header">
+            <a href="index.html">Startseite</a> /
+            <span>Rechtliches</span>
+        </div>
+
+        <div id="impressum">
+            <h1 class="section-title">Impressum</h1>
+            <div class="content-box">
+                <p><strong>Diese Seite ist ein Studienentwurf.</strong> Sie ist kein Angebot des
+                    Landkreises Oldenburg, steht in keiner Verbindung zu ihm und wird auch nicht
+                    von ihm betrieben. Alle Inhalte, Termine, Gebühren und Ansprechpartner sind
+                    Beispieldaten für ein Gestaltungs- und Entwicklungskonzept.</p>
+                <br>
+                <p><strong>Verantwortlich für diesen Entwurf gemäß § 5 DDG:</strong></p>
+                <p>Jana Fisenko<br>
+                    c/o Hochschule Emden/Leer<br>
+                    Constantiaplatz 4<br>
+                    26723 Emden<br>
+                    E-Mail: <a href="mailto:jana.fisenko@hotmail.com">jana.fisenko@hotmail.com</a></p>
+                <br>
+                <p><strong>Anliegen zur Abfallwirtschaft im Landkreis Oldenburg</strong> richten Sie
+                    bitte an die zuständige Stelle selbst; deren offizielle Kontaktdaten finden Sie
+                    auf der Website des Landkreises Oldenburg. Über die Formulare dieses Entwurfs
+                    wird nichts abgeschickt.</p>
+                <br>
+                <p><a href="https://janafisenko.de/#gestaltung">Zurück zur Portfolioseite</a></p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div id="barrierefreiheit">
+            <h1 class="section-title">Barrierefreiheit</h1>
+            <div class="content-box">
+                <p>Barrierefreiheit war die Vorgabe, an der dieser Entwurf entwickelt wurde, nicht
+                    eine Nachbesserung am Ende. Umgesetzt sind:</p>
+                <ul>
+                    <li>durchgehende Bedienbarkeit per Tastatur, sichtbarer Fokus und ein
+                        Sprunglink zum Inhalt</li>
+                    <li>ein Bedienhilfen-Menü für höheren Kontrast und größere Schrift, die Wahl
+                        bleibt für den nächsten Besuch erhalten</li>
+                    <li>Textfarben mit einem Kontrastverhältnis von mindestens 4,5:1, im
+                        Kontrastmodus deutlich darüber</li>
+                    <li>eine durchgehende Überschriftenhierarchie, beschriftete Formularfelder und
+                        Alternativtexte für inhaltstragende Bilder</li>
+                    <li>Bedienung auch bei 200&nbsp;% Zoom und auf schmalen Bildschirmen, ohne
+                        waagerechtes Scrollen</li>
+                    <li>Erklärungen in kurzen Sätzen und ohne Fachjargon, wo der Sachverhalt es
+                        zulässt</li>
+                </ul>
+                <br>
+                <p><strong>Bekannte Grenzen:</strong> Die Standortkarte ist eine visuelle
+                    Darstellung; alle darauf gezeigten Standorte stehen zusätzlich als Liste unter
+                    <a href="standorte.html">Standorte</a>. Die zum Herunterladen angebotenen
+                    PDF-Dateien stammen aus fremder Quelle und sind nicht auf Barrierefreiheit
+                    geprüft.</p>
+                <br>
+                <p>Als Studienentwurf unterliegt diese Seite nicht der BITV&nbsp;2.0; die dort
+                    genannten Anforderungen waren aber der Maßstab für die Umsetzung.</p>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <div id="datenschutz" class="pb-3">
+            <h1 class="section-title">Datenschutzerklärung</h1>
+            <div class="content-box">
+                <h2>1. Datenschutz auf einen Blick</h2>
+                <h3>Allgemeine Hinweise</h3>
+                <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten
+                    passiert, wenn Sie diese Website besuchen.</p>
+                <br>
+                <h3>Verantwortliche</h3>
+                <p>Verantwortlich für diesen Studienentwurf ist Jana Fisenko; die Kontaktdaten stehen
+                    im Impressum oben.</p>
+                <br>
+                <h3>Formulareingaben</h3>
+                <p>Das Kontaktformular und die Online-Anträge dieses Entwurfs verschicken nichts.
+                    Ihre Eingaben bleiben im Browser, werden nur zur Anzeige der Bestätigung
+                    verwendet und mit dem Schließen der Seite verworfen.</p>
+                <br>
+                <h3>Lokale Speicherung</h3>
+                <p>Wenn Sie über das Bedienhilfen-Menü einen höheren Kontrast oder eine größere
+                    Schrift wählen, wird diese Einstellung im lokalen Speicher Ihres Browsers
+                    (localStorage) abgelegt. Die Angabe verlässt Ihr Gerät nicht.</p>
+                <br>
+                <h3>Externe Dienste</h3>
+                <p>Der Entwurf lädt das Symbol-Set Font&nbsp;Awesome über cdnjs.cloudflare.com, die
+                    Schriftart Roboto über Google&nbsp;Fonts und für die Standortkarte die Bibliothek
+                    Leaflet über unpkg.com sowie die Kartenkacheln von OpenStreetMap. Dabei wird Ihre
+                    IP-Adresse an die jeweiligen Anbieter übermittelt. Die Standortsuche auf der
+                    Kartenseite fragt Ihren Standort nur nach ausdrücklicher Freigabe im Browser ab;
+                    er wird ausschließlich lokal zur Umkreissuche verwendet.</p>
+            </div>
+        </div>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,920 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kalender>
+    <gemeinde name="Dötlingen">
+        <bezirk name="Gesamte Gemeinde">
+            <!-- REST -->
+            <termin date="2025-12-09" type="rest" /> <termin date="2025-12-22" type="rest" />
+            <termin date="2026-01-06" type="rest" /> <termin date="2026-01-20" type="rest" /> <termin date="2026-02-03" type="rest" /> <termin date="2026-02-17" type="rest" />
+            <termin date="2026-03-03" type="rest" /> <termin date="2026-03-17" type="rest" /> <termin date="2026-03-30" type="rest" /> <termin date="2026-04-14" type="rest" /> <termin date="2026-04-28" type="rest" />
+            <!-- BIO -->
+            <termin date="2025-12-02" type="bio" /> <termin date="2025-12-16" type="bio" /> <termin date="2025-12-30" type="bio" />
+            <termin date="2026-01-13" type="bio" /> <termin date="2026-01-27" type="bio" /> <termin date="2026-02-10" type="bio" /> <termin date="2026-02-24" type="bio" />
+            <termin date="2026-03-10" type="bio" /> <termin date="2026-03-24" type="bio" /> <termin date="2026-04-07" type="bio" /> <termin date="2026-04-21" type="bio" />
+            <!-- PAPIER -->
+            <termin date="2025-12-15" type="papier" />
+            <termin date="2026-01-12" type="papier" /> <termin date="2026-02-09" type="papier" /> <termin date="2026-03-09" type="papier" /> <termin date="2026-04-07" type="papier" />
+            <!-- GELB -->
+            <termin date="2025-12-17" type="gelb" />
+            <termin date="2026-01-14" type="gelb" /> <termin date="2026-02-11" type="gelb" /> <termin date="2026-03-11" type="gelb" /> <termin date="2026-04-09" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-12" type="rest" /> <termin date="2026-05-26" type="rest" /> <termin date="2026-06-09" type="rest" /> <termin date="2026-06-23" type="rest" /> <termin date="2026-07-07" type="rest" />
+            <termin date="2026-07-21" type="rest" /> <termin date="2026-08-04" type="rest" /> <termin date="2026-08-18" type="rest" /> <termin date="2026-09-01" type="rest" /> <termin date="2026-09-15" type="rest" />
+            <termin date="2026-09-29" type="rest" /> <termin date="2026-10-13" type="rest" /> <termin date="2026-10-27" type="rest" /> <termin date="2026-11-10" type="rest" /> <termin date="2026-11-24" type="rest" />
+            <termin date="2026-12-08" type="rest" /> <termin date="2026-12-22" type="rest" /> <termin date="2027-01-05" type="rest" /> <termin date="2027-01-19" type="rest" /> <termin date="2027-02-02" type="rest" />
+            <termin date="2027-02-16" type="rest" /> <termin date="2027-03-02" type="rest" /> <termin date="2027-03-16" type="rest" /> <termin date="2027-03-30" type="rest" /> <termin date="2027-04-13" type="rest" />
+            <termin date="2027-04-27" type="rest" /> <termin date="2027-05-11" type="rest" /> <termin date="2027-05-25" type="rest" /> <termin date="2027-06-08" type="rest" /> <termin date="2027-06-22" type="rest" />
+            <termin date="2027-07-06" type="rest" /> <termin date="2027-07-20" type="rest" /> <termin date="2027-08-03" type="rest" /> <termin date="2027-08-17" type="rest" /> <termin date="2027-08-31" type="rest" />
+            <termin date="2027-09-14" type="rest" /> <termin date="2027-09-28" type="rest" /> <termin date="2027-10-12" type="rest" /> <termin date="2027-10-26" type="rest" /> <termin date="2027-11-09" type="rest" />
+            <termin date="2027-11-23" type="rest" /> <termin date="2027-12-07" type="rest" /> <termin date="2027-12-21" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-05" type="bio" /> <termin date="2026-05-19" type="bio" /> <termin date="2026-06-02" type="bio" /> <termin date="2026-06-16" type="bio" /> <termin date="2026-06-30" type="bio" />
+            <termin date="2026-07-14" type="bio" /> <termin date="2026-07-28" type="bio" /> <termin date="2026-08-11" type="bio" /> <termin date="2026-08-25" type="bio" /> <termin date="2026-09-08" type="bio" />
+            <termin date="2026-09-22" type="bio" /> <termin date="2026-10-06" type="bio" /> <termin date="2026-10-20" type="bio" /> <termin date="2026-11-03" type="bio" /> <termin date="2026-11-17" type="bio" />
+            <termin date="2026-12-01" type="bio" /> <termin date="2026-12-15" type="bio" /> <termin date="2026-12-29" type="bio" /> <termin date="2027-01-12" type="bio" /> <termin date="2027-01-26" type="bio" />
+            <termin date="2027-02-09" type="bio" /> <termin date="2027-02-23" type="bio" /> <termin date="2027-03-09" type="bio" /> <termin date="2027-03-23" type="bio" /> <termin date="2027-04-06" type="bio" />
+            <termin date="2027-04-20" type="bio" /> <termin date="2027-05-04" type="bio" /> <termin date="2027-05-18" type="bio" /> <termin date="2027-06-01" type="bio" /> <termin date="2027-06-15" type="bio" />
+            <termin date="2027-06-29" type="bio" /> <termin date="2027-07-13" type="bio" /> <termin date="2027-07-27" type="bio" /> <termin date="2027-08-10" type="bio" /> <termin date="2027-08-24" type="bio" />
+            <termin date="2027-09-07" type="bio" /> <termin date="2027-09-21" type="bio" /> <termin date="2027-10-05" type="bio" /> <termin date="2027-10-19" type="bio" /> <termin date="2027-11-02" type="bio" />
+            <termin date="2027-11-16" type="bio" /> <termin date="2027-11-30" type="bio" /> <termin date="2027-12-14" type="bio" /> <termin date="2027-12-28" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-05" type="papier" /> <termin date="2026-06-02" type="papier" /> <termin date="2026-06-30" type="papier" /> <termin date="2026-07-28" type="papier" /> <termin date="2026-08-25" type="papier" />
+            <termin date="2026-09-22" type="papier" /> <termin date="2026-10-20" type="papier" /> <termin date="2026-11-17" type="papier" /> <termin date="2026-12-15" type="papier" /> <termin date="2027-01-12" type="papier" />
+            <termin date="2027-02-09" type="papier" /> <termin date="2027-03-09" type="papier" /> <termin date="2027-04-06" type="papier" /> <termin date="2027-05-04" type="papier" /> <termin date="2027-06-01" type="papier" />
+            <termin date="2027-06-29" type="papier" /> <termin date="2027-07-27" type="papier" /> <termin date="2027-08-24" type="papier" /> <termin date="2027-09-21" type="papier" /> <termin date="2027-10-19" type="papier" />
+            <termin date="2027-11-16" type="papier" /> <termin date="2027-12-14" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-07" type="gelb" /> <termin date="2026-06-04" type="gelb" /> <termin date="2026-07-02" type="gelb" /> <termin date="2026-07-30" type="gelb" /> <termin date="2026-08-27" type="gelb" />
+            <termin date="2026-09-24" type="gelb" /> <termin date="2026-10-22" type="gelb" /> <termin date="2026-11-19" type="gelb" /> <termin date="2026-12-17" type="gelb" /> <termin date="2027-01-14" type="gelb" />
+            <termin date="2027-02-11" type="gelb" /> <termin date="2027-03-11" type="gelb" /> <termin date="2027-04-08" type="gelb" /> <termin date="2027-05-07" type="gelb" /> <termin date="2027-06-03" type="gelb" />
+            <termin date="2027-07-01" type="gelb" /> <termin date="2027-07-29" type="gelb" /> <termin date="2027-08-26" type="gelb" /> <termin date="2027-09-23" type="gelb" /> <termin date="2027-10-21" type="gelb" />
+            <termin date="2027-11-18" type="gelb" /> <termin date="2027-12-16" type="gelb" />
+        </bezirk>
+    </gemeinde>
+
+    <gemeinde name="Ganderkesee">
+        <bezirk name="Bezirk 1 – Nördl. Bahnlinie (Bookholzberg, Schönemoor, Heide, Schierbrok-Nord)">
+            <termin date="2025-12-08" type="rest" /> <termin date="2025-12-20" type="rest" />
+            <termin date="2026-01-05" type="rest" /> <termin date="2026-01-19" type="rest" /> <termin date="2026-02-02" type="rest" /> <termin date="2026-02-16" type="rest" />
+            <termin date="2026-03-02" type="rest" /> <termin date="2026-03-16" type="rest" /> <termin date="2026-03-30" type="rest" /> <termin date="2026-04-11" type="rest" /> <termin date="2026-04-27" type="rest" />
+            
+            <termin date="2025-12-01" type="bio" /> <termin date="2025-12-15" type="bio" /> <termin date="2025-12-29" type="bio" />
+            <termin date="2026-01-12" type="bio" /> <termin date="2026-01-26" type="bio" /> <termin date="2026-02-09" type="bio" /> <termin date="2026-02-23" type="bio" />
+            <termin date="2026-03-09" type="bio" /> <termin date="2026-03-23" type="bio" /> <termin date="2026-04-06" type="bio" /> <termin date="2026-04-20" type="bio" />
+
+            <termin date="2025-12-03" type="papier" /> <termin date="2025-12-31" type="papier" />
+            <termin date="2026-01-28" type="papier" /> <termin date="2026-02-25" type="papier" /> <termin date="2026-03-25" type="papier" /> <termin date="2026-04-23" type="papier" />
+
+            <termin date="2025-12-10" type="gelb" />
+            <termin date="2026-01-07" type="gelb" /> <termin date="2026-02-04" type="gelb" /> <termin date="2026-03-04" type="gelb" /> <termin date="2026-04-01" type="gelb" /> <termin date="2026-04-29" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-11" type="rest" /> <termin date="2026-05-26" type="rest" /> <termin date="2026-06-08" type="rest" /> <termin date="2026-06-22" type="rest" /> <termin date="2026-07-06" type="rest" />
+            <termin date="2026-07-20" type="rest" /> <termin date="2026-08-03" type="rest" /> <termin date="2026-08-17" type="rest" /> <termin date="2026-08-31" type="rest" /> <termin date="2026-09-14" type="rest" />
+            <termin date="2026-09-28" type="rest" /> <termin date="2026-10-12" type="rest" /> <termin date="2026-10-26" type="rest" /> <termin date="2026-11-09" type="rest" /> <termin date="2026-11-23" type="rest" />
+            <termin date="2026-12-07" type="rest" /> <termin date="2026-12-21" type="rest" /> <termin date="2027-01-04" type="rest" /> <termin date="2027-01-18" type="rest" /> <termin date="2027-02-01" type="rest" />
+            <termin date="2027-02-15" type="rest" /> <termin date="2027-03-01" type="rest" /> <termin date="2027-03-15" type="rest" /> <termin date="2027-03-30" type="rest" /> <termin date="2027-04-12" type="rest" />
+            <termin date="2027-04-26" type="rest" /> <termin date="2027-05-10" type="rest" /> <termin date="2027-05-24" type="rest" /> <termin date="2027-06-07" type="rest" /> <termin date="2027-06-21" type="rest" />
+            <termin date="2027-07-05" type="rest" /> <termin date="2027-07-19" type="rest" /> <termin date="2027-08-02" type="rest" /> <termin date="2027-08-16" type="rest" /> <termin date="2027-08-30" type="rest" />
+            <termin date="2027-09-13" type="rest" /> <termin date="2027-09-27" type="rest" /> <termin date="2027-10-11" type="rest" /> <termin date="2027-10-25" type="rest" /> <termin date="2027-11-08" type="rest" />
+            <termin date="2027-11-22" type="rest" /> <termin date="2027-12-06" type="rest" /> <termin date="2027-12-20" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-04" type="bio" /> <termin date="2026-05-18" type="bio" /> <termin date="2026-06-01" type="bio" /> <termin date="2026-06-15" type="bio" /> <termin date="2026-06-29" type="bio" />
+            <termin date="2026-07-13" type="bio" /> <termin date="2026-07-27" type="bio" /> <termin date="2026-08-10" type="bio" /> <termin date="2026-08-24" type="bio" /> <termin date="2026-09-07" type="bio" />
+            <termin date="2026-09-21" type="bio" /> <termin date="2026-10-05" type="bio" /> <termin date="2026-10-19" type="bio" /> <termin date="2026-11-02" type="bio" /> <termin date="2026-11-16" type="bio" />
+            <termin date="2026-11-30" type="bio" /> <termin date="2026-12-14" type="bio" /> <termin date="2026-12-28" type="bio" /> <termin date="2027-01-11" type="bio" /> <termin date="2027-01-25" type="bio" />
+            <termin date="2027-02-08" type="bio" /> <termin date="2027-02-22" type="bio" /> <termin date="2027-03-08" type="bio" /> <termin date="2027-03-22" type="bio" /> <termin date="2027-04-05" type="bio" />
+            <termin date="2027-04-19" type="bio" /> <termin date="2027-05-03" type="bio" /> <termin date="2027-05-18" type="bio" /> <termin date="2027-05-31" type="bio" /> <termin date="2027-06-14" type="bio" />
+            <termin date="2027-06-28" type="bio" /> <termin date="2027-07-12" type="bio" /> <termin date="2027-07-26" type="bio" /> <termin date="2027-08-09" type="bio" /> <termin date="2027-08-23" type="bio" />
+            <termin date="2027-09-06" type="bio" /> <termin date="2027-09-20" type="bio" /> <termin date="2027-10-04" type="bio" /> <termin date="2027-10-18" type="bio" /> <termin date="2027-11-01" type="bio" />
+            <termin date="2027-11-15" type="bio" /> <termin date="2027-11-29" type="bio" /> <termin date="2027-12-13" type="bio" /> <termin date="2027-12-27" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-21" type="papier" /> <termin date="2026-06-18" type="papier" /> <termin date="2026-07-16" type="papier" /> <termin date="2026-08-13" type="papier" /> <termin date="2026-09-10" type="papier" />
+            <termin date="2026-10-08" type="papier" /> <termin date="2026-11-05" type="papier" /> <termin date="2026-12-03" type="papier" /> <termin date="2026-12-31" type="papier" /> <termin date="2027-01-28" type="papier" />
+            <termin date="2027-02-25" type="papier" /> <termin date="2027-03-25" type="papier" /> <termin date="2027-04-22" type="papier" /> <termin date="2027-05-20" type="papier" /> <termin date="2027-06-17" type="papier" />
+            <termin date="2027-07-15" type="papier" /> <termin date="2027-08-12" type="papier" /> <termin date="2027-09-09" type="papier" /> <termin date="2027-10-07" type="papier" /> <termin date="2027-11-04" type="papier" />
+            <termin date="2027-12-02" type="papier" /> <termin date="2027-12-30" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-27" type="gelb" /> <termin date="2026-06-24" type="gelb" /> <termin date="2026-07-22" type="gelb" /> <termin date="2026-08-19" type="gelb" /> <termin date="2026-09-16" type="gelb" />
+            <termin date="2026-10-14" type="gelb" /> <termin date="2026-11-11" type="gelb" /> <termin date="2026-12-09" type="gelb" /> <termin date="2027-01-06" type="gelb" /> <termin date="2027-02-03" type="gelb" />
+            <termin date="2027-03-03" type="gelb" /> <termin date="2027-03-31" type="gelb" /> <termin date="2027-04-28" type="gelb" /> <termin date="2027-05-26" type="gelb" /> <termin date="2027-06-23" type="gelb" />
+            <termin date="2027-07-21" type="gelb" /> <termin date="2027-08-18" type="gelb" /> <termin date="2027-09-15" type="gelb" /> <termin date="2027-10-13" type="gelb" /> <termin date="2027-11-10" type="gelb" />
+            <termin date="2027-12-08" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 2 – Südl. Bahnlinie bis A28 (Bookholzberg-Süd, Elmeloh, Stenum, Rethorn)">
+            <termin date="2025-12-08" type="rest" /> <termin date="2025-12-20" type="rest" />
+            <termin date="2026-01-05" type="rest" /> <termin date="2026-01-19" type="rest" /> <termin date="2026-02-02" type="rest" /> <termin date="2026-02-16" type="rest" />
+            <termin date="2026-03-02" type="rest" /> <termin date="2026-03-16" type="rest" /> <termin date="2026-03-30" type="rest" /> <termin date="2026-04-11" type="rest" /> <termin date="2026-04-27" type="rest" />
+
+            <termin date="2025-12-01" type="bio" /> <termin date="2025-12-15" type="bio" /> <termin date="2025-12-29" type="bio" />
+            <termin date="2026-01-12" type="bio" /> <termin date="2026-01-26" type="bio" /> <termin date="2026-02-09" type="bio" /> <termin date="2026-02-23" type="bio" />
+            <termin date="2026-03-09" type="bio" /> <termin date="2026-03-23" type="bio" /> <termin date="2026-04-06" type="bio" /> <termin date="2026-04-20" type="bio" />
+
+            <termin date="2025-12-02" type="papier" /> <termin date="2025-12-30" type="papier" />
+            <termin date="2026-01-27" type="papier" /> <termin date="2026-02-24" type="papier" /> <termin date="2026-03-24" type="papier" /> <termin date="2026-04-22" type="papier" />
+
+            <termin date="2025-12-09" type="gelb" />
+            <termin date="2026-01-06" type="gelb" /> <termin date="2026-02-03" type="gelb" /> <termin date="2026-03-03" type="gelb" /> <termin date="2026-03-31" type="gelb" /> <termin date="2026-04-28" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-11" type="rest" /> <termin date="2026-05-26" type="rest" /> <termin date="2026-06-08" type="rest" /> <termin date="2026-06-22" type="rest" /> <termin date="2026-07-06" type="rest" />
+            <termin date="2026-07-20" type="rest" /> <termin date="2026-08-03" type="rest" /> <termin date="2026-08-17" type="rest" /> <termin date="2026-08-31" type="rest" /> <termin date="2026-09-14" type="rest" />
+            <termin date="2026-09-28" type="rest" /> <termin date="2026-10-12" type="rest" /> <termin date="2026-10-26" type="rest" /> <termin date="2026-11-09" type="rest" /> <termin date="2026-11-23" type="rest" />
+            <termin date="2026-12-07" type="rest" /> <termin date="2026-12-21" type="rest" /> <termin date="2027-01-04" type="rest" /> <termin date="2027-01-18" type="rest" /> <termin date="2027-02-01" type="rest" />
+            <termin date="2027-02-15" type="rest" /> <termin date="2027-03-01" type="rest" /> <termin date="2027-03-15" type="rest" /> <termin date="2027-03-30" type="rest" /> <termin date="2027-04-12" type="rest" />
+            <termin date="2027-04-26" type="rest" /> <termin date="2027-05-10" type="rest" /> <termin date="2027-05-24" type="rest" /> <termin date="2027-06-07" type="rest" /> <termin date="2027-06-21" type="rest" />
+            <termin date="2027-07-05" type="rest" /> <termin date="2027-07-19" type="rest" /> <termin date="2027-08-02" type="rest" /> <termin date="2027-08-16" type="rest" /> <termin date="2027-08-30" type="rest" />
+            <termin date="2027-09-13" type="rest" /> <termin date="2027-09-27" type="rest" /> <termin date="2027-10-11" type="rest" /> <termin date="2027-10-25" type="rest" /> <termin date="2027-11-08" type="rest" />
+            <termin date="2027-11-22" type="rest" /> <termin date="2027-12-06" type="rest" /> <termin date="2027-12-20" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-04" type="bio" /> <termin date="2026-05-18" type="bio" /> <termin date="2026-06-01" type="bio" /> <termin date="2026-06-15" type="bio" /> <termin date="2026-06-29" type="bio" />
+            <termin date="2026-07-13" type="bio" /> <termin date="2026-07-27" type="bio" /> <termin date="2026-08-10" type="bio" /> <termin date="2026-08-24" type="bio" /> <termin date="2026-09-07" type="bio" />
+            <termin date="2026-09-21" type="bio" /> <termin date="2026-10-05" type="bio" /> <termin date="2026-10-19" type="bio" /> <termin date="2026-11-02" type="bio" /> <termin date="2026-11-16" type="bio" />
+            <termin date="2026-11-30" type="bio" /> <termin date="2026-12-14" type="bio" /> <termin date="2026-12-28" type="bio" /> <termin date="2027-01-11" type="bio" /> <termin date="2027-01-25" type="bio" />
+            <termin date="2027-02-08" type="bio" /> <termin date="2027-02-22" type="bio" /> <termin date="2027-03-08" type="bio" /> <termin date="2027-03-22" type="bio" /> <termin date="2027-04-05" type="bio" />
+            <termin date="2027-04-19" type="bio" /> <termin date="2027-05-03" type="bio" /> <termin date="2027-05-18" type="bio" /> <termin date="2027-05-31" type="bio" /> <termin date="2027-06-14" type="bio" />
+            <termin date="2027-06-28" type="bio" /> <termin date="2027-07-12" type="bio" /> <termin date="2027-07-26" type="bio" /> <termin date="2027-08-09" type="bio" /> <termin date="2027-08-23" type="bio" />
+            <termin date="2027-09-06" type="bio" /> <termin date="2027-09-20" type="bio" /> <termin date="2027-10-04" type="bio" /> <termin date="2027-10-18" type="bio" /> <termin date="2027-11-01" type="bio" />
+            <termin date="2027-11-15" type="bio" /> <termin date="2027-11-29" type="bio" /> <termin date="2027-12-13" type="bio" /> <termin date="2027-12-27" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-20" type="papier" /> <termin date="2026-06-17" type="papier" /> <termin date="2026-07-15" type="papier" /> <termin date="2026-08-12" type="papier" /> <termin date="2026-09-09" type="papier" />
+            <termin date="2026-10-07" type="papier" /> <termin date="2026-11-04" type="papier" /> <termin date="2026-12-02" type="papier" /> <termin date="2026-12-30" type="papier" /> <termin date="2027-01-27" type="papier" />
+            <termin date="2027-02-24" type="papier" /> <termin date="2027-03-24" type="papier" /> <termin date="2027-04-21" type="papier" /> <termin date="2027-05-19" type="papier" /> <termin date="2027-06-16" type="papier" />
+            <termin date="2027-07-14" type="papier" /> <termin date="2027-08-11" type="papier" /> <termin date="2027-09-08" type="papier" /> <termin date="2027-10-06" type="papier" /> <termin date="2027-11-03" type="papier" />
+            <termin date="2027-12-01" type="papier" /> <termin date="2027-12-29" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-26" type="gelb" /> <termin date="2026-06-23" type="gelb" /> <termin date="2026-07-21" type="gelb" /> <termin date="2026-08-18" type="gelb" /> <termin date="2026-09-15" type="gelb" />
+            <termin date="2026-10-13" type="gelb" /> <termin date="2026-11-10" type="gelb" /> <termin date="2026-12-08" type="gelb" /> <termin date="2027-01-05" type="gelb" /> <termin date="2027-02-02" type="gelb" />
+            <termin date="2027-03-02" type="gelb" /> <termin date="2027-03-30" type="gelb" /> <termin date="2027-04-27" type="gelb" /> <termin date="2027-05-25" type="gelb" /> <termin date="2027-06-22" type="gelb" />
+            <termin date="2027-07-20" type="gelb" /> <termin date="2027-08-17" type="gelb" /> <termin date="2027-09-14" type="gelb" /> <termin date="2027-10-12" type="gelb" /> <termin date="2027-11-09" type="gelb" />
+            <termin date="2027-12-07" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 3 – Ortskern Südost (Ganderkesee-Ort, Schlutter, Havekost)">
+            <termin date="2025-12-02" type="rest" /> <termin date="2025-12-16" type="rest" /> <termin date="2025-12-30" type="rest" />
+            <termin date="2026-01-13" type="rest" /> <termin date="2026-01-27" type="rest" /> <termin date="2026-02-10" type="rest" /> <termin date="2026-02-24" type="rest" />
+            <termin date="2026-03-10" type="rest" /> <termin date="2026-03-24" type="rest" /> <termin date="2026-04-07" type="rest" /> <termin date="2026-04-21" type="rest" />
+
+            <termin date="2025-12-09" type="bio" /> <termin date="2025-12-22" type="bio" />
+            <termin date="2026-01-06" type="bio" /> <termin date="2026-01-20" type="bio" /> <termin date="2026-02-03" type="bio" /> <termin date="2026-02-17" type="bio" />
+            <termin date="2026-03-03" type="bio" /> <termin date="2026-03-17" type="bio" /> <termin date="2026-03-31" type="bio" /> <termin date="2026-04-14" type="bio" /> <termin date="2026-04-28" type="bio" />
+
+            <termin date="2025-12-04" type="papier" /> <termin date="2026-01-02" type="papier" />
+            <termin date="2026-01-29" type="papier" /> <termin date="2026-02-26" type="papier" /> <termin date="2026-03-26" type="papier" /> <termin date="2026-04-24" type="papier" />
+
+            <termin date="2025-12-11" type="gelb" />
+            <termin date="2026-01-08" type="gelb" /> <termin date="2026-02-05" type="gelb" /> <termin date="2026-03-05" type="gelb" /> <termin date="2026-04-02" type="gelb" /> <termin date="2026-04-30" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-05" type="rest" /> <termin date="2026-05-19" type="rest" /> <termin date="2026-06-02" type="rest" /> <termin date="2026-06-16" type="rest" /> <termin date="2026-06-30" type="rest" />
+            <termin date="2026-07-14" type="rest" /> <termin date="2026-07-28" type="rest" /> <termin date="2026-08-11" type="rest" /> <termin date="2026-08-25" type="rest" /> <termin date="2026-09-08" type="rest" />
+            <termin date="2026-09-22" type="rest" /> <termin date="2026-10-06" type="rest" /> <termin date="2026-10-20" type="rest" /> <termin date="2026-11-03" type="rest" /> <termin date="2026-11-17" type="rest" />
+            <termin date="2026-12-01" type="rest" /> <termin date="2026-12-15" type="rest" /> <termin date="2026-12-29" type="rest" /> <termin date="2027-01-12" type="rest" /> <termin date="2027-01-26" type="rest" />
+            <termin date="2027-02-09" type="rest" /> <termin date="2027-02-23" type="rest" /> <termin date="2027-03-09" type="rest" /> <termin date="2027-03-23" type="rest" /> <termin date="2027-04-06" type="rest" />
+            <termin date="2027-04-20" type="rest" /> <termin date="2027-05-04" type="rest" /> <termin date="2027-05-18" type="rest" /> <termin date="2027-06-01" type="rest" /> <termin date="2027-06-15" type="rest" />
+            <termin date="2027-06-29" type="rest" /> <termin date="2027-07-13" type="rest" /> <termin date="2027-07-27" type="rest" /> <termin date="2027-08-10" type="rest" /> <termin date="2027-08-24" type="rest" />
+            <termin date="2027-09-07" type="rest" /> <termin date="2027-09-21" type="rest" /> <termin date="2027-10-05" type="rest" /> <termin date="2027-10-19" type="rest" /> <termin date="2027-11-02" type="rest" />
+            <termin date="2027-11-16" type="rest" /> <termin date="2027-11-30" type="rest" /> <termin date="2027-12-14" type="rest" /> <termin date="2027-12-28" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-12" type="bio" /> <termin date="2026-05-26" type="bio" /> <termin date="2026-06-09" type="bio" /> <termin date="2026-06-23" type="bio" /> <termin date="2026-07-07" type="bio" />
+            <termin date="2026-07-21" type="bio" /> <termin date="2026-08-04" type="bio" /> <termin date="2026-08-18" type="bio" /> <termin date="2026-09-01" type="bio" /> <termin date="2026-09-15" type="bio" />
+            <termin date="2026-09-29" type="bio" /> <termin date="2026-10-13" type="bio" /> <termin date="2026-10-27" type="bio" /> <termin date="2026-11-10" type="bio" /> <termin date="2026-11-24" type="bio" />
+            <termin date="2026-12-08" type="bio" /> <termin date="2026-12-22" type="bio" /> <termin date="2027-01-05" type="bio" /> <termin date="2027-01-19" type="bio" /> <termin date="2027-02-02" type="bio" />
+            <termin date="2027-02-16" type="bio" /> <termin date="2027-03-02" type="bio" /> <termin date="2027-03-16" type="bio" /> <termin date="2027-03-30" type="bio" /> <termin date="2027-04-13" type="bio" />
+            <termin date="2027-04-27" type="bio" /> <termin date="2027-05-11" type="bio" /> <termin date="2027-05-25" type="bio" /> <termin date="2027-06-08" type="bio" /> <termin date="2027-06-22" type="bio" />
+            <termin date="2027-07-06" type="bio" /> <termin date="2027-07-20" type="bio" /> <termin date="2027-08-03" type="bio" /> <termin date="2027-08-17" type="bio" /> <termin date="2027-08-31" type="bio" />
+            <termin date="2027-09-14" type="bio" /> <termin date="2027-09-28" type="bio" /> <termin date="2027-10-12" type="bio" /> <termin date="2027-10-26" type="bio" /> <termin date="2027-11-09" type="bio" />
+            <termin date="2027-11-23" type="bio" /> <termin date="2027-12-07" type="bio" /> <termin date="2027-12-21" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-22" type="papier" /> <termin date="2026-06-19" type="papier" /> <termin date="2026-07-17" type="papier" /> <termin date="2026-08-14" type="papier" /> <termin date="2026-09-11" type="papier" />
+            <termin date="2026-10-09" type="papier" /> <termin date="2026-11-06" type="papier" /> <termin date="2026-12-04" type="papier" /> <termin date="2027-01-02" type="papier" /> <termin date="2027-01-29" type="papier" />
+            <termin date="2027-02-26" type="papier" /> <termin date="2027-03-27" type="papier" /> <termin date="2027-04-23" type="papier" /> <termin date="2027-05-21" type="papier" /> <termin date="2027-06-18" type="papier" />
+            <termin date="2027-07-16" type="papier" /> <termin date="2027-08-13" type="papier" /> <termin date="2027-09-10" type="papier" /> <termin date="2027-10-08" type="papier" /> <termin date="2027-11-05" type="papier" />
+            <termin date="2027-12-03" type="papier" /> <termin date="2027-12-31" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-28" type="gelb" /> <termin date="2026-06-25" type="gelb" /> <termin date="2026-07-23" type="gelb" /> <termin date="2026-08-20" type="gelb" /> <termin date="2026-09-17" type="gelb" />
+            <termin date="2026-10-15" type="gelb" /> <termin date="2026-11-12" type="gelb" /> <termin date="2026-12-10" type="gelb" /> <termin date="2027-01-07" type="gelb" /> <termin date="2027-02-04" type="gelb" />
+            <termin date="2027-03-04" type="gelb" /> <termin date="2027-04-01" type="gelb" /> <termin date="2027-04-29" type="gelb" /> <termin date="2027-05-27" type="gelb" /> <termin date="2027-06-24" type="gelb" />
+            <termin date="2027-07-22" type="gelb" /> <termin date="2027-08-19" type="gelb" /> <termin date="2027-09-16" type="gelb" /> <termin date="2027-10-14" type="gelb" /> <termin date="2027-11-11" type="gelb" />
+            <termin date="2027-12-09" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 4 – Ortskern West (Ganderkesee-Ort West)">
+            <termin date="2025-12-02" type="rest" /> <termin date="2025-12-16" type="rest" /> <termin date="2025-12-30" type="rest" />
+            <termin date="2026-01-13" type="rest" /> <termin date="2026-01-27" type="rest" /> <termin date="2026-02-10" type="rest" /> <termin date="2026-02-24" type="rest" />
+            <termin date="2026-03-10" type="rest" /> <termin date="2026-03-24" type="rest" /> <termin date="2026-04-07" type="rest" /> <termin date="2026-04-21" type="rest" />
+
+            <termin date="2025-12-09" type="bio" /> <termin date="2025-12-22" type="bio" />
+            <termin date="2026-01-06" type="bio" /> <termin date="2026-01-20" type="bio" /> <termin date="2026-02-03" type="bio" /> <termin date="2026-02-17" type="bio" />
+            <termin date="2026-03-03" type="bio" /> <termin date="2026-03-17" type="bio" /> <termin date="2026-03-31" type="bio" /> <termin date="2026-04-14" type="bio" /> <termin date="2026-04-28" type="bio" />
+
+            <termin date="2025-12-01" type="papier" /> <termin date="2025-12-29" type="papier" />
+            <termin date="2026-01-26" type="papier" /> <termin date="2026-02-23" type="papier" /> <termin date="2026-03-23" type="papier" /> <termin date="2026-04-21" type="papier" />
+
+            <termin date="2025-12-08" type="gelb" />
+            <termin date="2026-01-05" type="gelb" /> <termin date="2026-02-02" type="gelb" /> <termin date="2026-03-02" type="gelb" /> <termin date="2026-03-30" type="gelb" /> <termin date="2026-04-27" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-05" type="rest" /> <termin date="2026-05-19" type="rest" /> <termin date="2026-06-02" type="rest" /> <termin date="2026-06-16" type="rest" /> <termin date="2026-06-30" type="rest" />
+            <termin date="2026-07-14" type="rest" /> <termin date="2026-07-28" type="rest" /> <termin date="2026-08-11" type="rest" /> <termin date="2026-08-25" type="rest" /> <termin date="2026-09-08" type="rest" />
+            <termin date="2026-09-22" type="rest" /> <termin date="2026-10-06" type="rest" /> <termin date="2026-10-20" type="rest" /> <termin date="2026-11-03" type="rest" /> <termin date="2026-11-17" type="rest" />
+            <termin date="2026-12-01" type="rest" /> <termin date="2026-12-15" type="rest" /> <termin date="2026-12-29" type="rest" /> <termin date="2027-01-12" type="rest" /> <termin date="2027-01-26" type="rest" />
+            <termin date="2027-02-09" type="rest" /> <termin date="2027-02-23" type="rest" /> <termin date="2027-03-09" type="rest" /> <termin date="2027-03-23" type="rest" /> <termin date="2027-04-06" type="rest" />
+            <termin date="2027-04-20" type="rest" /> <termin date="2027-05-04" type="rest" /> <termin date="2027-05-18" type="rest" /> <termin date="2027-06-01" type="rest" /> <termin date="2027-06-15" type="rest" />
+            <termin date="2027-06-29" type="rest" /> <termin date="2027-07-13" type="rest" /> <termin date="2027-07-27" type="rest" /> <termin date="2027-08-10" type="rest" /> <termin date="2027-08-24" type="rest" />
+            <termin date="2027-09-07" type="rest" /> <termin date="2027-09-21" type="rest" /> <termin date="2027-10-05" type="rest" /> <termin date="2027-10-19" type="rest" /> <termin date="2027-11-02" type="rest" />
+            <termin date="2027-11-16" type="rest" /> <termin date="2027-11-30" type="rest" /> <termin date="2027-12-14" type="rest" /> <termin date="2027-12-28" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-12" type="bio" /> <termin date="2026-05-26" type="bio" /> <termin date="2026-06-09" type="bio" /> <termin date="2026-06-23" type="bio" /> <termin date="2026-07-07" type="bio" />
+            <termin date="2026-07-21" type="bio" /> <termin date="2026-08-04" type="bio" /> <termin date="2026-08-18" type="bio" /> <termin date="2026-09-01" type="bio" /> <termin date="2026-09-15" type="bio" />
+            <termin date="2026-09-29" type="bio" /> <termin date="2026-10-13" type="bio" /> <termin date="2026-10-27" type="bio" /> <termin date="2026-11-10" type="bio" /> <termin date="2026-11-24" type="bio" />
+            <termin date="2026-12-08" type="bio" /> <termin date="2026-12-22" type="bio" /> <termin date="2027-01-05" type="bio" /> <termin date="2027-01-19" type="bio" /> <termin date="2027-02-02" type="bio" />
+            <termin date="2027-02-16" type="bio" /> <termin date="2027-03-02" type="bio" /> <termin date="2027-03-16" type="bio" /> <termin date="2027-03-30" type="bio" /> <termin date="2027-04-13" type="bio" />
+            <termin date="2027-04-27" type="bio" /> <termin date="2027-05-11" type="bio" /> <termin date="2027-05-25" type="bio" /> <termin date="2027-06-08" type="bio" /> <termin date="2027-06-22" type="bio" />
+            <termin date="2027-07-06" type="bio" /> <termin date="2027-07-20" type="bio" /> <termin date="2027-08-03" type="bio" /> <termin date="2027-08-17" type="bio" /> <termin date="2027-08-31" type="bio" />
+            <termin date="2027-09-14" type="bio" /> <termin date="2027-09-28" type="bio" /> <termin date="2027-10-12" type="bio" /> <termin date="2027-10-26" type="bio" /> <termin date="2027-11-09" type="bio" />
+            <termin date="2027-11-23" type="bio" /> <termin date="2027-12-07" type="bio" /> <termin date="2027-12-21" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-19" type="papier" /> <termin date="2026-06-16" type="papier" /> <termin date="2026-07-14" type="papier" /> <termin date="2026-08-11" type="papier" /> <termin date="2026-09-08" type="papier" />
+            <termin date="2026-10-06" type="papier" /> <termin date="2026-11-03" type="papier" /> <termin date="2026-12-01" type="papier" /> <termin date="2026-12-29" type="papier" /> <termin date="2027-01-26" type="papier" />
+            <termin date="2027-02-23" type="papier" /> <termin date="2027-03-23" type="papier" /> <termin date="2027-04-20" type="papier" /> <termin date="2027-05-18" type="papier" /> <termin date="2027-06-15" type="papier" />
+            <termin date="2027-07-13" type="papier" /> <termin date="2027-08-10" type="papier" /> <termin date="2027-09-07" type="papier" /> <termin date="2027-10-05" type="papier" /> <termin date="2027-11-02" type="papier" />
+            <termin date="2027-11-30" type="papier" /> <termin date="2027-12-28" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-26" type="gelb" /> <termin date="2026-06-22" type="gelb" /> <termin date="2026-07-20" type="gelb" /> <termin date="2026-08-17" type="gelb" /> <termin date="2026-09-14" type="gelb" />
+            <termin date="2026-10-12" type="gelb" /> <termin date="2026-11-09" type="gelb" /> <termin date="2026-12-07" type="gelb" /> <termin date="2027-01-04" type="gelb" /> <termin date="2027-02-01" type="gelb" />
+            <termin date="2027-03-01" type="gelb" /> <termin date="2027-03-30" type="gelb" /> <termin date="2027-04-26" type="gelb" /> <termin date="2027-05-24" type="gelb" /> <termin date="2027-06-21" type="gelb" />
+            <termin date="2027-07-19" type="gelb" /> <termin date="2027-08-16" type="gelb" /> <termin date="2027-09-13" type="gelb" /> <termin date="2027-10-11" type="gelb" /> <termin date="2027-11-08" type="gelb" />
+            <termin date="2027-12-06" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 5 – Süd (Bookhorn, Falkenburg, Steinkimmen, Immer, Hengsterholz)">
+            <termin date="2025-12-02" type="rest" /> <termin date="2025-12-16" type="rest" /> <termin date="2025-12-30" type="rest" />
+            <termin date="2026-01-13" type="rest" /> <termin date="2026-01-27" type="rest" /> <termin date="2026-02-10" type="rest" /> <termin date="2026-02-24" type="rest" />
+            <termin date="2026-03-10" type="rest" /> <termin date="2026-03-24" type="rest" /> <termin date="2026-04-07" type="rest" /> <termin date="2026-04-21" type="rest" />
+
+            <termin date="2025-12-09" type="bio" /> <termin date="2025-12-22" type="bio" />
+            <termin date="2026-01-06" type="bio" /> <termin date="2026-01-20" type="bio" /> <termin date="2026-02-03" type="bio" /> <termin date="2026-02-17" type="bio" />
+            <termin date="2026-03-03" type="bio" /> <termin date="2026-03-17" type="bio" /> <termin date="2026-03-31" type="bio" /> <termin date="2026-04-14" type="bio" /> <termin date="2026-04-28" type="bio" />
+
+            <termin date="2025-12-05" type="papier" /> <termin date="2026-01-03" type="papier" />
+            <termin date="2026-01-30" type="papier" /> <termin date="2026-02-27" type="papier" /> <termin date="2026-03-27" type="papier" /> <termin date="2026-04-25" type="papier" />
+
+            <termin date="2025-12-12" type="gelb" />
+            <termin date="2026-01-09" type="gelb" /> <termin date="2026-02-06" type="gelb" /> <termin date="2026-03-06" type="gelb" /> <termin date="2026-04-03" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-05" type="rest" /> <termin date="2026-05-19" type="rest" /> <termin date="2026-06-02" type="rest" /> <termin date="2026-06-16" type="rest" /> <termin date="2026-06-30" type="rest" />
+            <termin date="2026-07-14" type="rest" /> <termin date="2026-07-28" type="rest" /> <termin date="2026-08-11" type="rest" /> <termin date="2026-08-25" type="rest" /> <termin date="2026-09-08" type="rest" />
+            <termin date="2026-09-22" type="rest" /> <termin date="2026-10-06" type="rest" /> <termin date="2026-10-20" type="rest" /> <termin date="2026-11-03" type="rest" /> <termin date="2026-11-17" type="rest" />
+            <termin date="2026-12-01" type="rest" /> <termin date="2026-12-15" type="rest" /> <termin date="2026-12-29" type="rest" /> <termin date="2027-01-12" type="rest" /> <termin date="2027-01-26" type="rest" />
+            <termin date="2027-02-09" type="rest" /> <termin date="2027-02-23" type="rest" /> <termin date="2027-03-09" type="rest" /> <termin date="2027-03-23" type="rest" /> <termin date="2027-04-06" type="rest" />
+            <termin date="2027-04-20" type="rest" /> <termin date="2027-05-04" type="rest" /> <termin date="2027-05-18" type="rest" /> <termin date="2027-06-01" type="rest" /> <termin date="2027-06-15" type="rest" />
+            <termin date="2027-06-29" type="rest" /> <termin date="2027-07-13" type="rest" /> <termin date="2027-07-27" type="rest" /> <termin date="2027-08-10" type="rest" /> <termin date="2027-08-24" type="rest" />
+            <termin date="2027-09-07" type="rest" /> <termin date="2027-09-21" type="rest" /> <termin date="2027-10-05" type="rest" /> <termin date="2027-10-19" type="rest" /> <termin date="2027-11-02" type="rest" />
+            <termin date="2027-11-16" type="rest" /> <termin date="2027-11-30" type="rest" /> <termin date="2027-12-14" type="rest" /> <termin date="2027-12-28" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-12" type="bio" /> <termin date="2026-05-26" type="bio" /> <termin date="2026-06-09" type="bio" /> <termin date="2026-06-23" type="bio" /> <termin date="2026-07-07" type="bio" />
+            <termin date="2026-07-21" type="bio" /> <termin date="2026-08-04" type="bio" /> <termin date="2026-08-18" type="bio" /> <termin date="2026-09-01" type="bio" /> <termin date="2026-09-15" type="bio" />
+            <termin date="2026-09-29" type="bio" /> <termin date="2026-10-13" type="bio" /> <termin date="2026-10-27" type="bio" /> <termin date="2026-11-10" type="bio" /> <termin date="2026-11-24" type="bio" />
+            <termin date="2026-12-08" type="bio" /> <termin date="2026-12-22" type="bio" /> <termin date="2027-01-05" type="bio" /> <termin date="2027-01-19" type="bio" /> <termin date="2027-02-02" type="bio" />
+            <termin date="2027-02-16" type="bio" /> <termin date="2027-03-02" type="bio" /> <termin date="2027-03-16" type="bio" /> <termin date="2027-03-30" type="bio" /> <termin date="2027-04-13" type="bio" />
+            <termin date="2027-04-27" type="bio" /> <termin date="2027-05-11" type="bio" /> <termin date="2027-05-25" type="bio" /> <termin date="2027-06-08" type="bio" /> <termin date="2027-06-22" type="bio" />
+            <termin date="2027-07-06" type="bio" /> <termin date="2027-07-20" type="bio" /> <termin date="2027-08-03" type="bio" /> <termin date="2027-08-17" type="bio" /> <termin date="2027-08-31" type="bio" />
+            <termin date="2027-09-14" type="bio" /> <termin date="2027-09-28" type="bio" /> <termin date="2027-10-12" type="bio" /> <termin date="2027-10-26" type="bio" /> <termin date="2027-11-09" type="bio" />
+            <termin date="2027-11-23" type="bio" /> <termin date="2027-12-07" type="bio" /> <termin date="2027-12-21" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-23" type="papier" /> <termin date="2026-06-20" type="papier" /> <termin date="2026-07-18" type="papier" /> <termin date="2026-08-15" type="papier" /> <termin date="2026-09-12" type="papier" />
+            <termin date="2026-10-10" type="papier" /> <termin date="2026-11-07" type="papier" /> <termin date="2026-12-05" type="papier" /> <termin date="2027-01-02" type="papier" /> <termin date="2027-01-30" type="papier" />
+            <termin date="2027-02-27" type="papier" /> <termin date="2027-03-27" type="papier" /> <termin date="2027-04-24" type="papier" /> <termin date="2027-05-22" type="papier" /> <termin date="2027-06-19" type="papier" />
+            <termin date="2027-07-17" type="papier" /> <termin date="2027-08-14" type="papier" /> <termin date="2027-09-11" type="papier" /> <termin date="2027-10-09" type="papier" /> <termin date="2027-11-06" type="papier" />
+            <termin date="2027-12-04" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-02" type="gelb" /> <termin date="2026-05-29" type="gelb" /> <termin date="2026-06-26" type="gelb" /> <termin date="2026-07-24" type="gelb" /> <termin date="2026-08-21" type="gelb" />
+            <termin date="2026-09-18" type="gelb" /> <termin date="2026-10-16" type="gelb" /> <termin date="2026-11-13" type="gelb" /> <termin date="2026-12-11" type="gelb" /> <termin date="2027-01-08" type="gelb" />
+            <termin date="2027-02-05" type="gelb" /> <termin date="2027-03-05" type="gelb" /> <termin date="2027-04-02" type="gelb" /> <termin date="2027-04-30" type="gelb" /> <termin date="2027-05-28" type="gelb" />
+            <termin date="2027-06-25" type="gelb" /> <termin date="2027-07-23" type="gelb" /> <termin date="2027-08-20" type="gelb" /> <termin date="2027-09-17" type="gelb" /> <termin date="2027-10-15" type="gelb" />
+            <termin date="2027-11-12" type="gelb" /> <termin date="2027-12-10" type="gelb" />
+        </bezirk>
+    </gemeinde>
+
+    <gemeinde name="Großenkneten">
+        <bezirk name="Bezirk 1 – Ahlhorn, Großenkneten-Ort">
+            <termin date="2025-12-12" type="rest" /> <termin date="2025-12-27" type="rest" />
+            <termin date="2026-01-09" type="rest" /> <termin date="2026-01-23" type="rest" /> <termin date="2026-02-06" type="rest" /> <termin date="2026-02-20" type="rest" />
+            <termin date="2026-03-06" type="rest" /> <termin date="2026-03-20" type="rest" /> <termin date="2026-04-03" type="rest" /> <termin date="2026-04-17" type="rest" />
+
+            <termin date="2025-12-05" type="bio" /> <termin date="2025-12-19" type="bio" /> <termin date="2026-01-03" type="bio" />
+            <termin date="2026-01-16" type="bio" /> <termin date="2026-01-30" type="bio" /> <termin date="2026-02-13" type="bio" /> <termin date="2026-02-27" type="bio" />
+            <termin date="2026-03-13" type="bio" /> <termin date="2026-03-27" type="bio" /> <termin date="2026-04-10" type="bio" /> <termin date="2026-04-24" type="bio" />
+
+            <termin date="2025-12-08" type="papier" />
+            <termin date="2026-01-05" type="papier" /> <termin date="2026-02-02" type="papier" /> <termin date="2026-03-02" type="papier" /> <termin date="2026-03-30" type="papier" /> <termin date="2026-04-27" type="papier" />
+
+            <termin date="2025-12-15" type="gelb" />
+            <termin date="2026-01-12" type="gelb" /> <termin date="2026-02-09" type="gelb" /> <termin date="2026-03-09" type="gelb" /> <termin date="2026-04-07" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-02" type="rest" /> <termin date="2026-05-15" type="rest" /> <termin date="2026-05-29" type="rest" /> <termin date="2026-06-12" type="rest" /> <termin date="2026-06-26" type="rest" />
+            <termin date="2026-07-10" type="rest" /> <termin date="2026-07-24" type="rest" /> <termin date="2026-08-07" type="rest" /> <termin date="2026-08-21" type="rest" /> <termin date="2026-09-04" type="rest" />
+            <termin date="2026-09-18" type="rest" /> <termin date="2026-10-02" type="rest" /> <termin date="2026-10-16" type="rest" /> <termin date="2026-10-30" type="rest" /> <termin date="2026-11-13" type="rest" />
+            <termin date="2026-11-27" type="rest" /> <termin date="2026-12-11" type="rest" /> <termin date="2026-12-28" type="rest" /> <termin date="2027-01-08" type="rest" /> <termin date="2027-01-22" type="rest" />
+            <termin date="2027-02-05" type="rest" /> <termin date="2027-02-19" type="rest" /> <termin date="2027-03-05" type="rest" /> <termin date="2027-03-19" type="rest" /> <termin date="2027-04-02" type="rest" />
+            <termin date="2027-04-16" type="rest" /> <termin date="2027-04-30" type="rest" /> <termin date="2027-05-14" type="rest" /> <termin date="2027-05-28" type="rest" /> <termin date="2027-06-11" type="rest" />
+            <termin date="2027-06-25" type="rest" /> <termin date="2027-07-09" type="rest" /> <termin date="2027-07-23" type="rest" /> <termin date="2027-08-06" type="rest" /> <termin date="2027-08-20" type="rest" />
+            <termin date="2027-09-03" type="rest" /> <termin date="2027-09-17" type="rest" /> <termin date="2027-10-01" type="rest" /> <termin date="2027-10-15" type="rest" /> <termin date="2027-10-29" type="rest" />
+            <termin date="2027-11-12" type="rest" /> <termin date="2027-11-26" type="rest" /> <termin date="2027-12-10" type="rest" /> <termin date="2027-12-24" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-08" type="bio" /> <termin date="2026-05-22" type="bio" /> <termin date="2026-06-05" type="bio" /> <termin date="2026-06-19" type="bio" /> <termin date="2026-07-03" type="bio" />
+            <termin date="2026-07-17" type="bio" /> <termin date="2026-07-31" type="bio" /> <termin date="2026-08-14" type="bio" /> <termin date="2026-08-28" type="bio" /> <termin date="2026-09-11" type="bio" />
+            <termin date="2026-09-25" type="bio" /> <termin date="2026-10-09" type="bio" /> <termin date="2026-10-23" type="bio" /> <termin date="2026-11-06" type="bio" /> <termin date="2026-11-20" type="bio" />
+            <termin date="2026-12-04" type="bio" /> <termin date="2026-12-18" type="bio" /> <termin date="2027-01-02" type="bio" /> <termin date="2027-01-15" type="bio" /> <termin date="2027-01-29" type="bio" />
+            <termin date="2027-02-12" type="bio" /> <termin date="2027-02-26" type="bio" /> <termin date="2027-03-12" type="bio" /> <termin date="2027-03-27" type="bio" /> <termin date="2027-04-09" type="bio" />
+            <termin date="2027-04-23" type="bio" /> <termin date="2027-05-07" type="bio" /> <termin date="2027-05-21" type="bio" /> <termin date="2027-06-04" type="bio" /> <termin date="2027-06-18" type="bio" />
+            <termin date="2027-07-02" type="bio" /> <termin date="2027-07-16" type="bio" /> <termin date="2027-07-30" type="bio" /> <termin date="2027-08-13" type="bio" /> <termin date="2027-08-27" type="bio" />
+            <termin date="2027-09-10" type="bio" /> <termin date="2027-09-24" type="bio" /> <termin date="2027-10-08" type="bio" /> <termin date="2027-10-22" type="bio" /> <termin date="2027-11-05" type="bio" />
+            <termin date="2027-11-19" type="bio" /> <termin date="2027-12-03" type="bio" /> <termin date="2027-12-17" type="bio" /> <termin date="2027-12-31" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-26" type="papier" /> <termin date="2026-06-22" type="papier" /> <termin date="2026-07-20" type="papier" /> <termin date="2026-08-17" type="papier" /> <termin date="2026-09-14" type="papier" />
+            <termin date="2026-10-12" type="papier" /> <termin date="2026-11-09" type="papier" /> <termin date="2026-12-07" type="papier" /> <termin date="2027-01-04" type="papier" /> <termin date="2027-02-01" type="papier" />
+            <termin date="2027-03-01" type="papier" /> <termin date="2027-03-30" type="papier" /> <termin date="2027-04-26" type="papier" /> <termin date="2027-05-24" type="papier" /> <termin date="2027-06-21" type="papier" />
+            <termin date="2027-07-19" type="papier" /> <termin date="2027-08-16" type="papier" /> <termin date="2027-09-13" type="papier" /> <termin date="2027-10-11" type="papier" /> <termin date="2027-11-08" type="papier" />
+            <termin date="2027-12-06" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-05" type="gelb" /> <termin date="2026-06-02" type="gelb" /> <termin date="2026-06-30" type="gelb" /> <termin date="2026-07-28" type="gelb" /> <termin date="2026-08-25" type="gelb" />
+            <termin date="2026-09-22" type="gelb" /> <termin date="2026-10-20" type="gelb" /> <termin date="2026-11-17" type="gelb" /> <termin date="2026-12-15" type="gelb" /> <termin date="2027-01-12" type="gelb" />
+            <termin date="2027-02-09" type="gelb" /> <termin date="2027-03-09" type="gelb" /> <termin date="2027-04-06" type="gelb" /> <termin date="2027-05-04" type="gelb" /> <termin date="2027-06-01" type="gelb" />
+            <termin date="2027-06-29" type="gelb" /> <termin date="2027-07-27" type="gelb" /> <termin date="2027-08-24" type="gelb" /> <termin date="2027-09-21" type="gelb" /> <termin date="2027-10-19" type="gelb" />
+            <termin date="2027-11-16" type="gelb" /> <termin date="2027-12-14" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 2 – Sage, Huntlosen, Döhlen">
+            <termin date="2025-12-12" type="rest" /> <termin date="2025-12-27" type="rest" />
+            <termin date="2026-01-09" type="rest" /> <termin date="2026-01-23" type="rest" /> <termin date="2026-02-06" type="rest" /> <termin date="2026-02-20" type="rest" />
+            <termin date="2026-03-06" type="rest" /> <termin date="2026-03-20" type="rest" /> <termin date="2026-04-03" type="rest" /> <termin date="2026-04-17" type="rest" />
+
+            <termin date="2025-12-05" type="bio" /> <termin date="2025-12-19" type="bio" /> <termin date="2026-01-03" type="bio" />
+            <termin date="2026-01-16" type="bio" /> <termin date="2026-01-30" type="bio" /> <termin date="2026-02-13" type="bio" /> <termin date="2026-02-27" type="bio" />
+            <termin date="2026-03-13" type="bio" /> <termin date="2026-03-27" type="bio" /> <termin date="2026-04-10" type="bio" /> <termin date="2026-04-24" type="bio" />
+
+            <termin date="2025-12-09" type="papier" />
+            <termin date="2026-01-06" type="papier" /> <termin date="2026-02-03" type="papier" /> <termin date="2026-03-03" type="papier" /> <termin date="2026-03-31" type="papier" /> <termin date="2026-04-28" type="papier" />
+
+            <termin date="2025-12-16" type="gelb" />
+            <termin date="2026-01-13" type="gelb" /> <termin date="2026-02-10" type="gelb" /> <termin date="2026-03-10" type="gelb" /> <termin date="2026-04-08" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-02" type="rest" /> <termin date="2026-05-15" type="rest" /> <termin date="2026-05-29" type="rest" /> <termin date="2026-06-12" type="rest" /> <termin date="2026-06-26" type="rest" />
+            <termin date="2026-07-10" type="rest" /> <termin date="2026-07-24" type="rest" /> <termin date="2026-08-07" type="rest" /> <termin date="2026-08-21" type="rest" /> <termin date="2026-09-04" type="rest" />
+            <termin date="2026-09-18" type="rest" /> <termin date="2026-10-02" type="rest" /> <termin date="2026-10-16" type="rest" /> <termin date="2026-10-30" type="rest" /> <termin date="2026-11-13" type="rest" />
+            <termin date="2026-11-27" type="rest" /> <termin date="2026-12-11" type="rest" /> <termin date="2026-12-28" type="rest" /> <termin date="2027-01-08" type="rest" /> <termin date="2027-01-22" type="rest" />
+            <termin date="2027-02-05" type="rest" /> <termin date="2027-02-19" type="rest" /> <termin date="2027-03-05" type="rest" /> <termin date="2027-03-19" type="rest" /> <termin date="2027-04-02" type="rest" />
+            <termin date="2027-04-16" type="rest" /> <termin date="2027-04-30" type="rest" /> <termin date="2027-05-14" type="rest" /> <termin date="2027-05-28" type="rest" /> <termin date="2027-06-11" type="rest" />
+            <termin date="2027-06-25" type="rest" /> <termin date="2027-07-09" type="rest" /> <termin date="2027-07-23" type="rest" /> <termin date="2027-08-06" type="rest" /> <termin date="2027-08-20" type="rest" />
+            <termin date="2027-09-03" type="rest" /> <termin date="2027-09-17" type="rest" /> <termin date="2027-10-01" type="rest" /> <termin date="2027-10-15" type="rest" /> <termin date="2027-10-29" type="rest" />
+            <termin date="2027-11-12" type="rest" /> <termin date="2027-11-26" type="rest" /> <termin date="2027-12-10" type="rest" /> <termin date="2027-12-24" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-08" type="bio" /> <termin date="2026-05-22" type="bio" /> <termin date="2026-06-05" type="bio" /> <termin date="2026-06-19" type="bio" /> <termin date="2026-07-03" type="bio" />
+            <termin date="2026-07-17" type="bio" /> <termin date="2026-07-31" type="bio" /> <termin date="2026-08-14" type="bio" /> <termin date="2026-08-28" type="bio" /> <termin date="2026-09-11" type="bio" />
+            <termin date="2026-09-25" type="bio" /> <termin date="2026-10-09" type="bio" /> <termin date="2026-10-23" type="bio" /> <termin date="2026-11-06" type="bio" /> <termin date="2026-11-20" type="bio" />
+            <termin date="2026-12-04" type="bio" /> <termin date="2026-12-18" type="bio" /> <termin date="2027-01-02" type="bio" /> <termin date="2027-01-15" type="bio" /> <termin date="2027-01-29" type="bio" />
+            <termin date="2027-02-12" type="bio" /> <termin date="2027-02-26" type="bio" /> <termin date="2027-03-12" type="bio" /> <termin date="2027-03-27" type="bio" /> <termin date="2027-04-09" type="bio" />
+            <termin date="2027-04-23" type="bio" /> <termin date="2027-05-07" type="bio" /> <termin date="2027-05-21" type="bio" /> <termin date="2027-06-04" type="bio" /> <termin date="2027-06-18" type="bio" />
+            <termin date="2027-07-02" type="bio" /> <termin date="2027-07-16" type="bio" /> <termin date="2027-07-30" type="bio" /> <termin date="2027-08-13" type="bio" /> <termin date="2027-08-27" type="bio" />
+            <termin date="2027-09-10" type="bio" /> <termin date="2027-09-24" type="bio" /> <termin date="2027-10-08" type="bio" /> <termin date="2027-10-22" type="bio" /> <termin date="2027-11-05" type="bio" />
+            <termin date="2027-11-19" type="bio" /> <termin date="2027-12-03" type="bio" /> <termin date="2027-12-17" type="bio" /> <termin date="2027-12-31" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-26" type="papier" /> <termin date="2026-06-23" type="papier" /> <termin date="2026-07-21" type="papier" /> <termin date="2026-08-18" type="papier" /> <termin date="2026-09-15" type="papier" />
+            <termin date="2026-10-13" type="papier" /> <termin date="2026-11-10" type="papier" /> <termin date="2026-12-08" type="papier" /> <termin date="2027-01-05" type="papier" /> <termin date="2027-02-02" type="papier" />
+            <termin date="2027-03-02" type="papier" /> <termin date="2027-03-30" type="papier" /> <termin date="2027-04-27" type="papier" /> <termin date="2027-05-25" type="papier" /> <termin date="2027-06-22" type="papier" />
+            <termin date="2027-07-20" type="papier" /> <termin date="2027-08-17" type="papier" /> <termin date="2027-09-14" type="papier" /> <termin date="2027-10-12" type="papier" /> <termin date="2027-11-09" type="papier" />
+            <termin date="2027-12-07" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-06" type="gelb" /> <termin date="2026-06-03" type="gelb" /> <termin date="2026-07-01" type="gelb" /> <termin date="2026-07-29" type="gelb" /> <termin date="2026-08-26" type="gelb" />
+            <termin date="2026-09-23" type="gelb" /> <termin date="2026-10-21" type="gelb" /> <termin date="2026-11-18" type="gelb" /> <termin date="2026-12-16" type="gelb" /> <termin date="2027-01-13" type="gelb" />
+            <termin date="2027-02-10" type="gelb" /> <termin date="2027-03-10" type="gelb" /> <termin date="2027-04-07" type="gelb" /> <termin date="2027-05-05" type="gelb" /> <termin date="2027-06-02" type="gelb" />
+            <termin date="2027-06-30" type="gelb" /> <termin date="2027-07-28" type="gelb" /> <termin date="2027-08-25" type="gelb" /> <termin date="2027-09-22" type="gelb" /> <termin date="2027-10-20" type="gelb" />
+            <termin date="2027-11-17" type="gelb" /> <termin date="2027-12-15" type="gelb" />
+        </bezirk>
+    </gemeinde>
+
+    <gemeinde name="Harpstedt">
+        <bezirk name="Bezirk 1 – Flecken Harpstedt, Dünsen, Kirchseelte">
+            <termin date="2025-12-09" type="rest" /> <termin date="2025-12-22" type="rest" />
+            <termin date="2026-01-06" type="rest" /> <termin date="2026-01-20" type="rest" /> <termin date="2026-02-03" type="rest" /> <termin date="2026-02-17" type="rest" />
+            <termin date="2026-03-03" type="rest" /> <termin date="2026-03-17" type="rest" /> <termin date="2026-03-30" type="rest" /> <termin date="2026-04-14" type="rest" /> <termin date="2026-04-28" type="rest" />
+
+            <termin date="2025-12-02" type="bio" /> <termin date="2025-12-16" type="bio" /> <termin date="2025-12-30" type="bio" />
+            <termin date="2026-01-13" type="bio" /> <termin date="2026-01-27" type="bio" /> <termin date="2026-02-10" type="bio" /> <termin date="2026-02-24" type="bio" />
+            <termin date="2026-03-10" type="bio" /> <termin date="2026-03-24" type="bio" /> <termin date="2026-04-07" type="bio" /> <termin date="2026-04-21" type="bio" />
+
+            <termin date="2025-12-17" type="papier" />
+            <termin date="2026-01-14" type="papier" /> <termin date="2026-02-11" type="papier" /> <termin date="2026-03-11" type="papier" /> <termin date="2026-04-08" type="papier" />
+
+            <termin date="2025-12-23" type="gelb" />
+            <termin date="2026-01-21" type="gelb" /> <termin date="2026-02-18" type="gelb" /> <termin date="2026-03-18" type="gelb" /> <termin date="2026-04-15" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-12" type="rest" /> <termin date="2026-05-26" type="rest" /> <termin date="2026-06-09" type="rest" /> <termin date="2026-06-23" type="rest" /> <termin date="2026-07-07" type="rest" />
+            <termin date="2026-07-21" type="rest" /> <termin date="2026-08-04" type="rest" /> <termin date="2026-08-18" type="rest" /> <termin date="2026-09-01" type="rest" /> <termin date="2026-09-15" type="rest" />
+            <termin date="2026-09-29" type="rest" /> <termin date="2026-10-13" type="rest" /> <termin date="2026-10-27" type="rest" /> <termin date="2026-11-10" type="rest" /> <termin date="2026-11-24" type="rest" />
+            <termin date="2026-12-08" type="rest" /> <termin date="2026-12-22" type="rest" /> <termin date="2027-01-05" type="rest" /> <termin date="2027-01-19" type="rest" /> <termin date="2027-02-02" type="rest" />
+            <termin date="2027-02-16" type="rest" /> <termin date="2027-03-02" type="rest" /> <termin date="2027-03-16" type="rest" /> <termin date="2027-03-30" type="rest" /> <termin date="2027-04-13" type="rest" />
+            <termin date="2027-04-27" type="rest" /> <termin date="2027-05-11" type="rest" /> <termin date="2027-05-25" type="rest" /> <termin date="2027-06-08" type="rest" /> <termin date="2027-06-22" type="rest" />
+            <termin date="2027-07-06" type="rest" /> <termin date="2027-07-20" type="rest" /> <termin date="2027-08-03" type="rest" /> <termin date="2027-08-17" type="rest" /> <termin date="2027-08-31" type="rest" />
+            <termin date="2027-09-14" type="rest" /> <termin date="2027-09-28" type="rest" /> <termin date="2027-10-12" type="rest" /> <termin date="2027-10-26" type="rest" /> <termin date="2027-11-09" type="rest" />
+            <termin date="2027-11-23" type="rest" /> <termin date="2027-12-07" type="rest" /> <termin date="2027-12-21" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-05" type="bio" /> <termin date="2026-05-19" type="bio" /> <termin date="2026-06-02" type="bio" /> <termin date="2026-06-16" type="bio" /> <termin date="2026-06-30" type="bio" />
+            <termin date="2026-07-14" type="bio" /> <termin date="2026-07-28" type="bio" /> <termin date="2026-08-11" type="bio" /> <termin date="2026-08-25" type="bio" /> <termin date="2026-09-08" type="bio" />
+            <termin date="2026-09-22" type="bio" /> <termin date="2026-10-06" type="bio" /> <termin date="2026-10-20" type="bio" /> <termin date="2026-11-03" type="bio" /> <termin date="2026-11-17" type="bio" />
+            <termin date="2026-12-01" type="bio" /> <termin date="2026-12-15" type="bio" /> <termin date="2026-12-29" type="bio" /> <termin date="2027-01-12" type="bio" /> <termin date="2027-01-26" type="bio" />
+            <termin date="2027-02-09" type="bio" /> <termin date="2027-02-23" type="bio" /> <termin date="2027-03-09" type="bio" /> <termin date="2027-03-23" type="bio" /> <termin date="2027-04-06" type="bio" />
+            <termin date="2027-04-20" type="bio" /> <termin date="2027-05-04" type="bio" /> <termin date="2027-05-18" type="bio" /> <termin date="2027-06-01" type="bio" /> <termin date="2027-06-15" type="bio" />
+            <termin date="2027-06-29" type="bio" /> <termin date="2027-07-13" type="bio" /> <termin date="2027-07-27" type="bio" /> <termin date="2027-08-10" type="bio" /> <termin date="2027-08-24" type="bio" />
+            <termin date="2027-09-07" type="bio" /> <termin date="2027-09-21" type="bio" /> <termin date="2027-10-05" type="bio" /> <termin date="2027-10-19" type="bio" /> <termin date="2027-11-02" type="bio" />
+            <termin date="2027-11-16" type="bio" /> <termin date="2027-11-30" type="bio" /> <termin date="2027-12-14" type="bio" /> <termin date="2027-12-28" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-06" type="papier" /> <termin date="2026-06-03" type="papier" /> <termin date="2026-07-01" type="papier" /> <termin date="2026-07-29" type="papier" /> <termin date="2026-08-26" type="papier" />
+            <termin date="2026-09-23" type="papier" /> <termin date="2026-10-21" type="papier" /> <termin date="2026-11-18" type="papier" /> <termin date="2026-12-16" type="papier" /> <termin date="2027-01-13" type="papier" />
+            <termin date="2027-02-10" type="papier" /> <termin date="2027-03-10" type="papier" /> <termin date="2027-04-07" type="papier" /> <termin date="2027-05-05" type="papier" /> <termin date="2027-06-02" type="papier" />
+            <termin date="2027-06-30" type="papier" /> <termin date="2027-07-28" type="papier" /> <termin date="2027-08-25" type="papier" /> <termin date="2027-09-22" type="papier" /> <termin date="2027-10-20" type="papier" />
+            <termin date="2027-11-17" type="papier" /> <termin date="2027-12-15" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-13" type="gelb" /> <termin date="2026-06-10" type="gelb" /> <termin date="2026-07-08" type="gelb" /> <termin date="2026-08-05" type="gelb" /> <termin date="2026-09-02" type="gelb" />
+            <termin date="2026-09-30" type="gelb" /> <termin date="2026-10-28" type="gelb" /> <termin date="2026-11-25" type="gelb" /> <termin date="2026-12-23" type="gelb" /> <termin date="2027-01-20" type="gelb" />
+            <termin date="2027-02-17" type="gelb" /> <termin date="2027-03-17" type="gelb" /> <termin date="2027-04-14" type="gelb" /> <termin date="2027-05-12" type="gelb" /> <termin date="2027-06-09" type="gelb" />
+            <termin date="2027-07-07" type="gelb" /> <termin date="2027-08-04" type="gelb" /> <termin date="2027-09-01" type="gelb" /> <termin date="2027-09-29" type="gelb" /> <termin date="2027-10-27" type="gelb" />
+            <termin date="2027-11-24" type="gelb" /> <termin date="2027-12-22" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 2 – Beckeln, Colnrade, Groß Ippener, Prinzhöfte, Winkelsett">
+            <termin date="2025-12-04" type="rest" /> <termin date="2025-12-18" type="rest" /> <termin date="2026-01-02" type="rest" />
+            <termin date="2026-01-15" type="rest" /> <termin date="2026-01-29" type="rest" /> <termin date="2026-02-12" type="rest" /> <termin date="2026-02-26" type="rest" />
+            <termin date="2026-03-12" type="rest" /> <termin date="2026-03-26" type="rest" /> <termin date="2026-04-09" type="rest" /> <termin date="2026-04-23" type="rest" />
+
+            <termin date="2025-12-11" type="bio" /> <termin date="2025-12-24" type="bio" />
+            <termin date="2026-01-08" type="bio" /> <termin date="2026-01-22" type="bio" /> <termin date="2026-02-05" type="bio" /> <termin date="2026-02-19" type="bio" />
+            <termin date="2026-03-05" type="bio" /> <termin date="2026-03-19" type="bio" /> <termin date="2026-04-02" type="bio" /> <termin date="2026-04-16" type="bio" /> <termin date="2026-04-30" type="bio" />
+
+            <termin date="2025-12-19" type="papier" />
+            <termin date="2026-01-16" type="papier" /> <termin date="2026-02-13" type="papier" /> <termin date="2026-03-13" type="papier" /> <termin date="2026-04-10" type="papier" />
+
+            <termin date="2025-12-27" type="gelb" />
+            <termin date="2026-01-23" type="gelb" /> <termin date="2026-02-20" type="gelb" /> <termin date="2026-03-20" type="gelb" /> <termin date="2026-04-17" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-07" type="rest" /> <termin date="2026-05-21" type="rest" /> <termin date="2026-06-04" type="rest" /> <termin date="2026-06-18" type="rest" /> <termin date="2026-07-02" type="rest" />
+            <termin date="2026-07-16" type="rest" /> <termin date="2026-07-30" type="rest" /> <termin date="2026-08-13" type="rest" /> <termin date="2026-08-27" type="rest" /> <termin date="2026-09-10" type="rest" />
+            <termin date="2026-09-24" type="rest" /> <termin date="2026-10-08" type="rest" /> <termin date="2026-10-22" type="rest" /> <termin date="2026-11-05" type="rest" /> <termin date="2026-11-19" type="rest" />
+            <termin date="2026-12-03" type="rest" /> <termin date="2026-12-17" type="rest" /> <termin date="2026-12-31" type="rest" /> <termin date="2027-01-14" type="rest" /> <termin date="2027-01-28" type="rest" />
+            <termin date="2027-02-11" type="rest" /> <termin date="2027-02-25" type="rest" /> <termin date="2027-03-11" type="rest" /> <termin date="2027-03-25" type="rest" /> <termin date="2027-04-08" type="rest" />
+            <termin date="2027-04-22" type="rest" /> <termin date="2027-05-07" type="rest" /> <termin date="2027-05-20" type="rest" /> <termin date="2027-06-03" type="rest" /> <termin date="2027-06-17" type="rest" />
+            <termin date="2027-07-01" type="rest" /> <termin date="2027-07-15" type="rest" /> <termin date="2027-07-29" type="rest" /> <termin date="2027-08-12" type="rest" /> <termin date="2027-08-26" type="rest" />
+            <termin date="2027-09-09" type="rest" /> <termin date="2027-09-23" type="rest" /> <termin date="2027-10-07" type="rest" /> <termin date="2027-10-21" type="rest" /> <termin date="2027-11-04" type="rest" />
+            <termin date="2027-11-18" type="rest" /> <termin date="2027-12-02" type="rest" /> <termin date="2027-12-16" type="rest" /> <termin date="2027-12-30" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-15" type="bio" /> <termin date="2026-05-28" type="bio" /> <termin date="2026-06-11" type="bio" /> <termin date="2026-06-25" type="bio" /> <termin date="2026-07-09" type="bio" />
+            <termin date="2026-07-23" type="bio" /> <termin date="2026-08-06" type="bio" /> <termin date="2026-08-20" type="bio" /> <termin date="2026-09-03" type="bio" /> <termin date="2026-09-17" type="bio" />
+            <termin date="2026-10-01" type="bio" /> <termin date="2026-10-15" type="bio" /> <termin date="2026-10-29" type="bio" /> <termin date="2026-11-12" type="bio" /> <termin date="2026-11-26" type="bio" />
+            <termin date="2026-12-10" type="bio" /> <termin date="2026-12-24" type="bio" /> <termin date="2027-01-07" type="bio" /> <termin date="2027-01-21" type="bio" /> <termin date="2027-02-04" type="bio" />
+            <termin date="2027-02-18" type="bio" /> <termin date="2027-03-04" type="bio" /> <termin date="2027-03-18" type="bio" /> <termin date="2027-04-01" type="bio" /> <termin date="2027-04-15" type="bio" />
+            <termin date="2027-04-29" type="bio" /> <termin date="2027-05-13" type="bio" /> <termin date="2027-05-27" type="bio" /> <termin date="2027-06-10" type="bio" /> <termin date="2027-06-24" type="bio" />
+            <termin date="2027-07-08" type="bio" /> <termin date="2027-07-22" type="bio" /> <termin date="2027-08-05" type="bio" /> <termin date="2027-08-19" type="bio" /> <termin date="2027-09-02" type="bio" />
+            <termin date="2027-09-16" type="bio" /> <termin date="2027-09-30" type="bio" /> <termin date="2027-10-14" type="bio" /> <termin date="2027-10-28" type="bio" /> <termin date="2027-11-11" type="bio" />
+            <termin date="2027-11-25" type="bio" /> <termin date="2027-12-09" type="bio" /> <termin date="2027-12-23" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-08" type="papier" /> <termin date="2026-06-05" type="papier" /> <termin date="2026-07-03" type="papier" /> <termin date="2026-07-31" type="papier" /> <termin date="2026-08-28" type="papier" />
+            <termin date="2026-09-25" type="papier" /> <termin date="2026-10-23" type="papier" /> <termin date="2026-11-20" type="papier" /> <termin date="2026-12-18" type="papier" /> <termin date="2027-01-15" type="papier" />
+            <termin date="2027-02-12" type="papier" /> <termin date="2027-03-12" type="papier" /> <termin date="2027-04-09" type="papier" /> <termin date="2027-05-07" type="papier" /> <termin date="2027-06-04" type="papier" />
+            <termin date="2027-07-02" type="papier" /> <termin date="2027-07-30" type="papier" /> <termin date="2027-08-27" type="papier" /> <termin date="2027-09-24" type="papier" /> <termin date="2027-10-22" type="papier" />
+            <termin date="2027-11-19" type="papier" /> <termin date="2027-12-17" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-15" type="gelb" /> <termin date="2026-06-12" type="gelb" /> <termin date="2026-07-10" type="gelb" /> <termin date="2026-08-07" type="gelb" /> <termin date="2026-09-04" type="gelb" />
+            <termin date="2026-10-02" type="gelb" /> <termin date="2026-10-30" type="gelb" /> <termin date="2026-11-27" type="gelb" /> <termin date="2026-12-28" type="gelb" /> <termin date="2027-01-22" type="gelb" />
+            <termin date="2027-02-19" type="gelb" /> <termin date="2027-03-19" type="gelb" /> <termin date="2027-04-16" type="gelb" /> <termin date="2027-05-14" type="gelb" /> <termin date="2027-06-11" type="gelb" />
+            <termin date="2027-07-09" type="gelb" /> <termin date="2027-08-06" type="gelb" /> <termin date="2027-09-03" type="gelb" /> <termin date="2027-10-01" type="gelb" /> <termin date="2027-10-29" type="gelb" />
+            <termin date="2027-11-26" type="gelb" /> <termin date="2027-12-24" type="gelb" />
+        </bezirk>
+    </gemeinde>
+
+    <gemeinde name="Hatten">
+        <bezirk name="Gesamte Gemeinde (Sandkrug, Kirchhatten, Sandhatten)">
+            <termin date="2025-12-10" type="rest" /> <termin date="2025-12-23" type="rest" />
+            <termin date="2026-01-07" type="rest" /> <termin date="2026-01-21" type="rest" /> <termin date="2026-02-04" type="rest" /> <termin date="2026-02-18" type="rest" />
+            <termin date="2026-03-04" type="rest" /> <termin date="2026-03-18" type="rest" /> <termin date="2026-04-01" type="rest" /> <termin date="2026-04-15" type="rest" /> <termin date="2026-04-29" type="rest" />
+
+            <termin date="2025-12-03" type="bio" /> <termin date="2025-12-17" type="bio" /> <termin date="2025-12-31" type="bio" />
+            <termin date="2026-01-14" type="bio" /> <termin date="2026-01-28" type="bio" /> <termin date="2026-02-11" type="bio" /> <termin date="2026-02-25" type="bio" />
+            <termin date="2026-03-11" type="bio" /> <termin date="2026-03-25" type="bio" /> <termin date="2026-04-08" type="bio" /> <termin date="2026-04-22" type="bio" />
+
+            <termin date="2025-12-11" type="papier" />
+            <termin date="2026-01-08" type="papier" /> <termin date="2026-02-05" type="papier" /> <termin date="2026-03-05" type="papier" /> <termin date="2026-04-02" type="papier" /> <termin date="2026-04-30" type="papier" />
+
+            <termin date="2025-12-18" type="gelb" />
+            <termin date="2026-01-15" type="gelb" /> <termin date="2026-02-12" type="gelb" /> <termin date="2026-03-12" type="gelb" /> <termin date="2026-04-09" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-13" type="rest" /> <termin date="2026-05-27" type="rest" /> <termin date="2026-06-10" type="rest" /> <termin date="2026-06-24" type="rest" /> <termin date="2026-07-08" type="rest" />
+            <termin date="2026-07-22" type="rest" /> <termin date="2026-08-05" type="rest" /> <termin date="2026-08-19" type="rest" /> <termin date="2026-09-02" type="rest" /> <termin date="2026-09-16" type="rest" />
+            <termin date="2026-09-30" type="rest" /> <termin date="2026-10-14" type="rest" /> <termin date="2026-10-28" type="rest" /> <termin date="2026-11-11" type="rest" /> <termin date="2026-11-25" type="rest" />
+            <termin date="2026-12-09" type="rest" /> <termin date="2026-12-23" type="rest" /> <termin date="2027-01-06" type="rest" /> <termin date="2027-01-20" type="rest" /> <termin date="2027-02-03" type="rest" />
+            <termin date="2027-02-17" type="rest" /> <termin date="2027-03-03" type="rest" /> <termin date="2027-03-17" type="rest" /> <termin date="2027-03-31" type="rest" /> <termin date="2027-04-14" type="rest" />
+            <termin date="2027-04-28" type="rest" /> <termin date="2027-05-12" type="rest" /> <termin date="2027-05-26" type="rest" /> <termin date="2027-06-09" type="rest" /> <termin date="2027-06-23" type="rest" />
+            <termin date="2027-07-07" type="rest" /> <termin date="2027-07-21" type="rest" /> <termin date="2027-08-04" type="rest" /> <termin date="2027-08-18" type="rest" /> <termin date="2027-09-01" type="rest" />
+            <termin date="2027-09-15" type="rest" /> <termin date="2027-09-29" type="rest" /> <termin date="2027-10-13" type="rest" /> <termin date="2027-10-27" type="rest" /> <termin date="2027-11-10" type="rest" />
+            <termin date="2027-11-24" type="rest" /> <termin date="2027-12-08" type="rest" /> <termin date="2027-12-22" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-06" type="bio" /> <termin date="2026-05-20" type="bio" /> <termin date="2026-06-03" type="bio" /> <termin date="2026-06-17" type="bio" /> <termin date="2026-07-01" type="bio" />
+            <termin date="2026-07-15" type="bio" /> <termin date="2026-07-29" type="bio" /> <termin date="2026-08-12" type="bio" /> <termin date="2026-08-26" type="bio" /> <termin date="2026-09-09" type="bio" />
+            <termin date="2026-09-23" type="bio" /> <termin date="2026-10-07" type="bio" /> <termin date="2026-10-21" type="bio" /> <termin date="2026-11-04" type="bio" /> <termin date="2026-11-18" type="bio" />
+            <termin date="2026-12-02" type="bio" /> <termin date="2026-12-16" type="bio" /> <termin date="2026-12-30" type="bio" /> <termin date="2027-01-13" type="bio" /> <termin date="2027-01-27" type="bio" />
+            <termin date="2027-02-10" type="bio" /> <termin date="2027-02-24" type="bio" /> <termin date="2027-03-10" type="bio" /> <termin date="2027-03-24" type="bio" /> <termin date="2027-04-07" type="bio" />
+            <termin date="2027-04-21" type="bio" /> <termin date="2027-05-05" type="bio" /> <termin date="2027-05-19" type="bio" /> <termin date="2027-06-02" type="bio" /> <termin date="2027-06-16" type="bio" />
+            <termin date="2027-06-30" type="bio" /> <termin date="2027-07-14" type="bio" /> <termin date="2027-07-28" type="bio" /> <termin date="2027-08-11" type="bio" /> <termin date="2027-08-25" type="bio" />
+            <termin date="2027-09-08" type="bio" /> <termin date="2027-09-22" type="bio" /> <termin date="2027-10-06" type="bio" /> <termin date="2027-10-20" type="bio" /> <termin date="2027-11-03" type="bio" />
+            <termin date="2027-11-17" type="bio" /> <termin date="2027-12-01" type="bio" /> <termin date="2027-12-15" type="bio" /> <termin date="2027-12-29" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-28" type="papier" /> <termin date="2026-06-25" type="papier" /> <termin date="2026-07-23" type="papier" /> <termin date="2026-08-20" type="papier" /> <termin date="2026-09-17" type="papier" />
+            <termin date="2026-10-15" type="papier" /> <termin date="2026-11-12" type="papier" /> <termin date="2026-12-10" type="papier" /> <termin date="2027-01-07" type="papier" /> <termin date="2027-02-04" type="papier" />
+            <termin date="2027-03-04" type="papier" /> <termin date="2027-04-01" type="papier" /> <termin date="2027-04-29" type="papier" /> <termin date="2027-05-27" type="papier" /> <termin date="2027-06-24" type="papier" />
+            <termin date="2027-07-22" type="papier" /> <termin date="2027-08-19" type="papier" /> <termin date="2027-09-16" type="papier" /> <termin date="2027-10-14" type="papier" /> <termin date="2027-11-11" type="papier" />
+            <termin date="2027-12-09" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-07" type="gelb" /> <termin date="2026-06-04" type="gelb" /> <termin date="2026-07-02" type="gelb" /> <termin date="2026-07-30" type="gelb" /> <termin date="2026-08-27" type="gelb" />
+            <termin date="2026-09-24" type="gelb" /> <termin date="2026-10-22" type="gelb" /> <termin date="2026-11-19" type="gelb" /> <termin date="2026-12-17" type="gelb" /> <termin date="2027-01-14" type="gelb" />
+            <termin date="2027-02-11" type="gelb" /> <termin date="2027-03-11" type="gelb" /> <termin date="2027-04-08" type="gelb" /> <termin date="2027-05-07" type="gelb" /> <termin date="2027-06-03" type="gelb" />
+            <termin date="2027-07-01" type="gelb" /> <termin date="2027-07-29" type="gelb" /> <termin date="2027-08-26" type="gelb" /> <termin date="2027-09-23" type="gelb" /> <termin date="2027-10-21" type="gelb" />
+            <termin date="2027-11-18" type="gelb" /> <termin date="2027-12-16" type="gelb" />
+        </bezirk>
+    </gemeinde>
+
+    <gemeinde name="Hude">
+        <bezirk name="Bezirk 1 – Südlich Bahnlinie">
+            <termin date="2025-12-04" type="rest" /> <termin date="2025-12-18" type="rest" /> <termin date="2026-01-02" type="rest" />
+            <termin date="2026-01-15" type="rest" /> <termin date="2026-01-29" type="rest" /> <termin date="2026-02-12" type="rest" /> <termin date="2026-02-26" type="rest" />
+            <termin date="2026-03-12" type="rest" /> <termin date="2026-03-26" type="rest" /> <termin date="2026-04-09" type="rest" /> <termin date="2026-04-23" type="rest" />
+
+            <termin date="2025-12-11" type="bio" /> <termin date="2025-12-24" type="bio" />
+            <termin date="2026-01-08" type="bio" /> <termin date="2026-01-22" type="bio" /> <termin date="2026-02-05" type="bio" /> <termin date="2026-02-19" type="bio" />
+            <termin date="2026-03-05" type="bio" /> <termin date="2026-03-19" type="bio" /> <termin date="2026-04-02" type="bio" /> <termin date="2026-04-16" type="bio" /> <termin date="2026-04-30" type="bio" />
+
+            <termin date="2025-12-22" type="papier" />
+            <termin date="2026-01-20" type="papier" /> <termin date="2026-02-17" type="papier" /> <termin date="2026-03-17" type="papier" /> <termin date="2026-04-14" type="papier" />
+
+            <termin date="2025-12-03" type="gelb" /> <termin date="2025-12-31" type="gelb" />
+            <termin date="2026-01-28" type="gelb" /> <termin date="2026-02-25" type="gelb" /> <termin date="2026-03-25" type="gelb" /> <termin date="2026-04-23" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-07" type="rest" /> <termin date="2026-05-21" type="rest" /> <termin date="2026-06-04" type="rest" /> <termin date="2026-06-18" type="rest" /> <termin date="2026-07-02" type="rest" />
+            <termin date="2026-07-16" type="rest" /> <termin date="2026-07-30" type="rest" /> <termin date="2026-08-13" type="rest" /> <termin date="2026-08-27" type="rest" /> <termin date="2026-09-10" type="rest" />
+            <termin date="2026-09-24" type="rest" /> <termin date="2026-10-08" type="rest" /> <termin date="2026-10-22" type="rest" /> <termin date="2026-11-05" type="rest" /> <termin date="2026-11-19" type="rest" />
+            <termin date="2026-12-03" type="rest" /> <termin date="2026-12-17" type="rest" /> <termin date="2026-12-31" type="rest" /> <termin date="2027-01-14" type="rest" /> <termin date="2027-01-28" type="rest" />
+            <termin date="2027-02-11" type="rest" /> <termin date="2027-02-25" type="rest" /> <termin date="2027-03-11" type="rest" /> <termin date="2027-03-25" type="rest" /> <termin date="2027-04-08" type="rest" />
+            <termin date="2027-04-22" type="rest" /> <termin date="2027-05-07" type="rest" /> <termin date="2027-05-20" type="rest" /> <termin date="2027-06-03" type="rest" /> <termin date="2027-06-17" type="rest" />
+            <termin date="2027-07-01" type="rest" /> <termin date="2027-07-15" type="rest" /> <termin date="2027-07-29" type="rest" /> <termin date="2027-08-12" type="rest" /> <termin date="2027-08-26" type="rest" />
+            <termin date="2027-09-09" type="rest" /> <termin date="2027-09-23" type="rest" /> <termin date="2027-10-07" type="rest" /> <termin date="2027-10-21" type="rest" /> <termin date="2027-11-04" type="rest" />
+            <termin date="2027-11-18" type="rest" /> <termin date="2027-12-02" type="rest" /> <termin date="2027-12-16" type="rest" /> <termin date="2027-12-30" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-15" type="bio" /> <termin date="2026-05-28" type="bio" /> <termin date="2026-06-11" type="bio" /> <termin date="2026-06-25" type="bio" /> <termin date="2026-07-09" type="bio" />
+            <termin date="2026-07-23" type="bio" /> <termin date="2026-08-06" type="bio" /> <termin date="2026-08-20" type="bio" /> <termin date="2026-09-03" type="bio" /> <termin date="2026-09-17" type="bio" />
+            <termin date="2026-10-01" type="bio" /> <termin date="2026-10-15" type="bio" /> <termin date="2026-10-29" type="bio" /> <termin date="2026-11-12" type="bio" /> <termin date="2026-11-26" type="bio" />
+            <termin date="2026-12-10" type="bio" /> <termin date="2026-12-24" type="bio" /> <termin date="2027-01-07" type="bio" /> <termin date="2027-01-21" type="bio" /> <termin date="2027-02-04" type="bio" />
+            <termin date="2027-02-18" type="bio" /> <termin date="2027-03-04" type="bio" /> <termin date="2027-03-18" type="bio" /> <termin date="2027-04-01" type="bio" /> <termin date="2027-04-15" type="bio" />
+            <termin date="2027-04-29" type="bio" /> <termin date="2027-05-13" type="bio" /> <termin date="2027-05-27" type="bio" /> <termin date="2027-06-10" type="bio" /> <termin date="2027-06-24" type="bio" />
+            <termin date="2027-07-08" type="bio" /> <termin date="2027-07-22" type="bio" /> <termin date="2027-08-05" type="bio" /> <termin date="2027-08-19" type="bio" /> <termin date="2027-09-02" type="bio" />
+            <termin date="2027-09-16" type="bio" /> <termin date="2027-09-30" type="bio" /> <termin date="2027-10-14" type="bio" /> <termin date="2027-10-28" type="bio" /> <termin date="2027-11-11" type="bio" />
+            <termin date="2027-11-25" type="bio" /> <termin date="2027-12-09" type="bio" /> <termin date="2027-12-23" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-12" type="papier" /> <termin date="2026-06-09" type="papier" /> <termin date="2026-07-07" type="papier" /> <termin date="2026-08-04" type="papier" /> <termin date="2026-09-01" type="papier" />
+            <termin date="2026-09-29" type="papier" /> <termin date="2026-10-27" type="papier" /> <termin date="2026-11-24" type="papier" /> <termin date="2026-12-22" type="papier" /> <termin date="2027-01-19" type="papier" />
+            <termin date="2027-02-16" type="papier" /> <termin date="2027-03-16" type="papier" /> <termin date="2027-04-13" type="papier" /> <termin date="2027-05-11" type="papier" /> <termin date="2027-06-08" type="papier" />
+            <termin date="2027-07-06" type="papier" /> <termin date="2027-08-03" type="papier" /> <termin date="2027-08-31" type="papier" /> <termin date="2027-09-28" type="papier" /> <termin date="2027-10-26" type="papier" />
+            <termin date="2027-11-23" type="papier" /> <termin date="2027-12-21" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-21" type="gelb" /> <termin date="2026-06-18" type="gelb" /> <termin date="2026-07-16" type="gelb" /> <termin date="2026-08-13" type="gelb" /> <termin date="2026-09-10" type="gelb" />
+            <termin date="2026-10-08" type="gelb" /> <termin date="2026-11-05" type="gelb" /> <termin date="2026-12-03" type="gelb" /> <termin date="2026-12-31" type="gelb" /> <termin date="2027-01-28" type="gelb" />
+            <termin date="2027-02-25" type="gelb" /> <termin date="2027-03-25" type="gelb" /> <termin date="2027-04-22" type="gelb" /> <termin date="2027-05-20" type="gelb" /> <termin date="2027-06-17" type="gelb" />
+            <termin date="2027-07-15" type="gelb" /> <termin date="2027-08-12" type="gelb" /> <termin date="2027-09-09" type="gelb" /> <termin date="2027-10-07" type="gelb" /> <termin date="2027-11-04" type="gelb" />
+            <termin date="2027-12-02" type="gelb" /> <termin date="2027-12-30" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 2 – Nördlich Bahnlinie (Lintel, Maibusch, Nordenholz)">
+            <termin date="2025-12-04" type="rest" /> <termin date="2025-12-18" type="rest" /> <termin date="2026-01-02" type="rest" />
+            <termin date="2026-01-15" type="rest" /> <termin date="2026-01-29" type="rest" /> <termin date="2026-02-12" type="rest" /> <termin date="2026-02-26" type="rest" />
+            <termin date="2026-03-12" type="rest" /> <termin date="2026-03-26" type="rest" /> <termin date="2026-04-09" type="rest" /> <termin date="2026-04-23" type="rest" />
+
+            <termin date="2025-12-11" type="bio" /> <termin date="2025-12-24" type="bio" />
+            <termin date="2026-01-08" type="bio" /> <termin date="2026-01-22" type="bio" /> <termin date="2026-02-05" type="bio" /> <termin date="2026-02-19" type="bio" />
+            <termin date="2026-03-05" type="bio" /> <termin date="2026-03-19" type="bio" /> <termin date="2026-04-02" type="bio" /> <termin date="2026-04-16" type="bio" /> <termin date="2026-04-30" type="bio" />
+
+            <termin date="2025-12-20" type="papier" />
+            <termin date="2026-01-19" type="papier" /> <termin date="2026-02-16" type="papier" /> <termin date="2026-03-16" type="papier" /> <termin date="2026-04-13" type="papier" />
+
+            <termin date="2025-12-01" type="gelb" /> <termin date="2025-12-29" type="gelb" />
+            <termin date="2026-01-26" type="gelb" /> <termin date="2026-02-23" type="gelb" /> <termin date="2026-03-23" type="gelb" /> <termin date="2026-04-21" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-07" type="rest" /> <termin date="2026-05-21" type="rest" /> <termin date="2026-06-04" type="rest" /> <termin date="2026-06-18" type="rest" /> <termin date="2026-07-02" type="rest" />
+            <termin date="2026-07-16" type="rest" /> <termin date="2026-07-30" type="rest" /> <termin date="2026-08-13" type="rest" /> <termin date="2026-08-27" type="rest" /> <termin date="2026-09-10" type="rest" />
+            <termin date="2026-09-24" type="rest" /> <termin date="2026-10-08" type="rest" /> <termin date="2026-10-22" type="rest" /> <termin date="2026-11-05" type="rest" /> <termin date="2026-11-19" type="rest" />
+            <termin date="2026-12-03" type="rest" /> <termin date="2026-12-17" type="rest" /> <termin date="2026-12-31" type="rest" /> <termin date="2027-01-14" type="rest" /> <termin date="2027-01-28" type="rest" />
+            <termin date="2027-02-11" type="rest" /> <termin date="2027-02-25" type="rest" /> <termin date="2027-03-11" type="rest" /> <termin date="2027-03-25" type="rest" /> <termin date="2027-04-08" type="rest" />
+            <termin date="2027-04-22" type="rest" /> <termin date="2027-05-07" type="rest" /> <termin date="2027-05-20" type="rest" /> <termin date="2027-06-03" type="rest" /> <termin date="2027-06-17" type="rest" />
+            <termin date="2027-07-01" type="rest" /> <termin date="2027-07-15" type="rest" /> <termin date="2027-07-29" type="rest" /> <termin date="2027-08-12" type="rest" /> <termin date="2027-08-26" type="rest" />
+            <termin date="2027-09-09" type="rest" /> <termin date="2027-09-23" type="rest" /> <termin date="2027-10-07" type="rest" /> <termin date="2027-10-21" type="rest" /> <termin date="2027-11-04" type="rest" />
+            <termin date="2027-11-18" type="rest" /> <termin date="2027-12-02" type="rest" /> <termin date="2027-12-16" type="rest" /> <termin date="2027-12-30" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-15" type="bio" /> <termin date="2026-05-28" type="bio" /> <termin date="2026-06-11" type="bio" /> <termin date="2026-06-25" type="bio" /> <termin date="2026-07-09" type="bio" />
+            <termin date="2026-07-23" type="bio" /> <termin date="2026-08-06" type="bio" /> <termin date="2026-08-20" type="bio" /> <termin date="2026-09-03" type="bio" /> <termin date="2026-09-17" type="bio" />
+            <termin date="2026-10-01" type="bio" /> <termin date="2026-10-15" type="bio" /> <termin date="2026-10-29" type="bio" /> <termin date="2026-11-12" type="bio" /> <termin date="2026-11-26" type="bio" />
+            <termin date="2026-12-10" type="bio" /> <termin date="2026-12-24" type="bio" /> <termin date="2027-01-07" type="bio" /> <termin date="2027-01-21" type="bio" /> <termin date="2027-02-04" type="bio" />
+            <termin date="2027-02-18" type="bio" /> <termin date="2027-03-04" type="bio" /> <termin date="2027-03-18" type="bio" /> <termin date="2027-04-01" type="bio" /> <termin date="2027-04-15" type="bio" />
+            <termin date="2027-04-29" type="bio" /> <termin date="2027-05-13" type="bio" /> <termin date="2027-05-27" type="bio" /> <termin date="2027-06-10" type="bio" /> <termin date="2027-06-24" type="bio" />
+            <termin date="2027-07-08" type="bio" /> <termin date="2027-07-22" type="bio" /> <termin date="2027-08-05" type="bio" /> <termin date="2027-08-19" type="bio" /> <termin date="2027-09-02" type="bio" />
+            <termin date="2027-09-16" type="bio" /> <termin date="2027-09-30" type="bio" /> <termin date="2027-10-14" type="bio" /> <termin date="2027-10-28" type="bio" /> <termin date="2027-11-11" type="bio" />
+            <termin date="2027-11-25" type="bio" /> <termin date="2027-12-09" type="bio" /> <termin date="2027-12-23" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-11" type="papier" /> <termin date="2026-06-08" type="papier" /> <termin date="2026-07-06" type="papier" /> <termin date="2026-08-03" type="papier" /> <termin date="2026-08-31" type="papier" />
+            <termin date="2026-09-28" type="papier" /> <termin date="2026-10-26" type="papier" /> <termin date="2026-11-23" type="papier" /> <termin date="2026-12-21" type="papier" /> <termin date="2027-01-18" type="papier" />
+            <termin date="2027-02-15" type="papier" /> <termin date="2027-03-15" type="papier" /> <termin date="2027-04-12" type="papier" /> <termin date="2027-05-10" type="papier" /> <termin date="2027-06-07" type="papier" />
+            <termin date="2027-07-05" type="papier" /> <termin date="2027-08-02" type="papier" /> <termin date="2027-08-30" type="papier" /> <termin date="2027-09-27" type="papier" /> <termin date="2027-10-25" type="papier" />
+            <termin date="2027-11-22" type="papier" /> <termin date="2027-12-20" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-19" type="gelb" /> <termin date="2026-06-16" type="gelb" /> <termin date="2026-07-14" type="gelb" /> <termin date="2026-08-11" type="gelb" /> <termin date="2026-09-08" type="gelb" />
+            <termin date="2026-10-06" type="gelb" /> <termin date="2026-11-03" type="gelb" /> <termin date="2026-12-01" type="gelb" /> <termin date="2026-12-29" type="gelb" /> <termin date="2027-01-26" type="gelb" />
+            <termin date="2027-02-23" type="gelb" /> <termin date="2027-03-23" type="gelb" /> <termin date="2027-04-20" type="gelb" /> <termin date="2027-05-18" type="gelb" /> <termin date="2027-06-15" type="gelb" />
+            <termin date="2027-07-13" type="gelb" /> <termin date="2027-08-10" type="gelb" /> <termin date="2027-09-07" type="gelb" /> <termin date="2027-10-05" type="gelb" /> <termin date="2027-11-02" type="gelb" />
+            <termin date="2027-11-30" type="gelb" /> <termin date="2027-12-28" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 3 – Wüsting, Oberhausen, Altmoorhausen, Hurrel">
+            <termin date="2025-12-04" type="rest" /> <termin date="2025-12-18" type="rest" /> <termin date="2026-01-02" type="rest" />
+            <termin date="2026-01-15" type="rest" /> <termin date="2026-01-29" type="rest" /> <termin date="2026-02-12" type="rest" /> <termin date="2026-02-26" type="rest" />
+            <termin date="2026-03-12" type="rest" /> <termin date="2026-03-26" type="rest" /> <termin date="2026-04-09" type="rest" /> <termin date="2026-04-23" type="rest" />
+
+            <termin date="2025-12-11" type="bio" /> <termin date="2025-12-24" type="bio" />
+            <termin date="2026-01-08" type="bio" /> <termin date="2026-01-22" type="bio" /> <termin date="2026-02-05" type="bio" /> <termin date="2026-02-19" type="bio" />
+            <termin date="2026-03-05" type="bio" /> <termin date="2026-03-19" type="bio" /> <termin date="2026-04-02" type="bio" /> <termin date="2026-04-16" type="bio" /> <termin date="2026-04-30" type="bio" />
+
+            <termin date="2025-12-01" type="papier" /> <termin date="2025-12-29" type="papier" />
+            <termin date="2026-01-26" type="papier" /> <termin date="2026-02-23" type="papier" /> <termin date="2026-03-23" type="papier" /> <termin date="2026-04-21" type="papier" />
+
+            <termin date="2025-12-05" type="gelb" />
+            <termin date="2026-01-03" type="gelb" /> <termin date="2026-01-30" type="gelb" /> <termin date="2026-02-27" type="gelb" /> <termin date="2026-03-27" type="gelb" /> <termin date="2026-04-25" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-07" type="rest" /> <termin date="2026-05-21" type="rest" /> <termin date="2026-06-04" type="rest" /> <termin date="2026-06-18" type="rest" /> <termin date="2026-07-02" type="rest" />
+            <termin date="2026-07-16" type="rest" /> <termin date="2026-07-30" type="rest" /> <termin date="2026-08-13" type="rest" /> <termin date="2026-08-27" type="rest" /> <termin date="2026-09-10" type="rest" />
+            <termin date="2026-09-24" type="rest" /> <termin date="2026-10-08" type="rest" /> <termin date="2026-10-22" type="rest" /> <termin date="2026-11-05" type="rest" /> <termin date="2026-11-19" type="rest" />
+            <termin date="2026-12-03" type="rest" /> <termin date="2026-12-17" type="rest" /> <termin date="2026-12-31" type="rest" /> <termin date="2027-01-14" type="rest" /> <termin date="2027-01-28" type="rest" />
+            <termin date="2027-02-11" type="rest" /> <termin date="2027-02-25" type="rest" /> <termin date="2027-03-11" type="rest" /> <termin date="2027-03-25" type="rest" /> <termin date="2027-04-08" type="rest" />
+            <termin date="2027-04-22" type="rest" /> <termin date="2027-05-07" type="rest" /> <termin date="2027-05-20" type="rest" /> <termin date="2027-06-03" type="rest" /> <termin date="2027-06-17" type="rest" />
+            <termin date="2027-07-01" type="rest" /> <termin date="2027-07-15" type="rest" /> <termin date="2027-07-29" type="rest" /> <termin date="2027-08-12" type="rest" /> <termin date="2027-08-26" type="rest" />
+            <termin date="2027-09-09" type="rest" /> <termin date="2027-09-23" type="rest" /> <termin date="2027-10-07" type="rest" /> <termin date="2027-10-21" type="rest" /> <termin date="2027-11-04" type="rest" />
+            <termin date="2027-11-18" type="rest" /> <termin date="2027-12-02" type="rest" /> <termin date="2027-12-16" type="rest" /> <termin date="2027-12-30" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-15" type="bio" /> <termin date="2026-05-28" type="bio" /> <termin date="2026-06-11" type="bio" /> <termin date="2026-06-25" type="bio" /> <termin date="2026-07-09" type="bio" />
+            <termin date="2026-07-23" type="bio" /> <termin date="2026-08-06" type="bio" /> <termin date="2026-08-20" type="bio" /> <termin date="2026-09-03" type="bio" /> <termin date="2026-09-17" type="bio" />
+            <termin date="2026-10-01" type="bio" /> <termin date="2026-10-15" type="bio" /> <termin date="2026-10-29" type="bio" /> <termin date="2026-11-12" type="bio" /> <termin date="2026-11-26" type="bio" />
+            <termin date="2026-12-10" type="bio" /> <termin date="2026-12-24" type="bio" /> <termin date="2027-01-07" type="bio" /> <termin date="2027-01-21" type="bio" /> <termin date="2027-02-04" type="bio" />
+            <termin date="2027-02-18" type="bio" /> <termin date="2027-03-04" type="bio" /> <termin date="2027-03-18" type="bio" /> <termin date="2027-04-01" type="bio" /> <termin date="2027-04-15" type="bio" />
+            <termin date="2027-04-29" type="bio" /> <termin date="2027-05-13" type="bio" /> <termin date="2027-05-27" type="bio" /> <termin date="2027-06-10" type="bio" /> <termin date="2027-06-24" type="bio" />
+            <termin date="2027-07-08" type="bio" /> <termin date="2027-07-22" type="bio" /> <termin date="2027-08-05" type="bio" /> <termin date="2027-08-19" type="bio" /> <termin date="2027-09-02" type="bio" />
+            <termin date="2027-09-16" type="bio" /> <termin date="2027-09-30" type="bio" /> <termin date="2027-10-14" type="bio" /> <termin date="2027-10-28" type="bio" /> <termin date="2027-11-11" type="bio" />
+            <termin date="2027-11-25" type="bio" /> <termin date="2027-12-09" type="bio" /> <termin date="2027-12-23" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-19" type="papier" /> <termin date="2026-06-16" type="papier" /> <termin date="2026-07-14" type="papier" /> <termin date="2026-08-11" type="papier" /> <termin date="2026-09-08" type="papier" />
+            <termin date="2026-10-06" type="papier" /> <termin date="2026-11-03" type="papier" /> <termin date="2026-12-01" type="papier" /> <termin date="2026-12-29" type="papier" /> <termin date="2027-01-26" type="papier" />
+            <termin date="2027-02-23" type="papier" /> <termin date="2027-03-23" type="papier" /> <termin date="2027-04-20" type="papier" /> <termin date="2027-05-18" type="papier" /> <termin date="2027-06-15" type="papier" />
+            <termin date="2027-07-13" type="papier" /> <termin date="2027-08-10" type="papier" /> <termin date="2027-09-07" type="papier" /> <termin date="2027-10-05" type="papier" /> <termin date="2027-11-02" type="papier" />
+            <termin date="2027-11-30" type="papier" /> <termin date="2027-12-28" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-23" type="gelb" /> <termin date="2026-06-20" type="gelb" /> <termin date="2026-07-18" type="gelb" /> <termin date="2026-08-15" type="gelb" /> <termin date="2026-09-12" type="gelb" />
+            <termin date="2026-10-10" type="gelb" /> <termin date="2026-11-07" type="gelb" /> <termin date="2026-12-05" type="gelb" /> <termin date="2027-01-02" type="gelb" /> <termin date="2027-01-30" type="gelb" />
+            <termin date="2027-02-27" type="gelb" /> <termin date="2027-03-27" type="gelb" /> <termin date="2027-04-24" type="gelb" /> <termin date="2027-05-22" type="gelb" /> <termin date="2027-06-19" type="gelb" />
+            <termin date="2027-07-17" type="gelb" /> <termin date="2027-08-14" type="gelb" /> <termin date="2027-09-11" type="gelb" /> <termin date="2027-10-09" type="gelb" /> <termin date="2027-11-06" type="gelb" />
+            <termin date="2027-12-04" type="gelb" />
+        </bezirk>
+    </gemeinde>
+
+    <gemeinde name="Wardenburg">
+        <bezirk name="Bezirk 1 – Wardenburg-Ort, Westerburg, Höven, Astrup">
+            <termin date="2025-12-10" type="rest" /> <termin date="2025-12-23" type="rest" />
+            <termin date="2026-01-07" type="rest" /> <termin date="2026-01-21" type="rest" /> <termin date="2026-02-04" type="rest" /> <termin date="2026-02-18" type="rest" />
+            <termin date="2026-03-04" type="rest" /> <termin date="2026-03-18" type="rest" /> <termin date="2026-04-01" type="rest" /> <termin date="2026-04-15" type="rest" /> <termin date="2026-04-29" type="rest" />
+
+            <termin date="2025-12-03" type="bio" /> <termin date="2025-12-17" type="bio" /> <termin date="2025-12-31" type="bio" />
+            <termin date="2026-01-14" type="bio" /> <termin date="2026-01-28" type="bio" /> <termin date="2026-02-11" type="bio" /> <termin date="2026-02-25" type="bio" />
+            <termin date="2026-03-11" type="bio" /> <termin date="2026-03-25" type="bio" /> <termin date="2026-04-08" type="bio" /> <termin date="2026-04-22" type="bio" />
+
+            <termin date="2025-12-16" type="papier" />
+            <termin date="2026-01-13" type="papier" /> <termin date="2026-02-10" type="papier" /> <termin date="2026-03-10" type="papier" /> <termin date="2026-04-07" type="papier" />
+
+            <termin date="2025-12-22" type="gelb" />
+            <termin date="2026-01-20" type="gelb" /> <termin date="2026-02-17" type="gelb" /> <termin date="2026-03-17" type="gelb" /> <termin date="2026-04-14" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-13" type="rest" /> <termin date="2026-05-27" type="rest" /> <termin date="2026-06-10" type="rest" /> <termin date="2026-06-24" type="rest" /> <termin date="2026-07-08" type="rest" />
+            <termin date="2026-07-22" type="rest" /> <termin date="2026-08-05" type="rest" /> <termin date="2026-08-19" type="rest" /> <termin date="2026-09-02" type="rest" /> <termin date="2026-09-16" type="rest" />
+            <termin date="2026-09-30" type="rest" /> <termin date="2026-10-14" type="rest" /> <termin date="2026-10-28" type="rest" /> <termin date="2026-11-11" type="rest" /> <termin date="2026-11-25" type="rest" />
+            <termin date="2026-12-09" type="rest" /> <termin date="2026-12-23" type="rest" /> <termin date="2027-01-06" type="rest" /> <termin date="2027-01-20" type="rest" /> <termin date="2027-02-03" type="rest" />
+            <termin date="2027-02-17" type="rest" /> <termin date="2027-03-03" type="rest" /> <termin date="2027-03-17" type="rest" /> <termin date="2027-03-31" type="rest" /> <termin date="2027-04-14" type="rest" />
+            <termin date="2027-04-28" type="rest" /> <termin date="2027-05-12" type="rest" /> <termin date="2027-05-26" type="rest" /> <termin date="2027-06-09" type="rest" /> <termin date="2027-06-23" type="rest" />
+            <termin date="2027-07-07" type="rest" /> <termin date="2027-07-21" type="rest" /> <termin date="2027-08-04" type="rest" /> <termin date="2027-08-18" type="rest" /> <termin date="2027-09-01" type="rest" />
+            <termin date="2027-09-15" type="rest" /> <termin date="2027-09-29" type="rest" /> <termin date="2027-10-13" type="rest" /> <termin date="2027-10-27" type="rest" /> <termin date="2027-11-10" type="rest" />
+            <termin date="2027-11-24" type="rest" /> <termin date="2027-12-08" type="rest" /> <termin date="2027-12-22" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-06" type="bio" /> <termin date="2026-05-20" type="bio" /> <termin date="2026-06-03" type="bio" /> <termin date="2026-06-17" type="bio" /> <termin date="2026-07-01" type="bio" />
+            <termin date="2026-07-15" type="bio" /> <termin date="2026-07-29" type="bio" /> <termin date="2026-08-12" type="bio" /> <termin date="2026-08-26" type="bio" /> <termin date="2026-09-09" type="bio" />
+            <termin date="2026-09-23" type="bio" /> <termin date="2026-10-07" type="bio" /> <termin date="2026-10-21" type="bio" /> <termin date="2026-11-04" type="bio" /> <termin date="2026-11-18" type="bio" />
+            <termin date="2026-12-02" type="bio" /> <termin date="2026-12-16" type="bio" /> <termin date="2026-12-30" type="bio" /> <termin date="2027-01-13" type="bio" /> <termin date="2027-01-27" type="bio" />
+            <termin date="2027-02-10" type="bio" /> <termin date="2027-02-24" type="bio" /> <termin date="2027-03-10" type="bio" /> <termin date="2027-03-24" type="bio" /> <termin date="2027-04-07" type="bio" />
+            <termin date="2027-04-21" type="bio" /> <termin date="2027-05-05" type="bio" /> <termin date="2027-05-19" type="bio" /> <termin date="2027-06-02" type="bio" /> <termin date="2027-06-16" type="bio" />
+            <termin date="2027-06-30" type="bio" /> <termin date="2027-07-14" type="bio" /> <termin date="2027-07-28" type="bio" /> <termin date="2027-08-11" type="bio" /> <termin date="2027-08-25" type="bio" />
+            <termin date="2027-09-08" type="bio" /> <termin date="2027-09-22" type="bio" /> <termin date="2027-10-06" type="bio" /> <termin date="2027-10-20" type="bio" /> <termin date="2027-11-03" type="bio" />
+            <termin date="2027-11-17" type="bio" /> <termin date="2027-12-01" type="bio" /> <termin date="2027-12-15" type="bio" /> <termin date="2027-12-29" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-05" type="papier" /> <termin date="2026-06-02" type="papier" /> <termin date="2026-06-30" type="papier" /> <termin date="2026-07-28" type="papier" /> <termin date="2026-08-25" type="papier" />
+            <termin date="2026-09-22" type="papier" /> <termin date="2026-10-20" type="papier" /> <termin date="2026-11-17" type="papier" /> <termin date="2026-12-15" type="papier" /> <termin date="2027-01-12" type="papier" />
+            <termin date="2027-02-09" type="papier" /> <termin date="2027-03-09" type="papier" /> <termin date="2027-04-06" type="papier" /> <termin date="2027-05-04" type="papier" /> <termin date="2027-06-01" type="papier" />
+            <termin date="2027-06-29" type="papier" /> <termin date="2027-07-27" type="papier" /> <termin date="2027-08-24" type="papier" /> <termin date="2027-09-21" type="papier" /> <termin date="2027-10-19" type="papier" />
+            <termin date="2027-11-16" type="papier" /> <termin date="2027-12-14" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-12" type="gelb" /> <termin date="2026-06-09" type="gelb" /> <termin date="2026-07-07" type="gelb" /> <termin date="2026-08-04" type="gelb" /> <termin date="2026-09-01" type="gelb" />
+            <termin date="2026-09-29" type="gelb" /> <termin date="2026-10-27" type="gelb" /> <termin date="2026-11-24" type="gelb" /> <termin date="2026-12-22" type="gelb" /> <termin date="2027-01-19" type="gelb" />
+            <termin date="2027-02-16" type="gelb" /> <termin date="2027-03-16" type="gelb" /> <termin date="2027-04-13" type="gelb" /> <termin date="2027-05-11" type="gelb" /> <termin date="2027-06-08" type="gelb" />
+            <termin date="2027-07-06" type="gelb" /> <termin date="2027-08-03" type="gelb" /> <termin date="2027-08-31" type="gelb" /> <termin date="2027-09-28" type="gelb" /> <termin date="2027-10-26" type="gelb" />
+            <termin date="2027-11-23" type="gelb" /> <termin date="2027-12-21" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 2 – Tungeln, Hundsmühlen, Südmoslesfehn">
+            <termin date="2025-12-10" type="rest" /> <termin date="2025-12-23" type="rest" />
+            <termin date="2026-01-07" type="rest" /> <termin date="2026-01-21" type="rest" /> <termin date="2026-02-04" type="rest" /> <termin date="2026-02-18" type="rest" />
+            <termin date="2026-03-04" type="rest" /> <termin date="2026-03-18" type="rest" /> <termin date="2026-04-01" type="rest" /> <termin date="2026-04-15" type="rest" /> <termin date="2026-04-29" type="rest" />
+
+            <termin date="2025-12-03" type="bio" /> <termin date="2025-12-17" type="bio" /> <termin date="2025-12-31" type="bio" />
+            <termin date="2026-01-14" type="bio" /> <termin date="2026-01-28" type="bio" /> <termin date="2026-02-11" type="bio" /> <termin date="2026-02-25" type="bio" />
+            <termin date="2026-03-11" type="bio" /> <termin date="2026-03-25" type="bio" /> <termin date="2026-04-08" type="bio" /> <termin date="2026-04-22" type="bio" />
+
+            <termin date="2025-12-15" type="papier" />
+            <termin date="2026-01-12" type="papier" /> <termin date="2026-02-09" type="papier" /> <termin date="2026-03-09" type="papier" /> <termin date="2026-04-07" type="papier" />
+
+            <termin date="2025-12-20" type="gelb" />
+            <termin date="2026-01-19" type="gelb" /> <termin date="2026-02-16" type="gelb" /> <termin date="2026-03-16" type="gelb" /> <termin date="2026-04-13" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-13" type="rest" /> <termin date="2026-05-27" type="rest" /> <termin date="2026-06-10" type="rest" /> <termin date="2026-06-24" type="rest" /> <termin date="2026-07-08" type="rest" />
+            <termin date="2026-07-22" type="rest" /> <termin date="2026-08-05" type="rest" /> <termin date="2026-08-19" type="rest" /> <termin date="2026-09-02" type="rest" /> <termin date="2026-09-16" type="rest" />
+            <termin date="2026-09-30" type="rest" /> <termin date="2026-10-14" type="rest" /> <termin date="2026-10-28" type="rest" /> <termin date="2026-11-11" type="rest" /> <termin date="2026-11-25" type="rest" />
+            <termin date="2026-12-09" type="rest" /> <termin date="2026-12-23" type="rest" /> <termin date="2027-01-06" type="rest" /> <termin date="2027-01-20" type="rest" /> <termin date="2027-02-03" type="rest" />
+            <termin date="2027-02-17" type="rest" /> <termin date="2027-03-03" type="rest" /> <termin date="2027-03-17" type="rest" /> <termin date="2027-03-31" type="rest" /> <termin date="2027-04-14" type="rest" />
+            <termin date="2027-04-28" type="rest" /> <termin date="2027-05-12" type="rest" /> <termin date="2027-05-26" type="rest" /> <termin date="2027-06-09" type="rest" /> <termin date="2027-06-23" type="rest" />
+            <termin date="2027-07-07" type="rest" /> <termin date="2027-07-21" type="rest" /> <termin date="2027-08-04" type="rest" /> <termin date="2027-08-18" type="rest" /> <termin date="2027-09-01" type="rest" />
+            <termin date="2027-09-15" type="rest" /> <termin date="2027-09-29" type="rest" /> <termin date="2027-10-13" type="rest" /> <termin date="2027-10-27" type="rest" /> <termin date="2027-11-10" type="rest" />
+            <termin date="2027-11-24" type="rest" /> <termin date="2027-12-08" type="rest" /> <termin date="2027-12-22" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-06" type="bio" /> <termin date="2026-05-20" type="bio" /> <termin date="2026-06-03" type="bio" /> <termin date="2026-06-17" type="bio" /> <termin date="2026-07-01" type="bio" />
+            <termin date="2026-07-15" type="bio" /> <termin date="2026-07-29" type="bio" /> <termin date="2026-08-12" type="bio" /> <termin date="2026-08-26" type="bio" /> <termin date="2026-09-09" type="bio" />
+            <termin date="2026-09-23" type="bio" /> <termin date="2026-10-07" type="bio" /> <termin date="2026-10-21" type="bio" /> <termin date="2026-11-04" type="bio" /> <termin date="2026-11-18" type="bio" />
+            <termin date="2026-12-02" type="bio" /> <termin date="2026-12-16" type="bio" /> <termin date="2026-12-30" type="bio" /> <termin date="2027-01-13" type="bio" /> <termin date="2027-01-27" type="bio" />
+            <termin date="2027-02-10" type="bio" /> <termin date="2027-02-24" type="bio" /> <termin date="2027-03-10" type="bio" /> <termin date="2027-03-24" type="bio" /> <termin date="2027-04-07" type="bio" />
+            <termin date="2027-04-21" type="bio" /> <termin date="2027-05-05" type="bio" /> <termin date="2027-05-19" type="bio" /> <termin date="2027-06-02" type="bio" /> <termin date="2027-06-16" type="bio" />
+            <termin date="2027-06-30" type="bio" /> <termin date="2027-07-14" type="bio" /> <termin date="2027-07-28" type="bio" /> <termin date="2027-08-11" type="bio" /> <termin date="2027-08-25" type="bio" />
+            <termin date="2027-09-08" type="bio" /> <termin date="2027-09-22" type="bio" /> <termin date="2027-10-06" type="bio" /> <termin date="2027-10-20" type="bio" /> <termin date="2027-11-03" type="bio" />
+            <termin date="2027-11-17" type="bio" /> <termin date="2027-12-01" type="bio" /> <termin date="2027-12-15" type="bio" /> <termin date="2027-12-29" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-05" type="papier" /> <termin date="2026-06-02" type="papier" /> <termin date="2026-06-30" type="papier" /> <termin date="2026-07-28" type="papier" /> <termin date="2026-08-25" type="papier" />
+            <termin date="2026-09-22" type="papier" /> <termin date="2026-10-20" type="papier" /> <termin date="2026-11-17" type="papier" /> <termin date="2026-12-15" type="papier" /> <termin date="2027-01-12" type="papier" />
+            <termin date="2027-02-09" type="papier" /> <termin date="2027-03-09" type="papier" /> <termin date="2027-04-06" type="papier" /> <termin date="2027-05-04" type="papier" /> <termin date="2027-06-01" type="papier" />
+            <termin date="2027-06-29" type="papier" /> <termin date="2027-07-27" type="papier" /> <termin date="2027-08-24" type="papier" /> <termin date="2027-09-21" type="papier" /> <termin date="2027-10-19" type="papier" />
+            <termin date="2027-11-16" type="papier" /> <termin date="2027-12-14" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-11" type="gelb" /> <termin date="2026-06-08" type="gelb" /> <termin date="2026-07-06" type="gelb" /> <termin date="2026-08-03" type="gelb" /> <termin date="2026-08-31" type="gelb" />
+            <termin date="2026-09-28" type="gelb" /> <termin date="2026-10-26" type="gelb" /> <termin date="2026-11-23" type="gelb" /> <termin date="2026-12-21" type="gelb" /> <termin date="2027-01-18" type="gelb" />
+            <termin date="2027-02-15" type="gelb" /> <termin date="2027-03-15" type="gelb" /> <termin date="2027-04-12" type="gelb" /> <termin date="2027-05-10" type="gelb" /> <termin date="2027-06-07" type="gelb" />
+            <termin date="2027-07-05" type="gelb" /> <termin date="2027-08-02" type="gelb" /> <termin date="2027-08-30" type="gelb" /> <termin date="2027-09-27" type="gelb" /> <termin date="2027-10-25" type="gelb" />
+            <termin date="2027-11-22" type="gelb" /> <termin date="2027-12-20" type="gelb" />
+        </bezirk>
+        <bezirk name="Bezirk 3 – Achternmeer, Benthullen, Littel, Charlottendorf">
+            <termin date="2025-12-10" type="rest" /> <termin date="2025-12-23" type="rest" />
+            <termin date="2026-01-07" type="rest" /> <termin date="2026-01-21" type="rest" /> <termin date="2026-02-04" type="rest" /> <termin date="2026-02-18" type="rest" />
+            <termin date="2026-03-04" type="rest" /> <termin date="2026-03-18" type="rest" /> <termin date="2026-04-01" type="rest" /> <termin date="2026-04-15" type="rest" /> <termin date="2026-04-29" type="rest" />
+
+            <termin date="2025-12-03" type="bio" /> <termin date="2025-12-17" type="bio" /> <termin date="2025-12-31" type="bio" />
+            <termin date="2026-01-14" type="bio" /> <termin date="2026-01-28" type="bio" /> <termin date="2026-02-11" type="bio" /> <termin date="2026-02-25" type="bio" />
+            <termin date="2026-03-11" type="bio" /> <termin date="2026-03-25" type="bio" /> <termin date="2026-04-08" type="bio" /> <termin date="2026-04-22" type="bio" />
+
+            <termin date="2025-12-18" type="papier" />
+            <termin date="2026-01-15" type="papier" /> <termin date="2026-02-12" type="papier" /> <termin date="2026-03-12" type="papier" /> <termin date="2026-04-09" type="papier" />
+
+            <termin date="2025-12-24" type="gelb" />
+            <termin date="2026-01-22" type="gelb" /> <termin date="2026-02-19" type="gelb" /> <termin date="2026-03-19" type="gelb" /> <termin date="2026-04-16" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-13" type="rest" /> <termin date="2026-05-27" type="rest" /> <termin date="2026-06-10" type="rest" /> <termin date="2026-06-24" type="rest" /> <termin date="2026-07-08" type="rest" />
+            <termin date="2026-07-22" type="rest" /> <termin date="2026-08-05" type="rest" /> <termin date="2026-08-19" type="rest" /> <termin date="2026-09-02" type="rest" /> <termin date="2026-09-16" type="rest" />
+            <termin date="2026-09-30" type="rest" /> <termin date="2026-10-14" type="rest" /> <termin date="2026-10-28" type="rest" /> <termin date="2026-11-11" type="rest" /> <termin date="2026-11-25" type="rest" />
+            <termin date="2026-12-09" type="rest" /> <termin date="2026-12-23" type="rest" /> <termin date="2027-01-06" type="rest" /> <termin date="2027-01-20" type="rest" /> <termin date="2027-02-03" type="rest" />
+            <termin date="2027-02-17" type="rest" /> <termin date="2027-03-03" type="rest" /> <termin date="2027-03-17" type="rest" /> <termin date="2027-03-31" type="rest" /> <termin date="2027-04-14" type="rest" />
+            <termin date="2027-04-28" type="rest" /> <termin date="2027-05-12" type="rest" /> <termin date="2027-05-26" type="rest" /> <termin date="2027-06-09" type="rest" /> <termin date="2027-06-23" type="rest" />
+            <termin date="2027-07-07" type="rest" /> <termin date="2027-07-21" type="rest" /> <termin date="2027-08-04" type="rest" /> <termin date="2027-08-18" type="rest" /> <termin date="2027-09-01" type="rest" />
+            <termin date="2027-09-15" type="rest" /> <termin date="2027-09-29" type="rest" /> <termin date="2027-10-13" type="rest" /> <termin date="2027-10-27" type="rest" /> <termin date="2027-11-10" type="rest" />
+            <termin date="2027-11-24" type="rest" /> <termin date="2027-12-08" type="rest" /> <termin date="2027-12-22" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-06" type="bio" /> <termin date="2026-05-20" type="bio" /> <termin date="2026-06-03" type="bio" /> <termin date="2026-06-17" type="bio" /> <termin date="2026-07-01" type="bio" />
+            <termin date="2026-07-15" type="bio" /> <termin date="2026-07-29" type="bio" /> <termin date="2026-08-12" type="bio" /> <termin date="2026-08-26" type="bio" /> <termin date="2026-09-09" type="bio" />
+            <termin date="2026-09-23" type="bio" /> <termin date="2026-10-07" type="bio" /> <termin date="2026-10-21" type="bio" /> <termin date="2026-11-04" type="bio" /> <termin date="2026-11-18" type="bio" />
+            <termin date="2026-12-02" type="bio" /> <termin date="2026-12-16" type="bio" /> <termin date="2026-12-30" type="bio" /> <termin date="2027-01-13" type="bio" /> <termin date="2027-01-27" type="bio" />
+            <termin date="2027-02-10" type="bio" /> <termin date="2027-02-24" type="bio" /> <termin date="2027-03-10" type="bio" /> <termin date="2027-03-24" type="bio" /> <termin date="2027-04-07" type="bio" />
+            <termin date="2027-04-21" type="bio" /> <termin date="2027-05-05" type="bio" /> <termin date="2027-05-19" type="bio" /> <termin date="2027-06-02" type="bio" /> <termin date="2027-06-16" type="bio" />
+            <termin date="2027-06-30" type="bio" /> <termin date="2027-07-14" type="bio" /> <termin date="2027-07-28" type="bio" /> <termin date="2027-08-11" type="bio" /> <termin date="2027-08-25" type="bio" />
+            <termin date="2027-09-08" type="bio" /> <termin date="2027-09-22" type="bio" /> <termin date="2027-10-06" type="bio" /> <termin date="2027-10-20" type="bio" /> <termin date="2027-11-03" type="bio" />
+            <termin date="2027-11-17" type="bio" /> <termin date="2027-12-01" type="bio" /> <termin date="2027-12-15" type="bio" /> <termin date="2027-12-29" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-07" type="papier" /> <termin date="2026-06-04" type="papier" /> <termin date="2026-07-02" type="papier" /> <termin date="2026-07-30" type="papier" /> <termin date="2026-08-27" type="papier" />
+            <termin date="2026-09-24" type="papier" /> <termin date="2026-10-22" type="papier" /> <termin date="2026-11-19" type="papier" /> <termin date="2026-12-17" type="papier" /> <termin date="2027-01-14" type="papier" />
+            <termin date="2027-02-11" type="papier" /> <termin date="2027-03-11" type="papier" /> <termin date="2027-04-08" type="papier" /> <termin date="2027-05-07" type="papier" /> <termin date="2027-06-03" type="papier" />
+            <termin date="2027-07-01" type="papier" /> <termin date="2027-07-29" type="papier" /> <termin date="2027-08-26" type="papier" /> <termin date="2027-09-23" type="papier" /> <termin date="2027-10-21" type="papier" />
+            <termin date="2027-11-18" type="papier" /> <termin date="2027-12-16" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-15" type="gelb" /> <termin date="2026-06-11" type="gelb" /> <termin date="2026-07-09" type="gelb" /> <termin date="2026-08-06" type="gelb" /> <termin date="2026-09-03" type="gelb" />
+            <termin date="2026-10-01" type="gelb" /> <termin date="2026-10-29" type="gelb" /> <termin date="2026-11-26" type="gelb" /> <termin date="2026-12-24" type="gelb" /> <termin date="2027-01-21" type="gelb" />
+            <termin date="2027-02-18" type="gelb" /> <termin date="2027-03-18" type="gelb" /> <termin date="2027-04-15" type="gelb" /> <termin date="2027-05-13" type="gelb" /> <termin date="2027-06-10" type="gelb" />
+            <termin date="2027-07-08" type="gelb" /> <termin date="2027-08-05" type="gelb" /> <termin date="2027-09-02" type="gelb" /> <termin date="2027-09-30" type="gelb" /> <termin date="2027-10-28" type="gelb" />
+            <termin date="2027-11-25" type="gelb" /> <termin date="2027-12-23" type="gelb" />
+        </bezirk>
+    </gemeinde>
+
+    <gemeinde name="Wildeshausen">
+        <bezirk name="Stadt – Östlich Bahnlinie">
+            <termin date="2025-12-12" type="rest" /> <termin date="2025-12-27" type="rest" />
+            <termin date="2026-01-09" type="rest" /> <termin date="2026-01-23" type="rest" /> <termin date="2026-02-06" type="rest" /> <termin date="2026-02-20" type="rest" />
+            <termin date="2026-03-06" type="rest" /> <termin date="2026-03-20" type="rest" /> <termin date="2026-04-03" type="rest" /> <termin date="2026-04-17" type="rest" />
+
+            <termin date="2025-12-05" type="bio" /> <termin date="2025-12-19" type="bio" /> <termin date="2026-01-03" type="bio" />
+            <termin date="2026-01-16" type="bio" /> <termin date="2026-01-30" type="bio" /> <termin date="2026-02-13" type="bio" /> <termin date="2026-02-27" type="bio" />
+            <termin date="2026-03-13" type="bio" /> <termin date="2026-03-27" type="bio" /> <termin date="2026-04-10" type="bio" /> <termin date="2026-04-24" type="bio" />
+
+            <termin date="2025-12-24" type="papier" />
+            <termin date="2026-01-22" type="papier" /> <termin date="2026-02-19" type="papier" /> <termin date="2026-03-19" type="papier" /> <termin date="2026-04-16" type="papier" />
+
+            <termin date="2025-12-04" type="gelb" /> <termin date="2026-01-02" type="gelb" />
+            <termin date="2026-01-29" type="gelb" /> <termin date="2026-02-26" type="gelb" /> <termin date="2026-03-26" type="gelb" /> <termin date="2026-04-24" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-02" type="rest" /> <termin date="2026-05-15" type="rest" /> <termin date="2026-05-29" type="rest" /> <termin date="2026-06-12" type="rest" /> <termin date="2026-06-26" type="rest" />
+            <termin date="2026-07-10" type="rest" /> <termin date="2026-07-24" type="rest" /> <termin date="2026-08-07" type="rest" /> <termin date="2026-08-21" type="rest" /> <termin date="2026-09-04" type="rest" />
+            <termin date="2026-09-18" type="rest" /> <termin date="2026-10-02" type="rest" /> <termin date="2026-10-16" type="rest" /> <termin date="2026-10-30" type="rest" /> <termin date="2026-11-13" type="rest" />
+            <termin date="2026-11-27" type="rest" /> <termin date="2026-12-11" type="rest" /> <termin date="2026-12-28" type="rest" /> <termin date="2027-01-08" type="rest" /> <termin date="2027-01-22" type="rest" />
+            <termin date="2027-02-05" type="rest" /> <termin date="2027-02-19" type="rest" /> <termin date="2027-03-05" type="rest" /> <termin date="2027-03-19" type="rest" /> <termin date="2027-04-02" type="rest" />
+            <termin date="2027-04-16" type="rest" /> <termin date="2027-04-30" type="rest" /> <termin date="2027-05-14" type="rest" /> <termin date="2027-05-28" type="rest" /> <termin date="2027-06-11" type="rest" />
+            <termin date="2027-06-25" type="rest" /> <termin date="2027-07-09" type="rest" /> <termin date="2027-07-23" type="rest" /> <termin date="2027-08-06" type="rest" /> <termin date="2027-08-20" type="rest" />
+            <termin date="2027-09-03" type="rest" /> <termin date="2027-09-17" type="rest" /> <termin date="2027-10-01" type="rest" /> <termin date="2027-10-15" type="rest" /> <termin date="2027-10-29" type="rest" />
+            <termin date="2027-11-12" type="rest" /> <termin date="2027-11-26" type="rest" /> <termin date="2027-12-10" type="rest" /> <termin date="2027-12-24" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-08" type="bio" /> <termin date="2026-05-22" type="bio" /> <termin date="2026-06-05" type="bio" /> <termin date="2026-06-19" type="bio" /> <termin date="2026-07-03" type="bio" />
+            <termin date="2026-07-17" type="bio" /> <termin date="2026-07-31" type="bio" /> <termin date="2026-08-14" type="bio" /> <termin date="2026-08-28" type="bio" /> <termin date="2026-09-11" type="bio" />
+            <termin date="2026-09-25" type="bio" /> <termin date="2026-10-09" type="bio" /> <termin date="2026-10-23" type="bio" /> <termin date="2026-11-06" type="bio" /> <termin date="2026-11-20" type="bio" />
+            <termin date="2026-12-04" type="bio" /> <termin date="2026-12-18" type="bio" /> <termin date="2027-01-02" type="bio" /> <termin date="2027-01-15" type="bio" /> <termin date="2027-01-29" type="bio" />
+            <termin date="2027-02-12" type="bio" /> <termin date="2027-02-26" type="bio" /> <termin date="2027-03-12" type="bio" /> <termin date="2027-03-27" type="bio" /> <termin date="2027-04-09" type="bio" />
+            <termin date="2027-04-23" type="bio" /> <termin date="2027-05-07" type="bio" /> <termin date="2027-05-21" type="bio" /> <termin date="2027-06-04" type="bio" /> <termin date="2027-06-18" type="bio" />
+            <termin date="2027-07-02" type="bio" /> <termin date="2027-07-16" type="bio" /> <termin date="2027-07-30" type="bio" /> <termin date="2027-08-13" type="bio" /> <termin date="2027-08-27" type="bio" />
+            <termin date="2027-09-10" type="bio" /> <termin date="2027-09-24" type="bio" /> <termin date="2027-10-08" type="bio" /> <termin date="2027-10-22" type="bio" /> <termin date="2027-11-05" type="bio" />
+            <termin date="2027-11-19" type="bio" /> <termin date="2027-12-03" type="bio" /> <termin date="2027-12-17" type="bio" /> <termin date="2027-12-31" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-15" type="papier" /> <termin date="2026-06-11" type="papier" /> <termin date="2026-07-09" type="papier" /> <termin date="2026-08-06" type="papier" /> <termin date="2026-09-03" type="papier" />
+            <termin date="2026-10-01" type="papier" /> <termin date="2026-10-29" type="papier" /> <termin date="2026-11-26" type="papier" /> <termin date="2026-12-24" type="papier" /> <termin date="2027-01-21" type="papier" />
+            <termin date="2027-02-18" type="papier" /> <termin date="2027-03-18" type="papier" /> <termin date="2027-04-15" type="papier" /> <termin date="2027-05-13" type="papier" /> <termin date="2027-06-10" type="papier" />
+            <termin date="2027-07-08" type="papier" /> <termin date="2027-08-05" type="papier" /> <termin date="2027-09-02" type="papier" /> <termin date="2027-09-30" type="papier" /> <termin date="2027-10-28" type="papier" />
+            <termin date="2027-11-25" type="papier" /> <termin date="2027-12-23" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-22" type="gelb" /> <termin date="2026-06-19" type="gelb" /> <termin date="2026-07-17" type="gelb" /> <termin date="2026-08-14" type="gelb" /> <termin date="2026-09-11" type="gelb" />
+            <termin date="2026-10-09" type="gelb" /> <termin date="2026-11-06" type="gelb" /> <termin date="2026-12-04" type="gelb" /> <termin date="2027-01-02" type="gelb" /> <termin date="2027-01-29" type="gelb" />
+            <termin date="2027-02-26" type="gelb" /> <termin date="2027-03-27" type="gelb" /> <termin date="2027-04-23" type="gelb" /> <termin date="2027-05-21" type="gelb" /> <termin date="2027-06-18" type="gelb" />
+            <termin date="2027-07-16" type="gelb" /> <termin date="2027-08-13" type="gelb" /> <termin date="2027-09-10" type="gelb" /> <termin date="2027-10-08" type="gelb" /> <termin date="2027-11-05" type="gelb" />
+            <termin date="2027-12-03" type="gelb" /> <termin date="2027-12-31" type="gelb" />
+        </bezirk>
+        <bezirk name="Stadt/Land – Westlich Bahnlinie (inkl. Glane, Düngstrup, Bargloy)">
+            <termin date="2025-12-12" type="rest" /> <termin date="2025-12-27" type="rest" />
+            <termin date="2026-01-09" type="rest" /> <termin date="2026-01-23" type="rest" /> <termin date="2026-02-06" type="rest" /> <termin date="2026-02-20" type="rest" />
+            <termin date="2026-03-06" type="rest" /> <termin date="2026-03-20" type="rest" /> <termin date="2026-04-03" type="rest" /> <termin date="2026-04-17" type="rest" />
+
+            <termin date="2025-12-05" type="bio" /> <termin date="2025-12-19" type="bio" /> <termin date="2026-01-03" type="bio" />
+            <termin date="2026-01-16" type="bio" /> <termin date="2026-01-30" type="bio" /> <termin date="2026-02-13" type="bio" /> <termin date="2026-02-27" type="bio" />
+            <termin date="2026-03-13" type="bio" /> <termin date="2026-03-27" type="bio" /> <termin date="2026-04-10" type="bio" /> <termin date="2026-04-24" type="bio" />
+
+            <termin date="2025-12-24" type="papier" />
+            <termin date="2026-01-22" type="papier" /> <termin date="2026-02-19" type="papier" /> <termin date="2026-03-19" type="papier" /> <termin date="2026-04-16" type="papier" />
+
+            <termin date="2025-12-02" type="gelb" /> <termin date="2025-12-30" type="gelb" />
+            <termin date="2026-01-27" type="gelb" /> <termin date="2026-02-24" type="gelb" /> <termin date="2026-03-24" type="gelb" /> <termin date="2026-04-22" type="gelb" />
+            <!-- REST fortgeschrieben -->
+            <termin date="2026-05-02" type="rest" /> <termin date="2026-05-15" type="rest" /> <termin date="2026-05-29" type="rest" /> <termin date="2026-06-12" type="rest" /> <termin date="2026-06-26" type="rest" />
+            <termin date="2026-07-10" type="rest" /> <termin date="2026-07-24" type="rest" /> <termin date="2026-08-07" type="rest" /> <termin date="2026-08-21" type="rest" /> <termin date="2026-09-04" type="rest" />
+            <termin date="2026-09-18" type="rest" /> <termin date="2026-10-02" type="rest" /> <termin date="2026-10-16" type="rest" /> <termin date="2026-10-30" type="rest" /> <termin date="2026-11-13" type="rest" />
+            <termin date="2026-11-27" type="rest" /> <termin date="2026-12-11" type="rest" /> <termin date="2026-12-28" type="rest" /> <termin date="2027-01-08" type="rest" /> <termin date="2027-01-22" type="rest" />
+            <termin date="2027-02-05" type="rest" /> <termin date="2027-02-19" type="rest" /> <termin date="2027-03-05" type="rest" /> <termin date="2027-03-19" type="rest" /> <termin date="2027-04-02" type="rest" />
+            <termin date="2027-04-16" type="rest" /> <termin date="2027-04-30" type="rest" /> <termin date="2027-05-14" type="rest" /> <termin date="2027-05-28" type="rest" /> <termin date="2027-06-11" type="rest" />
+            <termin date="2027-06-25" type="rest" /> <termin date="2027-07-09" type="rest" /> <termin date="2027-07-23" type="rest" /> <termin date="2027-08-06" type="rest" /> <termin date="2027-08-20" type="rest" />
+            <termin date="2027-09-03" type="rest" /> <termin date="2027-09-17" type="rest" /> <termin date="2027-10-01" type="rest" /> <termin date="2027-10-15" type="rest" /> <termin date="2027-10-29" type="rest" />
+            <termin date="2027-11-12" type="rest" /> <termin date="2027-11-26" type="rest" /> <termin date="2027-12-10" type="rest" /> <termin date="2027-12-24" type="rest" />
+            <!-- BIO fortgeschrieben -->
+            <termin date="2026-05-08" type="bio" /> <termin date="2026-05-22" type="bio" /> <termin date="2026-06-05" type="bio" /> <termin date="2026-06-19" type="bio" /> <termin date="2026-07-03" type="bio" />
+            <termin date="2026-07-17" type="bio" /> <termin date="2026-07-31" type="bio" /> <termin date="2026-08-14" type="bio" /> <termin date="2026-08-28" type="bio" /> <termin date="2026-09-11" type="bio" />
+            <termin date="2026-09-25" type="bio" /> <termin date="2026-10-09" type="bio" /> <termin date="2026-10-23" type="bio" /> <termin date="2026-11-06" type="bio" /> <termin date="2026-11-20" type="bio" />
+            <termin date="2026-12-04" type="bio" /> <termin date="2026-12-18" type="bio" /> <termin date="2027-01-02" type="bio" /> <termin date="2027-01-15" type="bio" /> <termin date="2027-01-29" type="bio" />
+            <termin date="2027-02-12" type="bio" /> <termin date="2027-02-26" type="bio" /> <termin date="2027-03-12" type="bio" /> <termin date="2027-03-27" type="bio" /> <termin date="2027-04-09" type="bio" />
+            <termin date="2027-04-23" type="bio" /> <termin date="2027-05-07" type="bio" /> <termin date="2027-05-21" type="bio" /> <termin date="2027-06-04" type="bio" /> <termin date="2027-06-18" type="bio" />
+            <termin date="2027-07-02" type="bio" /> <termin date="2027-07-16" type="bio" /> <termin date="2027-07-30" type="bio" /> <termin date="2027-08-13" type="bio" /> <termin date="2027-08-27" type="bio" />
+            <termin date="2027-09-10" type="bio" /> <termin date="2027-09-24" type="bio" /> <termin date="2027-10-08" type="bio" /> <termin date="2027-10-22" type="bio" /> <termin date="2027-11-05" type="bio" />
+            <termin date="2027-11-19" type="bio" /> <termin date="2027-12-03" type="bio" /> <termin date="2027-12-17" type="bio" /> <termin date="2027-12-31" type="bio" />
+            <!-- PAPIER fortgeschrieben -->
+            <termin date="2026-05-15" type="papier" /> <termin date="2026-06-11" type="papier" /> <termin date="2026-07-09" type="papier" /> <termin date="2026-08-06" type="papier" /> <termin date="2026-09-03" type="papier" />
+            <termin date="2026-10-01" type="papier" /> <termin date="2026-10-29" type="papier" /> <termin date="2026-11-26" type="papier" /> <termin date="2026-12-24" type="papier" /> <termin date="2027-01-21" type="papier" />
+            <termin date="2027-02-18" type="papier" /> <termin date="2027-03-18" type="papier" /> <termin date="2027-04-15" type="papier" /> <termin date="2027-05-13" type="papier" /> <termin date="2027-06-10" type="papier" />
+            <termin date="2027-07-08" type="papier" /> <termin date="2027-08-05" type="papier" /> <termin date="2027-09-02" type="papier" /> <termin date="2027-09-30" type="papier" /> <termin date="2027-10-28" type="papier" />
+            <termin date="2027-11-25" type="papier" /> <termin date="2027-12-23" type="papier" />
+            <!-- GELB fortgeschrieben -->
+            <termin date="2026-05-20" type="gelb" /> <termin date="2026-06-17" type="gelb" /> <termin date="2026-07-15" type="gelb" /> <termin date="2026-08-12" type="gelb" /> <termin date="2026-09-09" type="gelb" />
+            <termin date="2026-10-07" type="gelb" /> <termin date="2026-11-04" type="gelb" /> <termin date="2026-12-02" type="gelb" /> <termin date="2026-12-30" type="gelb" /> <termin date="2027-01-27" type="gelb" />
+            <termin date="2027-02-24" type="gelb" /> <termin date="2027-03-24" type="gelb" /> <termin date="2027-04-21" type="gelb" /> <termin date="2027-05-19" type="gelb" /> <termin date="2027-06-16" type="gelb" />
+            <termin date="2027-07-14" type="gelb" /> <termin date="2027-08-11" type="gelb" /> <termin date="2027-09-08" type="gelb" /> <termin date="2027-10-06" type="gelb" /> <termin date="2027-11-03" type="gelb" />
+            <termin date="2027-12-01" type="gelb" /> <termin date="2027-12-29" type="gelb" />
+        </bezirk>
+    </gemeinde>
+</kalender>

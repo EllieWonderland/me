@@ -1,0 +1,668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <bilanzen>
+        <box>
+            <title>Abfallwirtschaftskonzept 2024plus</title>
+            <text>Das Konzept stellt die aktuelle Situation der Abfallwirtschaft dar und plant Maßnahmen für die Zukunft.</text>
+            <downloads>
+                <link>
+                    <text>Abfallwirtschaftskonzept 2024plus (PDF)</text>
+                    <url>downloads/abfallwirtschaftskonzept2024.pdf</url>
+                    <icon>fas fa-file-pdf</icon>
+                </link>
+            </downloads>
+        </box>
+        <box>
+            <title>Abfallbilanzen</title>
+            <text>Statistiken und Auswertungen der vergangenen Jahre.</text>
+            <downloads>
+                <link>
+                    <text>Abfallbilanz 2024</text>
+                    <url>downloads/abfallbilanz_2024.pdf</url>
+                    <icon>fas fa-file-pdf</icon>
+                </link>
+                <link>
+                    <text>Abfallbilanz 2023</text>
+                    <url>downloads/abfallbilanz_2023.pdf</url>
+                    <icon>fas fa-file-pdf</icon>
+                </link>
+                <link>
+                    <text>Abfallbilanz 2022</text>
+                    <url>downloads/abfallbilanz_2022.pdf</url>
+                    <icon>fas fa-file-pdf</icon>
+                </link>
+            </downloads>
+        </box>
+    </bilanzen>
+    <merkblaetter>
+        <item>
+            <text>Merkblätter zur Abfallsortierung</text>
+            <icon>fas fa-file-pdf</icon>
+            <link>downloads/merkblatt_abfallsortierung.pdf</link>
+        </item>
+        <item>
+            <text>Merkblatt Grünabfall</text>
+            <icon>fas fa-file-pdf</icon>
+            <link>downloads/merkblatt_gruenabfallsammlung.pdf</link>
+        </item>
+        <item>
+            <text>Eigenkompostierung &amp; Biotonne</text>
+            <icon>fas fa-leaf</icon>
+            <link>downloads/merkblatt_kompostierung.pdf</link>
+        </item>
+        <item>
+            <text>Entsorgung von Asbest</text>
+            <icon>fas fa-exclamation-triangle</icon>
+            <link>downloads/merkblatt_asbestentsorgung.pdf</link>
+        </item>
+        <item>
+            <text>Entsorgung von Nachtspeicheröfen</text>
+            <icon>fas fa-temperature-high</icon>
+            <link>downloads/merkblatt_nachtspeicheroefen.pdf</link>
+        </item>
+        <item>
+            <text>Entsorgung von PUR-Schaumdosen</text>
+            <icon>fas fa-spray-can</icon>
+            <link>downloads/merkblatt_pur_schaumdosen.pdf</link>
+        </item>
+        <item>
+            <text>Entsorgung von Elektrogeräten (ohne Batterien)</text>
+            <icon>fas fa-plug</icon>
+            <link>downloads/merkblatt_elektrogeraete_ohne_batterien.pdf</link>
+        </item>
+        <item>
+            <text>Entsorgung von Altholz</text>
+            <icon>fas fa-tree</icon>
+            <link>downloads/merkblatt_altholz.pdf</link>
+        </item>
+        <item>
+            <text>Entsorgung von PV-Modulen</text>
+            <icon>fas fa-solar-panel</icon>
+            <link>downloads/merkblatt_pv_module.pdf</link>
+        </item>
+        <item>
+            <text>Hinweise für Flächennutzungspläne</text>
+            <icon>fas fa-map</icon>
+            <link>downloads/merkblatt_flaechennutzungs_und_bebauungsplaene.pdf</link>
+        </item>
+    </merkblaetter>
+    <sortierung>
+        <box>
+            <type>rest</type>
+            <title>Restabfall</title>
+            <icon>fas fa-trash</icon>
+            <items>
+                <item>Staubsaugerbeutel</item>
+                <item>Windeln</item>
+                <item>Zigarettenkippen</item>
+            </items>
+        </box>
+        <box>
+            <type>bio</type>
+            <title>Bioabfall</title>
+            <icon>fas fa-leaf</icon>
+            <items>
+                <item>Essensreste</item>
+                <item>Kaffeefilter</item>
+                <item>Grünschnitt</item>
+            </items>
+        </box>
+        <box>
+            <type>papier</type>
+            <title>Altpapier</title>
+            <icon>fas fa-newspaper</icon>
+            <items>
+                <item>Zeitungen</item>
+                <item>Kartons</item>
+                <item>Bücher</item>
+            </items>
+        </box>
+        <box>
+            <type>gelb</type>
+            <title>Gelbe Tonne</title>
+            <icon>fas fa-recycle</icon>
+            <items>
+                <item>Verpackungen aus Kunststoff</item>
+                <item>Konservendosen</item>
+                <item>Tetra-Packs</item>
+            </items>
+        </box>
+    </sortierung>
+    <abc>
+        <item>
+            <name>Abbeizmittel</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Abdeckfolie</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Acrylfarbe</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Aktenordner (Kunststoff)</name>
+            <disposal>Restabfall</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Aktenordner (Papier/Pappe)</name>
+            <disposal>Altpapier</disposal>
+            <type>papier</type>
+        </item>
+        <item>
+            <name>Altglas</name>
+            <disposal>Glascontainer</disposal>
+            <type>glas</type>
+        </item>
+        <item>
+            <name>Altkleider</name>
+            <disposal>Kleidercontainer</disposal>
+            <type>kleider</type>
+        </item>
+        <item>
+            <name>Aluminiumfolie</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Asbest</name>
+            <disposal>Sonderabfall (Deponie)</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Asche (Holz)</name>
+            <disposal>Biotonne (abgekühlt)</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Asche (Kohle)</name>
+            <disposal>Restabfalltonne (abgekühlt)</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Autoreifen</name>
+            <disposal>Wertstoffhof (Gebühr)</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Backofen</name>
+            <disposal>Wertstoffhof / Sperrmüll</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Batterien</name>
+            <disposal>Sammelboxen (Handel) / Wertstoffhof</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Bauschutt</name>
+            <disposal>Wertstoffhof (Gebühr)</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Benzin</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Bettwäsche</name>
+            <disposal>Altkleidercontainer / Kleiderkammer</disposal>
+            <type>kleider</type>
+        </item>
+        <item>
+            <name>Blechdosen</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Blumenerde</name>
+            <disposal>Biotonne</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Bratpfanne</name>
+            <disposal>Wertstoffhof (Metall)</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>CDs / DVDs</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Chemikalien</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Computer</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Dachpappe (teerfrei)</name>
+            <disposal>Umschlagstation (Gebühr)</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Desinfektionsmittel</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Dosen</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Drucker</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Eimer (Kunststoff)</name>
+            <disposal>Restabfall (wenn keine Verpackung)</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Elektrogeräte (klein)</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Energiesparlampen</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Fahrrad</name>
+            <disposal>Wertstoffhof / Sperrmüll</disposal>
+            <type>sperr</type>
+        </item>
+        <item>
+            <name>Farbreste (flüssig)</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Fensterglas</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Feuerlöscher</name>
+            <disposal>Problemstoffsammlung / Fachhandel</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Fotos</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Frittierfett (fest)</name>
+            <disposal>Biotonne</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Frittieröl (flüssig)</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Gardinen</name>
+            <disposal>Altkleidercontainer</disposal>
+            <type>kleider</type>
+        </item>
+        <item>
+            <name>Gartenabfälle</name>
+            <disposal>Biotonne / Sammelstelle</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Geschirr (Keramik/Porzellan)</name>
+            <disposal>Restabfall (Einzelstücke) / Bauschutt</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Glühbirnen</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Gummi</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Handy</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Heizkörper</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Holz (behandelt)</name>
+            <disposal>Wertstoffhof (Gebühr)</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Hundekot</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Isolierkannen</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Joghurtbecher</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Kaffeefilter</name>
+            <disposal>Biotonne</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Katzenstreu</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Klebstoff</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Knochen</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Korken (Natur)</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Kühlgeräte</name>
+            <disposal>Wertstoffhof / Sperrmüll</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Laminat</name>
+            <disposal>Sperrmüll / Wertstoffhof</disposal>
+            <type>sperr</type>
+        </item>
+        <item>
+            <name>Laub</name>
+            <disposal>Biotonne / Grünabfall-Sammelstelle</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Leder</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Leuchtstoffröhren</name>
+            <disposal>Wertstoffhof / Sammelstelle</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Lösemittel</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Matratzen</name>
+            <disposal>Sperrmüll / Wertstoffhof</disposal>
+            <type>sperr</type>
+        </item>
+        <item>
+            <name>Möbel</name>
+            <disposal>Sperrmüll / Wertstoffhof</disposal>
+            <type>sperr</type>
+        </item>
+        <item>
+            <name>Nachtspeicheröfen</name>
+            <disposal>Sonderentsorgung (Anmeldung)</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Nagellack</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Obstkisten (Holz)</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Ölradiatoren</name>
+            <disposal>Umschlagstation</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Papier</name>
+            <disposal>Altpapier</disposal>
+            <type>papier</type>
+        </item>
+        <item>
+            <name>Pflanzenschutzmittel</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Plastikschüsseln</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Putzmittel</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Quittungen (Thermopapier)</name>
+            <disposal>Restabfall</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Rasenmäher</name>
+            <disposal>Wertstoffhof / Sperrmüll</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Regenschirm</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Restmüll</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Rostschutzmittel</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Sägespäne (unbehandelt)</name>
+            <disposal>Biotonne</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Schuhe</name>
+            <disposal>Altkleidercontainer (paarweise) / Restabfall</disposal>
+            <type>kleider</type>
+        </item>
+        <item>
+            <name>Sofa</name>
+            <disposal>Sperrmüll / Wertstoffhof</disposal>
+            <type>sperr</type>
+        </item>
+        <item>
+            <name>Spiegel</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Spielzeug</name>
+            <disposal>Restabfall (klein) / Sperrmüll (groß)</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Spraydosen</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Spülmaschine</name>
+            <disposal>Wertstoffhof / Sperrmüll</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Styropor (Verpackung)</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Tapetenreste</name>
+            <disposal>Restabfall</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Taschentücher (Papier)</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Teppich</name>
+            <disposal>Sperrmüll / Wertstoffhof</disposal>
+            <type>sperr</type>
+        </item>
+        <item>
+            <name>Thermometer (Quecksilber)</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Töpfe</name>
+            <disposal>Wertstoffhof (Metall)</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Verpackungen (Kunststoff)</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Videokassetten</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Waschmaschine</name>
+            <disposal>Wertstoffhof / Sperrmüll</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Watte</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>WC-Reiniger</name>
+            <disposal>Problemstoffsammlung</disposal>
+            <type>sonder</type>
+        </item>
+        <item>
+            <name>Werkzeug</name>
+            <disposal>Wertstoffhof</disposal>
+            <type>hof</type>
+        </item>
+        <item>
+            <name>Windeln</name>
+            <disposal>Restabfall</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Zahnbürste</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Zeitungen</name>
+            <disposal>Altpapier</disposal>
+            <type>papier</type>
+        </item>
+        <item>
+            <name>Zigarettenasche</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Zigarettenkippen</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Staubsaugerbeutel</name>
+            <disposal>Restabfalltonne</disposal>
+            <type>rest</type>
+        </item>
+        <item>
+            <name>Essensreste</name>
+            <disposal>Biotonne</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Kaffeefilter</name>
+            <disposal>Biotonne</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Grünschnitt</name>
+            <disposal>Biotonne / Grünabfall-Sammelstelle</disposal>
+            <type>bio</type>
+        </item>
+        <item>
+            <name>Kartons</name>
+            <disposal>Altpapier</disposal>
+            <type>papier</type>
+        </item>
+        <item>
+            <name>Bücher</name>
+            <disposal>Altpapier</disposal>
+            <type>papier</type>
+        </item>
+        <item>
+            <name>Verpackungen aus Kunststoff</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Konservendosen</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+        <item>
+            <name>Tetra-Packs</name>
+            <disposal>Gelbe Tonne</disposal>
+            <type>gelb</type>
+        </item>
+    </abc>
+</data>

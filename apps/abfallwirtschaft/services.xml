@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<services>
+    <service>
+        <icon>fas fa-calendar-check</icon>
+        <title>Abfallkalender</title>
+        <text>Ihre persönlichen Abholtermine im Überblick</text>
+        <link>infos.html#kalender</link>
+        <linkText>Zum Kalender</linkText>
+    </service>
+    <service>
+        <icon>fas fa-recycle</icon>
+        <title>Wertstoffhöfe</title>
+        <text>Standorte in Ihrer Nähe finden</text>
+        <link>standorte.html</link>
+        <linkText>Standorte finden</linkText>
+    </service>
+    <service>
+        <icon>fas fa-calculator</icon>
+        <title>Gebührenrechner</title>
+        <text>Berechnen Sie Ihre Abfallgebühren online</text>
+        <link>rechner.html</link>
+        <linkText>Jetzt berechnen</linkText>
+    </service>
+    <service>
+        <icon>fas fa-book</icon>
+        <title>Abfall-ABC</title>
+        <text>Was gehört in welche Tonne?</text>
+        <link>infos.html#abc</link>
+        <linkText>ABC öffnen</linkText>
+    </service>
+    <service>
+        <icon>fas fa-truck</icon>
+        <title>Sperrmüll</title>
+        <text>Online-Anmeldung für Ihre Sperrmüllabholung</text>
+        <link>onlinedienste.html#sperrmuell</link>
+        <linkText>Anmelden</linkText>
+    </service>
+    <service>
+        <icon>fas fa-headset</icon>
+        <title>Abfallberatung</title>
+        <text>Ungeklärte Fragen? Hier wird Ihnen geholfen</text>
+        <link>kontakt.html</link>
+        <linkText>Kontakt aufnehmen</linkText>
+    </service>
+</services>

@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studienentwurf · Standorte & Anlagen - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb-header">
+            <div class="container">
+                <a href="index.html">Startseite</a> / <span>Standorte</span>
+            </div>
+        </div>
+
+        <section class="container pt-2">
+            <h1 class="section-title">Standorte & Anlagen</h1>
+
+            <!-- Tab navigation -->
+            <div class="tab-navigation">
+                <a href="karte.html" class="tab-btn">
+                    <i class="fas fa-map"></i> Interaktive Karte
+                </a>
+                <button class="tab-btn active" data-tab="anlagen">
+                    <i class="fas fa-recycle"></i> Entsorgungsanlagen
+                </button>
+                <button class="tab-btn" data-tab="container">
+                    <i class="fas fa-box"></i> Container
+                </button>
+            </div>
+
+            <!-- Tab content: Waste disposal facilities -->
+            <div id="anlagen" class="tab-content active">
+                <p class="mb-2">Übersicht aller Entsorgungsanlagen im Landkreis Oldenburg.</p>
+
+                <!-- Recycling centers -->
+                <details class="service-form-card" id="wertstoffhof" open>
+                    <summary>
+                        <i class="fas fa-recycle"></i> Wertstoffhöfe
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Auf den Wertstoffhöfen können private
+                            Haushalte diverse Abfälle entsorgen (ggf. gebührenpflichtig).</p>
+                        <div id="locations-grid" class="location-grid">
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Green waste collection points -->
+                <details class="service-form-card" id="sammelstellen">
+                    <summary>
+                        <i class="fas fa-leaf"></i> Grünabfall-Sammelstellen
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Zusätzliche Annahmestellen nur für
+                            Grünabfall (geöffnet März bis November).</p>
+                        <div id="gruen-grid" class="location-grid">
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Compost plant -->
+                <details class="service-form-card" id="kompostwerk">
+                    <summary>
+                        <i class="fas fa-industry"></i> Kompostwerk
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Zentrale Anlage zur Verwertung von
+                            Bioabfällen.</p>
+                        <div id="kompost-grid" class="location-grid">
+                        </div>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Tab content: Container -->
+            <div id="container" class="tab-content">
+                <p class="mb-2">Standorte aller öffentlichen Container im Landkreis.</p>
+
+                <!-- Glass container -->
+                <details class="service-form-card" id="altglascontainer" open>
+                    <summary>
+                        <i class="fas fa-wine-bottle"></i> Glascontainer-Standorte
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Altglas kann kostenlos in den Containern
+                            entsorgt werden. Bitte nach Farben sortieren!</p>
+                        <div id="altglas-list">
+                        </div>
+                    </div>
+                </details>
+
+                <!-- Cloth container -->
+                <details class="service-form-card" id="kleidercontainer">
+                    <summary>
+                        <i class="fas fa-tshirt"></i> Kleidercontainer
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Gut erhaltene Kleidung und Schuhe können
+                            Sie an folgenden Standorten abgeben.</p>
+                        <div id="kleider-grid" class="location-grid">
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+    </main>
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/data-loaders.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

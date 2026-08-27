@@ -1,0 +1,696 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studienentwurf · Onlinedienste - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb-header">
+            <div class="container">
+                <a href="index.html">Startseite</a> / <span>Onlinedienste</span>
+            </div>
+        </div>
+
+        <section class="container pt-2">
+            <h1 class="section-title">Onlinedienste</h1>
+            <p class="section-subtitle">Erledigen Sie Ihre Anliegen bequem von zu Hause aus. Füllen Sie das passende
+                Formular aus und senden Sie es direkt ab.</p>
+
+            <!-- Tab navigation -->
+            <div class="tabs-nav">
+                <button class="tab-btn active" data-tab="behaelter">
+                    <i class="fas fa-trash"></i> Behälterverwaltung
+                </button>
+                <button class="tab-btn" data-tab="abholung">
+                    <i class="fas fa-truck"></i> Abholungen
+                </button>
+                <button class="tab-btn" data-tab="sonstiges">
+                    <i class="fas fa-file-alt"></i> Sonstiges
+                </button>
+            </div>
+
+            <!-- Tab content: Bin -->
+            <div id="behaelter" class="tab-content active">
+                <p class="mb-2">Hier können Sie Änderungen an Ihren Abfallbehältern beantragen.</p>
+
+                <!-- Service 1: Order bin -->
+                <details class="service-form-card" id="tonne-bestellen">
+                    <summary>
+                        <i class="fas fa-plus-circle"></i> Tonne bestellen / anmelden
+                    </summary>
+                    <div class="service-form-content">
+                        <form class="online-form" data-service="Tonne bestellen">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tb-name">Name *</label>
+                                    <input type="text" id="tb-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tb-email">E-Mail *</label>
+                                    <input type="email" id="tb-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tb-adresse">Adresse (Straße, Hausnr., PLZ, Ort) *</label>
+                                <input type="text" id="tb-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tb-tonnenart">Tonnenart *</label>
+                                    <select id="tb-tonnenart" name="tonnenart" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="Restabfall">Restabfalltonne</option>
+                                        <option value="Bioabfall">Bioabfalltonne</option>
+                                        <option value="Altpapier">Altpapiertonne</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tb-groesse">Größe *</label>
+                                    <select id="tb-groesse" name="groesse" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="80L">80 Liter</option>
+                                        <option value="120L">120 Liter</option>
+                                        <option value="240L">240 Liter</option>
+                                        <option value="1100L">1.100 Liter (Großbehälter)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tb-bemerkung">Bemerkungen</label>
+                                <textarea id="tb-bemerkung" name="bemerkung" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Service 2: Bin exchange -->
+                <details class="service-form-card" id="tonne-umtauschen">
+                    <summary>
+                        <i class="fas fa-exchange-alt"></i> Tonne umtauschen (Größe ändern)
+                    </summary>
+                    <div class="service-form-content">
+                        <form class="online-form" data-service="Tonne umtauschen">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tu-name">Name *</label>
+                                    <input type="text" id="tu-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tu-email">E-Mail *</label>
+                                    <input type="email" id="tu-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tu-adresse">Adresse *</label>
+                                <input type="text" id="tu-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="tu-tonnenart">Tonnenart *</label>
+                                    <select id="tu-tonnenart" name="tonnenart" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="Restabfall">Restabfalltonne</option>
+                                        <option value="Bioabfall">Bioabfalltonne</option>
+                                        <option value="Altpapier">Altpapiertonne</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tu-aktuelle-groesse">Aktuelle Größe *</label>
+                                    <select id="tu-aktuelle-groesse" name="aktuelle_groesse" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="80L">80 Liter</option>
+                                        <option value="120L">120 Liter</option>
+                                        <option value="240L">240 Liter</option>
+                                        <option value="1100L">1.100 Liter (Großbehälter)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="tu-neue-groesse">Gewünschte Größe *</label>
+                                    <select id="tu-neue-groesse" name="neue_groesse" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="80L">80 Liter</option>
+                                        <option value="120L">120 Liter</option>
+                                        <option value="240L">240 Liter</option>
+                                        <option value="1100L">1.100 Liter (Großbehälter)</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tu-begruendung">Begründung</label>
+                                <textarea id="tu-begruendung" name="begruendung" rows="3"
+                                    placeholder="z.B. Haushaltsgröße geändert"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Service 3: Bin owner change -->
+                <details class="service-form-card" id="eigentuemerwechsel">
+                    <summary>
+                        <i class="fas fa-user-friends"></i> Eigentümerwechsel melden
+                    </summary>
+                    <div class="service-form-content">
+                        <form class="online-form" data-service="Eigentümerwechsel">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ew-alter-name">Bisheriger Eigentümer *</label>
+                                    <input type="text" id="ew-alter-name" name="alter_eigentuemer" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ew-neuer-name">Neuer Eigentümer *</label>
+                                    <input type="text" id="ew-neuer-name" name="neuer_eigentuemer" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="ew-adresse">Adresse des Grundstücks *</label>
+                                <input type="text" id="ew-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ew-datum">Datum des Wechsels *</label>
+                                    <input type="date" id="ew-datum" name="datum" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ew-email">E-Mail (neuer Eigentümer) *</label>
+                                    <input type="email" id="ew-email" name="email" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Service 4: Bin sharing -->
+                <details class="service-form-card" id="gemeinsame-nutzung">
+                    <summary>
+                        <i class="fas fa-users"></i> Gemeinsame Nutzung von Behältern
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Bei gemeinsamer Nutzung einer Tonne mit
+                            einem Nachbarhaushalt teilen sich beide Parteien die Gebühren.</p>
+                        <form class="online-form" data-service="Gemeinsame Nutzung">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="gn-name1">Antragsteller (Name) *</label>
+                                    <input type="text" id="gn-name1" name="antragsteller" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gn-adresse1">Adresse Antragsteller *</label>
+                                    <input type="text" id="gn-adresse1" name="adresse_antragsteller" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="gn-name2">Partner-Haushalt (Name) *</label>
+                                    <input type="text" id="gn-name2" name="partner" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gn-adresse2">Adresse Partner *</label>
+                                    <input type="text" id="gn-adresse2" name="adresse_partner" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gn-email">E-Mail *</label>
+                                <input type="email" id="gn-email" name="email" required>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Service 5: Organic waste bin exemption -->
+                <details class="service-form-card" id="biotonne-befreiung">
+                    <summary>
+                        <i class="fas fa-leaf"></i> Befreiung von der Biotonne
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Eine Befreiung ist möglich, wenn Sie
+                            Ihren Bioabfall vollständig selbst kompostieren.</p>
+                        <form class="online-form" data-service="Biotonne Befreiung">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="bb-name">Name *</label>
+                                    <input type="text" id="bb-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="bb-email">E-Mail *</label>
+                                    <input type="email" id="bb-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bb-adresse">Adresse *</label>
+                                <input type="text" id="bb-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="bb-begruendung">Begründung *</label>
+                                <select id="bb-begruendung" name="begruendung" required>
+                                    <option value="">-- Bitte wählen --</option>
+                                    <option value="Eigenkompostierung">Eigenkompostierung auf dem Grundstück</option>
+                                    <option value="Kein Bioabfall">Kein verwertbarer Bioabfall</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="bestaetigung" required>
+                                    Ich bestätige, dass ich meinen Bioabfall vollständig selbst verwerte. *
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Tab content: Bin pickup -->
+            <div id="abholung" class="tab-content">
+                <p class="mb-2">Beantragen Sie hier die Abholung von Sperrmüll oder Elektrogeräten.</p>
+
+                <!-- Service 1: Pickup bulky waste -->
+                <details class="service-form-card" id="sperrmuell" open>
+                    <summary>
+                        <i class="fas fa-couch"></i> Sperrmüll anmelden
+                    </summary>
+                    <div class="service-form-content">
+                        <div class="form-options">
+                            <div class="option-card">
+                                <h4><i class="fas fa-bolt"></i> Express-Abholung</h4>
+                                <p>Abholung innerhalb von 5 Werktagen</p>
+                                <p class="price">29,00 € pauschal</p>
+                            </div>
+                            <div class="option-card">
+                                <h4><i class="fas fa-clock"></i> Standard-Abholung</h4>
+                                <p>Abholung zum nächsten Termin (ca. 2-4 Wochen)</p>
+                                <p class="price">Kostenlos</p>
+                            </div>
+                        </div>
+                        <form class="online-form" data-service="Sperrmüll Anmeldung">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sm-name">Name *</label>
+                                    <input type="text" id="sm-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sm-email">E-Mail *</label>
+                                    <input type="email" id="sm-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sm-adresse">Abhol-Adresse *</label>
+                                <input type="text" id="sm-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sm-art">Abholart *</label>
+                                    <select id="sm-art" name="art" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="Express">Express (29,00 €)</option>
+                                        <option value="Standard">Standard (kostenlos)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sm-wunschtermin">Wunschtermin</label>
+                                    <input type="date" id="sm-wunschtermin" name="wunschtermin">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sm-beschreibung">Was soll abgeholt werden? *</label>
+                                <textarea id="sm-beschreibung" name="beschreibung" rows="4" required
+                                    placeholder="z.B. 1 Sofa, 2 Stühle, 1 Matratze..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Service 2: Pickup large household appliances -->
+                <details class="service-form-card" id="elektrogeraete">
+                    <summary>
+                        <i class="fas fa-tv"></i> Haushaltsgroßgeräte Abfuhr
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Die Abholung von Großgeräten
+                            (Kühlschrank, Waschmaschine, etc.) ist kostenlos.</p>
+                        <form class="online-form" data-service="Elektrogeräte Abholung">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="eg-name">Name *</label>
+                                    <input type="text" id="eg-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eg-email">E-Mail *</label>
+                                    <input type="email" id="eg-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="eg-adresse">Abhol-Adresse *</label>
+                                <input type="text" id="eg-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="eg-geraet">Geräteart *</label>
+                                    <select id="eg-geraet" name="geraet" required>
+                                        <option value="">-- Bitte wählen --</option>
+                                        <option value="Kühlschrank">Kühlschrank / Gefrierschrank</option>
+                                        <option value="Waschmaschine">Waschmaschine</option>
+                                        <option value="Trockner">Trockner</option>
+                                        <option value="Spülmaschine">Spülmaschine</option>
+                                        <option value="Herd">Herd / Backofen</option>
+                                        <option value="Fernseher">Fernseher</option>
+                                        <option value="Sonstiges">Sonstiges Großgerät</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="eg-anzahl">Anzahl *</label>
+                                    <input type="number" id="eg-anzahl" name="anzahl" min="1" max="5" value="1"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="eg-bemerkung">Bemerkungen</label>
+                                <textarea id="eg-bemerkung" name="bemerkung" rows="3"
+                                    placeholder="z.B. Gerät steht im Keller"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+            </div>
+
+            <!-- Tab content: Other -->
+            <div id="sonstiges" class="tab-content">
+                <p class="mb-2">Weitere Anträge und Meldungen.</p>
+
+                <!-- SEPA Direct Debit -->
+                <details class="service-form-card" id="sepa-mandat">
+                    <summary>
+                        <i class="fas fa-university"></i> SEPA-Lastschriftmandat
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-info-circle"></i> Mit einem SEPA-Lastschriftmandat können
+                            wir die Gebühren bequem von Ihrem Konto abbuchen.</p>
+                        <form class="online-form" data-service="SEPA-Lastschriftmandat">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sepa-name">Kontoinhaber (Name) *</label>
+                                    <input type="text" id="sepa-name" name="kontoinhaber" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sepa-email">E-Mail *</label>
+                                    <input type="email" id="sepa-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sepa-adresse">Anschrift *</label>
+                                <input type="text" id="sepa-adresse" name="adresse" required
+                                    placeholder="Straße, Hausnr., PLZ, Ort">
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sepa-iban">IBAN *</label>
+                                    <input type="text" id="sepa-iban" name="iban" required
+                                        placeholder="DE00 0000 0000 0000 0000 00">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sepa-bic">BIC (optional)</label>
+                                    <input type="text" id="sepa-bic" name="bic" placeholder="z.B. GENODEF1XXX">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sepa-bank">Name der Bank *</label>
+                                <input type="text" id="sepa-bank" name="bank" required>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="bestaetigung" required>
+                                    Ich ermächtige die Abfallwirtschaft Landkreis Oldenburg, Zahlungen von meinem Konto
+                                    mittels Lastschrift einzuziehen. *
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Burn plant-based waste -->
+                <details class="service-form-card" id="verbrennen">
+                    <summary>
+                        <i class="fas fa-fire"></i> Verbrennen pflanzlicher Abfälle
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-exclamation-triangle"></i> Das Verbrennen ist nur unter
+                            bestimmten Bedingungen und mit Genehmigung erlaubt.</p>
+                        <form class="online-form" data-service="Verbrennen pflanzlicher Abfälle">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vp-name">Name *</label>
+                                    <input type="text" id="vp-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="vp-email">E-Mail *</label>
+                                    <input type="email" id="vp-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="vp-adresse">Adresse des Grundstücks *</label>
+                                <input type="text" id="vp-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="vp-zeitraum">Gewünschter Zeitraum *</label>
+                                    <input type="text" id="vp-zeitraum" name="zeitraum" required
+                                        placeholder="z.B. 15.-20. März 2025">
+                                </div>
+                                <div class="form-group">
+                                    <label for="vp-menge">Geschätzte Menge *</label>
+                                    <input type="text" id="vp-menge" name="menge" required
+                                        placeholder="z.B. ca. 3 Kubikmeter">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Self-declaration glass- and stone wool -->
+                <details class="service-form-card" id="glaswolle">
+                    <summary>
+                        <i class="fas fa-file-signature"></i> Eigenerklärung: Entsorgung Glas-/Steinwolle
+                    </summary>
+                    <div class="service-form-content">
+                        <form class="online-form" data-service="Eigenerklärung Glaswolle">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="gs-name">Name *</label>
+                                    <input type="text" id="gs-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="gs-email">E-Mail *</label>
+                                    <input type="email" id="gs-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="gs-adresse">Adresse *</label>
+                                <input type="text" id="gs-adresse" name="adresse" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="gs-menge">Menge (ca. in kg oder Säcken) *</label>
+                                <input type="text" id="gs-menge" name="menge" required>
+                            </div>
+                            <div class="form-group">
+                                <label>
+                                    <input type="checkbox" name="bestaetigung" required>
+                                    Ich bestätige, dass das Material ordnungsgemäß verpackt ist. *
+                                </label>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Information on old landfills -->
+                <details class="service-form-card" id="altablagerungen">
+                    <summary>
+                        <i class="fas fa-map-marker-alt"></i> Auskunft über Altablagerungen
+                    </summary>
+                    <div class="service-form-content">
+                        <form class="online-form" data-service="Auskunft Altablagerungen">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="aa-name">Name *</label>
+                                    <input type="text" id="aa-name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="aa-email">E-Mail *</label>
+                                    <input type="email" id="aa-email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="aa-flurstueck">Flurstück / Grundstücksadresse *</label>
+                                <input type="text" id="aa-flurstueck" name="flurstueck" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="aa-zweck">Zweck der Anfrage *</label>
+                                <select id="aa-zweck" name="zweck" required>
+                                    <option value="">-- Bitte wählen --</option>
+                                    <option value="Grundstückskauf">Grundstückskauf</option>
+                                    <option value="Bauvorhaben">Bauvorhaben</option>
+                                    <option value="Gutachten">Gutachten</option>
+                                    <option value="Sonstiges">Sonstiges</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Report unauthorized waste disposal -->
+                <details class="service-form-card" id="muellkippe">
+                    <summary>
+                        <i class="fas fa-exclamation-triangle"></i> Meldung unerlaubter Abfallentsorgung
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-shield-alt"></i> Ihre Angaben werden vertraulich
+                            behandelt. Die Angabe Ihrer Kontaktdaten ist optional.</p>
+                        <form class="online-form" data-service="Wilde Müllkippe Meldung">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="mk-name">Name (optional)</label>
+                                    <input type="text" id="mk-name" name="name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mk-email">E-Mail (optional)</label>
+                                    <input type="email" id="mk-email" name="email">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mk-standort">Standort der Ablagerung *</label>
+                                <input type="text" id="mk-standort" name="standort" required
+                                    placeholder="z.B. Waldweg bei Musterstraße 12, Ganderkesee">
+                            </div>
+                            <div class="form-group">
+                                <label for="mk-beschreibung">Beschreibung *</label>
+                                <textarea id="mk-beschreibung" name="beschreibung" rows="4" required
+                                    placeholder="Was wurde abgelagert? Wann wurde es entdeckt?"></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+
+                <!-- Registration clean landscape -->
+                <details class="service-form-card" id="saubere-landschaft">
+                    <summary>
+                        <i class="fas fa-hands-helping"></i> Anmeldung Aktion "Saubere Landschaft"
+                    </summary>
+                    <div class="service-form-content">
+                        <p class="form-info"><i class="fas fa-users"></i> Melden Sie Ihre Gruppe für die jährliche
+                            Müllsammelaktion an. Wir stellen Handschuhe und Müllsäcke.</p>
+                        <form class="online-form" data-service="Saubere Landschaft Anmeldung">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sl-gruppe">Gruppenname / Organisation *</label>
+                                    <input type="text" id="sl-gruppe" name="gruppe" required
+                                        placeholder="z.B. Sportverein XY, Grundschule ABC">
+                                </div>
+                                <div class="form-group">
+                                    <label for="sl-ansprechpartner">Ansprechpartner *</label>
+                                    <input type="text" id="sl-ansprechpartner" name="ansprechpartner" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sl-email">E-Mail *</label>
+                                    <input type="email" id="sl-email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sl-telefon">Telefon *</label>
+                                    <input type="tel" id="sl-telefon" name="telefon" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="sl-teilnehmer">Geschätzte Teilnehmerzahl *</label>
+                                    <input type="number" id="sl-teilnehmer" name="teilnehmer" min="1" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="sl-termin">Wunschtermin *</label>
+                                    <input type="date" id="sl-termin" name="termin" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="sl-gebiet">Sammelgebiet</label>
+                                <textarea id="sl-gebiet" name="gebiet" rows="2"
+                                    placeholder="z.B. Ortskern Ganderkesee, Waldgebiet..."></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i>
+                                Absenden</button>
+                        </form>
+                    </div>
+                </details>
+            </div>
+
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/tabs.js"></script>
+    <script src="js/forms.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/data-loaders.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

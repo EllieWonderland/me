@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+
+<head>
+<meta name="robots" content="noindex, nofollow">
+<style id="studienentwurf-hinweis">
+  :root { --se-h: 46px; }
+  body { padding-top: calc(var(--header-height, 0px) + var(--se-h)) !important; }
+  #se-bar {
+    position: fixed; inset: 0 0 auto 0; z-index: 2147483647;
+    background: #7a1f1f; color: #fff;
+    font: 600 14px/1.35 system-ui, -apple-system, "Segoe UI", sans-serif;
+    padding: 8px 16px; text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,.35);
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    min-height: var(--se-h); box-sizing: border-box;
+  }
+  #se-bar a { color: #fff; text-underline-offset: 3px; }
+  #se-bar b { font-weight: 700; }
+  @media (max-width: 640px) { :root { --se-h: 62px; } #se-bar { font-size: 12.5px; } }
+  @media print { #se-bar { position: static; } body { padding-top: 0 !important; } }
+
+  /* Fixierte Kopfzeile des Prototyps unter den Hinweis schieben */
+  .site-header { top: var(--se-h) !important; }
+  html { scroll-padding-top: calc(var(--se-h) + 90px); }
+
+</style>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studienentwurf · Sitemap - Abfallwirtschaft Landkreis Oldenburg</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="shortcut icon" href="img/favicon.ico?v=2" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="se-bar" role="note"><span><b>Studienentwurf.</b> Dies ist ein Konzeptprototyp von Jana Fisenko und <b>keine offizielle Seite des Landkreises Oldenburg</b>. Alle Angaben sind Beispieldaten. <a href="https://janafisenko.de/">Zur Portfolioseite</a></span></div>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="breadcrumb-header">
+            <div class="container">
+                <a href="index.html">Startseite</a> / <span>Sitemap</span>
+            </div>
+        </div>
+
+        <section class="container pt-2">
+            <h1 class="section-title">Sitemap</h1>
+            <p class="section-subtitle">Übersicht über alle Seiten und Bereiche.</p>
+
+            <div class="sitemap-container">
+                <div class="sitemap-tree">
+                    <ul>
+                        <li>
+                            <a href="index.html" class="main-link"><i class="fas fa-home"></i> Startseite</a>
+                        </li>
+
+                        <li>
+                            <a href="news.html" class="main-link"><i class="fas fa-newspaper"></i> Aktuelles &
+                                Meldungen</a>
+                        </li>
+
+                        <li>
+                            <a href="standorte.html" class="main-link"><i class="fas fa-map-marked-alt"></i>
+                                Standorte</a>
+                            <ul>
+                                <li><a href="karte.html">Interaktive Standortkarte</a></li>
+                                <li><a href="standorte.html#wertstoffhof">Wertstoffhöfe</a></li>
+                                <li><a href="standorte.html#sammelstellen">Grünabfall-Sammelstellen</a></li>
+                                <li><a href="standorte.html#kompostwerk">Kompostwerk</a></li>
+                                <li><a href="standorte.html#altglascontainer">Glascontainer</a></li>
+                                <li><a href="standorte.html#kleidercontainer">Kleidercontainer</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="onlinedienste.html" class="main-link"><i class="fas fa-laptop"></i>
+                                Onlinedienste</a>
+                            <ul>
+                                <li><a href="onlinedienste.html#behaelter">Behälterverwaltung</a>
+                                    <ul>
+                                        <li><a href="onlinedienste.html#tonne-bestellen">Tonne bestellen</a></li>
+                                        <li><a href="onlinedienste.html#tonne-umtauschen">Tonne umtauschen</a></li>
+                                        <li><a href="onlinedienste.html#eigentuemerwechsel">Eigentümerwechsel</a></li>
+                                        <li><a href="onlinedienste.html#gemeinsame-nutzung">Gemeinsame Nutzung</a></li>
+                                        <li><a href="onlinedienste.html#biotonne-befreiung">Biotonne Befreiung</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="onlinedienste.html#abholung">Abholung</a>
+                                    <ul>
+                                        <li><a href="onlinedienste.html#sperrmuell">Sperrmüll anmelden</a></li>
+                                        <li><a href="onlinedienste.html#elektrogeraete">Haushaltsgroßgeräte</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="onlinedienste.html#sonstiges">Sonstige Formulare</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="infos.html" class="main-link"><i class="fas fa-info-circle"></i> Infos &
+                                Beratung</a>
+                            <ul>
+                                <li><a href="infos.html#abc">Abfall-ABC</a></li>
+                                <li><a href="infos.html#kalender">Abfallkalender</a></li>
+                                <li><a href="infos.html#sortierung">Richtig Sortieren</a></li>
+                                <li><a href="infos.html#downloads">Merkblätter</a></li>
+                                <li><a href="infos.html#repair">Repair-Cafés</a></li>
+                                <li><a href="infos.html#verschenkmarkt">Verschenkmarkt</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="rechner.html" class="main-link"><i class="fas fa-euro-sign"></i> Gebühren</a>
+                            <ul>
+                                <li><a href="rechner.html#rechner">Gebührenrechner</a></li>
+                                <li><a href="rechner.html#behaeltergebuehren">Behältergebühren</a></li>
+                                <li><a href="rechner.html#wertstoffhof-gebuehren">Wertstoffhöfe</a></li>
+                                <li><a href="rechner.html#umschlagstation-gebuehren">Umschlagstation</a></li>
+                                <li><a href="rechner.html#gruenabfall-gebuehren">Grünabfall-Sammelstellen</a></li>
+                                <li><a href="rechner.html#kostenfreie-leistungen">Kostenfreie Leistungen</a></li>
+                                <li><a href="rechner.html#gebuehren-download">Gebührensatzung</a></li>
+                                <li><a href="rechner.html#bilanzen">Konzepte & Bilanzen</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="gewerbe.html" class="main-link"><i class="fas fa-industry"></i> Gewerbe</a>
+                            <ul>
+                                <li><a href="gewerbe.html#anzeige-krwg">Anzeige §18 KrWG</a></li>
+                                <li><a href="gewerbe.html#restabfallbehaelter">Restabfallbehälter</a></li>
+                                <li><a href="gewerbe.html#downloads-gewerbe">Merkblätter</a></li>
+                            </ul>
+                        </li>
+
+                        <li>
+                            <a href="kontakt.html" class="main-link"><i class="fas fa-headset"></i> Kontakt</a>
+                        </li>
+
+                        <li>
+                            <span class="main-link"><i class="fas fa-paragraph"></i> Rechtliches</span>
+                            <ul>
+                                <li><a href="legal.html#impressum">Impressum</a></li>
+                                <li><a href="legal.html#datenschutz">Datenschutz</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="footer-placeholder"></div>
+    <script src="js/components.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/accessibility.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

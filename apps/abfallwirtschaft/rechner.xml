@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gebuehrensatzung jahr="2025">
+    <grundgebuehr wert="54.00" waehrung="Euro" />
+    
+    <gebuehren typ="restabfall" label="Restabfalltonne">
+        <tonne volumen="80" label="80 Liter">
+            <rhythmus name="8w" label="Alle 8 Wochen" preis="21.00" />
+            <rhythmus name="4w" label="Alle 4 Wochen" preis="42.00" />
+            <rhythmus name="2w" label="Alle 2 Wochen" preis="84.00" />
+        </tonne>
+        <tonne volumen="120" label="120 Liter">
+            <rhythmus name="4w" label="Alle 4 Wochen" preis="63.00" />
+            <rhythmus name="2w" label="Alle 2 Wochen" preis="126.00" />
+        </tonne>
+        <tonne volumen="240" label="240 Liter">
+            <rhythmus name="4w" label="Alle 4 Wochen" preis="126.00" />
+            <rhythmus name="2w" label="Alle 2 Wochen" preis="252.00" />
+        </tonne>
+        <tonne volumen="1100" label="1.100 Liter (Großbehälter)">
+            <rhythmus name="2w" label="Alle 2 Wochen" preis="1087.20" />
+            <rhythmus name="1w" label="Wöchentlich" preis="2174.40" />
+        </tonne>
+    </gebuehren>
+    
+    <gebuehren typ="bioabfall" label="Biotonne">
+        <tonne volumen="80" label="80 Liter">
+            <rhythmus name="2w" label="Alle 2 Wochen" preis="45.60" />
+        </tonne>
+        <tonne volumen="120" label="120 Liter">
+            <rhythmus name="2w" label="Alle 2 Wochen" preis="68.40" />
+        </tonne>
+        <tonne volumen="240" label="240 Liter">
+            <rhythmus name="2w" label="Alle 2 Wochen" preis="136.80" />
+        </tonne>
+    </gebuehren>
+
+    <gebuehren typ="saisonbio" label="Saison-Biotonne">
+        <tonne volumen="120" label="120 Liter (März-Nov)">
+            <rhythmus name="saison" label="Saison" preis="45.60" />
+        </tonne>
+        <tonne volumen="240" label="240 Liter (März-Nov)">
+            <rhythmus name="saison" label="Saison" preis="91.20" />
+        </tonne>
+    </gebuehren>
+
+    <gebuehren typ="papier" label="Papiertonne (Kostenfrei)">
+        <tonne volumen="240" label="240 Liter">
+            <rhythmus name="4w" label="Alle 4 Wochen" preis="0.00" />
+        </tonne>
+        <tonne volumen="1100" label="1.100 Liter">
+            <rhythmus name="4w" label="Alle 4 Wochen" preis="0.00" />
+        </tonne>
+    </gebuehren>
+</gebuehrensatzung>

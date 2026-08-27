@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<newslist>
+    <news>
+        <date>10. Dezember 2025</date>
+        <title>Weihnachtsbaumsammlung 2026</title>
+        <text>Vom 08. bis 19. Januar 2026 werden im gesamten Kreisgebiet die Weihnachtsbäume gesammelt. Bitte stellen Sie Ihren Baum am Abfuhrtag bis 6 Uhr an den Straßenrand.</text>
+        <badge>Wichtig</badge>
+        <badgeClass>news-badge-warning</badgeClass>
+        <link>infos.html#kalender</link>
+    </news>
+    <news>
+        <date>05. Dezember 2025</date>
+        <title>Geänderte Öffnungszeiten an den Feiertagen</title>
+        <text>Bitte beachten Sie die geänderten Öffnungszeiten der Wertstoffhöfe während der Weihnachtsfeiertage und zum Jahreswechsel. Am 24., 25., 26., 31. Dezember sowie am 01. Januar bleiben alle Wertstoffhöfe geschlossen.</text>
+        <badge>Feiertage</badge>
+        <badgeClass>news-badge-info</badgeClass>
+        <link>standorte.html#wertstoffhof</link>
+    </news>
+    <news>
+        <date>25. November 2025</date>
+        <title>Gelber Sack wird 2026 zur Gelben Tonne</title>
+        <text>Ab Januar 2026 wird der Gelbe Sack im Landkreis durch die Gelbe Tonne ersetzt. Die Verteilung der Tonnen erfolgt im Dezember. Die Nutzung bleibt kostenfrei.</text>
+        <badge>Neu</badge>
+        <badgeClass>news-badge-new</badgeClass>
+        <link>infos.html#sortierung</link>
+    </news>
+    <news>
+        <date>15. November 2025</date>
+        <title>Neue Gebührenordnung ab 2026</title>
+        <text>Der Kreistag hat die neue Abfallgebührensatzung für das Jahr 2026 beschlossen. Die Behältergebühren steigen moderat um durchschnittlich 2,8%. Details finden Sie im Gebührenbereich.</text>
+        <badge>Info</badge>
+        <badgeClass>news-badge-info</badgeClass>
+        <link>rechner.html#behaeltergebuehren</link>
+    </news>
+    <news>
+        <date>01. November 2025</date>
+        <title>Aktion Saubere Landschaft 2026</title>
+        <text>Die Anmeldung für die Aktion "Saubere Landschaft" 2026 ist ab sofort möglich. Vereine, Schulen und Gruppen können sich bis Ende Februar anmelden.</text>
+        <badge>Aktion</badge>
+        <badgeClass>news-badge-green</badgeClass>
+        <link>onlinedienste.html#saubere-landschaft</link>
+    </news>
+    <news>
+        <date>20. Oktober 2025</date>
+        <title>Kompostwerk Wildeshausen: Grünabfallannahme erweitert</title>
+        <text>Das Kompostwerk in Wildeshausen erweitert seine Annahmezeiten. Ab November können Grünabfälle auch samstags von 8 bis 13 Uhr angeliefert werden.</text>
+        <badge>Neu</badge>
+        <badgeClass>news-badge-new</badgeClass>
+        <link>standorte.html#kompostwerk</link>
+    </news>
+    <news>
+        <date>10. Oktober 2025</date>
+        <title>Elektroschrott-Sammlung: Neue Sammelboxen im Handel</title>
+        <text>In Zusammenarbeit mit dem Einzelhandel wurden neue Sammelboxen für Kleinelektrogeräte aufgestellt. Diese finden Sie in allen größeren Supermärkten der Region.</text>
+        <badge>Info</badge>
+        <badgeClass>news-badge-info</badgeClass>
+        <link>infos.html#abc</link>
+    </news>
+    <news>
+        <date>25. September 2025</date>
+        <title>Repair-Café Ganderkesee: Neue Termine</title>
+        <text>Das beliebte Repair-Café in Ganderkesee startet wieder durch. Jeden ersten Samstag im Monat können defekte Geräte zur Reparatur gebracht werden.</text>
+        <badge>Termin</badge>
+        <badgeClass>news-badge-green</badgeClass>
+        <link>infos.html#repair</link>
+    </news>
+    <news>
+        <date>15. September 2025</date>
+        <title>Problemstoffsammlung: Terminplan 2026 online</title>
+        <text>Der Terminplan für die mobile Problemstoffsammlung 2026 ist ab sofort verfügbar. Alle Termine für Ihren Ort finden Sie im Abfallkalender.</text>
+        <badge>Info</badge>
+        <badgeClass>news-badge-info</badgeClass>
+        <link>infos.html#kalender</link>
+    </news>
+    <news>
+        <date>01. September 2025</date>
+        <title>Biotonne im Sommer: Tipps gegen Gerüche und Maden</title>
+        <text>Hohe Temperaturen können die Biotonne zur Geruchsquelle machen. Wir geben Tipps, wie Sie Gerüche und Madenbefall vermeiden können.</text>
+        <badge>Tipp</badge>
+        <badgeClass>news-badge-green</badgeClass>
+        <link>infos.html#sortierung</link>
+    </news>
+</newslist>

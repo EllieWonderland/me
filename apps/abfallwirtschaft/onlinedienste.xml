@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data>
+    <behaelter>
+        <item>
+            <icon>fas fa-plus-circle</icon>
+            <text>Tonne bestellen / anmelden</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-exchange-alt</icon>
+            <text>Tonne umtauschen (Größe ändern)</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-user-friends</icon>
+            <text>Eigentümerwechsel melden</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-users</icon>
+            <text>Gemeinsame Nutzung von Behältern</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-leaf</icon>
+            <text>Befreiung von der Biotonne</text>
+            <link>#</link>
+        </item>
+    </behaelter>
+    <abholung>
+        <item>
+            <icon>fas fa-couch</icon>
+            <text>Sperrmüll anmelden (Express &amp; Standard)</text>
+            <link>#</link>
+            <id>sperrmuell</id>
+        </item>
+        <item>
+            <icon>fas fa-tv</icon>
+            <text>Haushaltsgroßgeräte Abfuhr</text>
+            <link>#</link>
+        </item>
+    </abholung>
+    <sonstiges>
+        <item>
+            <icon>fas fa-university</icon>
+            <text>SEPA-Lastschriftmandat (PDF)</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-fire</icon>
+            <text>Verbrennen pflanzlicher Abfälle</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-file-signature</icon>
+            <text>Eigenerklärung: Entsorgung Glas-/Steinwolle</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-map-marker-alt</icon>
+            <text>Auskunft über Altablagerungen</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-exclamation-triangle</icon>
+            <text>Meldung unerlaubter Abfallentsorgung</text>
+            <link>#</link>
+        </item>
+        <item>
+            <icon>fas fa-hands-helping</icon>
+            <text>Anmeldung Aktion „Saubere Landschaft“</text>
+            <link>#</link>
+        </item>
+    </sonstiges>
+</data>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gewerbe>
+    <entry>
+        <title>Sammlungen nach § 18 KrWG</title>
+        <icon>fas fa-clipboard-list</icon>
+        <text>Gemeinnützige und gewerbliche Sammlungen von Abfällen müssen angezeigt werden.</text>
+        <links>
+            <link>
+                <text>Anzeigeformular gem. § 18 KrWG (PDF)</text>
+                <url>#</url>
+                <icon>fas fa-file-pdf</icon>
+            </link>
+            <link>
+                <text>Liste aktuell angezeigter Sammlungen</text>
+                <url>#</url>
+                <icon>fas fa-list</icon>
+            </link>
+        </links>
+    </entry>
+    <entry>
+        <title>Restabfallbehälter</title>
+        <icon>fas fa-trash-alt</icon>
+        <text>Informationen zur Bemessung von Restabfallbehältern in Gewerbebetrieben.</text>
+        <links>
+            <link>
+                <text>Merkblatt: Behälter in Gewerbebetrieben</text>
+                <url>#</url>
+                <icon>fas fa-info-circle</icon>
+            </link>
+            <link>
+                <text>Auskunft zur Bemessung</text>
+                <url>#</url>
+                <icon>fas fa-calculator</icon>
+            </link>
+        </links>
+    </entry>
+    <entry>
+        <title>Merkblätter &amp; Infos</title>
+        <icon>fas fa-file-alt</icon>
+        <text>Spezifische Entsorgungshinweise für gewerbliche Abfälle.</text>
+        <links>
+            <link>
+                <text>Informationen für Schrottsammlungen</text>
+                <url>#</url>
+                <icon>fas fa-file-pdf</icon>
+            </link>
+            <link>
+                <text>Entsorgung von PUR-Schaumdosen</text>
+                <url>#</url>
+                <icon>fas fa-file-pdf</icon>
+            </link>
+        </links>
+    </entry>
+</gewerbe>
