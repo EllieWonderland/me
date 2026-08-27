@@ -1,0 +1,44 @@
+# =====================================================================
+#  Was NICHT auf janafisenko.de landen darf
+#  Veroeffentlicht wird nur: index.html, assets/, apps/, CNAME
+# =====================================================================
+
+# Arbeitskopie von CoasterCheck.
+# Enthaelt den privaten VAPID-Push-Schluessel, echte Abo-Daten,
+# node_modules und ein eigenes .git-Verzeichnis.
+# Die veroeffentlichte Fassung liegt unter apps/coastercheck/.
+/CoasterCheck/
+
+# Persoenliche Unterlagen und Quellmaterial fuer die Seite
+/Docs/
+/Fotos/
+/Abgabe/
+Java_Bootcamp_Udemy.pdf
+*.pptx
+WEB_index.html
+programminghistory.txt
+
+# Quellprojekte, die nur als Beschreibung/Screenshot auf die Seite gehoeren.
+# "Five Nights at Henhouses" enthaelt server/.env mit Zugangsdaten.
+/Five Nights at Henhouses/
+/Craftybara AG/
+
+# Arbeitsdateien
+index.html.bak
+_probe.html
+_light.html
+
+# Geheimnisse und Ballast, generell
+node_modules/
+.env
+.env.*
+*.jks
+*.keystore
+keystore.properties
+vapid.json
+*_push_subscriptions.json
+*_reviews.json
+
+# Diese Ordner werden veroeffentlicht und duerfen nie ausgeschlossen werden
+!/assets/
+!/apps/
