@@ -406,11 +406,6 @@ img { max-width: 100%; height: auto; display: block; }
 }
 @media (min-width: 700px) {
   .projects.two .project.featured { grid-column: 1 / -1; }
-  .project.featured { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,360px); gap: 8px 30px; align-items: start; }
-  .project.featured .shot { grid-column: 2; grid-row: 1 / span 8; margin: 0; }
-  /* Die Abbildung laeuft unter beiden Spalten durch: das Motiv traegt Breite,
-     im 360px-Streifen der Seitenspalte waere davon nichts zu erkennen. */
-  .project.featured .portal-figure { grid-column: 1 / -1; grid-row: 9; }
 }
 .project.featured h3 { font-size: clamp(1.32rem, 2.6vw, 1.62rem); }
 .project.featured .what { font-size: 1rem; }
@@ -467,7 +462,7 @@ img { max-width: 100%; height: auto; display: block; }
 .figure img { width: 100%; border-radius: var(--radius); border: 1px solid var(--line); box-shadow: var(--shadow-sm); }
 .figure.banner img { aspect-ratio: 1240 / 505; object-fit: cover; object-position: 50% 42%; }
 @media (max-width: 560px) { .figure.banner img { aspect-ratio: 3 / 2; object-position: 52% 30%; } }
-.portal-figure { margin: 12px 0 0; }
+.portal-figure { margin: 0 0 12px; }
 .portal-figure img { border-radius: var(--radius-sm); }
 .figure figcaption {
   margin-top: 10px; color: var(--ink-faint);
